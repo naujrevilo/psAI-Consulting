@@ -5,6 +5,7 @@ section.intro {
     align-items: center;
     min-height: 100vh;
     min-height: 100dvh;
+    position: relative;
 }
 
 p {
@@ -18,23 +19,30 @@ section > .ctnr {
     align-items: center;
     width: 100%;
     margin-inline: auto;
-    position: relative;
+    gap: clamp(2rem, 5vw, 3rem);
+}
+
+section + hr {
+    margin: clamp(4rem, 10vw, 22rem) auto;
+    width: var(--width-1);
+    height: 0.1rem;
+    background-color: var(--light-1);
 }
 
 .intro .waves {
-    
-}
-
-.intro .waves svg {
     width: clamp(10rem, 95vw, 75rem);
-    position: absolute;
     position: absolute;
     inset: 0;
     margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro .waves svg {
 }
 
 .intro h1 {
-    margin-block: 2rem clamp(2rem, 8vw, 3rem);
     font-size: clamp(2rem, 8.5vw, 4.3rem);
     font-weight: 500;
     text-align: center;
@@ -44,11 +52,10 @@ section > .ctnr {
 }
 
 .intro h2 {
-    font-size: clamp(1.8rem, 5.2vw, 2.4rem);
+    font-size: clamp(1.8rem, 4.2vw, 2.4rem);
     text-align: center;
-    width: clamp(10rem, var(--pace), 92rem);
-    font-weight: 500;
-    margin-bottom: 3rem;
+    width: clamp(10rem, 75vw, 92rem);
+    font-weight: 400;
     line-height: 1.4;
 }
 
@@ -84,7 +91,7 @@ section > .ctnr {
         -ms-transform: scale3D(0.9, 0.9, 1);
         -o-transform: scale3D(0.9, 0.9, 1);
 }   15% {
-        opacity:1;
+        opacity:0.4;
         transform: scale3D(0.98, 0.98, 1);
         -webkit-transform: scale3D(0.98, 0.98, 1);
         -moz-transform: scale3D(0.98, 0.98, 1);
@@ -98,7 +105,7 @@ section > .ctnr {
         -ms-transform: scale3D(0.93, 0.93, 1);
         -o-transform: scale3D(0.93, 0.93, 1);
 }  35% {
-        opacity: 1;
+        opacity: 0.6;
         transform: scale3D(1, 1, 1);
         -webkit-transform: scale3D(1, 1, 1);
         -moz-transform: scale3D(1, 1, 1);
@@ -126,12 +133,6 @@ section > .ctnr {
         -ms-transform: scale3D(1, 1, 1);
         -o-transform: scale3D(1, 1, 1);
 }
-}
-
-.pulse {
-    perspective: 1000px;
-    animation: pulse_wave 10s ease infinite;
-    -webkit-animation: pulse_wave 10s ease infinite;
 }
 
 @keyframes float {
@@ -319,5 +320,10 @@ section.default1 .cta {
 
     section.default1.inverted {
         flex-flow: row-reverse wrap;
+    }
+
+    .pulse {
+        animation: pulse_wave 10s ease infinite;
+        -webkit-animation: pulse_wave 10s ease infinite;
     }
 }
