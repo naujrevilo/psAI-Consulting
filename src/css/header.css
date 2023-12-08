@@ -110,7 +110,7 @@ header .hambt path {
     }
 
     .header_nav {
-        font-size: clamp(1.4rem, 1.2vw, 2.7rem);
+        font-size: clamp(1.8rem, 1.2vw, 2.7rem);
         opacity: 1;
         top: 3rem;
         visibility: visible;
