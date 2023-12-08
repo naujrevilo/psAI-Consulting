@@ -7,21 +7,23 @@ section.contact {
     margin-inline: auto;
     transform: translateY(-50%);
     width: fit-content;
-    background-color: var(--light);
+    background-color: var(--light-1);
     color: var(--dark);
-    border: 0.2rem solid var(--light);
-    padding: clamp(3rem, 5vw, 5rem);
+    padding: clamp(3rem, 5vw, 4rem);
     box-sizing: border-box;
     max-width: var(--width-1);
+    max-height: 80vh;
+    overflow: auto;
+    display: none;
+    margin-bottom: unset;
+    border: 0.1rem solid var(--light);
+    background-color: rgb(214 219 255 / 91%);
+    backdrop-filter: blur(0.6rem);
     border-radius: clamp(2rem, 5vw, 4rem);
     -webkit-border-radius: clamp(2rem, 5vw, 4rem);
     -moz-border-radius: clamp(2rem, 5vw, 4rem);
     -ms-border-radius: clamp(2rem, 5vw, 4rem);
     -o-border-radius: clamp(2rem, 5vw, 4rem);
-    max-height: 80vh;
-    overflow: auto;
-    display: none;
-    margin-bottom: unset;
 }
 
 section.contact.show {

@@ -83,6 +83,7 @@ form button[type='submit'].main.cta {
     margin-bottom: unset;
     font-family: inherit;
     min-width: 100%;
+    box-shadow: unset;
 }
 
 form button[type='submit'].disabled {

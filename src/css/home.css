@@ -3,11 +3,8 @@ section.intro {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-block: clamp(1rem, 60vw, 20rem);
-    /* min-height: clamp(10rem, 100vh, 120rem); */
-    /* min-height: clamp(10rem, 100dvh, 120rem); */
-    /* min-height: 100vh; */
-    /* min-height: 100dvh; */
+    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 p {
@@ -24,7 +21,7 @@ section > .ctnr {
 }
 
 section.padding {
-    padding-block: clamp(2rem, 9vw, 18rem) clamp(5rem, 24vw, 18rem);
+    padding-block: clamp(2rem, 9vw, 9rem) clamp(5rem, 24vw, 18rem);
 }
 
 .intro .logo {
@@ -39,14 +36,19 @@ section.padding {
     text-align: center;
     line-height: 1.4;
     margin-inline: auto;
-    width: clamp(1rem, 80vw, 100rem);
+    width: clamp(1rem, var(--pace), 100rem);
+}
+
+.intro h1 b, .intro h1 strong {
+    font-weight:700;
+    color: var(--secondary-1);
 }
 
 .intro .corner.graphic {
     position: absolute;
-    top: 0;
+    top: -0.3rem;
     left: 0;
-    width: clamp(1rem, 55vw, 40rem);
+    width: clamp(1rem, 50vw, 40rem);
 }
 
 .intro .corner.graphic .pulse {
@@ -77,11 +79,11 @@ section.padding {
         -o-transform: scale(0.98);
 }16% {
         opacity:0;
-        transform: scale(0.5);
-        -webkit-transform: scale(0.5);
-        -moz-transform: scale(0.5);
-        -ms-transform: scale(0.5);
-        -o-transform: scale(0.5);
+        transform: scale(0.7);
+        -webkit-transform: scale(0.7);
+        -moz-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        -o-transform: scale(0.7);
 }  35% {
         opacity: 1;
         transform: scale(1);
@@ -91,18 +93,18 @@ section.padding {
         -o-transform: scale(1);
 }   50% {
         opacity: 1;
-        transform: scale(0.9);
-        -webkit-transform: scale(0.9);
-        -moz-transform: scale(0.9);
-        -ms-transform: scale(0.9);
-        -o-transform: scale(0.9);
-}    70% {
-        opacity: 1;
         transform: scale(0.85);
         -webkit-transform: scale(0.85);
         -moz-transform: scale(0.85);
         -ms-transform: scale(0.85);
         -o-transform: scale(0.85);
+}    70% {
+        opacity: 1;
+        transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -o-transform: scale(0.9);
 }   100% {
         opacity: 1;
         transform: scale(1);
@@ -163,7 +165,11 @@ section.padding {
     right: 0;
     width: clamp(1rem, 50vw, 40rem);
     z-index: -2;
-    transform: translateY(-80%);
+    transform: translateY(-40%);
+    -webkit-transform: translateY(-40%);
+    -moz-transform: translateY(-40%);
+    -ms-transform: translateY(-40%);
+    -o-transform: translateY(-40%);
 }
 
 #the-problem .corner.graphic .pulse {
@@ -185,9 +191,9 @@ section.default1 {
 }
 
 section.default1 h2 {
-    font-size: clamp(2rem, 11vw, 5.5rem);
+    font-size: clamp(2rem, 11vw, 8rem);
     color: var(--secondary-1);
-    font-weight: 700;
+    font-weight: 650;
     line-height: 1;
     position: relative;
     display: flex;
@@ -214,7 +220,8 @@ section.default1 p {
 }
 
 section.default1 p b, section.default1 p strong {
-    font-weight: 600;
+    font-weight: 550;
+    color: var(--secondary-1);
 }
 
 section.default1 p.minor {
@@ -245,15 +252,21 @@ section.default1 .cta {
 
 @media screen and (min-width:850px) {
     .intro .logo {
-        margin-top: -18rem;
+        margin-top: -10rem;
+        width: clamp(10rem, 45vw, var(--max-width));
     }
 
     .intro h1 {
         z-index: 3;
     }
 
+    .intro .corner.graphic {
+        width: clamp(1rem, 25vw, 110rem);
+    }
+
     section.default1 {
         justify-content: space-between;
+        align-items: center;
         flex-flow: row wrap;
         scroll-margin-top: calc(var(--header-height) + 2rem);
     }
