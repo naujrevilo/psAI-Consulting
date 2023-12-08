@@ -128,6 +128,11 @@ section > .ctnr {
     animation: pulse_wave 6s ease infinite;
     -webkit-animation: pulse_wave 6s ease infinite;
     will-change: transform;
+    transform: translateZ(0.0001px);
+    -webkit-transform: translateZ(0.0001px);
+    -moz-transform: translateZ(0.0001px);
+    -ms-transform: translateZ(0.0001px);
+    -o-transform: translateZ(0.0001px);
 }
 
 @keyframes float {
