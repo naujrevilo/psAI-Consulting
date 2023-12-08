@@ -3,8 +3,8 @@ section.intro {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    min-height: 100dvh;
+    min-height: 105vh;
+    min-height: 105dvh;
     position: relative;
 }
 
@@ -23,14 +23,14 @@ section > .ctnr {
 }
 
 section + hr {
-    margin: clamp(4rem, 10vw, 22rem) auto;
+    margin: clamp(4rem, 40vw, 22rem) auto;
     width: var(--width-1);
     height: 0.1rem;
     background-color: var(--light-1);
 }
 
 .intro .waves {
-    width: clamp(10rem, 95vw, 75rem);
+    width: clamp(10rem, 95vw, 95rem);
     position: absolute;
     inset: 0;
     margin: auto;
@@ -42,11 +42,15 @@ section + hr {
 .intro .waves svg {
 }
 
+.intro > .ctnr .logo {
+    display: none;
+}
+
 .intro h1 {
     font-size: clamp(2rem, 8.5vw, 4.3rem);
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
-    line-height: 1.4;
+    line-height: 1.25;
     margin-inline: auto;
     width: clamp(1rem, var(--pace), 85rem);
 }
@@ -65,10 +69,7 @@ section + hr {
 }
 
 .intro .corner.graphic {
-    position: absolute;
-    top: -0.3rem;
-    left: 0;
-    width: clamp(1rem, 50vw, 40rem);
+    display: none;
 }
 
 .intro .corner.graphic .pulse {
@@ -299,12 +300,21 @@ section.default1 .cta {
         width: clamp(10rem, 45vw, var(--max-width));
     }
 
+    .intro > .ctnr .logo {
+        display: initial;
+        width: 30rem;
+    }
+
     .intro h1 {
         z-index: 3;
     }
 
     .intro .corner.graphic {
         width: clamp(1rem, 25vw, 110rem);
+        position: absolute;
+        top: -0.3rem;
+        left: 0;
+        display: block;
     }
 
     section.default1 {
