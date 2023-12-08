@@ -5,7 +5,6 @@ section.intro {
     align-items: center;
     min-height: 100vh;
     min-height: 100dvh;
-    position: relative;
 }
 
 p {
@@ -21,8 +20,13 @@ section > .ctnr {
     margin-inline: auto;
 }
 
+section.padding {
+    padding-block: clamp(2rem, 9vw, 9rem) clamp(5rem, 24vw, 18rem);
+}
+
 .intro .logo {
-    width: clamp(10rem, 45vw, 75rem);
+    width: clamp(10rem, 85vw, 75rem);
+    transform: translateX(-10%);
 }
 
 .intro h1 {
@@ -33,19 +37,6 @@ section > .ctnr {
     line-height: 1.4;
     margin-inline: auto;
     width: clamp(1rem, var(--pace), 100rem);
-}
-
-.intro .overflow_ctnr.graphic {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-}
-
-.intro .overflow_ctnr.graphic svg {
-    position: absolute;
-    width: clamp(10rem, 350vw, 261rem);
-    transform: translateX(-10%);
-    height: 100%;
 }
 
 .intro h1 b, .intro h1 strong {
@@ -127,6 +118,7 @@ section > .ctnr {
 .pulse {
     animation: pulse_wave 6s ease infinite;
     -webkit-animation: pulse_wave 6s ease infinite;
+    will-change: transform;
 }
 
 @keyframes float {
@@ -196,8 +188,6 @@ section.default1 {
     gap: clamp(1rem, 5vw, 8rem);
     justify-content: center;
     /* align-items: center; */
-    padding-block: clamp(2rem, 9vw, 9rem) clamp(5rem, 24vw, 18rem);
-    margin-top: 10rem;
 }
 
 section.default1 h2 {
@@ -292,7 +282,7 @@ section.default1 .cta {
 
 @media screen and (min-width:850px) {
     .intro .logo {
-        width: clamp(10rem, 45vw, 40rem);
+        width: clamp(10rem, 45vw, var(--max-width));
     }
 
     .intro h1 {
