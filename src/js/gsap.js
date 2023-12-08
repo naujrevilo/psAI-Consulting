@@ -21,16 +21,16 @@ const graphics = document.querySelectorAll('.graphic, .logo')
 
 const relativeStrokeWidth = Math.floor(window.innerHeight / 500)
 
-for(let j = 0; j < graphics.length; j++) {
-    let pulsePaths = graphics[j].querySelectorAll('.pulse')
-    for(let i = 0; i < pulsePaths.length; i++) {
-        pulsePaths[i].style.animationDelay = `${i / 10}s`
-        pulsePaths[i].style.strokeWidth = `${relativeStrokeWidth}.5px`
-    }
-}
+// for(let j = 0; j < graphics.length; j++) {
+//     let pulsePaths = graphics[j].querySelectorAll('.pulse')
+//     for(let i = 0; i < pulsePaths.length; i++) {
+//         pulsePaths[i].style.animationDelay = `${i / 10}s`
+//         pulsePaths[i].style.strokeWidth = `${relativeStrokeWidth}.5px`
+//     }
+// }
 
-const floatPaths = document.querySelectorAll('.float')
+// const floatPaths = document.querySelectorAll('.float')
 
-for(let i = 0; i < floatPaths.length; i++) {
-    floatPaths[i].style.animationDelay = `${i * (Math.random() + 1 * 2 )}s`
-}
+// for(let i = 0; i < floatPaths.length; i++) {
+//     floatPaths[i].style.animationDelay = `${i * (Math.random() + 1 * 2 )}s`
+// }
