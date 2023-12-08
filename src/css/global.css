@@ -54,7 +54,7 @@ html {
 
 body {
     font-family: 'Gabarito', sans-serif;
-    background-color: var(--light);
+    background-color: var(--primary);
     color: var(--dark);
     position: relative;
     background-attachment: fixed;
