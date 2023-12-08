@@ -1,3 +1,43 @@
+.stripe {
+    background-color: var(--dark);
+    width: 100%;
+    margin-inline: auto;
+    color: var(--grey);
+    position: relative;
+}
+
+.stripe > .ctnr {
+    padding-block: 0.6rem;
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stripe a:hover {
+    color: var(--light-1);
+}
+
+.stripe .inverted_corner {
+    width: clamp(2rem, 3vw, 3rem);
+    position: absolute;
+    top: 99%;
+    color: var(--dark);
+}
+
+.stripe .inverted_corner:first-of-type {
+    left:0;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+}
+
+.stripe .inverted_corner:last-of-type {
+    right:0;
+}
+
 header {
     position: fixed;
     position: absolute;
@@ -27,7 +67,7 @@ header > .ctnr {
 .header_nav {
     position: fixed;
     width: var(--width1);
-    top: var(--header-height);
+    top: calc(var(--header-height) + 3rem);
     right: 2rem;
     left: 2rem;
     display: flex;
@@ -110,6 +150,7 @@ header .hambt path {
     }
 
     .header_nav {
+        position: sticky;
         font-size: clamp(1.8rem, 1.2vw, 2.7rem);
         opacity: 1;
         top: 3rem;

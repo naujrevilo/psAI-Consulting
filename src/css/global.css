@@ -8,7 +8,7 @@ html.sr .reveal, html.sr .slow_reveal {
 
     --dark:#30253f;
 
-    --grey:#666666;
+    --grey:#857695;
 
     --primary:#58f9d2;
     --primary-1:#58f9a4;
@@ -159,7 +159,7 @@ body::before {
 
 .graphic_cta .graphic {
     position: absolute;
-    left: 3rem;
+    left: -5rem;
     right: 0;
     width: 18rem;
     transform:translateY(-60%);
