@@ -12,7 +12,15 @@ header {
 header > .ctnr {
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: space-between;
+}
+
+.logo_anchor {
+    width: clamp(9rem, 27vmin, 11rem);
+}
+
+.logo_anchor svg {
+
 }
 
 .header_nav {
@@ -51,14 +59,12 @@ header.show_nav + nav {
 
 .hambt {
     color: var(--secondary-1);
-    width: var(--header-height);
     height: var(--header-height);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 9;
-    margin-right: calc((var(--header-height) - clamp(2.5rem,9vw,4rem)) / -2);
 }
 
 header.show_nav .hambt {
@@ -83,7 +89,7 @@ header .hambt path {
 }
 
 .hambt svg {
-    height: 50%;
+    height: 4rem;
 }
 
 

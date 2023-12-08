@@ -24,7 +24,7 @@ html.sr .reveal, html.sr .slow_reveal {
     --corner-width1: calc((100vw - var(--width-1)) / 2);
     --limited-corner: clamp(-30rem, calc(var(--corner-width1) * -1), 80rem);
 
-    --header-height:clamp(1rem,22vmin,8rem);
+    --header-height: clamp(1rem,29vmin,12rem);
 
     --testimonial-width:clamp(15rem, 75vw, 100rem);
 }
