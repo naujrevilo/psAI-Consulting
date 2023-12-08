@@ -63,7 +63,7 @@ body::before {
     content:'';
     background-image: url(/svg/noise-bg.svg), linear-gradient(-30deg, var(--primary), var(--secondary));
     background-size: 26rem, cover;
-    position: fixed;
+    position: absolute;
     inset: 0;
     z-index: -2;
 }
