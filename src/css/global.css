@@ -1,0 +1,214 @@
+html.sr .reveal, html.sr .slow_reveal {
+    visibility: hidden;
+}
+
+:root {
+    --light:#f8f8ff;
+    --light-1:#e2ebfb;
+
+    --dark:#30253f;
+
+    --grey:#666666;
+
+    --primary:#58f9d2;
+    --primary-1:#58f9a4;
+
+    --secondary:#d2a5ff;
+    --secondary-1:#513e6b;
+
+    --max-width: 120rem;
+    --pace:81vw;
+
+    --width-1:clamp(15rem, var(--pace), var(--max-width));
+
+    --corner-width1: calc((100vw - var(--width-1)) / 2);
+    --limited-corner: clamp(-30rem, calc(var(--corner-width1) * -1), 80rem);
+
+    --header-height:clamp(1rem,22vmin,8rem);
+
+    --testimonial-width:clamp(15rem, 75vw, 100rem);
+}
+
+.width1 {
+    width: var(--width-1);
+    margin-inline: auto;
+}
+
+.scroll_margin_top {
+    scroll-margin-top: calc(var(--header-height) + 4rem);
+}
+
+@font-face {
+    font-family: 'Gabarito';
+    src: url('/fonts/Gabarito-VariableFont_wght.ttf');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Gabarito', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    position: relative;
+    background-attachment: fixed;
+    background-image: url(/svg/noise-bg.svg), linear-gradient(-30deg, var(--primary), var(--secondary));
+    background-size: 26rem, cover;
+}
+
+
+::selection {
+    color: var(--dark);
+    background-color: #ddd;
+}
+
+::-webkit-scrollbar {
+    width: 2.6rem;
+    height: 2rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--light);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    background-image: url(/svg/noise-bg.svg), linear-gradient(-30deg, var(--primary), var(--secondary));
+    border:0.7rem solid var(--light);
+    border-radius: 3rem;
+    -webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+    -ms-border-radius: 3rem;
+    -o-border-radius: 3rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.mobile_hidden {
+    display: none;
+}
+
+.flex.column {
+    flex-direction: column;
+}
+
+.flex.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.main.cta {
+    display: block;
+    text-align: center;
+    width: fit-content;
+    padding: clamp(0.7rem, 4vw, 1.6rem) clamp(1.6rem, 8vw, 4.3rem);
+    background-color: var(--light);
+    border-radius: 20rem;
+    box-shadow: inset -1rem -1rem 1.5rem -1.2rem var(--secondary), inset 1rem 1rem 1.5rem -1.2rem var(--primary);
+}
+
+.cta {
+    display: block;
+    color: var(--secondary-1);
+    font-weight: 650;
+    font-size: clamp(1.5rem, 4.8vw, 2.1rem);
+    line-height: 1;
+    position: relative;
+    transition: filter 0.4s ease;
+    -webkit-transition: filter 0.4s ease;
+    -moz-transition: filter 0.4s ease;
+    -ms-transition: filter 0.4s ease;
+    -o-transition: filter 0.4s ease;
+}
+
+.cta:hover {
+    filter: drop-shadow(0rem 0rem 2rem var(--light));
+    -webkit-filter: drop-shadow(0rem 0rem 2rem var(--light));
+    transition: filter 0.1s ease;
+    -webkit-transition: filter 0.1s ease;
+    -moz-transition: filter 0.1s ease;
+    -ms-transition: filter 0.1s ease;
+    -o-transition: filter 0.1s ease;
+}
+
+.graphic_cta {
+    position: relative;
+}
+
+.graphic_cta .graphic {
+    position: absolute;
+    left: 3rem;
+    right: 0;
+    width: 18rem;
+    transform:translateY(-60%);
+    -webkit-transform:translateY(-60%);
+    -moz-transform:translateY(-60%);
+    -ms-transform:translateY(-60%);
+    -o-transform:translateY(-60%);
+}
+
+.graphic {
+    z-index: -1;
+}
+
+.graphic svg {
+    width: 100%;
+}
+
+
+
+
+
+@media screen and (min-width:800px) {
+    .mobile_hidden {
+        display: inherit;
+    }
+}
+
+@media (min-width:1920px) {
+    html {
+        font-size: 11px;
+    }
+}
+
+@media (min-width:2440px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media (min-width:3000px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (min-width:4000px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (min-width:5000px) {
+    html {
+        font-size: 19px;
+    }
+}
+
+

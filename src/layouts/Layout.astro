@@ -1,0 +1,21 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+import BaseHead from '../components/BaseHead.astro';
+import OQVABadge from '../components/OQVABadge.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<BaseHead title={title}/>
+
+	<body id="home">
+		<slot />
+
+		<!-- <OQVABadge/> -->
+	</body>
+</html>

@@ -1,0 +1,93 @@
+
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    cursor: default;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    width: fit-content;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    color: unset;
+    cursor: pointer;
+}
+
+a h1, a h2, a h3, a h4, a h5, h5 {
+    cursor: pointer;
+}
+
+img {
+    user-select: none;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    object-position: center;
+}
+
+video {
+    background-size: cover;
+    background-position: center;
+}
+
+button {
+    background-color: transparent;
+    outline-color: transparent;
+    border: unset;
+    padding: unset;
+    font-family: inherit;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+button:focus-visible {
+    outline: 0.1rem solid transparent;
+}
+
+button:not([type="submit"]):focus-visible {
+    outline: 0.1rem solid transparent;
+}
+
+ol, ul, li {
+    padding: 0;
+    list-style: none;
+    margin-block: 0;
+}
+
+hr {
+    border:unset;
+    margin: unset;
+}
+
+noscript {
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+    position: absolute;
+    background-color: var(--light);
+    z-index: 10;
+    color: var(--dark-a);
+    margin-inline: auto;
+    padding: 1rem;
+    border: 0.2rem solid var(--highlight);
+    max-width: 80%;
+    box-sizing: border-box;
+    inset: 0;
+    height: fit-content;
+    margin: auto;
+}

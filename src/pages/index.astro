@@ -1,0 +1,101 @@
+---
+	import Layout from '../layouts/Layout.astro';
+	import Header from '../components/Header.astro';
+	import Footer from '../components/Footer.astro';
+
+	import '../css/home.css'
+	
+	import Logo from '../components/svg/Logo.astro';
+
+	import Graphic01 from '../components/svg/graphics/Graphic01.astro';
+	import Graphic02 from '../components/svg/graphics/Graphic02.astro';
+	import Graphic03 from '../components/svg/graphics/Graphic03.astro';
+	import Graphic04 from '../components/svg/graphics/Graphic04.astro';
+	import Graphic05 from '../components/svg/graphics/Graphic05.astro';
+
+	import Worm from '../components/svg/graphics/Worm.astro'
+	import CornerGraphic01 from '../components/svg/graphics/CornerGraphic01.astro';
+	import CornerGraphic02 from '../components/svg/graphics/CornerGraphic02.astro';
+
+	import { Image, getImage } from 'astro:assets';
+	import ContactBox from '../components/ContactBox.astro';
+---
+
+<Layout title="psAI Consulting - ">
+	<script src="../js/gsap.js"></script>
+	
+	<main>
+		<Header/>
+
+		<section class="intro">
+			<div class="ctnr width1">
+				<div class="logo">
+					<Logo/>
+				</div>
+	
+				<h1>Unlock the potential of <strong>AI integration</strong>. Embrace innovation. <b>Define the future.</b></h1>
+
+				<div class="graphic_cta">
+					<a href="#the-problem" class="main cta">Discover our Journey</a>
+					<Graphic04/>
+				</div>
+
+				<!-- <div class="graphic g1">
+					<Graphic02/>
+				</div> -->
+				<!-- <Graphic03/> -->
+			</div>
+
+			<div class="graphic corner">
+				<CornerGraphic01/>
+			</div>
+		</section>
+
+		<section id="the-problem" class="padding default1">
+			<div class="content">
+				<h2>The Problem<Worm/></h2>
+
+				<p><b>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</b> Sequi, eius. Distinctio recusandae illo soluta sequi, eum vero voluptas esse rerum, unde sunt praesentium quo nam inventore. <b>Eum illum distinctio sunt.</b></p>
+
+				<p class="minor">Lorem ipsum dolor sit amet consectetur adipisicing elit. <b>Corrupti doloremque aliquid asperiores</b>, quo alias facilis quis laboriosam itaque nemo magnam architecto voluptate nam. <b>Aperiam, labore a? Facere placeat odit distinctio?</b></p>
+
+
+				<div class="graphic_cta">
+					<a href="#why-psai" class="main cta">Why psAI</a>
+					<Graphic05/>
+				</div>
+			</div>
+
+			<div class="graphic g3 slow_reveal">
+				<Graphic03/>
+			</div>
+
+			<div class="graphic corner">
+				<CornerGraphic02/>
+			</div>
+		</section>
+
+		<section id="why-psai" class="padding default1 inverted">
+			<div class="content">
+				<h2>Why psAI<Worm/></h2>
+
+				<p>Lorem ipsum dolor sit amet consectetur <b>adipisicing elit</b>. Libero voluptas numquam ea veritatis reprehenderit cumque perspiciatis tenetur tempora, <b>vitae debitis</b>. Ex at porro eum quae aliquam eos quo recusandae voluptate.</p>
+
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta voluptate quas non eius architecto? <b>Laudantium, nisi recusandae.</b> Veniam corrupti vitae asperiores quidem blanditiis? Consequatur magni recusandae nostrum! Aspernatur, qui dolores?</p>
+
+				<div class="graphic_cta">
+					<a href="#deliverables" class="main cta">Our Deliverables</a>
+					<Graphic04/>
+				</div>
+			</div>
+
+			<div class="graphic g4 slow_reveal">
+				<Graphic02/>
+			</div>
+		</section>
+
+		<ContactBox/>
+
+		<Footer/>
+	</main>
+</Layout>

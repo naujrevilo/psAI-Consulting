@@ -1,0 +1,264 @@
+section.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block: clamp(1rem, 60vw, 20rem);
+    /* min-height: clamp(10rem, 100vh, 120rem); */
+    /* min-height: clamp(10rem, 100dvh, 120rem); */
+    /* min-height: 100vh; */
+    /* min-height: 100dvh; */
+}
+
+p {
+    line-height: 1.5;
+}
+
+section > .ctnr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: var(--width-1);
+    margin-inline: auto;
+}
+
+section.padding {
+    padding-block: clamp(2rem, 9vw, 18rem) clamp(5rem, 24vw, 18rem);
+}
+
+.intro .logo {
+    width: clamp(10rem, 85vw, 75rem);
+    transform: translateX(-10%);
+}
+
+.intro h1 {
+    margin-block: 2rem clamp(2rem, 8vw, 3rem);
+    font-size: clamp(2rem, 5.5vw, 2.6rem);
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.4;
+    margin-inline: auto;
+    width: clamp(1rem, 80vw, 100rem);
+}
+
+.intro .corner.graphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: clamp(1rem, 55vw, 40rem);
+}
+
+.intro .corner.graphic .pulse {
+    transform-origin: top left;
+}
+
+@keyframes pulse_wave {
+    0% {
+        opacity:1;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }   8% {
+        opacity:1;
+        transform: scale(0.95);
+        -webkit-transform: scale(0.95);
+        -moz-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+        -o-transform: scale(0.95);
+}   15% {
+        opacity:0;
+        transform: scale(0.98);
+        -webkit-transform: scale(0.98);
+        -moz-transform: scale(0.98);
+        -ms-transform: scale(0.98);
+        -o-transform: scale(0.98);
+}16% {
+        opacity:0;
+        transform: scale(0.5);
+        -webkit-transform: scale(0.5);
+        -moz-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+        -o-transform: scale(0.5);
+}  35% {
+        opacity: 1;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}   50% {
+        opacity: 1;
+        transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -o-transform: scale(0.9);
+}    70% {
+        opacity: 1;
+        transform: scale(0.85);
+        -webkit-transform: scale(0.85);
+        -moz-transform: scale(0.85);
+        -ms-transform: scale(0.85);
+        -o-transform: scale(0.85);
+}   100% {
+        opacity: 1;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+}
+
+.pulse {
+    animation: pulse_wave 14s ease infinite;
+    -webkit-animation: pulse_wave 14s ease infinite;
+    will-change: transform;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0rem);
+        -webkit-transform: translateY(0rem);
+        -moz-transform: translateY(0rem);
+        -ms-transform: translateY(0rem);
+        -o-transform: translateY(0rem);
+    } 33% {
+        transform: translateY(-1.5rem);
+        -webkit-transform: translateY(-1.5rem);
+        -moz-transform: translateY(-1.5rem);
+        -ms-transform: translateY(-1.5rem);
+        -o-transform: translateY(-1.5rem);
+    } 100% {
+        transform: translateY(0rem);
+        -webkit-transform: translateY(0rem);
+        -moz-transform: translateY(0rem);
+        -ms-transform: translateY(0rem);
+        -o-transform: translateY(0rem);
+    }
+}
+
+.float {
+    animation: float 5s ease infinite;
+    -webkit-animation: float 5s ease infinite;
+}
+
+.intro .logo .pulse {
+    transform-origin: center bottom;
+}
+
+#the-problem .g3 .pulse {
+    transform-origin: top left;
+}
+
+#why-psai .g4 .pulse {
+    transform-origin: bottom left;
+}
+
+#the-problem .corner.graphic {
+    position: absolute;
+    right: 0;
+    width: clamp(1rem, 50vw, 40rem);
+    z-index: -2;
+    transform: translateY(-80%);
+}
+
+#the-problem .corner.graphic .pulse {
+    transform-origin: center right;
+}
+
+section {
+
+}
+
+section.default1 {
+    display: flex;
+    flex-direction: column-reverse;
+    width: var(--width-1);
+    margin-inline: auto;
+    gap: clamp(1rem, 5vw, 8rem);
+    justify-content: center;
+    /* align-items: center; */
+}
+
+section.default1 h2 {
+    font-size: clamp(2rem, 11vw, 5.5rem);
+    color: var(--secondary-1);
+    font-weight: 700;
+    line-height: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin-bottom: 1.8rem;
+}
+
+section.default1 h2 .worm {
+    color: var(--light);
+    width: 5rem;
+    top: 120%;
+}
+
+section.default1 > .content {
+    flex: 1;
+    min-width: clamp(10rem, var(--pace), 40rem);
+    max-width: clamp(10rem, var(--pace), 71rem);
+    font-size: clamp(1.8rem, 4.8vw, 2.4rem);
+}
+
+section.default1 p {
+    margin-top: 1.2rem;
+}
+
+section.default1 p b, section.default1 p strong {
+    font-weight: 600;
+}
+
+section.default1 p.minor {
+    font-size: clamp(1.7rem, 4vw, 0.8em);
+    font-weight: 500;
+    color: var(--secondary-1);
+    line-height: 1.4;
+}
+
+section.default1 > .graphic {
+    width: clamp(9rem, 62vw, 35rem);
+}
+
+section.default1 .cta {
+    margin-top: 2.5rem;
+    width: fit-content;
+}
+
+.g1 {
+    width: clamp(10rem, 40vw, 25rem);
+    position: absolute;
+    left: 2rem;
+    top: 0;
+}
+
+
+
+
+@media screen and (min-width:850px) {
+    .intro .logo {
+        margin-top: -18rem;
+    }
+
+    .intro h1 {
+        z-index: 3;
+    }
+
+    section.default1 {
+        justify-content: space-between;
+        flex-flow: row wrap;
+        scroll-margin-top: calc(var(--header-height) + 2rem);
+    }
+
+    section.default1.inverted {
+        flex-flow: row-reverse wrap;
+    }
+}

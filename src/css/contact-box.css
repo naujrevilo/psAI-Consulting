@@ -1,0 +1,40 @@
+section.contact {
+    position: fixed;
+    top: calc(50% + 3rem);
+    z-index: 8;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    transform: translateY(-50%);
+    width: fit-content;
+    background-color: var(--light);
+    color: var(--dark);
+    border: 0.2rem solid var(--light);
+    padding: clamp(3rem, 5vw, 5rem);
+    box-sizing: border-box;
+    max-width: var(--width-1);
+    border-radius: clamp(2rem, 5vw, 4rem);
+    -webkit-border-radius: clamp(2rem, 5vw, 4rem);
+    -moz-border-radius: clamp(2rem, 5vw, 4rem);
+    -ms-border-radius: clamp(2rem, 5vw, 4rem);
+    -o-border-radius: clamp(2rem, 5vw, 4rem);
+    max-height: 80vh;
+    overflow: auto;
+    display: none;
+    margin-bottom: unset;
+}
+
+section.contact.show {
+    display: block;
+}
+
+section.contact.show + .exit_area {
+    display: block;
+}
+
+.exit_area {
+    position: fixed;
+    inset:0;
+    z-index: 7;
+    display: none;
+}

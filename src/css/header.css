@@ -1,0 +1,150 @@
+header {
+    position: fixed;
+    width: 100%;
+    height: var(--header-height);
+    color: var(--light);
+    z-index: 9;
+    left: 0;
+    right: 0;
+    /* mix-blend-mode: difference; */
+}
+
+header > .ctnr {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.header_nav {
+    position: fixed;
+    width: var(--width1);
+    top: var(--header-height);
+    right: 2rem;
+    left: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(214 219 255 / 85%);
+    backdrop-filter: blur(0.4rem);
+    padding: 4rem var(--corner-width1) 5rem;
+    box-sizing: border-box;
+    font-size: clamp(1.5rem, 7vw, 5.2rem);
+    font-weight: 600;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 60vh;
+    overflow-y: auto;
+    z-index: 9;
+    color: var(--dark);
+    border-radius: clamp(2rem, 3vw, 5rem);
+    border: 0.1rem solid var(--light);
+    text-align: center;
+}
+
+.header_nav a, .header_nav button {
+    padding-block: 1.6rem;
+}
+
+header.show_nav + nav {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hambt {
+    color: var(--light);
+    width: var(--header-height);
+    height: var(--header-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    margin-right: calc((var(--header-height) - clamp(2.5rem,9vw,4rem)) / -2);
+}
+
+header.show_nav .hambt {
+    color: var(--dark);
+}
+
+header .hambt path {
+    transition: stroke 0.2s ease;
+    -webkit-transition: stroke 0.2s ease;
+    -moz-transition: stroke 0.2s ease;
+    -ms-transition: stroke 0.2s ease;
+    -o-transition: stroke 0.2s ease;
+}
+
+.hambt > .ctnr {
+    width: clamp(2.5rem,8vw,4rem);
+    height: clamp(2rem,7vw,3.5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.hambt svg {
+    height: 50%;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 1150px) {
+
+    .hambt {
+        display: none;
+    }
+
+    header > .ctnr {
+        display: none;
+    }
+
+    .header_nav {
+        font-size: clamp(1.4rem, 1.1vw, 2.7rem);
+        opacity: 1;
+        top: 3rem;
+        visibility: visible;
+        justify-content: center;
+        align-items: center;
+        padding-block: unset;
+        flex-direction: row;
+        align-items: end;
+        width: fit-content;
+        gap: clamp(0rem, 5vw, 5rem);
+        margin-inline: auto;
+        padding: unset;
+        margin-inline: auto;
+        left: 0;
+        right: 0;
+        width: fit-content;
+        padding: clamp(0.9rem, 0.6vw, 1.8rem) clamp(2rem, 4vw, 9rem);
+        border-radius: 5rem;
+    }
+
+    .header_nav a, .header_nav button {
+        margin-inline: unset;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        transition: color 0.3s ease;
+        padding: 0.75rem 0;
+        transition: opacity 0.3s ease;
+        -webkit-transition: opacity 0.3s ease;
+        -moz-transition: opacity 0.3s ease;
+        -ms-transition: opacity 0.3s ease;
+        -o-transition: opacity 0.3s ease;
+    }
+    
+    .header_nav a:hover, .header_nav button:hover {
+        opacity: 0.6;
+        transition: opacity 0s ease;
+        -webkit-transition: opacity 0s ease;
+        -moz-transition: opacity 0s ease;
+        -ms-transition: opacity 0s ease;
+        -o-transition: opacity 0s ease;
+}
+}

@@ -1,0 +1,97 @@
+form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 2vw, 2rem);
+    font-size: 1.45rem;
+    justify-content: space-evenly;
+    max-width: clamp(1rem, var(--width-1), 50rem);
+    color: var(--light);
+}
+
+form p {
+    flex: 1;
+    min-width: clamp(10rem, 33vw, 18rem);
+}
+
+form > .flex {
+    justify-content: space-between;
+    gap: clamp(1.5rem, 2vw, 2rem);
+    flex-flow: row wrap;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    font-weight: 600;
+    line-height: 1.4;
+    font-size: 1.8rem;
+    color: var(--secondary-1);
+}
+
+form input,
+form select {
+    height: 4rem;
+}
+
+form input,
+form textarea,
+form select {
+    padding: clamp(0.8rem, 2vw, 1.2rem) clamp(0.8rem, 2vw, 1.5rem);
+    border: unset;
+    font-size: 0.85em;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    font-family: inherit;
+    font-weight: 500;
+    color: var(--dark);
+    background-size: 100% 100%;
+    background-color: var(--light-1);
+    border: unset;
+    border-radius: 2rem;
+}
+
+input:focus-visible, textarea:focus-visible, select:focus-visible {
+    outline-color: transparent;
+    outline-width: 0.3rem;
+}
+
+textarea {
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+    min-height: 13rem;
+    height: clamp(13rem, 30vw, 15rem);
+    max-height: 35rem;
+}
+
+form button[type='submit'].main.cta {
+    display: block;
+    margin: 0 auto;
+    font-size: 2.2rem;
+    color: var(--secondary-1);
+    cursor: pointer;
+    font-weight: 700;
+    border-bottom-width: 0.7rem;
+    position: relative;
+    line-height: 1;
+    margin-top: 2rem;
+    margin-bottom: unset;
+    font-family: inherit;
+    min-width: 100%;
+}
+
+form button[type='submit'].disabled {
+    font-weight: 500;
+    pointer-events: none;
+}
+
+body form button[type='submit'].submitted {
+    background-color: var(--light-1);
+    color: var(--secondary-1);
+    pointer-events: none;
+}
