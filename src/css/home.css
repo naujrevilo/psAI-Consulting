@@ -127,7 +127,6 @@ section > .ctnr {
 .pulse {
     animation: pulse_wave 6s ease infinite;
     -webkit-animation: pulse_wave 6s ease infinite;
-    will-change: transform;
 }
 
 @keyframes float {
