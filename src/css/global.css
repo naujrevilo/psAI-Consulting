@@ -57,9 +57,15 @@ body {
     background-color: var(--primary);
     color: var(--dark);
     position: relative;
-    /* background-attachment: local, fixed;
+}
+
+body::before {
+    content:'';
     background-image: url(/svg/noise-bg.svg), linear-gradient(-30deg, var(--primary), var(--secondary));
-    background-size: 26rem, cover; */
+    background-size: 26rem, cover;
+    position: fixed;
+    inset: 0;
+    z-index: -2;
 }
 
 
