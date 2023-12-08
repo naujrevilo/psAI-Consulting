@@ -125,14 +125,14 @@ section > .ctnr {
 }
 
 .pulse {
-    /* animation: pulse_wave 6s ease infinite;
-    -webkit-animation: pulse_wave 6s ease infinite; */
+    animation: pulse_wave 6s ease infinite;
+    -webkit-animation: pulse_wave 6s ease infinite;
     will-change: transform;
-    transform: translateZ(0.0001px);
-    -webkit-transform: translateZ(0.0001px);
-    -moz-transform: translateZ(0.0001px);
-    -ms-transform: translateZ(0.0001px);
-    -o-transform: translateZ(0.0001px);
+    transform: rotate3d(0.1deg);
+    -webkit-transform: rotate3d(0.1deg);
+    -moz-transform: rotate3d(0.1deg);
+    -ms-transform: rotate3d(0.1deg);
+    -o-transform: rotate3d(0.1deg);
 }
 
 @keyframes float {
