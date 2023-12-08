@@ -130,13 +130,8 @@ section > .ctnr {
 
 .pulse {
     perspective: 1000px;
-    animation: pulse_wave 10s ease infinite;
-    -webkit-animation: pulse_wave 10s ease infinite;
-    transform:translateZ(0.001px);
-    -webkit-transform:translateZ(0.001px);
-    -moz-transform:translateZ(0.001px);
-    -ms-transform:translateZ(0.001px);
-    -o-transform:translateZ(0.001px);
+    /* animation: pulse_wave 10s ease infinite;
+    -webkit-animation: pulse_wave 10s ease infinite; */
 }
 
 @keyframes float {
