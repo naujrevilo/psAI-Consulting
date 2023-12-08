@@ -65,11 +65,11 @@ section.padding {
         -o-transform: scale(1);
     }   8% {
         opacity:1;
-        transform: scale(0.95);
-        -webkit-transform: scale(0.95);
-        -moz-transform: scale(0.95);
-        -ms-transform: scale(0.95);
-        -o-transform: scale(0.95);
+        transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -o-transform: scale(0.9);
 }   15% {
         opacity:0;
         transform: scale(0.98);
@@ -77,13 +77,13 @@ section.padding {
         -moz-transform: scale(0.98);
         -ms-transform: scale(0.98);
         -o-transform: scale(0.98);
-}16% {
+}   20% {
         opacity:0;
-        transform: scale(0.7);
-        -webkit-transform: scale(0.7);
-        -moz-transform: scale(0.7);
-        -ms-transform: scale(0.7);
-        -o-transform: scale(0.7);
+        transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+        -moz-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        -o-transform: scale(0.8);
 }  35% {
         opacity: 1;
         transform: scale(1);
@@ -116,8 +116,8 @@ section.padding {
 }
 
 .pulse {
-    animation: pulse_wave 14s ease infinite;
-    -webkit-animation: pulse_wave 14s ease infinite;
+    animation: pulse_wave 6s ease infinite;
+    -webkit-animation: pulse_wave 6s ease infinite;
     will-change: transform;
 }
 
