@@ -162,7 +162,7 @@ section + hr {
     -webkit-animation: float 5s ease infinite;
 }
 
-.intro .logo .pulse {
+.intro .waves .pulse {
     transform-origin: 60% 60%;
 }
 
