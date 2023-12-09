@@ -56,6 +56,7 @@ header > .ctnr {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 100%;
 }
 
 .logo_anchor {
@@ -102,7 +103,7 @@ header.show_nav + nav {
 
 .hambt {
     color: var(--secondary-1);
-    height: var(--header-height);
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -142,6 +143,10 @@ header .hambt path {
 
 
 @media screen and (min-width: 1150px) {
+
+    header {
+        height: unset;
+    }
 
     .hambt {
         display: none;

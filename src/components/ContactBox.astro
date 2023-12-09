@@ -4,6 +4,7 @@
 ---
 
 <section class="contact">
+    <h3>Contact us</h3>
     <ContactForm/>
 </section>
 
@@ -12,7 +13,7 @@
 <script is:inline>
 
     const contactBox = document.querySelector('section.contact')
-    const contactBt = document.querySelector('.contact_bt')
+    const contactBts = document.querySelectorAll('.contact_bt')
     const exitArea = document.querySelector('.exit_area')
 
     let showingContactBox = false;
@@ -27,7 +28,9 @@
         }
     }
 
-    contactBt.addEventListener('click', toggleContactBox)
+    for(let i = 0; i < contactBts.length; i++) {
+        contactBts[i].addEventListener('click', toggleContactBox)
+    }
 
     exitArea.addEventListener('click', toggleContactBox)
 </script>
