@@ -49,12 +49,11 @@ header {
     z-index: 9;
     left: 0;
     right: 0;
-    /* mix-blend-mode: difference; */
 }
 
 header > .ctnr {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
     height: 100%;
 }
@@ -69,17 +68,18 @@ header > .ctnr {
 
 .header_nav {
     position: fixed;
-    width: var(--width1);
+    width: var(--width-1);
     top: calc(var(--header-height) + 3rem);
     right: 2rem;
     left: 2rem;
+    margin-inline: auto;
     display: flex;
     flex-direction: column;
     background-color: rgb(214 219 255 / 85%);
     backdrop-filter: blur(0.4rem);
     padding: 4rem var(--corner-width1) 5rem;
     box-sizing: border-box;
-    font-size: clamp(1.5rem, 7vw, 5.2rem);
+    font-size: clamp(1.5rem, 7vw, 4.2rem);
     font-weight: 600;
     opacity: 0;
     visibility: hidden;
@@ -96,7 +96,7 @@ header > .ctnr {
     padding-block: 1.6rem;
 }
 
-header.show_nav + nav {
+nav.show {
     opacity: 1;
     visibility: visible;
 }
@@ -104,14 +104,16 @@ header.show_nav + nav {
 .hambt {
     color: var(--secondary-1);
     height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: block;
     z-index: 9;
+    position: sticky;
+    right: clamp(1rem, calc((100% - var(--width-1)) / 2), 4rem);
+    top: 3rem;
+    margin-left: auto;
+    margin-top: 3rem;
 }
 
-header.show_nav .hambt {
+.hambt.active {
     color: var(--light);
 }
 
