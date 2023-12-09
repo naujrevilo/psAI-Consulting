@@ -24,7 +24,7 @@ section > .ctnr {
 }
 
 section + hr {
-    margin: clamp(4rem, 40vw, 22rem) auto;
+    margin: clamp(4rem, 40vw, 22rem) auto clamp(4rem, 40vw, 20rem);
     width: var(--width-1);
     height: 0.1rem;
     background-color: var(--light-1);
@@ -169,11 +169,11 @@ section + hr {
 }
 
 #the-problem .g3 .pulse {
-    transform-origin: 100% 100%;
+    transform-origin: bottom left;
 }
 
 #why-psai .g4 .pulse {
-    transform-origin: bottom left;
+    transform-origin: 60% 70%;
 }
 
 #the-problem .corner.graphic {
@@ -195,6 +195,11 @@ section + hr {
 section {
 
 }
+
+
+
+
+
 
 section.default1 {
     display: flex;
@@ -248,7 +253,7 @@ section.default1 p.minor {
 }
 
 section.default1 > .graphic {
-    width: clamp(9rem, 62vw, 35rem);
+    width: clamp(9rem, 55vw, 38rem);
 }
 
 section.default1 .cta {
@@ -271,17 +276,131 @@ section.default1 .cta {
 
 
 
+#the-team {
+    position: relative;
+}
 
+#the-team .heading.graphic {
+    position: absolute;
+    width: clamp(1rem, 65vw, 50rem);
+    top: 0;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-55%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
 
+#the-team .heading.graphic .pulse {
+    transform-origin: 60% 30%;
+}
 
+section.default2 {
+    scroll-margin-top: calc(var(--header-height) + 2rem);
+}
 
-.section.default2 {
+section.default2 > .content {
+    width: var(--width-1);
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+section.default2 h2  {
+    font-size: clamp(2rem, 11vw, 8rem);
+    color: var(--secondary-1);
+    text-align: center;
+}
+
+section.default2 h2 + p  {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    max-width: 90rem;
+    text-align: center;
+}
+
+.team_ctnr {
+    display: flex;
+    flex-flow: row wrap;
+    gap: clamp(1rem, 11vw, 7rem);
+    margin-block: 3rem;
+    justify-content: left;
+    width: 100%;
+}
+
+.team_ctnr .profile {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-width: clamp(10rem, var(--pace), 35rem);
+    max-width: clamp(10rem, var(--pace), 35rem);
+    flex: 1;
+}
+
+.team_ctnr .profile .flex {
+    gap: clamp(1rem, 6vw, 2rem);
+    align-items: center;
+    position: relative;
+}
+
+.team_ctnr .profile img {
+    width: clamp(10rem, 33vmin, 12rem);
+    border-radius: 3rem;
+    /* border: 0.2rem solid var(--light-1); */
+}
+
+.team_ctnr .profile .worm {
+    color: var(--light);
+    width: 6rem;
+    position: absolute;
+    bottom: -0.9rem;
+    left: 0;
+}
+
+.team_ctnr .profile .name {
+    font-weight: 700;
+    font-size: clamp(1rem, 8vw, 2.7rem);
+    line-height: 1;
+    margin-bottom: 0.6rem;
+}
+
+.team_ctnr .profile .role {
+    font-size: clamp(1rem, 4vw, 1.8rem);
+    line-height: 1.1;
+    font-weight: 600;
+    max-width: 22rem;
+    color: var(--secondary-1);
+}
+
+.team_ctnr .profile .description {
+    font-size: 1.7rem;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.team_ctnr .profile .description p {
+    line-height: 1.15;
+}
+
+.team_ctnr .profile .description b {
+    font-weight: 600;
+}
+
+.team_ctnr .profile p {
 
 }
 
-.section.default2 > .content {
-    
-}
+
+
+
+
+
+
+
+
 
 
 
@@ -342,5 +461,9 @@ section.default1 .cta {
     .pulse {
         animation: pulse_wave 10s ease infinite;
         -webkit-animation: pulse_wave 10s ease infinite;
+    }
+
+    .team_ctnr {
+        gap: 3rem clamp(1rem, 11vw, 7rem);
     }
 }

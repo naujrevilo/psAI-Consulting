@@ -1,5 +1,5 @@
 .stripe {
-    background-color: var(--dark);
+    background-color: var(--dark-1);
     width: 100%;
     margin-inline: auto;
     color: var(--grey);
@@ -8,10 +8,12 @@
 
 .stripe > .ctnr {
     padding-block: 0.6rem;
-    font-size: clamp(1rem, 4vw, 1.5rem);
+    font-size: clamp(1rem, 4vw, 1.4rem);
     font-weight: 300;
     display: flex;
     justify-content: space-between;
+    line-height: 1;
+    align-items: center;
 }
 
 .stripe a:hover {
@@ -22,7 +24,7 @@
     width: clamp(2rem, 3vw, 3rem);
     position: absolute;
     top: 99%;
-    color: var(--dark);
+    color: var(--dark-1);
 }
 
 .stripe .inverted_corner:first-of-type {
@@ -159,7 +161,6 @@ header .hambt path {
         padding-block: unset;
         flex-direction: row;
         align-items: end;
-        gap: clamp(0rem, 5vw, 5rem);
         margin-inline: auto;
         left: 0;
         right: 0;
@@ -171,16 +172,17 @@ header .hambt path {
         -moz-border-radius: 0 0 2rem 2rem;
         -ms-border-radius: 0 0 2rem 2rem;
         -o-border-radius: 0 0 2rem 2rem;
+        font-weight: 500;
 }
 
     .header_nav a, .header_nav button {
+        padding: 0.75rem clamp(0rem, 3vw, 2.5rem);
         margin-inline: unset;
         background-color: transparent;
         display: flex;
         align-items: center;
         box-sizing: border-box;
         transition: color 0.3s ease;
-        padding: 0.75rem 0;
         transition: opacity 0.3s ease;
         -webkit-transition: opacity 0.3s ease;
         -moz-transition: opacity 0.3s ease;
