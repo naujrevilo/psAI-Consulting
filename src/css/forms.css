@@ -38,7 +38,7 @@ form select {
 form input,
 form textarea,
 form select {
-    padding: clamp(0.8rem, 2vw, 1.2rem) clamp(0.8rem, 2vw, 1.5rem);
+    padding: clamp(0.8rem, 2vw, 1.2rem) clamp(1.2rem, 3vw, 1.5rem);
     border: unset;
     font-size: 0.85em;
     box-sizing: border-box;

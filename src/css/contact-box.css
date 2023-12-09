@@ -66,6 +66,7 @@ section.contact h3 {
 
 section.contact.show + .exit_area {
     display: block;
+    backdrop-filter: blur(0.2rem);
 }
 
 .exit_area {

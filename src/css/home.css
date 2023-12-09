@@ -283,8 +283,21 @@ section.default1 .cta {
     -moz-border-radius: 3rem;
     -ms-border-radius: 3rem;
     -o-border-radius: 3rem;
-    background-image: linear-gradient(0deg, var(--light-1) -20%, transparent 38%);
-    background-attachment: fixed;
+    border: 0.1rem solid transparent;
+    transition: border-color 0.4s ease;
+    -webkit-transition: border-color 0.4s ease;
+    -moz-transition: border-color 0.4s ease;
+    -ms-transition: border-color 0.4s ease;
+    -o-transition: border-color 0.4s ease;
+}
+
+.default1 .list li:hover {
+    border-color: var(--light-1);
+    transition: border-color 0.1s ease;
+    -webkit-transition: border-color 0.1s ease;
+    -moz-transition: border-color 0.1s ease;
+    -ms-transition: border-color 0.1s ease;
+    -o-transition: border-color 0.1s ease;
 }
 
 .default1 .list li h3 {
@@ -381,28 +394,38 @@ section.default2 h2 + p  {
     padding: clamp(1.5rem, 2vw, 2rem) clamp(1.5rem, 2vw, 2rem);
     box-sizing: border-box;
     height: fit-content;
-    background-image: linear-gradient(0deg, var(--light-1) -20%, transparent 38%);
+    /*background-image: linear-gradient(0deg, var(--light-1) -20%, transparent 38%);
     background-attachment: fixed;
-    border-radius: 3rem;
+    */border-radius: 3rem;
     -webkit-border-radius: 3rem;
     -moz-border-radius: 3rem;
     -ms-border-radius: 3rem;
     -o-border-radius: 3rem;
-    transition: border-color 0.4s ease, margin-bottom 0.5s 0.5s ease;
-    -webkit-transition: border-color 0.4s ease, margin-bottom 0.5s 0.5s ease;
-    -moz-transition: border-color 0.4s ease, margin-bottom 0.5s 0.5s ease;
-    -ms-transition: border-color 0.4s ease, margin-bottom 0.5s 0.5s ease;
-    -o-transition: border-color 0.4s ease, margin-bottom 0.5s 0.5s ease;
+    transition: border-color 0.4s ease, transform 0.1s, margin-bottom 0.5s 0.5s ease;
+    -webkit-transition: border-color 0.4s ease, transform 0.1s, margin-bottom 0.5s 0.5s ease;
+    -moz-transition: border-color 0.4s ease, transform 0.1s, margin-bottom 0.5s 0.5s ease;
+    -ms-transition: border-color 0.4s ease, transform 0.1s, margin-bottom 0.5s 0.5s ease;
+    -o-transition: border-color 0.4s ease, transform 0.1s, margin-bottom 0.5s 0.5s ease;
     border: 0.1rem solid transparent;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
 }
 
 .team_ctnr .profile:hover {
     border-color: var(--light-1);
-    transition: border-color 0.1s ease, margin-bottom 0s ease;
-    -webkit-transition: border-color 0.1s ease, margin-bottom 0s ease;
-    -moz-transition: border-color 0.1s ease, margin-bottom 0s ease;
-    -ms-transition: border-color 0.1s ease, margin-bottom 0s ease;
-    -o-transition: border-color 0.1s ease, margin-bottom 0s ease;
+    transition: border-color 0.1s ease, transform 0.2s ease, margin-bottom 0s ease;
+    -webkit-transition: border-color 0.1s ease, transform 0.2s ease, margin-bottom 0s ease;
+    -moz-transition: border-color 0.1s ease, transform 0.2s ease, margin-bottom 0s ease;
+    -ms-transition: border-color 0.1s ease, transform 0.2s ease, margin-bottom 0s ease;
+    -o-transition: border-color 0.1s ease, transform 0.2s ease, margin-bottom 0s ease;
+    transform: scale(1.06);
+    -webkit-transform: scale(1.06);
+    -moz-transform: scale(1.06);
+    -ms-transform: scale(1.06);
+    -o-transform: scale(1.06);
 }
 
 .team_ctnr .profile .flex {
@@ -571,21 +594,21 @@ section.default2 h2 + p  {
     }
 
     .team_ctnr .profile {
-        transition: border-color 0.4s ease, margin-bottom 0.2s ease, z-index 0.5s step-end;
-        -webkit-transition: border-color 0.4s ease, margin-bottom 0.2s ease, z-index 0.5s step-end;
-        -moz-transition: border-color 0.4s ease, margin-bottom 0.2s ease, z-index 0.5s step-end;
-        -ms-transition: border-color 0.4s ease, margin-bottom 0.2s ease, z-index 0.5s step-end;
-        -o-transition: border-color 0.4s ease, margin-bottom 0.2s ease, z-index 0.5s step-end;
+        transition: border-color 0.4s ease, transform 0.4s, margin-bottom 0.2s ease, z-index 0.5s step-end;
+        -webkit-transition: border-color 0.4s ease, transform 0.4s, margin-bottom 0.2s ease, z-index 0.5s step-end;
+        -moz-transition: border-color 0.4s ease, transform 0.4s, margin-bottom 0.2s ease, z-index 0.5s step-end;
+        -ms-transition: border-color 0.4s ease, transform 0.4s, margin-bottom 0.2s ease, z-index 0.5s step-end;
+        -o-transition: border-color 0.4s ease, transform 0.4s, margin-bottom 0.2s ease, z-index 0.5s step-end;
 }
 
     .team_ctnr .profile:hover {
         z-index: 9;
         margin-bottom: -15rem;
-        transition: margin-bottom 0.7s 0.15s ease, z-index 0.5s step-end;
-        -webkit-transition: margin-bottom 0.7s 0.15s ease, z-index 0.5s step-end;
-        -moz-transition: margin-bottom 0.7s 0.15s ease, z-index 0.5s step-end;
-        -ms-transition: margin-bottom 0.7s 0.15s ease, z-index 0.5s step-end;
-        -o-transition: margin-bottom 0.7s 0.15s ease, z-index 0.5s step-end;
+        transition: margin-bottom 0.7s 0.15s ease, transform 0.2s, z-index 0.5s step-end;
+        -webkit-transition: margin-bottom 0.7s 0.15s ease, transform 0.2s, z-index 0.5s step-end;
+        -moz-transition: margin-bottom 0.7s 0.15s ease, transform 0.2s, z-index 0.5s step-end;
+        -ms-transition: margin-bottom 0.7s 0.15s ease, transform 0.2s, z-index 0.5s step-end;
+        -o-transition: margin-bottom 0.7s 0.15s ease, transform 0.2s, z-index 0.5s step-end;
 }
 
     .team_ctnr .profile .description {
