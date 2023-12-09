@@ -14,8 +14,8 @@ section.contact {
     max-width: var(--width-1);
     max-height: 80vh;
     overflow: auto;
-    display: none;
-    margin-bottom: unset;
+    /*display: none;
+    */margin-bottom: unset;
     border: 0.1rem solid var(--light);
     background-color: rgb(214 219 255 / 91%);
     backdrop-filter: blur(0.6rem);
@@ -26,16 +26,42 @@ section.contact {
     -o-border-radius: clamp(2rem, 5vw, 3rem);
 }
 
+.header_nav, section.contact {
+    transform: translateY(calc(-50% + 1rem)) scale(0.9);
+    -webkit-transform: translateY(calc(-50% + 1rem)) scale(0.9);
+    -moz-transform: translateY(calc(-50% + 1rem)) scale(0.9);
+    -ms-transform: translateY(calc(-50% + 1rem)) scale(0.9);
+    -o-transform: translateY(calc(-50% + 1rem)) scale(0.9);
+    transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.4s ease;
+    -webkit-transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.4s ease;
+    -moz-transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.4s ease;
+    -ms-transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.4s ease;
+    -o-transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.4s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.header_nav.show, section.contact.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) scale(1);
+    -webkit-transform: translateY(-50%) scale(1);
+    -moz-transform: translateY(-50%) scale(1);
+    -ms-transform: translateY(-50%) scale(1);
+    -o-transform: translateY(-50%) scale(1);
+    transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.4s ease;
+    -webkit-transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.4s ease;
+    -moz-transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.4s ease;
+    -ms-transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.4s ease;
+    -o-transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.4s ease;
+}
+
 section.contact h3 {
     margin-inline: auto;
     font-size: clamp(3.5rem, 5vw, 4rem);
     color: var(--secondary-1);
     margin-bottom: 2rem;
     font-weight: 700;
-}
-
-section.contact.show {
-    display: block;
 }
 
 section.contact.show + .exit_area {
