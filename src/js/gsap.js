@@ -25,7 +25,7 @@ const relativeStrokeWidth = Math.floor((window.innerHeight + (window.innerWidth 
 for(let j = 0; j < graphics.length; j++) {
     let pulsePaths = graphics[j].querySelectorAll('.pulse')
     for(let i = 0; i < pulsePaths.length; i++) {
-        pulsePaths[i].style.animationDelay = `${i / 11}s`
+        pulsePaths[i].style.animationDelay = `${i / 9}s`
         pulsePaths[i].style.strokeWidth = `${relativeStrokeWidth}px`
     }
 }
