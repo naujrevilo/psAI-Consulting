@@ -408,6 +408,7 @@ section.default2 h2 + p  {
     margin-block: 3rem;
     justify-content: center;
     width: 100%;
+    z-index: 1;
 }
 
 .team_ctnr .profile {
@@ -625,11 +626,11 @@ section.default2 h2 + p  {
 
     .team_ctnr .profile {
         backdrop-filter: blur(2rem);
-        transition: border-color 0.4s ease, transform 0.8s 0.2s, margin-bottom 0.2s ease, z-index 0.5s step-end, background-color 0.4s ease;
-        -webkit-transition: border-color 0.4s ease, transform 0.8s 0.2s, margin-bottom 0.2s ease, z-index 0.5s step-end, background-color 0.4s ease;
-        -moz-transition: border-color 0.4s ease, transform 0.8s 0.2s, margin-bottom 0.2s ease, z-index 0.5s step-end, background-color 0.4s ease;
-        -ms-transition: border-color 0.4s ease, transform 0.8s 0.2s, margin-bottom 0.2s ease, z-index 0.5s step-end, background-color 0.4s ease;
-        -o-transition: border-color 0.4s ease, transform 0.8s 0.2s, margin-bottom 0.2s ease, z-index 0.5s step-end, background-color 0.4s ease;
+        transition: border-color 0.4s ease, transform 0.8s 0.2s, margin-bottom 0.5s ease, background-color 0.4s ease;
+        -webkit-transition: border-color 0.4s ease, transform 0.8s 0.2s, margin-bottom 0.5s ease, background-color 0.4s ease;
+        -moz-transition: border-color 0.4s ease, transform 0.8s 0.2s, margin-bottom 0.5s ease, background-color 0.4s ease;
+        -ms-transition: border-color 0.4s ease, transform 0.8s 0.2s, margin-bottom 0.5s ease, background-color 0.4s ease;
+        -o-transition: border-color 0.4s ease, transform 0.8s 0.2s, margin-bottom 0.5s ease, background-color 0.4s ease;
 }
 
     .team_ctnr .profile:hover {
@@ -643,12 +644,12 @@ section.default2 h2 + p  {
 }
 
     .team_ctnr .profile .description {
-        transition:max-height 0.1s ease;
-        -webkit-transition:max-height 0.1s ease;
-        -moz-transition:max-height 0.1s ease;
-        -ms-transition:max-height 0.1s ease;
-        -o-transition:max-height 0.1s ease;
-    }
+        transition:max-height 0.5s ease;
+        -webkit-transition:max-height 0.5s ease;
+        -moz-transition:max-height 0.5s ease;
+        -ms-transition:max-height 0.5s ease;
+        -o-transition:max-height 0.5s ease;
+}
 
     .team_ctnr .profile:hover .description {
         max-height: 15rem;
