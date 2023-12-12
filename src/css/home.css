@@ -48,7 +48,7 @@ section + hr {
 }
 
 .intro h1 {
-    font-size: clamp(2rem, 9.1vmin, 6rem);
+    font-size: clamp(2rem, 9.1vmin, 6.5rem);
     font-weight: 700;
     text-align: center;
     line-height: 1.25;
@@ -554,7 +554,7 @@ section.default2 h2 + p  {
 
     .intro h1 {
         z-index: 3;
-        width: clamp(1rem, var(--pace), 105rem);
+        width: clamp(1rem, var(--pace), var(--max-width));
     }
 
     .intro .corner.graphic {

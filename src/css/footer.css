@@ -75,9 +75,9 @@ footer nav .contact_bt {
 
 footer nav a .worm {
     position: absolute;
-    width: 4rem;
-    bottom: 0.6rem;
-    left: -1rem;
+    width: 2.6rem;
+    bottom: 0.3rem;
+    right: 0rem;
     color: var(--light);
     z-index: -1;
 }
