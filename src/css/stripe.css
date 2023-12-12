@@ -1,0 +1,67 @@
+.stripe {
+    background-color: var(--light);
+    width: 100%;
+    margin-inline: auto;
+    color: var(--grey);
+    position: relative;
+}
+
+.stripe > .ctnr {
+    padding-block: 0.6rem;
+    font-size: clamp(1rem, 4vw, 1.4rem);
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1;
+    align-items: center;
+}
+
+.stripe a:hover {
+    color: var(--secondary);
+}
+
+.stripe .inverted_corner {
+    width: clamp(2rem, 3vw, 3rem);
+    position: absolute;
+    color: var(--light);
+}
+
+.stripe .inverted_corner:first-of-type {
+    left:0;
+}
+
+.stripe .inverted_corner:last-of-type {
+    right:0;
+}
+
+.stripe.header .inverted_corner {
+    top: 99%;
+}
+
+.stripe.footer .inverted_corner {
+    bottom: 99%;
+}
+
+.stripe.header .inverted_corner:first-of-type {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+}
+
+.stripe.footer .inverted_corner:first-of-type {
+    transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+}
+
+.stripe.footer .inverted_corner:last-of-type {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}

@@ -6,7 +6,11 @@ interface Props {
 const { title } = Astro.props;
 
 import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import ContactBox from '../components/ContactBox.astro';
+import Footer from '../components/Footer.astro';
 import OQVABadge from '../components/OQVABadge.astro';
+import MailBubble from '../components/MailBubble.astro';
 ---
 
 <!doctype html>
@@ -14,7 +18,15 @@ import OQVABadge from '../components/OQVABadge.astro';
 	<BaseHead title={title}/>
 
 	<body id="home">
-		<slot />
+		<Header/>
+
+		<MailBubble/>
+
+		<slot/>
+
+		<ContactBox/>
+
+		<Footer/>
 
 		<!-- <OQVABadge/> -->
 	</body>

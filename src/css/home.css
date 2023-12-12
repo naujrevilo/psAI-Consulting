@@ -3,8 +3,8 @@ section.intro {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 95vh;
-    min-height: 95svh;
+    min-height: 90vh;
+    min-height: 90svh;
     position: relative;
     margin-bottom: clamp(4rem, 40vw, 22rem);
 }
@@ -24,7 +24,7 @@ section > .ctnr {
     align-items: center;
     width: 100%;
     margin-inline: auto;
-    gap: clamp(2rem, 5vw, 3rem);
+    gap: clamp(2rem, 8vw, 3rem);
 }
 
 section + hr {
@@ -48,17 +48,22 @@ section + hr {
 }
 
 .intro h1 {
-    font-size: clamp(2rem, 8.5vw, 4.3rem);
+    font-size: clamp(2rem, 9.1vw, 6rem);
     font-weight: 700;
     text-align: center;
     line-height: 1.25;
     margin-inline: auto;
-    width: clamp(1rem, var(--pace), 85rem);
+    width: clamp(1rem, 90vw, 105rem);
 }
 
 .intro h1 b, .intro h1 strong {
-    font-weight:inherit;
-    color: var(--secondary-1);
+    font-weight: inherit;
+    color: #604fcd;
+    background-image: -webkit-linear-gradient(-80deg, #3a7de4, #a96fff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
 }
 
 .intro h2 {
@@ -66,14 +71,14 @@ section + hr {
     text-align: center;
     width: clamp(10rem, 75vw, 92rem);
     font-weight: 400;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .intro h2 b, .intro h2 strong {
     font-weight: 600;
 }
 
-.corner.graphic:first-of-type {
+.intro .corner.graphic {
     display: none;
 }
 
@@ -233,7 +238,7 @@ section.default1 > .content {
     flex: 1;
     min-width: clamp(10rem, var(--pace), 40rem);
     max-width: clamp(10rem, var(--pace), 71rem);
-    font-size: clamp(1.8rem, 4.8vw, 2.4rem);
+    font-size: clamp(1.8rem, 4.8vw, 2.3rem);
 }
 
 section.default1 .content p {
@@ -284,20 +289,21 @@ section.default1 .cta {
     -ms-border-radius: 3rem;
     -o-border-radius: 3rem;
     border: 0.1rem solid transparent;
-    transition: border-color 0.4s ease;
-    -webkit-transition: border-color 0.4s ease;
-    -moz-transition: border-color 0.4s ease;
-    -ms-transition: border-color 0.4s ease;
-    -o-transition: border-color 0.4s ease;
+    transition: border-color 0.4s ease, background-color 0.4s ease;
+    -webkit-transition: border-color 0.4s ease, background-color 0.4s ease;
+    -moz-transition: border-color 0.4s ease, background-color 0.4s ease;
+    -ms-transition: border-color 0.4s ease, background-color 0.4s ease;
+    -o-transition: border-color 0.4s ease, background-color 0.4s ease;
 }
 
 .default1 .list li:hover {
     border-color: var(--light-1);
-    transition: border-color 0.1s ease;
-    -webkit-transition: border-color 0.1s ease;
-    -moz-transition: border-color 0.1s ease;
-    -ms-transition: border-color 0.1s ease;
-    -o-transition: border-color 0.1s ease;
+    background-color: rgb(214 219 255 / 50%);
+    transition: border-color 0.1s ease, background-color 0.1s ease;
+    -webkit-transition: border-color 0.1s ease, background-color 0.1s ease;
+    -moz-transition: border-color 0.1s ease, background-color 0.1s ease;
+    -ms-transition: border-color 0.1s ease, background-color 0.1s ease;
+    -o-transition: border-color 0.1s ease, background-color 0.1s ease;
 }
 
 .default1 .list li h3 {
@@ -313,6 +319,10 @@ section.default1 .cta {
     line-height: 1.3;
     color: var(--secondary-1);
     font-weight: 500;
+}
+
+.default1 .list li b, .default1 .list li strong{
+    font-weight: 650;
 }
 
 .g1 {
@@ -416,6 +426,7 @@ section.default2 h2 + p  {
 
 .team_ctnr .profile:hover {
     border-color: var(--light-1);
+    background-color: rgb(214 219 255 / 50%);
     transition: border-color 0.1s ease, transform 0.2s ease, margin-bottom 0s ease;
     -webkit-transition: border-color 0.1s ease, transform 0.2s ease, margin-bottom 0s ease;
     -moz-transition: border-color 0.1s ease, transform 0.2s ease, margin-bottom 0s ease;
@@ -454,9 +465,10 @@ section.default2 h2 + p  {
 
 .team_ctnr .profile .name {
     font-weight: 700;
-    font-size: clamp(1rem, 6vw, 2.6rem);
+    font-size: clamp(1rem, 6vw, 2.4rem);
     line-height: 1;
     margin-bottom: 0.4rem;
+    user-select: none;
 }
 
 .team_ctnr .profile .role {
@@ -465,6 +477,7 @@ section.default2 h2 + p  {
     font-weight: 600;
     max-width: 22rem;
     color: var(--secondary-1);
+    user-select: none;
 }
 
 .team_ctnr .profile .description {
@@ -527,8 +540,8 @@ section.default2 h2 + p  {
 @media screen and (min-width:850px) {
 
     section.intro {
-        min-height: 90vh;
-        min-height: 90dvh;
+        min-height: 85vh;
+        min-height: 85dvh;
     }
 
     .intro .waves {
@@ -543,19 +556,20 @@ section.default2 h2 + p  {
         width: clamp(10rem, 45vw, var(--max-width));
     }
 
-    .intro > .ctnr .logo {
+    /* .intro > .ctnr .logo {
         display: initial;
         width: 24rem;
-    }
+    } */
 
     .intro h1 {
         z-index: 3;
+        width: clamp(1rem, var(--pace), 105rem);
     }
 
-    .corner.graphic:first-of-type {
-        width: clamp(1rem, 25vw, 110rem);
+    .intro .corner.graphic {
+        width: clamp(1rem, 19vw, 110rem);
         position: absolute;
-        top: -0.3rem;
+        top: -12rem;
         left: 0;
         display: block;
     }
@@ -594,21 +608,22 @@ section.default2 h2 + p  {
     }
 
     .team_ctnr .profile {
-        transition: border-color 0.4s ease, transform 0.4s, margin-bottom 0.2s ease, z-index 0.5s step-end;
-        -webkit-transition: border-color 0.4s ease, transform 0.4s, margin-bottom 0.2s ease, z-index 0.5s step-end;
-        -moz-transition: border-color 0.4s ease, transform 0.4s, margin-bottom 0.2s ease, z-index 0.5s step-end;
-        -ms-transition: border-color 0.4s ease, transform 0.4s, margin-bottom 0.2s ease, z-index 0.5s step-end;
-        -o-transition: border-color 0.4s ease, transform 0.4s, margin-bottom 0.2s ease, z-index 0.5s step-end;
+        backdrop-filter: blur(2rem);
+        transition: border-color 0.4s ease, transform 0.8s 0.2s, margin-bottom 0.2s ease, z-index 0.5s step-end, background-color 0.4s ease;
+        -webkit-transition: border-color 0.4s ease, transform 0.8s 0.2s, margin-bottom 0.2s ease, z-index 0.5s step-end, background-color 0.4s ease;
+        -moz-transition: border-color 0.4s ease, transform 0.8s 0.2s, margin-bottom 0.2s ease, z-index 0.5s step-end, background-color 0.4s ease;
+        -ms-transition: border-color 0.4s ease, transform 0.8s 0.2s, margin-bottom 0.2s ease, z-index 0.5s step-end, background-color 0.4s ease;
+        -o-transition: border-color 0.4s ease, transform 0.8s 0.2s, margin-bottom 0.2s ease, z-index 0.5s step-end, background-color 0.4s ease;
 }
 
     .team_ctnr .profile:hover {
-        z-index: 9;
+        z-index: 8;
         margin-bottom: -15rem;
-        transition: margin-bottom 0.7s 0.15s ease, transform 0.2s, z-index 0.5s step-end;
-        -webkit-transition: margin-bottom 0.7s 0.15s ease, transform 0.2s, z-index 0.5s step-end;
-        -moz-transition: margin-bottom 0.7s 0.15s ease, transform 0.2s, z-index 0.5s step-end;
-        -ms-transition: margin-bottom 0.7s 0.15s ease, transform 0.2s, z-index 0.5s step-end;
-        -o-transition: margin-bottom 0.7s 0.15s ease, transform 0.2s, z-index 0.5s step-end;
+        transition: margin-bottom 0.7s 0.15s ease, transform 0.4s, z-index 0.5s step-end, background-color 0.2s ease;
+        -webkit-transition: margin-bottom 0.7s 0.15s ease, transform 0.4s, z-index 0.5s step-end, background-color 0.2s ease;
+        -moz-transition: margin-bottom 0.7s 0.15s ease, transform 0.4s, z-index 0.5s step-end, background-color 0.2s ease;
+        -ms-transition: margin-bottom 0.7s 0.15s ease, transform 0.4s, z-index 0.5s step-end, background-color 0.2s ease;
+        -o-transition: margin-bottom 0.7s 0.15s ease, transform 0.4s, z-index 0.5s step-end, background-color 0.2s ease;
 }
 
     .team_ctnr .profile .description {
@@ -617,14 +632,14 @@ section.default2 h2 + p  {
         -moz-transition:max-height 0.1s ease;
         -ms-transition:max-height 0.1s ease;
         -o-transition:max-height 0.1s ease;
-}
+    }
 
     .team_ctnr .profile:hover .description {
         max-height: 15rem;
-        transition:max-height 0.7s 0.15s ease;
-        -webkit-transition:max-height 0.7s 0.15s ease;
-        -moz-transition:max-height 0.7s 0.15s ease;
-        -ms-transition:max-height 0.7s 0.15s ease;
-        -o-transition:max-height 0.7s 0.15s ease;
-}
+        transition:max-height 0.8s 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        -webkit-transition:max-height 0.8s 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        -moz-transition:max-height 0.8s 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        -ms-transition:max-height 0.8s 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        -o-transition:max-height 0.8s 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }

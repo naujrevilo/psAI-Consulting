@@ -2,9 +2,6 @@
 	import '../css/home.css'
 
 	import Layout from '../layouts/Layout.astro';
-	import Header from '../components/Header.astro';
-	import Footer from '../components/Footer.astro';
-	import ContactBox from '../components/ContactBox.astro';
 	
 	import Logo from '../components/svg/Logo.astro';
 	import LogoWaves from '../components/svg/LogoWaves.astro';
@@ -34,15 +31,13 @@
 <Layout title="psAI Consulting - Unlock the Potential of AI I55ntegration">
 	<script src="../js/gsap.js"></script>
 
-	<div class="graphic corner">
-		<CornerGraphic01/>
-	</div>
-
-	<Header/>
-
 	<main>
-
 		<section class="intro">
+
+			<div class="corner graphic">
+				<CornerGraphic01/>
+			</div>
+
 			<div class="waves big graphic">
 				<Graphic06/>
 			</div>
@@ -52,9 +47,10 @@
 					<LogoText/>
 				</div>
 
-				<h1>Unlock the potential of <strong>AI integration</strong>. Embrace innovation. <b>Define the future.</b></h1>
+				<h1>Unlock the potential of <strong>AI integration</strong>. Embrace innovation. <b>Define the future</b>.</h1>
 
-				<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. <b>Reiciendis animi nam laudantium cumque eius, molestiae voluptatum expedita commodi.</b> Maxime harum incidunt fuga minima laborum impedit obcaecati.</h2>
+				<h2>AI integration through a blend of agility, foresight, and innovation. <b>We navigate the complexities of tomorrow, turning certain uncertainties into opportunities.</b>
+					</h2>
 
 				<div class="graphic_cta">
 					<a href="#the-problem" class="main cta">Discover our Journey</a>
@@ -273,45 +269,68 @@
 				<li>
 					<h3>AI Readiness Analysis</h3>
 
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt similique at excepturi ea, tempora maxime ex pariatur, officia alias, facere amet harum dolor dolore quia nostrum atque nam. Facere, nam.</p>
+					<p>This will assess the current technological infrastructure of the real estate company, including existing hardware, software, and data systems. The goal is to determine how prepared the company is to integrate AI technologies and identify areas in need of upgrade or modification.</p>
 				</li>
 
 				<li>
 					<h3>Market Analysis</h3>
 
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit at ullam. Et cupiditate ut explicabo architecto, in deleniti rem accusantium cumque beatae expedita quod asperiores ab, porro officiis repellat!</p>
+					<p>This will provide an overview of the latest trends in the real estate industry, especially those related to technology and AI. It will benchmark the company against 'best in class' competitors who are effectively using AI, giving insights into their strategies and success stories.</p>
 				</li>
 
 				<li>
 					<h3>Risk Analysis</h3>
 
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, molestiae quisquam? Fugiat eos cupiditate dolorem voluptate tenetur quod adipisci sequi nisi unde a voluptatum laudantium eius alias autem, blanditiis labore.</p>
+					<p><b>Disruption and Opportunity Costs:</b> Here, the potential risks associated with falling behind on AI in the real estate industry will be analyzed. This includes potential market share loss, brand damage and the opportunity costs of not being early to implement AI. This analysis helps in understanding how critical it is for the company to implement AI rapidly.</p>
 				</li>
 
 				<li>
 					<h3>Long List of AI Opportunities</h3>
 
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis corrupti animi beatae, sapiente expedita ut, aperiam dicta eveniet ab, deserunt placeat sequi accusamus doloribus explicabo asperiores obcaecati! Porro, maxime eos!</p>
+					<p><b>Different Possibilities of AI Implementations Available:</b> This comprehensive list will include all possible AI applications relevant to the real estate sector, such as Autonomous agents for households, LLM-powered agentic experiences for buyers in offices, AI-powered home maintenance and management, and more.</p>
 				</li>
 
 				<li>
 					<h3>Shortlist of Opportunities</h3>
 
-					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi nihil, mollitia alias ducimus et ullam delectus aliquid incidunt dignissimos corrupti, expedita similique nisi nulla sed aperiam omnis, laborum est beatae!</p>
+					<p>Prioritization of the Long List and <b>Explanation of Which Opportunities to Pursue First:</b> Based on the company's goals, market position, and readiness, we will prioritize the AI implementation ideas. It will explain why certain opportunities are more viable or beneficial to pursue initially and how they align with the company's strategic objectives.</p>
 				</li>
 
 				<li>
 					<h3>Implementation Plans</h3>
 
-					<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum deleniti voluptatum perferendis eaque cum a porro! Quas cupiditate cumque, impedit obcaecati velit minima dicta laboriosam eum qui! Explicabo, optio sed.</p>
+					<p><b>Technical Implementation Plan and Roadmap for Shortlisted Ideas:</b> Detailed plans for the technical implementation of the chosen AI initiatives. These will include a phased roadmap, resource allocation, timelines, and key milestones. It ensures that the company has a clear and actionable plan for integrating AI into its operations.</p>
 				</li>
 			</ul>
 		</section>
-
-		<hr>
-
-		<ContactBox/>
-
-		<Footer/>
 	</main>
 </Layout>
+
+<script is:inline>
+
+    const contactBox = document.querySelector('section.contact')
+    const contactBts = document.querySelectorAll('.contact_bt')
+    const exitArea = document.querySelector('.exit_area')
+
+    let showingContactBox = false;
+
+    function toggleContactBox() {
+        if(showingContactBox == false) {
+            contactBox.classList.add('show')
+            showingContactBox = true;
+        } else {
+            contactBox.classList.remove('show')
+            showingContactBox = false;
+        }
+    }
+
+    for(let i = 0; i < contactBts.length; i++) {
+        console.log(contactBts[i])
+    }
+
+    for(let i = 0; i < contactBts.length; i++) {
+        contactBts[i].addEventListener('click', toggleContactBox)
+    }
+
+    exitArea.addEventListener('click', toggleContactBox)
+</script>

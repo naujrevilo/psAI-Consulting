@@ -1,44 +1,4 @@
-.stripe {
-    background-color: var(--dark-1);
-    width: 100%;
-    margin-inline: auto;
-    color: var(--grey);
-    position: relative;
-}
 
-.stripe > .ctnr {
-    padding-block: 0.6rem;
-    font-size: clamp(1rem, 4vw, 1.4rem);
-    font-weight: 300;
-    display: flex;
-    justify-content: space-between;
-    line-height: 1;
-    align-items: center;
-}
-
-.stripe a:hover {
-    color: var(--light-1);
-}
-
-.stripe .inverted_corner {
-    width: clamp(2rem, 3vw, 3rem);
-    position: absolute;
-    top: 99%;
-    color: var(--dark-1);
-}
-
-.stripe .inverted_corner:first-of-type {
-    left:0;
-    transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-}
-
-.stripe .inverted_corner:last-of-type {
-    right:0;
-}
 
 header {
     position: fixed;
@@ -58,11 +18,11 @@ header > .ctnr {
     height: 100%;
 }
 
-.logo_anchor {
-    width: clamp(9rem, 27vmin, 11rem);
+header .logo_anchor {
+    width: clamp(9rem, 24vmin, 11rem);
 }
 
-.logo_anchor svg {
+header .logo_anchor svg {
 
 }
 
@@ -153,16 +113,20 @@ header .hambt path {
         display: none;
     }
 
-    header > .ctnr {
-        display: none;
+    header .logo_anchor {
+        position: absolute;
+        width: 5vw;
+        left: 2vw;
+        top: 2.8rem;
     }
 
     nav.header_nav {
         position: sticky;
-        font-size: clamp(1.8rem, 1.2vw, 2.7rem);
+        font-size: clamp(1.8rem, 1.2vw, 2.2rem);
         opacity: 1;
-        top: 3rem;
-        visibility: visible;
+        top: 0;
+        /*margin-top: 2rem;
+        */visibility: visible;
         justify-content: center;
         padding-block: unset;
         flex-direction: row;
@@ -170,9 +134,8 @@ header .hambt path {
         margin-inline: auto;
         left: 0;
         right: 0;
-        padding: clamp(0.9rem, 0.8vw, 1.8rem) clamp(2rem, 4vw, 9rem);
+        padding: clamp(0.9rem, 0.5vw, 1.8rem) clamp(2rem, 4vw, 9rem);
         width: var(--width-1);
-        top: 0;
         border-radius: 0 0 2rem 2rem;
         -webkit-border-radius: 0 0 2rem 2rem;
         -moz-border-radius: 0 0 2rem 2rem;
@@ -180,7 +143,12 @@ header .hambt path {
         -o-border-radius: 0 0 2rem 2rem;
         font-weight: 500;
         transform: unset;
-    }
+        transition: none;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -ms-transition: none;
+        -o-transition: none;
+}
 
     nav.header_nav.show {
         transform: translateY(0);
@@ -188,7 +156,7 @@ header .hambt path {
         -moz-transform: translateY(0);
         -ms-transform: translateY(0);
         -o-transform: translateY(0);
-}
+    }
 
     .header_nav a, .header_nav button {
         padding: 0.75rem clamp(0rem, 3vw, 2.5rem);
@@ -197,20 +165,22 @@ header .hambt path {
         display: flex;
         align-items: center;
         box-sizing: border-box;
-        transition: color 0.3s ease;
+    }
+    
+    nav a, nav button {
         transition: opacity 0.3s ease;
         -webkit-transition: opacity 0.3s ease;
         -moz-transition: opacity 0.3s ease;
         -ms-transition: opacity 0.3s ease;
         -o-transition: opacity 0.3s ease;
     }
-    
-    .header_nav a:hover, .header_nav button:hover {
+
+    nav a:hover, nav button:hover {
         opacity: 0.6;
         transition: opacity 0s ease;
         -webkit-transition: opacity 0s ease;
         -moz-transition: opacity 0s ease;
         -ms-transition: opacity 0s ease;
         -o-transition: opacity 0s ease;
-}
+    }
 }

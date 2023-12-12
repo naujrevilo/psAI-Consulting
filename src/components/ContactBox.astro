@@ -9,28 +9,3 @@
 </section>
 
 <div class="exit_area" role="button" title="close"></div>
-
-<script is:inline>
-
-    const contactBox = document.querySelector('section.contact')
-    const contactBts = document.querySelectorAll('.contact_bt')
-    const exitArea = document.querySelector('.exit_area')
-
-    let showingContactBox = false;
-
-    function toggleContactBox() {
-        if(showingContactBox == false) {
-            contactBox.classList.add('show')
-            showingContactBox = true;
-        } else {
-            contactBox.classList.remove('show')
-            showingContactBox = false;
-        }
-    }
-
-    for(let i = 0; i < contactBts.length; i++) {
-        contactBts[i].addEventListener('click', toggleContactBox)
-    }
-
-    exitArea.addEventListener('click', toggleContactBox)
-</script>

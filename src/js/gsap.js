@@ -4,18 +4,18 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const anim01 = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".intro",
-        start: "top top",
-        end: "+=1500",
-        scrub: 6,
-        pin: false,
-        markers:false,
-    }
-});
+// const anim01 = gsap.timeline({
+//     scrollTrigger: {
+//         trigger: "#deliverables",
+//         start: "top top",
+//         end: "+=1500",
+//         scrub: 1,
+//         pin: true,
+//         markers:false,
+//     }
+// });
 
-// anim01.from(".graphic", {y: 1300, rotation: -20, scale:1, duration: 1, ease: "power1.out",})
+// anim01.from(".default1 .list li", {x: 1300, opacity:0, duration: 1, ease: "power1.out",})
 
 const graphics = document.querySelectorAll('.graphic, .logo')
 
