@@ -109,14 +109,14 @@ section + hr {
             -moz-transform: scale3D(1, 1, 1);
             -ms-transform: scale3D(1, 1, 1);
             -o-transform: scale3D(1, 1, 1);
-}   14% {
+}   12% {
             opacity:0.4;
-            transform: scale3D(0.8, 0.8, 1);
-            -webkit-transform: scale3D(0.8, 0.8, 1);
-            -moz-transform: scale3D(0.8, 0.8, 1);
-            -ms-transform: scale3D(0.8, 0.8, 1);
-            -o-transform: scale3D(0.8, 0.8, 1);
-    }   25% {
+            transform: scale3D(0.95, 0.95, 1);
+            -webkit-transform: scale3D(0.95, 0.95, 1);
+            -moz-transform: scale3D(0.95, 0.95, 1);
+            -ms-transform: scale3D(0.95, 0.95, 1);
+            -o-transform: scale3D(0.95, 0.95, 1);
+}   25% {
             opacity:1;
             transform: scale3D(1, 1, 1);
             -webkit-transform: scale3D(1, 1, 1);
@@ -130,21 +130,21 @@ section + hr {
             -moz-transform: scale3D(0.8, 1, 1);
             -ms-transform: scale3D(0.8, 1, 1);
             -o-transform: scale3D(0.8, 1, 1);
-}   65% {
+}   75% {
             opacity: 1;
             transform: scale3D(1, 1, 1);
             -webkit-transform: scale3D(1, 1, 1);
             -moz-transform: scale3D(1, 1, 1);
             -ms-transform: scale3D(1, 1, 1);
             -o-transform: scale3D(1, 1, 1);
-    }  80% {
+}  80% {
             opacity: 1;
-            transform: scale3D(0.90, 0.90, 1);
-            -webkit-transform: scale3D(0.90, 0.90, 1);
-            -moz-transform: scale3D(0.90, 0.90, 1);
-            -ms-transform: scale3D(0.90, 0.90, 1);
-            -o-transform: scale3D(0.90, 0.90, 1);
-    }   100% {
+            transform: scale3D(1, 0.95, 1);
+            -webkit-transform: scale3D(1, 0.95, 1);
+            -moz-transform: scale3D(1, 0.95, 1);
+            -ms-transform: scale3D(1, 0.95, 1);
+            -o-transform: scale3D(1, 0.95, 1);
+}   100% {
             opacity: 1;
             transform: scale3D(1, 1, 1);
             -webkit-transform: scale3D(1, 1, 1);
