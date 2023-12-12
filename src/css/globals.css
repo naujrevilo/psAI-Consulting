@@ -16,7 +16,7 @@ html.sr .reveal, html.sr .slow_reveal {
     --secondary-1:#513e6b;
     --secondary-2:#857695;
 
-    --highlight-gradient:linear-gradient(-80deg, #3a7de4, #a96fff);
+    --highlight-gradient:linear-gradient(-30deg, #00b599, #a96fff);
 
     --max-width: 120rem;
     --pace:81vw;

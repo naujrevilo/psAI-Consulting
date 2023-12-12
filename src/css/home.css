@@ -54,6 +54,7 @@ section + hr {
     line-height: 1.25;
     margin-inline: auto;
     width: clamp(1rem, 90vw, 105rem);
+    user-select: none;
 }
 
 .intro h1 b, .intro h1 strong {
