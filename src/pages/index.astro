@@ -8,6 +8,7 @@
 	import LogoText from '../components/svg/LogoText.astro';
 
 	import Graphic01 from '../components/svg/graphics/Graphic01.astro';
+	import ProblemGraphic from '../components/svg/graphics/ProblemGraphic.astro';
 	import Graphic02 from '../components/svg/graphics/Graphic02.astro';
 	import Graphic03 from '../components/svg/graphics/Graphic03.astro';
 	import Graphic04 from '../components/svg/graphics/Graphic04.astro';
@@ -26,6 +27,13 @@
 	import NdaliLiitaCairney from "../assets/team/ndali-liita-cairney.jpg";
 	import RayhanBeebeejaun from "../assets/team/rayhan.beebeejaun.jpg";
 	import TsvetelinAnastasov from "../assets/team/tsvetelin-anastasov.jpg";
+
+	import Analysis from '../components/svg/icons/Analysis.astro'
+	import Chart from '../components/svg/icons/Chart.astro'
+	import HeartBeat from '../components/svg/icons/HeartBeat.astro'
+	import Idea from '../components/svg/icons/Idea.astro'
+	import List from '../components/svg/icons/List.astro'
+	import Strategy from '../components/svg/icons/Strategy.astro'
 ---
 
 <Layout title="psAI Consulting - Unlock the Potential of AI I55ntegration">
@@ -52,9 +60,9 @@
 				<h2>AI integration through a blend of agility, foresight, and innovation. <b>We navigate the complexities of tomorrow, turning certain uncertainties into opportunities.</b>
 					</h2>
 
-				<div class="graphic_cta">
-					<a href="#the-problem" class="main cta">Discover our Journey</a>
-					<!-- <Graphic04/> -->
+				<div class="cta_ctnr flex">
+					<a href="#the-problem" class="cta dark">The Problem with AI</a>
+					<button type="button" class="main cta contact_bt">Get in Touch</button>
 				</div>
 
 				<!-- <div class="graphic g1">
@@ -65,8 +73,8 @@
 		</section>
 
 		<section id="the-problem" class="default1">
-			<div class="big graphic g3">
-				<Graphic02/>
+			<div class="big graphic">
+				<ProblemGraphic/>
 			</div>
 
 			<div class="content">
@@ -257,7 +265,7 @@
 				<p class="minor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta voluptate quas non eius architecto? <b>Laudantium, nisi recusandae.</b> Veniam corrupti vitae asperiores quidem blanditiis? Consequatur magni recusandae nostrum! Aspernatur, qui dolores?</p>
 
 				<div class="graphic_cta">
-					<button type="button" class="main cta dark contact_bt">Contact Us</button>
+					<button type="button" class="main cta highlight contact_bt">Contact Us</button>
 
 					<div class="graphic">
 						<Graphic07/>
@@ -267,37 +275,37 @@
 
 			<ul class="list">
 				<li>
-					<h3>AI Readiness Analysis</h3>
+					<h3><Analysis/>AI Readiness Analysis</h3>
 
 					<p>This will assess the current technological infrastructure of the real estate company, including existing hardware, software, and data systems. The goal is to determine how prepared the company is to integrate AI technologies and identify areas in need of upgrade or modification.</p>
 				</li>
 
 				<li>
-					<h3>Market Analysis</h3>
+					<h3><Chart/>Market Analysis</h3>
 
 					<p>This will provide an overview of the latest trends in the real estate industry, especially those related to technology and AI. It will benchmark the company against 'best in class' competitors who are effectively using AI, giving insights into their strategies and success stories.</p>
 				</li>
 
 				<li>
-					<h3>Risk Analysis</h3>
+					<h3><HeartBeat/>Risk Analysis</h3>
 
 					<p><b>Disruption and Opportunity Costs:</b> Here, the potential risks associated with falling behind on AI in the real estate industry will be analyzed. This includes potential market share loss, brand damage and the opportunity costs of not being early to implement AI. This analysis helps in understanding how critical it is for the company to implement AI rapidly.</p>
 				</li>
 
 				<li>
-					<h3>Long List of AI Opportunities</h3>
+					<h3><Idea/>Long List of AI Opportunities</h3>
 
 					<p><b>Different Possibilities of AI Implementations Available:</b> This comprehensive list will include all possible AI applications relevant to the real estate sector, such as Autonomous agents for households, LLM-powered agentic experiences for buyers in offices, AI-powered home maintenance and management, and more.</p>
 				</li>
 
 				<li>
-					<h3>Shortlist of Opportunities</h3>
+					<h3><List/>Shortlist of Opportunities</h3>
 
 					<p>Prioritization of the Long List and <b>Explanation of Which Opportunities to Pursue First:</b> Based on the company's goals, market position, and readiness, we will prioritize the AI implementation ideas. It will explain why certain opportunities are more viable or beneficial to pursue initially and how they align with the company's strategic objectives.</p>
 				</li>
 
 				<li>
-					<h3>Implementation Plans</h3>
+					<h3><Strategy/>Implementation Plans</h3>
 
 					<p><b>Technical Implementation Plan and Roadmap for Shortlisted Ideas:</b> Detailed plans for the technical implementation of the chosen AI initiatives. These will include a phased roadmap, resource allocation, timelines, and key milestones. It ensures that the company has a clear and actionable plan for integrating AI into its operations.</p>
 				</li>

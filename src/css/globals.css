@@ -9,13 +9,14 @@ html.sr .reveal, html.sr .slow_reveal {
     --dark:#30253f;
     --dark-1:#201c25;
 
-    --grey:#857695;
-
     --primary:#58f9d2;
     --primary-1:#58f9a4;
 
     --secondary:#d2a5ff;
     --secondary-1:#513e6b;
+    --secondary-2:#857695;
+
+    --highlight-gradient:linear-gradient(-80deg, #3a7de4, #a96fff);
 
     --max-width: 120rem;
     --pace:81vw;
@@ -128,23 +129,22 @@ body::before {
     display: block;
     text-align: center;
     width: fit-content;
-    padding: clamp(0.7rem, 4vw, 1.6rem) clamp(1.6rem, 8vw, 4.3rem);
     background-color: var(--light);
-    border-radius: 20rem;
     box-shadow: inset -1rem -1rem 1.5rem -1.2rem var(--secondary), inset 1rem 1rem 1.5rem -1.2rem var(--primary);
 }
 
-.main.cta.dark {
+.main.cta.highlight {
     background-color: var(--secondary-1);
-    color: var(--light);
-    font-weight: 300;
-    box-shadow: inset -1rem -1rem 1.5rem -1.2rem #9a51e2, inset 0.7rem 1.3rem 1.5rem -1.2rem #3d8e7a;
+    background-image: var(--highlight-gradient);
 }
 
 .cta {
+    padding: clamp(0.7rem, 4vw, 1.6rem) clamp(1.6rem, 11vmin, 4.3rem);
+    font-weight: 300;
+    border-radius: 20rem;
     display: block;
     color: var(--secondary-1);
-    font-weight: 650;
+    font-weight: 600;
     font-size: clamp(1.5rem, 4.8vw, 2.1rem);
     line-height: 1;
     position: relative;
@@ -153,6 +153,13 @@ body::before {
     -moz-transition: filter 0.4s ease;
     -ms-transition: filter 0.4s ease;
     -o-transition: filter 0.4s ease;
+}
+
+.cta.dark {
+    box-shadow: inset -1rem -1rem 1.5rem -1.2rem var(--secondary), inset 1rem 1rem 1.5rem -1.2rem var(--primary);
+    background-color: var(--dark);
+    color: var(--light);
+    font-weight: 300;
 }
 
 .cta:hover {
@@ -190,29 +197,32 @@ body::before {
     overflow: visible;
 }
 
-.fixed_bubble {
+.behing_bubble {
     position: fixed;
     right: 0;
     bottom: 0;
-    z-index: 2;
-    width: clamp(2rem, 30vw, 14rem);
-    height: clamp(2rem, 30vw, 14rem);
+    width: clamp(2rem, 30vmin, 25rem);
+    height: clamp(2rem, 30vmin, 25rem);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.fixed_bubble .graphic {
+.behing_bubble svg {
     position: absolute;
     left: 0;
     top: 0;
     width: 200%;
     height: 200%;
     overflow: hidden;
+    pointer-events: none;
 }
 
 .mail_bubble {
-    position: relative;
+    z-index: 7;
+    position: fixed;
+    right: clamp(2rem, 6vmin, 90rem);
+    bottom: clamp(2rem, calc(4vmin + 2.5rem), 90rem);
     width: clamp(1rem, 15vw, 6rem);
     height: clamp(1rem, 15vw, 6rem);
     border-radius: 50%;
@@ -252,6 +262,15 @@ body::before {
 
 
 
+
+
+
+
+
+
+
+
+
 @media screen and (min-width:800px) {
     .mobile_hidden {
         display: inherit;
@@ -259,6 +278,11 @@ body::before {
 
     body {
         border-left: 0.7rem solid var(--light);
+    }
+
+    .fixed_bubble {
+        width: clamp(2rem, 30vmin, 25rem);
+        height: clamp(2rem, 30vmin, 25rem);
     }
 }
 

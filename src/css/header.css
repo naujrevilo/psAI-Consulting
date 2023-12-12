@@ -1,25 +1,18 @@
-
-
 header {
-    position: fixed;
     position: absolute;
-    width: 100%;
+    /* width: 100%; */
     height: var(--header-height);
     color: var(--light);
     z-index: 7;
-    left: 0;
-    right: 0;
-}
-
-header > .ctnr {
+    left: var(--corner-width1);
+    top: 4rem;
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    height: 100%;
+    align-items: center;
 }
 
 header .logo_anchor {
-    width: clamp(9rem, 24vmin, 11rem);
+    display: block;
+    width: clamp(9rem, 21vmin, 11rem);
 }
 
 header .logo_anchor svg {
@@ -51,6 +44,16 @@ header .logo_anchor svg {
     text-align: center;
 }
 
+.header_nav .contact_bt {
+    width: fit-content;
+    margin-inline: auto;
+    background-color: var(--light);
+    padding: 0.8rem 3rem;
+    border-radius: 3rem;
+    margin-top: 0.8rem;
+    box-shadow: inset -1rem -1rem 1.5rem -1.2rem var(--secondary), inset 1rem 1rem 1.5rem -1.2rem var(--primary);
+}
+
 .header_nav a, .header_nav button {
     padding-block: 1.6rem;
 }
@@ -61,15 +64,15 @@ nav.show {
 }
 
 .hambt {
-    color: var(--secondary-1);
-    height: 50%;
-    display: block;
-    z-index: 9;
     position: sticky;
-    right: clamp(1rem, calc((100% - var(--width-1)) / 2), 4rem);
-    top: 3rem;
+    top: 1rem;
+    right: var(--corner-width1);
+    height: var(--header-height);
+    z-index: 8;
+    width: fit-content;
     margin-left: auto;
-    margin-top: 3rem;
+    display: block;
+    margin-top: 1.5rem;
 }
 
 .hambt.active {
@@ -106,27 +109,25 @@ header .hambt path {
 @media screen and (min-width: 1150px) {
 
     header {
-        height: unset;
+        height: 6rem;
+        position: absolute;
+        width: 5vw;
+        left: 2vw;
+        top: 5rem;
+        align-items: end;
     }
 
     .hambt {
         display: none;
     }
 
-    header .logo_anchor {
-        position: absolute;
-        width: 5vw;
-        left: 2vw;
-        top: 2.8rem;
-    }
-
     nav.header_nav {
+        border-top: unset;
         position: sticky;
         font-size: clamp(1.8rem, 1.2vw, 2.2rem);
         opacity: 1;
         top: 0;
-        /*margin-top: 2rem;
-        */visibility: visible;
+        visibility: visible;
         justify-content: center;
         padding-block: unset;
         flex-direction: row;
@@ -134,7 +135,9 @@ header .hambt path {
         margin-inline: auto;
         left: 0;
         right: 0;
-        padding: clamp(0.9rem, 0.5vw, 1.8rem) clamp(2rem, 4vw, 9rem);
+        padding: unset;
+        height: 6rem;
+        align-items: center;
         width: var(--width-1);
         border-radius: 0 0 2rem 2rem;
         -webkit-border-radius: 0 0 2rem 2rem;
@@ -148,7 +151,7 @@ header .hambt path {
         -moz-transition: none;
         -ms-transition: none;
         -o-transition: none;
-}
+    }
 
     nav.header_nav.show {
         transform: translateY(0);
@@ -166,21 +169,29 @@ header .hambt path {
         align-items: center;
         box-sizing: border-box;
     }
+
+    .header_nav .contact_bt {
+        margin-inline: unset;
+        margin-top: unset;
+        height: 100%;
+        border-radius: 0;
+        box-shadow: unset;
+    }
     
     nav a, nav button {
-        transition: opacity 0.3s ease;
-        -webkit-transition: opacity 0.3s ease;
-        -moz-transition: opacity 0.3s ease;
-        -ms-transition: opacity 0.3s ease;
-        -o-transition: opacity 0.3s ease;
+        transition: color 0.3s ease;
+        -webkit-transition: color 0.3s ease;
+        -moz-transition: color 0.3s ease;
+        -ms-transition: color 0.3s ease;
+        -o-transition: color 0.3s ease;
     }
 
     nav a:hover, nav button:hover {
-        opacity: 0.6;
-        transition: opacity 0s ease;
-        -webkit-transition: opacity 0s ease;
-        -moz-transition: opacity 0s ease;
-        -ms-transition: opacity 0s ease;
-        -o-transition: opacity 0s ease;
+        color: var(--secondary-2);
+        transition: color 0s ease;
+        -webkit-transition: color 0s ease;
+        -moz-transition: color 0s ease;
+        -ms-transition: color 0s ease;
+        -o-transition: color 0s ease;
     }
 }

@@ -3,14 +3,14 @@ section.intro {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 90vh;
-    min-height: 90svh;
+    min-height: 85vh;
+    min-height: 85svh;
     position: relative;
     margin-bottom: clamp(4rem, 40vw, 22rem);
 }
 
 section {
-    scroll-margin-top: var(--header-height);
+    scroll-margin-top: calc(var(--header-height) + 6vw);
 }
 
 p {
@@ -48,7 +48,7 @@ section + hr {
 }
 
 .intro h1 {
-    font-size: clamp(2rem, 9.1vw, 6rem);
+    font-size: clamp(2rem, 9.1vmin, 6rem);
     font-weight: 700;
     text-align: center;
     line-height: 1.25;
@@ -59,7 +59,7 @@ section + hr {
 .intro h1 b, .intro h1 strong {
     font-weight: inherit;
     color: #604fcd;
-    background-image: -webkit-linear-gradient(-80deg, #3a7de4, #a96fff);
+    background-image: var(--highlight-gradient);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -67,9 +67,9 @@ section + hr {
 }
 
 .intro h2 {
-    font-size: clamp(1.6rem, 4.2vw, 2.4rem);
+    font-size: clamp(1.6rem, 4.2vw, 2.6rem);
     text-align: center;
-    width: clamp(10rem, 75vw, 92rem);
+    width: clamp(10rem, 75vw, 97rem);
     font-weight: 400;
     line-height: 1.5;
 }
@@ -84,6 +84,13 @@ section + hr {
 
 .intro .corner.graphic .pulse {
     transform-origin: top left;
+}
+
+.intro .cta_ctnr.flex {
+    flex-flow: row wrap;
+    gap: clamp(1rem, 4vw, 2rem);
+    max-width: 88vw;
+    justify-content: center;
 }
 
 @keyframes pulse_wave {
@@ -102,12 +109,12 @@ section + hr {
         -ms-transform: scale3D(0.9, 0.9, 1);
         -o-transform: scale3D(0.9, 0.9, 1);
 }   15% {
-        opacity:0.4;
-        transform: scale3D(0.98, 0.98, 1);
-        -webkit-transform: scale3D(0.98, 0.98, 1);
-        -moz-transform: scale3D(0.98, 0.98, 1);
-        -ms-transform: scale3D(0.98, 0.98, 1);
-        -o-transform: scale3D(0.98, 0.98, 1);
+        opacity:0.3;
+        transform: scale3D(0.8, 0.8, 1);
+        -webkit-transform: scale3D(0.8, 0.8, 1);
+        -moz-transform: scale3D(0.8, 0.8, 1);
+        -ms-transform: scale3D(0.8, 0.8, 1);
+        -o-transform: scale3D(0.8, 0.8, 1);
 }   20% {
         opacity:1;
         transform: scale3D(0.93, 0.93, 1);
@@ -122,27 +129,27 @@ section + hr {
         -moz-transform: scale3D(1.1, 1.1, 1);
         -ms-transform: scale3D(1.1, 1.1, 1);
         -o-transform: scale3D(1.1, 1.1, 1);
-}   50% {
+}   65% {
         opacity: 1;
-        transform: scale3D(0.85, 0.85, 1);
-        -webkit-transform: scale3D(0.85, 0.85, 1);
-        -moz-transform: scale3D(0.85, 0.85, 1);
-        -ms-transform: scale3D(0.85, 0.85, 1);
-        -o-transform: scale3D(0.85, 0.85, 1);
-}    70% {
+        transform: scale3D(1, 1, 1) rotateY(360deg);
+        -webkit-transform: scale3D(1, 1, 1) rotateY(360deg);
+        -moz-transform: scale3D(1, 1, 1) rotateY(360deg);
+        -ms-transform: scale3D(1, 1, 1) rotateY(360deg);
+        -o-transform: scale3D(1, 1, 1) rotateY(360deg);
+}  80% {
         opacity: 1;
-        transform: scale3D(0.9, 0.9, 1);
-        -webkit-transform: scale3D(0.9, 0.9, 1);
-        -moz-transform: scale3D(0.9, 0.9, 1);
-        -ms-transform: scale3D(0.9, 0.9, 1);
-        -o-transform: scale3D(0.9, 0.9, 1);
+        transform: scale3D(0.90, 0.90, 1) rotateY(360deg);
+        -webkit-transform: scale3D(0.90, 0.90, 1) rotateY(360deg);
+        -moz-transform: scale3D(0.90, 0.90, 1) rotateY(360deg);
+        -ms-transform: scale3D(0.90, 0.90, 1) rotateY(360deg);
+        -o-transform: scale3D(0.90, 0.90, 1) rotateY(360deg);
 }   100% {
         opacity: 1;
-        transform: scale3D(1, 1, 1);
-        -webkit-transform: scale3D(1, 1, 1);
-        -moz-transform: scale3D(1, 1, 1);
-        -ms-transform: scale3D(1, 1, 1);
-        -o-transform: scale3D(1, 1, 1);
+        transform: scale3D(1, 1, 1) rotateY(360deg);
+        -webkit-transform: scale3D(1, 1, 1) rotateY(360deg);
+        -moz-transform: scale3D(1, 1, 1) rotateY(360deg);
+        -ms-transform: scale3D(1, 1, 1) rotateY(360deg);
+        -o-transform: scale3D(1, 1, 1) rotateY(360deg);
 }
 }
 
@@ -177,8 +184,12 @@ section + hr {
     transform-origin: 60% 60%;
 }
 
-#the-problem .g3 .pulse {
-    transform-origin: bottom left;
+#the-problem .big.graphic .pulse {
+    transform-origin: 40% 90%;
+}
+
+.graphic_cta .pulse {
+    transform-origin: center;
 }
 
 #why-psai .g4 .pulse {
@@ -258,7 +269,7 @@ section.default1 p.minor {
 }
 
 section.default1 > .graphic {
-    width: clamp(9rem, 55vw, 38rem);
+    width: clamp(9rem, 55vmin, 38rem);
 }
 
 section .big.graphic .pulse {
@@ -314,6 +325,15 @@ section.default1 .cta {
     color: var(--secondary-1);
 }
 
+.default1 .list li h3 svg {
+    color: var(--secondary-1);
+    position: absolute;
+    left: 0;
+    transform: translate(-50%, 0%);
+    width: 2.8rem;
+    height: 2.8rem;
+}
+
 .default1 .list li p {
     font-size: clamp(0.7rem, 4vw, 1.8rem);
     line-height: 1.3;
@@ -357,10 +377,6 @@ section.default1 .cta {
 
 #the-team .heading.graphic .pulse {
     transform-origin: 60% 30%;
-}
-
-section.default2 {
-    scroll-margin-top: calc(var(--header-height) + 2rem);
 }
 
 section.default2 > .content {
@@ -578,7 +594,6 @@ section.default2 h2 + p  {
         justify-content: space-between;
         align-items: center;
         flex-flow: row wrap;
-        scroll-margin-top: calc(var(--header-height) + 2rem);
     }
 
     section.default1.bullets {
@@ -598,10 +613,10 @@ section.default2 h2 + p  {
         flex-flow: row-reverse wrap;
     }
 
-    .pulse {
+    .pulse, section .big.graphic .pulse {
         animation: pulse_wave 10s ease infinite;
         -webkit-animation: pulse_wave 10s ease infinite;
-    }
+}
 
     .team_ctnr {
         gap: 4rem;

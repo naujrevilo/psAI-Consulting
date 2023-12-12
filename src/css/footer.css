@@ -40,14 +40,20 @@ footer .about {
     gap: 1rem;
 }
 
+footer .about b, footer .about strong {
+    font-weight: 600;
+    color: var(--secondary-1);
+}
+
 footer nav {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    font-size: clamp(1.8rem, 5vw, 2rem);
+    font-size: clamp(1.6rem, 5vw, 1.8rem);
     font-weight: 500;
     min-width: 20rem;
+    color: var(--secondary-1);
 }
 
 footer nav a {
@@ -68,12 +74,12 @@ footer nav a {
         -moz-transform: translateX(-29%);
         -ms-transform: translateX(-29%);
         -o-transform: translateX(-29%);
-}
+    }
 
     footer .about {
         text-align: left;
         align-items: baseline;
-        width: clamp(5rem, 30vw, 40rem);
+        width: clamp(5rem, 35vw, 45rem);
     }
 
     footer nav {
