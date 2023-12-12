@@ -55,14 +55,31 @@ footer nav {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    font-size: clamp(1.6rem, 5vw, 1.8rem);
-    font-weight: 500;
+    font-size: clamp(1.5rem, 5.2vw, 2.1rem);
+    font-weight: 550;
     min-width: 20rem;
     color: var(--secondary-1);
 }
 
 footer nav a {
-    padding-block: 0.6rem;
+    padding-block: 0.8rem;
+    position: relative;
+}
+
+footer nav .contact_bt {
+    padding: 0.7rem 2.5rem;
+    background-color: var(--light);
+    border-radius: 4rem;
+    margin-top: 1rem;
+}
+
+footer nav a .worm {
+    position: absolute;
+    width: 4rem;
+    bottom: 0.6rem;
+    left: -1rem;
+    color: var(--light);
+    z-index: -1;
 }
 
 
@@ -90,5 +107,6 @@ footer nav a {
     footer nav {
         text-align: right;
         align-items: end;
+        font-size: clamp(1.5rem, 5.2vw, 1.9rem);
     }
 }
