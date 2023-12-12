@@ -227,6 +227,7 @@ body::before {
     bottom: clamp(2rem, calc(4vmin + 2.5rem), 90rem);
     width: clamp(1rem, 15vw, 6rem);
     height: clamp(1rem, 15vw, 6rem);
+    border: 0.1rem solid var(--light);
     border-radius: 50%;
     background-color: var(--light);
     color: var(--secondary-1);
