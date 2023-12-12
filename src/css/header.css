@@ -34,11 +34,11 @@ header .logo_anchor svg {
     padding: 4rem var(--corner-width1) 5rem;
     box-sizing: border-box;
     font-size: clamp(1.5rem, 4.8vw, 2.1rem);
-    font-weight: 600;
+    font-weight: 700;
     max-height: 75vh;
     overflow-y: auto;
     z-index: 9;
-    color: var(--dark);
+    color: var(--secondary-1);
     border-radius: clamp(2rem, 3vw, 5rem);
     border: 0.1rem solid var(--light-1);
     text-align: center;
@@ -144,7 +144,7 @@ header .hambt path {
         -moz-border-radius: 0 0 2rem 2rem;
         -ms-border-radius: 0 0 2rem 2rem;
         -o-border-radius: 0 0 2rem 2rem;
-        font-weight: 500;
+        font-weight: 550;
         transform: unset;
         transition: none;
         -webkit-transition: none;

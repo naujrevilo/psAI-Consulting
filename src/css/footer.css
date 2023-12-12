@@ -29,6 +29,10 @@ footer .logo {
     -o-transform: translateX(-10%);
 }
 
+footer .logo .pulse {
+    transform-origin: center;
+}
+
 footer .about {
     max-width: 91%;
     font-size: clamp(0.7rem, 4vw, 1.8rem);
