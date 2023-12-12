@@ -30,10 +30,10 @@ header .logo_anchor svg {
     display: flex;
     flex-direction: column;
     background-color: rgb(214 219 255 / 85%);
-    backdrop-filter: blur(0.4rem);
+    backdrop-filter: blur(0.8rem);
     padding: 4rem var(--corner-width1) 5rem;
     box-sizing: border-box;
-    font-size: clamp(1.5rem, 7vw, 4.2rem);
+    font-size: clamp(1.5rem, 4.8vw, 2.1rem);
     font-weight: 600;
     max-height: 75vh;
     overflow-y: auto;

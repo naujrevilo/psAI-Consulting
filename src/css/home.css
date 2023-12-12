@@ -3,8 +3,8 @@ section.intro {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 85vh;
-    min-height: 85svh;
+    min-height: 80vh;
+    min-height: 80svh;
     position: relative;
     margin-bottom: clamp(4rem, 40vw, 22rem);
 }
@@ -473,9 +473,9 @@ section.default2 h2 + p  {
 
 .team_ctnr .profile .worm {
     color: var(--light);
-    width: 6rem;
+    width: 5rem;
     position: absolute;
-    bottom: -0.9rem;
+    bottom: -0.4rem;
     left: 0;
 }
 
