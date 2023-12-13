@@ -226,7 +226,7 @@ section.default1 h2 {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 1.8rem;
+    gap: 0.8rem;
     margin-bottom: 1.8rem;
 }
 
