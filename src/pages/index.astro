@@ -335,6 +335,8 @@ function toggleNav() {
     hamBt.classList.toggle('active', showingNav);
     nav.classList.toggle("show", showingNav);
     toggleExitArea();
+	
+    controlPathAnimation(showingNav ? 'paused' : 'running');
 
     if (showingContactBox) {
         toggleContactBox();
