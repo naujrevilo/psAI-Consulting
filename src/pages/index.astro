@@ -264,7 +264,7 @@
 				<p class="minor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta voluptate quas non eius architecto? <b>Laudantium, nisi recusandae.</b> Veniam corrupti vitae asperiores quidem blanditiis? Consequatur magni recusandae nostrum! Aspernatur, qui dolores?</p>
 
 				<div class="graphic_cta">
-					<button type="button" class="main cta highlight contact_bt">Contact Us</button>
+					<button type="button" class="main cta highlight contact_bt">Get in Touch</button>
 
 					<div class="graphic">
 						<Graphic07/>
@@ -314,30 +314,73 @@
 </Layout>
 
 <script is:inline>
+    const header = document.querySelector('header');
+const hamBt = document.querySelector(".hambt");
+const nav = document.querySelector(".header_nav");
+const navBts = document.querySelectorAll(".header_nav a, .header_nav button");
+const exitArea = document.querySelector('.exit_area');
+const contactBox = document.querySelector('section.contact');
+const contactBts = document.querySelectorAll('.contact_bt');
+const pulsePaths = document.querySelectorAll('.pulse');
 
-    const contactBox = document.querySelector('section.contact')
-    const contactBts = document.querySelectorAll('.contact_bt')
-    const exitArea = document.querySelector('.exit_area')
+let showingNav = false;
+let showingContactBox = false;
 
-    let showingContactBox = false;
+function toggleExitArea() {
+    exitArea.classList.toggle('show', showingContactBox || showingNav);
+}
 
-    function toggleContactBox() {
-        if(showingContactBox == false) {
-            contactBox.classList.add('show')
-            showingContactBox = true;
-        } else {
-            contactBox.classList.remove('show')
-            showingContactBox = false;
-        }
+function toggleNav() {
+    showingNav = !showingNav;
+    hamBt.classList.toggle('active', showingNav);
+    nav.classList.toggle("show", showingNav);
+    toggleExitArea();
+
+    if (showingContactBox) {
+        toggleContactBox();
     }
+}
 
-    for(let i = 0; i < contactBts.length; i++) {
-        console.log(contactBts[i])
+function controlPathAnimation(state) {
+    pulsePaths.forEach(path => path.style.animationPlayState = state);
+}
+
+function toggleContactBox() {
+    showingContactBox = !showingContactBox;
+    contactBox.classList.toggle('show', showingContactBox);
+    controlPathAnimation(showingContactBox ? 'paused' : 'running');
+    toggleExitArea();
+}
+
+hamBt.addEventListener("click", toggleNav);
+
+if (window.matchMedia('(max-width:850px)').matches) {
+    navBts.forEach(btn => {
+        btn.addEventListener("click", () => {
+            toggleNav();
+            if (showingContactBox) {
+                toggleContactBox();
+            }
+        });
+    });
+}
+
+window.addEventListener("scroll", () => {
+    if (showingNav) {
+        toggleNav();
     }
+});
 
-    for(let i = 0; i < contactBts.length; i++) {
-        contactBts[i].addEventListener('click', toggleContactBox)
+contactBts.forEach(btn => {
+    btn.addEventListener('click', toggleContactBox);
+});
+
+exitArea.addEventListener('click', () => {
+    if (showingContactBox) {
+        toggleContactBox();
+    } else if (showingNav) {
+        toggleNav();
     }
+});
 
-    exitArea.addEventListener('click', toggleContactBox)
 </script>

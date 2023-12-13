@@ -125,7 +125,7 @@ header .hambt path {
     nav.header_nav {
         border-top: unset;
         position: sticky;
-        font-size: clamp(1.8rem, 1.2vw, 2.2rem);
+        font-size: clamp(1.8rem, 1.15vw, 2.2rem);
         opacity: 1;
         top: 0;
         visibility: visible;
@@ -139,7 +139,7 @@ header .hambt path {
         padding: unset;
         height: 6rem;
         align-items: center;
-        width: var(--width-1);
+        width: clamp(15rem, 75vw, var(--max-width));
         border-radius: 0 0 2rem 2rem;
         -webkit-border-radius: 0 0 2rem 2rem;
         -moz-border-radius: 0 0 2rem 2rem;

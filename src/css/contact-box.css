@@ -60,19 +60,19 @@ section.contact h3 {
     margin-inline: auto;
     font-size: clamp(3.5rem, 5vw, 4rem);
     color: var(--secondary-1);
-    margin-bottom: 2rem;
+    margin-bottom: 0.4rem;
     font-weight: 700;
 }
 
-section.contact.show + .exit_area {
+section.contact h3 + a {
+    text-align: center;
+    margin-inline: auto;
     display: block;
-    backdrop-filter: blur(0.2rem);
-}
-
-.exit_area {
-    position: fixed;
-    inset:0;
-    z-index: 7;
-    display: none;
-    cursor: alias;
+    margin-bottom: 2rem;
+    font-size: clamp(1.2rem, 3.5vw, 1.4rem);
+    color: var(--secondary-2);
+    background-color: var(--light);
+    border-radius: 2rem;
+    width: fit-content;
+    padding: 0.2rem 1rem;
 }

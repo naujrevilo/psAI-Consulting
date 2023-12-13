@@ -34,48 +34,4 @@
 </nav>
 
 <script is:inline>
-    const header = document.querySelector('header')
-    const hamBt = document.querySelector(".hambt");
-    const nav = document.querySelector(".header_nav");
-    const navBts = document.querySelectorAll(".header_nav a, .header_nav button");
-
-    let showingNav = false;
-
-    function toggleNav() {
-        if (showingNav == false) {
-			hamBt.classList.add('active')
-            nav.classList.add("show");
-
-            showingNav = true;
-        } else {
-			hamBt.classList.remove('active')
-            nav.classList.remove("show");
-
-            showingNav = false;
-        }
-
-        if(showingContactBox == true) {
-			toggleContactBox()
-        } else {
-			return
-		}
-    }
-
-	hamBt.addEventListener("click", toggleNav);
-
-		for (let i = 0; i < navBts.length; i++) {
-			navBts[i].addEventListener("click", function() {
-				toggleNav()
-		
-				if(showingContactBox == true) {
-					toggleContactBox()
-				}
-			});
-		}
-
-		window.addEventListener("scroll", function (e) {
-			if (showingNav == true) {
-				toggleNav();
-			}
-		});
 </script>

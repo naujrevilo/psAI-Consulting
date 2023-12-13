@@ -4,6 +4,7 @@
     margin-inline: auto;
     color: var(--secondary-2);
     position: relative;
+    z-index: 8;
 }
 
 .stripe > .ctnr {

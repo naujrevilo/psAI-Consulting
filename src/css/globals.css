@@ -231,7 +231,7 @@ body::-webkit-scrollbar-track-piece:start {
 }
 
 .mail_bubble {
-    z-index: 7;
+    z-index: 8;
     position: fixed;
     right: clamp(2rem, 6vmin, 90rem);
     bottom: clamp(2rem, calc(4vmin + 2.5rem), 90rem);
@@ -271,6 +271,20 @@ body::-webkit-scrollbar-track-piece:start {
     width: 38%;
 }
 
+.exit_area.show {
+    display: block;
+    backdrop-filter: blur(0.2rem);
+    filter: brightness(0.95);
+    -webkit-filter: brightness(0.95);
+}
+
+.exit_area {
+    position: fixed;
+    inset:0;
+    z-index: 7;
+    display: none;
+    cursor: alias;
+}
 
 
 

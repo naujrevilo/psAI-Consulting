@@ -179,10 +179,6 @@ section + hr {
     transform-origin: 60% 60%;
 }
 
-#the-problem .big.graphic .pulse {
-    transform-origin: 40% 90%;
-}
-
 .graphic_cta .pulse {
     transform-origin: center;
 }
@@ -512,7 +508,7 @@ section.default2 h2 + p  {
 }
 
 .team_ctnr .profile:hover .description {
-    max-height: 15rem;
+    max-height: 30rem;
 }
 
 .team_ctnr .profile .description p {
