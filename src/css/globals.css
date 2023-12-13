@@ -1,4 +1,4 @@
-html.sr .reveal, html.sr .slow_reveal {
+html.sr .reveal, html.sr .slow_reveal, html.sr .slow_step_reveal {
     visibility: hidden;
 }
 
@@ -88,6 +88,16 @@ body::before {
 /* Track */
 ::-webkit-scrollbar-track {
     background: var(--light);
+}
+
+body::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+    margin-bottom: 2rem; 
+}
+
+body::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-top: 2rem;
 }
 
 /* Handle */
