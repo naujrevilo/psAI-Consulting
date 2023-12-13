@@ -3,10 +3,10 @@ section.intro {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
-    min-height: 80svh;
+    min-height: 75vh;
+    min-height: 75svh;
     position: relative;
-    margin-bottom: clamp(4rem, 40vw, 22rem);
+    margin-block: 4vh clamp(4rem, 40vw, 22rem);
 }
 
 section {
