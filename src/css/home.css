@@ -592,7 +592,7 @@ section.default2 h2 + p  {
     }
 
     section.default1.bullets {
-        align-items: baseline;
+        align-items: flex-start;
     }
 
     section.default1 > .content {
