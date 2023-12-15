@@ -1,9 +1,13 @@
 ---
 interface Props {
-	title: string;
+	title?: string;
+	description?: string;
+	keywords?: string;
 }
 
-const { title } = Astro.props;
+const { title, description, keywords } = Astro.props;
+
+import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS } from "../../consts";
 
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
@@ -15,7 +19,10 @@ import MailBubble from '../components/MailBubble.astro';
 
 <!doctype html>
 <html lang="en">
-	<BaseHead title={title}/>
+	<BaseHead 
+	title={title ? title : SITE_TITLE}
+	description={description ? description : SITE_DESCRIPTION}
+	keywords={keywords ? keywords : SITE_KEYWORDS} />
 
 	<body id="home">
 		<Header/>

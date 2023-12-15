@@ -1,7 +1,7 @@
 
 // META
 
-export const SITE_TITLE = "";
+export const SITE_TITLE = "psAI Consulting - Unlock the Potential of AI Integration";
 
 export const SITE_DESCRIPTION = "";
 
