@@ -3,8 +3,8 @@ section.intro {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 75vh;
-    min-height: 75svh;
+    min-height: 69vh;
+    min-height: 69svh;
     position: relative;
     margin-block: 4vh clamp(4rem, 40vw, 22rem);
 }
@@ -548,8 +548,6 @@ section.default2 h2 + p  {
 @media screen and (min-width:850px) {
 
     section.intro {
-        min-height: 78vh;
-        min-height: 78dvh;
         margin-top: 4rem;
     }
 
