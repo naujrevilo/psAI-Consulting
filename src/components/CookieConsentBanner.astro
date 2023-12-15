@@ -79,20 +79,22 @@
 <style>
 
 .cookie-consent-banner {
-    display: none;
+    display: block;
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--primary-e);
-    color: var(--light);
+    bottom: 2rem;
+    left: 1rem;
+    right: 1rem;
+    background-color: var(--light-1);
+    color: var(--secondary-1);
     padding: 2rem clamp(1.3rem,5vw,4rem) 2rem;
     text-align: center;
     z-index: 11;
     margin-inline: auto;
-    border-top: 0.3rem solid var(--primary);
     width: 100%;
     box-sizing: border-box;
+    width: var(--width-1);
+    border-radius: 1rem;
+    border: 0.2rem solid var(--light);
 }
 
 .cookie-consent-banner > .flex {
@@ -165,18 +167,17 @@
 }
 
 .cookie-consent-button.accept {
-    background-color: var(--light);
     min-width: 100%;
+    background-color: var(--light);
 }
 
 .cookie-consent-button.accept_selection {
-    border-color: var(--primary);
+    background-color: var(--secondary-1);
     color: var(--light);
 }
 
 .cookie-consent-button.reject {
-    background-color: var(--primary-a);
-    color: var(--light);
+    border: 0.2rem solid var(--secondary-2);
 }
 
 .cookie-consent-options {

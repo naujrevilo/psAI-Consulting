@@ -70,7 +70,7 @@ section + hr {
 .intro h2 {
     font-size: clamp(1.6rem, 4.6vmin, 2.6rem);
     text-align: center;
-    width: clamp(10rem, 85vw, 97rem);
+    width: clamp(10rem, 75vw, 97rem);
     font-weight: 400;
     line-height: 1.5;
 }
