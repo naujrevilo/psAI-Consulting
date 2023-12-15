@@ -1,5 +1,3 @@
-
-    
 function hideBanner() {
     document.getElementById('cookie-consent-banner').style.display = 'none';
 }
