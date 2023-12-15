@@ -36,10 +36,6 @@ html.sr .reveal, html.sr .slow_reveal, html.sr .slow_step_reveal {
     margin-inline: auto;
 }
 
-.scroll_margin_top {
-    scroll-margin-top: calc(var(--header-height) + 4rem);
-}
-
 @font-face {
     font-family: 'Gabarito';
     src: url('/fonts/Gabarito-VariableFont_wght.ttf');

@@ -10,7 +10,7 @@ section.intro {
 }
 
 section {
-    scroll-margin-top: calc(var(--header-height) + 6vw);
+    scroll-margin-top: calc(var(--header-height) + 3vmin);
 }
 
 p {
