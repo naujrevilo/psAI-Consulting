@@ -23,78 +23,80 @@ declare global {
 }
 ---
 
-<!-- Google Tag Manager -->
-<script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<head>
+    <!-- Google Tag Manager -->
+    <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-587VFLN8');</script>
-<!-- End Google Tag Manager -->
+    <!-- End Google Tag Manager -->
 
-<script is:inline src="/js/scrollreveal.min.js"></script>
+    <script is:inline src="/js/scrollreveal.min.js"></script>
 
-<script>
-    ScrollReveal().reveal('.reveal', {
-        opacity: 0,
-        duration:1000,
-        easing: 'ease',
-    });
-    ScrollReveal().reveal('.slow_reveal', {
-        opacity: 0,
-        duration:2000,
-        easing: 'ease',
-    });
-    ScrollReveal().reveal('.slow_step_reveal', {
-        opacity: 0,
-        duration:2000,
-        easing: 'ease',
-        interval:200,
-    });
-    ScrollReveal().reveal('.team_ctnr .profile .flex', {
-        opacity: 0,
-        duration:1600,
-        easing: 'ease',
-        interval:150,
-    });
-    ScrollReveal().reveal('.default1 .list li', {
-        opacity: 0,
-        duration:900,
-        easing: 'ease',
-        interval:250,
-        cleanup: true,
-    });
-</script>
+    <script>
+        ScrollReveal().reveal('.reveal', {
+            opacity: 0,
+            duration:1000,
+            easing: 'ease',
+        });
+        ScrollReveal().reveal('.slow_reveal', {
+            opacity: 0,
+            duration:2000,
+            easing: 'ease',
+        });
+        ScrollReveal().reveal('.slow_step_reveal', {
+            opacity: 0,
+            duration:2000,
+            easing: 'ease',
+            interval:200,
+        });
+        ScrollReveal().reveal('.team_ctnr .profile .flex', {
+            opacity: 0,
+            duration:1600,
+            easing: 'ease',
+            interval:150,
+        });
+        ScrollReveal().reveal('.default1 .list li', {
+            opacity: 0,
+            duration:900,
+            easing: 'ease',
+            interval:250,
+            cleanup: true,
+        });
+    </script>
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#58f9a4">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#58f9a4">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content={Astro.generator} />
-<link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
 
-<title>{title}</title>
-<meta name="title" content={title} />
-<meta name="description" content={description} />
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
 
-<meta name="keywords" content={keywords}>
+    <meta name="keywords" content={keywords}>
 
-<link rel="canonical" href={canonicalURL} />
+    <link rel="canonical" href={canonicalURL} />
 
-<meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
-<meta property="og:title" content={title} />
-<meta property="og:description" content={SITE_DESCRIPTION} />
-<meta property="og:image" content={OG_IMAGE} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={SITE_DESCRIPTION} />
+    <meta property="og:image" content={OG_IMAGE} />
 
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={SITE_DESCRIPTION} />
-<meta property="twitter:image" content={OG_IMAGE} />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={SITE_DESCRIPTION} />
+    <meta property="twitter:image" content={OG_IMAGE} />
+</head>
