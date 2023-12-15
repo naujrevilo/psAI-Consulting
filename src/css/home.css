@@ -239,21 +239,23 @@ section.default1 h2 .worm {
 section.default1 > .content {
     flex: 1;
     min-width: clamp(10rem, var(--pace), 40rem);
-    max-width: clamp(10rem, var(--pace), 71rem);
-    font-size: clamp(1.8rem, 4.8vw, 2.3rem);
+    max-width: clamp(10rem, var(--pace), 64rem);
 }
 
 section.default1 .content p {
+    font-size: clamp(1.8rem, 5.3vw, 2.8rem);
     margin-top: 1.2rem;
+    font-weight: 500;
+    line-height: 1.4;
 }
 
-section.default1 p b, section.default1 p strong {
-    font-weight: 550;
+section p b, section p strong {
+    font-weight: 500;
     color: var(--secondary-1);
 }
 
 section.default1 p.minor {
-    font-size: clamp(1.7rem, 4vw, 0.8em);
+    font-size: clamp(1.7rem, 3vw, 2.1rem);
     font-weight: 500;
     color: var(--secondary-1);
     line-height: 1.4;
