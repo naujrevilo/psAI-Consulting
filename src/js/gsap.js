@@ -19,13 +19,13 @@ gsap.registerPlugin(ScrollTrigger);
 
 const graphics = document.querySelectorAll('.graphic, .logo')
 
-const relativeStrokeWidth = Math.floor((window.innerHeight + (window.innerWidth / 5)) / 600)
+const relativeStrokeWidth = Math.floor((window.innerHeight + (window.innerWidth / 5)) / 580)
 
 
 for(let j = 0; j < graphics.length; j++) {
     let pulsePaths = graphics[j].querySelectorAll('.pulse')
     for(let i = 0; i < pulsePaths.length; i++) {
-        pulsePaths[i].style.animationDelay = `${i / 9}s`
+        pulsePaths[i].style.animationDelay = `${i / 15}s`
         pulsePaths[i].style.strokeWidth = `${relativeStrokeWidth}px`
     }
 }
