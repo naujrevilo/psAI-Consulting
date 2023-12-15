@@ -18,7 +18,7 @@ section.contact {
     */margin-bottom: unset;
     border: 0.1rem solid var(--light);
     background-color: rgb(214 219 255 / 91%);
-    backdrop-filter: blur(0.6rem);
+    /* backdrop-filter: blur(0.6rem); */
     border-radius: clamp(2rem, 5vw, 3rem);
     -webkit-border-radius: clamp(2rem, 5vw, 3rem);
     -moz-border-radius: clamp(2rem, 5vw, 3rem);

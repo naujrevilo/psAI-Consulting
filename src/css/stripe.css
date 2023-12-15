@@ -2,15 +2,15 @@
     background-color: var(--light);
     width: 100%;
     margin-inline: auto;
-    color: var(--secondary-2);
     position: relative;
     z-index: 8;
 }
 
 .stripe > .ctnr {
     height: 2.7rem;
+    color: var(--secondary-1);
     font-size: clamp(1rem, 3vw, 1.4rem);
-    font-weight: 300;
+    font-weight: 500;
     display: flex;
     justify-content: space-between;
     line-height: 1;
@@ -20,7 +20,7 @@
 }
 
 .stripe a:hover {
-    color: var(--secondary);
+    color: var(--secondary-2);
 }
 
 .stripe .inverted_corner {

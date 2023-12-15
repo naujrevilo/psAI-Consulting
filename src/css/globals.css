@@ -273,7 +273,8 @@ body::-webkit-scrollbar-track-piece:start {
 
 .exit_area.show {
     display: block;
-    backdrop-filter: blur(0.2rem);
+    backdrop-filter: blur(0.6rem);
+    -webkit-backdrop-filter: blur(0.6rem);
     filter: brightness(0.95);
     -webkit-filter: brightness(0.95);
 }
