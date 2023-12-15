@@ -1,35 +1,35 @@
-backend:
-  name: git-gateway
-  branch: main
+# backend:
+#   name: git-gateway
+#   branch: main
 
-publish_mode: editorial_workflow
+# publish_mode: editorial_workflow
 
-media_folder: "public/images/media"
-public_folder: "/images/media"
+# media_folder: "public/images/media"
+# public_folder: "/images/media"
 
-collections:
-  - name: "blog"
-    label: "Blog Post"
-    folder: "src/content/blog"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "StandFirst", name: "standFirst", widget: "text", required: false}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Publish Date", name: "pubDate", widget: "datetime", format: "MMM DD YYYY"}
-      - {label: "Hero Image", name: "heroImage", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+# collections:
+#   - name: "blog"
+#     label: "Blog Post"
+#     folder: "src/content/blog"
+#     create: true
+#     slug: "{{slug}}"
+#     fields:
+#       - {label: "Title", name: "title", widget: "string"}
+#       - {label: "StandFirst", name: "standFirst", widget: "text", required: false}
+#       - {label: "Description", name: "description", widget: "text"}
+#       - {label: "Publish Date", name: "pubDate", widget: "datetime", format: "MMM DD YYYY"}
+#       - {label: "Hero Image", name: "heroImage", widget: "image", required: false}
+#       - {label: "Body", name: "body", widget: "markdown"}
       
-  - name: "events"
-    label: "Event"
-    folder: "src/content/events"
-    create: true
-    slug: "{{name}}"
-    fields:
-      - {label: "Status", name: "status", widget: "select", options: ["Upcoming", "Past"]}
-      - {label: "Name", name: "name", widget: "string"}
-      - {label: "Description", name: "description", widget: "text", required: false}
-      - {label: "Address", name: "address", widget: "string", required: false}
-      - {label: "External Link", name: "externalLink", widget: "string", required: false}
-      - {label: "Event Date", name: "eventDate", widget: "datetime", format: "MMM DD YYYY"}
+#   - name: "events"
+#     label: "Event"
+#     folder: "src/content/events"
+#     create: true
+#     slug: "{{name}}"
+#     fields:
+#       - {label: "Status", name: "status", widget: "select", options: ["Upcoming", "Past"]}
+#       - {label: "Name", name: "name", widget: "string"}
+#       - {label: "Description", name: "description", widget: "text", required: false}
+#       - {label: "Address", name: "address", widget: "string", required: false}
+#       - {label: "External Link", name: "externalLink", widget: "string", required: false}
+#       - {label: "Event Date", name: "eventDate", widget: "datetime", format: "MMM DD YYYY"}

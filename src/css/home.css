@@ -250,7 +250,7 @@ section.default1 .content p {
 }
 
 section p b, section p strong {
-    font-weight: 500;
+    font-weight: 550;
     color: var(--secondary-1);
 }
 
@@ -285,7 +285,6 @@ section.default1 .cta {
 .default1 .list li {
     position: relative;
     background-color: rgb(214 219 255 / 25%);
-    backdrop-filter: blur(0.4rem);
     padding: 3rem;
     box-sizing: border-box;
     border-radius: 3rem;
@@ -411,22 +410,19 @@ section.default2 h2 + p  {
     max-width: clamp(10rem, var(--pace), 38.1rem);
     flex: 1;
     background-color: rgb(214 219 255 / 25%);
-    backdrop-filter: blur(0.4rem);
     padding: clamp(1.5rem, 2vw, 2rem) clamp(1.5rem, 2vw, 2rem);
     box-sizing: border-box;
     height: fit-content;
-    /*background-image: linear-gradient(0deg, var(--light-1) -20%, transparent 38%);
-    background-attachment: fixed;
-    */border-radius: 3rem;
+    border-radius: 3rem;
     -webkit-border-radius: 3rem;
     -moz-border-radius: 3rem;
     -ms-border-radius: 3rem;
     -o-border-radius: 3rem;
-    transition: border-color 0.4s ease, transform 0.1s, margin-bottom 0.5s 0.5s ease;
-    -webkit-transition: border-color 0.4s ease, transform 0.1s, margin-bottom 0.5s 0.5s ease;
-    -moz-transition: border-color 0.4s ease, transform 0.1s, margin-bottom 0.5s 0.5s ease;
-    -ms-transition: border-color 0.4s ease, transform 0.1s, margin-bottom 0.5s 0.5s ease;
-    -o-transition: border-color 0.4s ease, transform 0.1s, margin-bottom 0.5s 0.5s ease;
+    transition: border-color 0.4s ease, transform 0.1s, background-color 0.4s ease, margin-bottom 0.5s 0.5s ease;
+    -webkit-transition: border-color 0.4s ease, transform 0.1s, background-color 0.4s ease, margin-bottom 0.5s 0.5s ease;
+    -moz-transition: border-color 0.4s ease, transform 0.1s, background-color 0.4s ease, margin-bottom 0.5s 0.5s ease;
+    -ms-transition: border-color 0.4s ease, transform 0.1s, background-color 0.4s ease, margin-bottom 0.5s 0.5s ease;
+    -o-transition: border-color 0.4s ease, transform 0.1s, background-color 0.4s ease, margin-bottom 0.5s 0.5s ease;
     border: 0.1rem solid transparent;
     transform: scale(1);
     -webkit-transform: scale(1);
@@ -438,16 +434,17 @@ section.default2 h2 + p  {
 .team_ctnr .profile:hover {
     border-color: var(--light-1);
     background-color: rgb(214 219 255 / 50%);
-    transition: border-color 0.1s ease, transform 0.2s ease, margin-bottom 0s ease;
-    -webkit-transition: border-color 0.1s ease, transform 0.2s ease, margin-bottom 0s ease;
-    -moz-transition: border-color 0.1s ease, transform 0.2s ease, margin-bottom 0s ease;
-    -ms-transition: border-color 0.1s ease, transform 0.2s ease, margin-bottom 0s ease;
-    -o-transition: border-color 0.1s ease, transform 0.2s ease, margin-bottom 0s ease;
+    transition: border-color 0.1s ease, transform 0.2s ease, background-color 0.2s ease, margin-bottom 0s ease;
+    -webkit-transition: border-color 0.1s ease, transform 0.2s ease, background-color 0.2s ease, margin-bottom 0s ease;
+    -moz-transition: border-color 0.1s ease, transform 0.2s ease, background-color 0.2s ease, margin-bottom 0s ease;
+    -ms-transition: border-color 0.1s ease, transform 0.2s ease, background-color 0.2s ease, margin-bottom 0s ease;
+    -o-transition: border-color 0.1s ease, transform 0.2s ease, background-color 0.2s ease, margin-bottom 0s ease;
     transform: scale(1.06);
     -webkit-transform: scale(1.06);
     -moz-transform: scale(1.06);
     -ms-transform: scale(1.06);
     -o-transform: scale(1.06);
+    background-color:var(--light-1);
 }
 
 .team_ctnr .profile .flex {
@@ -620,7 +617,6 @@ section.default2 h2 + p  {
     }
 
     .team_ctnr .profile {
-        backdrop-filter: blur(2rem);
         transition: border-color 0.4s ease, transform 0.8s 0.2s, margin-bottom 0.2s ease, background-color 0.4s ease;
         -webkit-transition: border-color 0.4s ease, transform 0.8s 0.2s, margin-bottom 0.2s ease, background-color 0.4s ease;
         -moz-transition: border-color 0.4s ease, transform 0.8s 0.2s, margin-bottom 0.2s ease, background-color 0.4s ease;
