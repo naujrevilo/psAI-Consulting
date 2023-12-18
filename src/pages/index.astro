@@ -7,6 +7,8 @@
 	import LogoWaves from '../components/svg/LogoWaves.astro';
 	import LogoText from '../components/svg/LogoText.astro';
 
+	import { Schema } from "astro-seo-schema"
+
 	import Graphic01 from '../components/svg/graphics/Graphic01.astro';
 	import ProblemGraphic from '../components/svg/graphics/ProblemGraphic.astro';
 	import Graphic02 from '../components/svg/graphics/Graphic02.astro';
@@ -311,10 +313,46 @@
 			</ul>
 		</section>
 	</main>
+
+	<Schema
+		item={
+		{
+			"@context": "https://schema.org",
+			"@type": "WebPage",
+			"name":"psAI Consulting - Unlock the Potential of AI Integration",
+			"url":`${Astro.url}`,
+			"description":"AI integration and analysis through a blend of agility, insight, and innovation. Transform uncertainties into identifiable opportunities with AI implementation.",
+		}
+		}
+	/>
+
+	<Schema
+		item={
+		{
+			"@context": "https://schema.org",
+			"@type":"WebSite",
+			"name":"psAI Consulting",
+			"url":`${Astro.url}`,
+		}
+		}
+	/>
+
+	<Schema
+		item={
+		{
+			"@context": "https://schema.org",
+			"@type":"Organization",
+			"name":"psAI Consulting",
+			"legalName":"psAI Consulting",
+			"url":`${Astro.url}`,
+			"@id":`${Astro.url}`,
+		}
+		}
+	/>
 </Layout>
 
 <script is:inline>
-    const header = document.querySelector('header');
+const header = document.querySelector('header');
 const hamBt = document.querySelector(".hambt");
 const nav = document.querySelector(".header_nav");
 const navBts = document.querySelectorAll(".header_nav a, .header_nav button");

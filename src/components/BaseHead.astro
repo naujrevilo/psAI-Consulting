@@ -52,34 +52,43 @@ declare global {
     <script is:inline src="/js/scrollreveal.min.js"></script>
 
     <script>
+
+        const resetTransition = (el) => {
+            el.style.transition = 'initial'
+        }
+
         ScrollReveal().reveal('.reveal', {
             opacity: 0,
             duration:1000,
             easing: 'ease',
+            afterReveal: resetTransition,
         });
         ScrollReveal().reveal('.slow_reveal', {
             opacity: 0,
             duration:2000,
             easing: 'ease',
+            afterReveal: resetTransition,
         });
         ScrollReveal().reveal('.step_reveal1', {
             opacity: 0,
             duration:2000,
             easing: 'ease',
             interval:100,
+            afterReveal: resetTransition,
         });
         ScrollReveal().reveal('.team_ctnr .profile .flex', {
             opacity: 0,
             duration:1600,
             easing: 'ease',
             interval:150,
+            afterReveal: resetTransition,
         });
         ScrollReveal().reveal('.default1 .list li', {
             opacity: 0,
             duration:900,
             easing: 'ease',
             interval:250,
-            cleanup: true,
+            afterReveal: resetTransition,
         });
     </script>
 

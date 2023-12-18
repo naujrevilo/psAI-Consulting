@@ -3,9 +3,9 @@
 
 export const SITE_TITLE = "psAI Consulting - Unlock the Potential of AI Integration";
 
-export const SITE_DESCRIPTION = "AI integration through a blend of agility, insight, and innovation. Navigate tomorrow's complexities, transforming uncertainties into identifiable opportunities.";
+export const SITE_DESCRIPTION = "AI integration and analysis through a blend of agility, insight, and innovation. Transform uncertainties into identifiable opportunities with AI implementation.";
 
-export const SITE_KEYWORDS = "artificial intelligence, AI Integration, AI consulting, AI development, business consulting, startup"
+export const SITE_KEYWORDS = "artificial intelligence, AI Integration, AI consulting, AI development, business consulting, startup, implementation"
     
 
 // SOCIAL SHARING IMAGE
