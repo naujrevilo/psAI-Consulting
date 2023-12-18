@@ -63,7 +63,7 @@ footer nav {
 }
 
 footer nav a {
-    padding-block: 1rem;
+    padding-block: 1.4rem;
     position: relative;
 }
 
@@ -72,6 +72,7 @@ footer nav .contact_bt {
     background-color: var(--light);
     border-radius: 4rem;
     margin-top: 1rem;
+    font-weight: 550;
 }
 
 footer nav a .worm {

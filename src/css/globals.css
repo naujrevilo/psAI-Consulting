@@ -1,4 +1,4 @@
-html.sr .reveal, html.sr .slow_reveal, html.sr .slow_step_reveal {
+html.sr .reveal, html.sr .slow_reveal, html.sr .step_reveal1 {
     visibility: hidden;
 }
 
