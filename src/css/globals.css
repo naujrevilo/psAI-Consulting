@@ -243,7 +243,7 @@ svg {
     z-index: 8;
     position: fixed;
     right: clamp(2rem, 6vmin, 90rem);
-    bottom: clamp(2rem, calc(4vmin + 2.5rem), 90rem);
+    bottom: clamp(2rem, calc(4vmin + 3.5rem), 90rem);
     width: clamp(1rem, 15vw, 6rem);
     height: clamp(1rem, 15vw, 6rem);
     border: 0.1rem solid var(--light);
@@ -344,10 +344,21 @@ section.default1 > .content {
 }
 
 section.default1 .content p {
-    font-size: clamp(1.8rem, 5.3vw, 2.8rem);
+    font-size: clamp(1.6rem, 4.3vw, 2rem);
     margin-top: 1.2rem;
     font-weight: 450;
     line-height: 1.4;
+}
+
+section.default1 h3 {
+    font-size: clamp(2rem, 6.5vw, 3.4rem);
+    color: var(--secondary-1);
+    font-weight: 650;
+    margin-bottom: -0.5rem;
+}
+
+section.default1 .content h3 {
+    margin-top: 2rem;
 }
 
 section.default1 p.minor {
@@ -374,16 +385,15 @@ section.default1 .cta {
     gap: 2rem;
 }
 
-.default1 .list li {
+.default1 .list .item {
     position: relative;
     background-color: rgb(214 219 255 / 25%);
-    padding: 3rem;
     box-sizing: border-box;
-    border-radius: 3rem;
-    -webkit-border-radius: 3rem;
-    -moz-border-radius: 3rem;
-    -ms-border-radius: 3rem;
-    -o-border-radius: 3rem;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
     border: 0.1rem solid transparent;
     transition: border-color 0.4s ease, background-color 0.4s ease;
     -webkit-transition: border-color 0.4s ease, background-color 0.4s ease;
@@ -392,7 +402,12 @@ section.default1 .cta {
     -o-transition: border-color 0.4s ease, background-color 0.4s ease;
 }
 
-.default1 .list li:hover {
+.default1 .list .item {
+    padding: 3rem;
+    display: block;
+}
+
+.default1 .list .item:hover {
     border-color: var(--light-1);
     background-color: rgb(214 219 255 / 50%);
     transition: border-color 0.1s ease, background-color 0.1s ease;
@@ -402,7 +417,7 @@ section.default1 .cta {
     -o-transition: border-color 0.1s ease, background-color 0.1s ease;
 }
 
-.default1 .list li h3 {
+.default1 .list .item h3 {
     font-weight: 650;
     font-size: clamp(1rem, 8vw, 2.6rem);
     line-height: 1;
@@ -410,7 +425,7 @@ section.default1 .cta {
     color: var(--secondary-1);
 }
 
-.default1 .list li h3 svg {
+.default1 .list .item h3 svg {
     color: var(--secondary-1);
     position: absolute;
     left: 0;
@@ -419,14 +434,14 @@ section.default1 .cta {
     height: 2.8rem;
 }
 
-.default1 .list li p {
+.default1 .list .item p {
     font-size: clamp(0.7rem, 4vw, 1.8rem);
     line-height: 1.4;
     color: var(--secondary-1);
     font-weight: 450;
 }
 
-.default1 .list li b, .default1 .list li strong{
+.default1 .list .item b, .default1 .list .item strong{
     font-weight: 650;
 }
 
@@ -530,6 +545,8 @@ section.default1 .cta {
 .pulse {
     animation: pulse_wave 10s ease infinite;
     -webkit-animation: pulse_wave 10s ease infinite;
+
+    will-change: transform, opacity;
 }
 
 

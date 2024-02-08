@@ -55,7 +55,7 @@ section + hr {
     font-size: clamp(2rem, 9.1vmin, 6.5rem);
     font-weight: 700;
     text-align: center;
-    line-height: 1.2;
+    line-height: 1.35;
     margin-inline: auto;
     width: clamp(1rem, 87vw, 105rem);
     user-select: none;

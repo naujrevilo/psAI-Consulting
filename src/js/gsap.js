@@ -15,7 +15,7 @@ gsap.registerPlugin(ScrollTrigger);
 //     }
 // });
 
-// anim01.from(".default1 .list li", {x: 1300, opacity:0, duration: 1, ease: "power1.out",})
+// anim01.from(".default1 .list .item", {x: 1300, opacity:0, duration: 1, ease: "power1.out",})
 
 const graphics = document.querySelectorAll('.graphic, .logo')
 const serviceLogos = document.querySelectorAll('svg.service_logo')

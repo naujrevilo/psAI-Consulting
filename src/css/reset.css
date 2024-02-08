@@ -24,7 +24,7 @@ a {
     cursor: pointer;
 }
 
-a h1, a h2, a h3, a h4, a h5, h5 {
+a h1, a h2, a h3, a h4, a h5, h5, a p {
     cursor: pointer;
 }
 
