@@ -1,21 +1,29 @@
-section {
+section.intro {
     border-radius: 0 0 clamp(4rem, 5vw, 6rem) clamp(4rem, 5vw, 6rem);
 }
 
-section:first-of-type {
+section.intro:first-of-type {
     padding-top: 7rem;
 }
 
-section:not(:last-of-type) {
+section.intro:not(:last-of-type) {
     margin-bottom: -6rem;
 }
 
-section:not(:first-of-type) {
+section.intro:not(:first-of-type) {
     padding-top: 6rem;
 }
 
 section {
     position: relative;
+}
+
+section:last-of-type {
+    margin-bottom: 10rem;
+}
+
+section:not(.intro) {
+    padding-block: 15rem;
 }
 
 section > .ctnr {
@@ -26,8 +34,13 @@ section > .ctnr {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-block: clamp(4rem, 25vmin, 12rem);
     overflow: hidden;
+}
+
+.intro > .ctnr {
+    padding-block: clamp(4rem, 25vmin, 12rem);
+    box-sizing: border-box;
+    min-height: 80vh;
 }
 
 .intro .ctnr .content {
@@ -320,4 +333,37 @@ section.run .learn_more.cta {
 
 .align.intro .title + p b, .align.intro .title + p strong {
     color: var(--dark-2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#learn-more.default1 .content h2 {
+    font-size: clamp(2rem, 11vw, 6rem);
+}
+
+#learn-more.default1 .content p {
+    font-size: clamp(1.6rem, 4.2vw, 1.9rem);
 }

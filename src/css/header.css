@@ -347,7 +347,7 @@ header .hambt path {
     }
 
     .header_nav a {
-        padding: clamp(0.75rem, 3vw, 1.4rem) clamp(0rem, 3vw, 3rem);
+        padding: clamp(0.75rem, 3vw, 1.4rem) clamp(0rem, 3vw, 2rem);
     }
 
     .header_nav button {
@@ -378,7 +378,7 @@ header .hambt path {
         -ms-transform: scale(1);
         -o-transform: scale(1);
         /* box-shadow: 0rem 3rem 5rem 0rem rgb(248 248 255 / 50%); */
-}
+    }
 
     .header_nav .subnav a:hover {
         transform: scale(1.03);
@@ -391,23 +391,24 @@ header .hambt path {
         -moz-transition: background-color 0.1s, transform 0.2s ease;
         -ms-transition: background-color 0.1s, transform 0.2s ease;
         -o-transition: background-color 0.1s, transform 0.2s ease;
-}
-    
-    nav a, nav button {
-        transition: color 0.3s ease;
-        -webkit-transition: color 0.3s ease;
-        -moz-transition: color 0.3s ease;
-        -ms-transition: color 0.3s ease;
-        -o-transition: color 0.3s ease;
     }
+    nav > a span, nav .superset > a span {
+        padding: 0.5rem 1rem;
+        border-radius: 0.4rem;
+        transition: background-color 0.3s ease;
+        -webkit-transition: background-color 0.3s ease;
+        -moz-transition: background-color 0.3s ease;
+        -ms-transition: background-color 0.3s ease;
+        -o-transition: background-color 0.3s ease;
+}
 
-    nav > a:hover, nav .superset > a:hover, nav button:hover {
-        color: var(--secondary-2);
-        transition: color 0s ease;
-        -webkit-transition: color 0s ease;
-        -moz-transition: color 0s ease;
-        -ms-transition: color 0s ease;
-        -o-transition: color 0s ease;
+    nav > a:hover span, nav .superset > a:hover span, .superset:hover > a span {
+        background-color:var(--light);
+        transition: background-color 0.1s ease;
+        -webkit-transition: background-color 0.1s ease;
+        -moz-transition: background-color 0.1s ease;
+        -ms-transition: background-color 0.1s ease;
+        -o-transition: background-color 0.1s ease;
     }
 
     .superset {

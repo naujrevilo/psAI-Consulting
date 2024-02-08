@@ -35,7 +35,11 @@
             <p>For businesses leveraging <strong>Machine Learning (ML)</strong>, psAI Run offers a strategic approach to optimising ML costs and operational models, <b>aligning them with your business needs for maximum efficiency and cost-effectiveness.</b></p>
 
             <div class="flex cta_ctnr">
-                <a href="#" class="cta learn_more">Learn more</a>
+                {isMain != "false" ? (
+                    <a href="#learn-more" class="cta learn_more">Learn more</a>
+                ) : (
+                    <a href="/services/run#learn-more" class="cta learn_more">Learn more</a>
+                )}
                 <button type="button" class="contact_bt">Connect with psAi</button>
             </div>
 

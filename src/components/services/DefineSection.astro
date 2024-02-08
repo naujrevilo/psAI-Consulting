@@ -1,6 +1,6 @@
 ---
     import '../../css/services.css'
-    import Define from '../svg/services/Define.astro';
+    import Define from '../../components/svg/services/Define.astro';
 
     const { isMain } = Astro.props;
 ---
@@ -35,7 +35,11 @@
             <p>The key to unlocking the full potential of artificial intelligence within your organisation lies not just in the technology itself, but in <b>how you and your team communicate with it.</b> psAI Define is designed to bridge this gap, ensuring your team and AI are speaking the same language—literally.</p>
 
             <div class="flex cta_ctnr">
-                <a href="#" class="cta learn_more">Learn more</a>
+                {isMain != "false" ? (
+                    <a href="#learn-more" class="cta learn_more">Learn more</a>
+                ) : (
+                    <a href="/services/define#learn-more" class="cta learn_more">Learn more</a>
+                )}
                 <button type="button" class="contact_bt">Connect with psAi</button>
             </div>
 

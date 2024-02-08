@@ -1,8 +1,7 @@
 footer {
-    margin: 20rem clamp(1rem, 3vw, 1.5rem) clamp(1rem, 3vw, 1.5rem);
+    margin: 0 clamp(1rem, 3vw, 1.5rem) clamp(1rem, 3vw, 1.5rem);
     padding: 6rem 2rem;
     background-color: var(--light);
-    /* backdrop-filter: blur(0.4rem); */
     border-radius: 2rem;
     -webkit-border-radius: 2.5rem;
     -moz-border-radius: 2rem;

@@ -17,6 +17,10 @@ p {
     line-height: 1.5;
 }
 
+section:last-of-type {
+    margin-bottom: 20rem;
+}
+
 section > .ctnr {
     display: flex;
     flex-direction: column;
@@ -127,131 +131,13 @@ section + hr {
 
 
 
-section.default1 {
-    display: flex;
-    flex-direction: column;
-    width: var(--width-1);
-    margin-inline: auto;
-    gap: clamp(1rem, 5vw, 8rem);
-    justify-content: center;
-    /* align-items: center; */
-}
-
-section.default1 h2 {
-    font-size: clamp(2rem, 11vw, 8rem);
-    color: var(--secondary-1);
-    font-weight: 650;
-    line-height: 1;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    margin-bottom: 1.8rem;
-}
-
-section.default1 h2 .worm {
-    color: var(--light);
-    width: 5rem;
-    top: 120%;
-}
-
-section.default1 > .content {
-    flex: 1;
-    min-width: clamp(10rem, var(--pace), 40rem);
-    max-width: clamp(10rem, var(--pace), 64rem);
-}
-
-section.default1 .content p {
-    font-size: clamp(1.8rem, 5.3vw, 2.8rem);
-    margin-top: 1.2rem;
-    font-weight: 450;
-    line-height: 1.4;
-}
 
 section p b, section p strong {
     font-weight: 550;
     color: var(--secondary-1);
 }
 
-section.default1 p.minor {
-    font-size: clamp(1.7rem, 3vw, 2rem);
-    font-weight: 450;
-    color: var(--secondary-1);
-    line-height: 1.4;
-    max-width: 50rem;
-}
 
-section.default1 > .graphic {
-    width: clamp(9rem, 55vmin, 38rem);
-}
-
-section.default1 .cta {
-    margin-top: 2.5rem;
-    width: fit-content;
-}
-
-.default1 .list {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.default1 .list li {
-    position: relative;
-    background-color: rgb(214 219 255 / 25%);
-    padding: 3rem;
-    box-sizing: border-box;
-    border-radius: 3rem;
-    -webkit-border-radius: 3rem;
-    -moz-border-radius: 3rem;
-    -ms-border-radius: 3rem;
-    -o-border-radius: 3rem;
-    border: 0.1rem solid transparent;
-    transition: border-color 0.4s ease, background-color 0.4s ease;
-    -webkit-transition: border-color 0.4s ease, background-color 0.4s ease;
-    -moz-transition: border-color 0.4s ease, background-color 0.4s ease;
-    -ms-transition: border-color 0.4s ease, background-color 0.4s ease;
-    -o-transition: border-color 0.4s ease, background-color 0.4s ease;
-}
-
-.default1 .list li:hover {
-    border-color: var(--light-1);
-    background-color: rgb(214 219 255 / 50%);
-    transition: border-color 0.1s ease, background-color 0.1s ease;
-    -webkit-transition: border-color 0.1s ease, background-color 0.1s ease;
-    -moz-transition: border-color 0.1s ease, background-color 0.1s ease;
-    -ms-transition: border-color 0.1s ease, background-color 0.1s ease;
-    -o-transition: border-color 0.1s ease, background-color 0.1s ease;
-}
-
-.default1 .list li h3 {
-    font-weight: 650;
-    font-size: clamp(1rem, 8vw, 2.6rem);
-    line-height: 1;
-    margin-bottom: 1rem;
-    color: var(--secondary-1);
-}
-
-.default1 .list li h3 svg {
-    color: var(--secondary-1);
-    position: absolute;
-    left: 0;
-    transform: translate(-50%, 0%);
-    width: 2.8rem;
-    height: 2.8rem;
-}
-
-.default1 .list li p {
-    font-size: clamp(0.7rem, 4vw, 1.8rem);
-    line-height: 1.3;
-    color: var(--secondary-1);
-    font-weight: 450;
-}
-
-.default1 .list li b, .default1 .list li strong{
-    font-weight: 650;
-}
 
 .g1 {
     width: clamp(10rem, 40vw, 25rem);
@@ -548,27 +434,8 @@ section.default2 h2 + p  {
         display: block;
     }
 
-    section.default1 {
-        justify-content: space-between;
-        align-items: center;
-        flex-flow: row wrap;
-    }
-
-    section.default1.bullets {
-        align-items: flex-start;
-    }
-
-    section.default1 > .content {
-        position: sticky;
-        top: calc(var(--header-height) + 2rem);
-    }
-
     #the-ai-challenge .corner.graphic {
         width: clamp(1rem, 20vw, 50rem);
-    }
-
-    section.default1.inverted {
-        flex-flow: row-reverse wrap;
     }
 
     .team_ctnr {
