@@ -1,11 +1,5 @@
 ---
-interface Props {
-	title?: string;
-	description?: string;
-	keywords?: string;
-}
-
-const { title, description, keywords } = Astro.props;
+const { title, description, keywords, logoAnchorTheme } = Astro.props;
 
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS } from "../../consts";
 
@@ -28,7 +22,8 @@ import CookieConsentBanner from "../components/CookieConsentBanner.astro";
 		<!-- Google Tag Manager (noscript) -->
 			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-587VFLN8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
-		<Header/>
+		
+		<Header logoAnchorTheme={logoAnchorTheme}/>
 
 		<MailBubble/>
 

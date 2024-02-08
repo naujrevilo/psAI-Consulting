@@ -15,6 +15,14 @@ header .logo_anchor {
     width: clamp(9rem, 21vmin, 11rem);
 }
 
+header .logo_anchor.dark {
+    color:var(--dark);
+}
+
+header .logo_anchor.light {
+    color:var(--light);
+}
+
 header .logo_anchor svg {
 
 }
@@ -84,6 +92,9 @@ nav.show {
     margin-left: auto;
     display: block;
     margin-top: 1rem;
+    color: var(--light);
+    mix-blend-mode: difference;
+    margin-bottom: calc((var(--header-height) + 1rem) * -1);
 }
 
 .hambt.active {
@@ -129,7 +140,7 @@ header .hambt path {
 
 .header_nav .subnav a {
     text-align: left;
-    padding: clamp(1.2rem, 3.5vw, 3rem) clamp(0.2rem, 4vw, 3rem) clamp(1.2rem, 3.5vw, 3rem) clamp(0.2rem, 4vw, 4rem);
+    padding: clamp(1.2rem, 3.5vw, 3rem) clamp(0.2rem, 4vw, 3rem) clamp(1.2rem, 3.5vw, 3rem) clamp(0.2rem, 4vw, 3rem);
     /* justify-content: center; */
     display: flex;
     flex-direction: column;
@@ -225,7 +236,7 @@ header .hambt path {
 
 .subnav a svg path {
     /* stroke: var(--secondary); */
-    stroke-width: 4px;
+    stroke-width: 0.15rem;
 }
 
 .subnav a .title {
@@ -236,7 +247,7 @@ header .hambt path {
 .subnav a .def {
     font-size: clamp(1.1rem, 3.5vw, 1.5rem);
     color: var(--secondary-3);
-    font-weight: 400;
+    font-weight: 450;
     max-width: 22rem;
 }
 
@@ -297,6 +308,7 @@ header .hambt path {
         right: 0;
         padding: unset;
         height: 7rem;
+        margin-bottom: -7rem;
         width: clamp(15rem, 80vw, var(--max-width));
         border-radius: 0 0 2rem 2rem;
         -webkit-border-radius: 0 0 2rem 2rem;
@@ -355,30 +367,30 @@ header .hambt path {
     }
 
     .header_nav .subnav a {
-        transition: background-color 0.3s, transform 0.1s ease;
-        -webkit-transition: background-color 0.3s, transform 0.1s ease;
-        -moz-transition: background-color 0.3s, transform 0.1s ease;
-        -ms-transition: background-color 0.3s, transform 0.1s ease;
-        -o-transition: background-color 0.3s, transform 0.1s ease;
+        transition: background-color 0.3s, transform 0.5s ease;
+        -webkit-transition: background-color 0.3s, transform 0.5s ease;
+        -moz-transition: background-color 0.3s, transform 0.5s ease;
+        -ms-transition: background-color 0.3s, transform 0.5s ease;
+        -o-transition: background-color 0.3s, transform 0.5s ease;
         transform: scale(1);
         -webkit-transform: scale(1);
         -moz-transform: scale(1);
         -ms-transform: scale(1);
         -o-transform: scale(1);
-        box-shadow: 0rem 3rem 5rem 0rem rgb(248 248 255 / 50%);
-    }
+        /* box-shadow: 0rem 3rem 5rem 0rem rgb(248 248 255 / 50%); */
+}
 
     .header_nav .subnav a:hover {
-        transform: scale(1.02);
-        -webkit-transform: scale(1.02);
-        -moz-transform: scale(1.02);
-        -ms-transform: scale(1.02);
-        -o-transform: scale(1.02);
-        transition: background-color 0.1s, transform 0.1s ease;
-        -webkit-transition: background-color 0.1s, transform 0.1s ease;
-        -moz-transition: background-color 0.1s, transform 0.1s ease;
-        -ms-transition: background-color 0.1s, transform 0.1s ease;
-        -o-transition: background-color 0.1s, transform 0.1s ease;
+        transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+        -moz-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+        -o-transform: scale(1.03);
+        transition: background-color 0.1s, transform 0.2s ease;
+        -webkit-transition: background-color 0.1s, transform 0.2s ease;
+        -moz-transition: background-color 0.1s, transform 0.2s ease;
+        -ms-transition: background-color 0.1s, transform 0.2s ease;
+        -o-transition: background-color 0.1s, transform 0.2s ease;
 }
     
     nav a, nav button {
@@ -399,7 +411,7 @@ header .hambt path {
     }
 
     .superset {
-        /* align-items: center; */
+        
     }
 
     .subnav {
@@ -408,42 +420,73 @@ header .hambt path {
         left: 0;
         right: 0;
         width: 100%;
-        transform: translateY(calc(100% - 1rem));
-        -webkit-transform: translateY(calc(100% - 1rem));
-        -moz-transform: translateY(calc(100% - 1rem));
-        -ms-transform: translateY(calc(100% - 1rem));
-        -o-transform: translateY(calc(100% - 1rem));
+        transform: translateY(100%);
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        -o-transform: translateY(100%);
         padding-top: 1.5rem;
         opacity: 0;
         visibility: hidden;
-        transition: transform 0.4s ease, opacity 0.2s ease, visibility 0.2s;
-        -webkit-transition: transform 0.4s ease, opacity 0.2s ease, visibility 0.2s;
-        -moz-transition: transform 0.4s ease, opacity 0.2s ease, visibility 0.2s;
-        -ms-transition: transform 0.4s ease, opacity 0.2s ease, visibility 0.2s;
-        -o-transition: transform 0.4s ease, opacity 0.2s ease, visibility 0.2s;
-    }
+        transition-delay: 0.6s;
+}
 
     .superset:hover .subnav {
         opacity: 1;
         visibility: visible;
-        transform: translateY(calc(100%));
-        -webkit-transform: translateY(calc(100%));
-        -moz-transform: translateY(calc(100%));
-        -ms-transform: translateY(calc(100%));
-        -o-transform: translateY(calc(100%));
-        transition: transform 0.1s ease, opacity 0.1s ease, visibility 0.1s;
-        -webkit-transition: transform 0.1s ease, opacity 0.1s ease, visibility 0.1s;
-        -moz-transition: transform 0.1s ease, opacity 0.1s ease, visibility 0.1s;
-        -ms-transition: transform 0.1s ease, opacity 0.1s ease, visibility 0.1s;
-        -o-transition: transform 0.1s ease, opacity 0.1s ease, visibility 0.1s;
+        transition-delay: 0s;
+    }
+
+    .transition_ctnr:nth-child(1) {
+        transition-delay: 0s;
+    }
+
+    .transition_ctnr:nth-child(2) {
+        transition-delay: 0.06s;
+    }
+
+    .transition_ctnr:nth-child(3) {
+        transition-delay: 0.12s;
+    }
+
+    .transition_ctnr:nth-child(4) {
+        transition-delay: 0.18s;
     }
     
     .subnav .ctnr {
         flex-direction: row;
+        width: 95%;
+        margin-inline: auto;
     }
+
+    .transition_ctnr {
+        display: flex;
+        flex: 1;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-0.8rem);
+        -webkit-transform: translateY(-0.8rem);
+        -moz-transform: translateY(-0.8rem);
+        -ms-transform: translateY(-0.8rem);
+        -o-transform: translateY(-0.8rem);
+        transition: transform 0.4s ease, opacity 0.5s ease, visibility 0.5s;
+        -webkit-transition: transform 0.4s ease, opacity 0.5s ease, visibility 0.5s;
+        -moz-transition: transform 0.4s ease, opacity 0.5s ease, visibility 0.5s;
+        -ms-transition: transform 0.4s ease, opacity 0.5s ease, visibility 0.5s;
+        -o-transition: transform 0.4s ease, opacity 0.5s ease, visibility 0.5s;
+}
+
+    .superset:hover .transition_ctnr {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0rem);
+        -webkit-transform: translateY(0rem);
+        -moz-transform: translateY(0rem);
+        -ms-transform: translateY(0rem);
+        -o-transform: translateY(0rem);
+}
     
     .header_nav .subnav a {
-        flex: 1;
     }
 
     .header_nav .subnav a .text, .subnav a .learn_more {

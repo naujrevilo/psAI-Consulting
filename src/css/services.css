@@ -1,0 +1,322 @@
+section {
+    border-radius: 0 0 clamp(4rem, 5vw, 6rem) clamp(4rem, 5vw, 6rem);
+}
+
+section:first-of-type {
+    padding-top: 7rem;
+}
+
+section:not(:last-of-type) {
+    margin-bottom: -6rem;
+}
+
+section:not(:first-of-type) {
+    padding-top: 6rem;
+}
+
+section {
+    position: relative;
+}
+
+section > .ctnr {
+    position: relative;
+    z-index: 1;
+    width: var(--width-1);
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: clamp(4rem, 25vmin, 12rem);
+    overflow: hidden;
+}
+
+section .ctnr .content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section .intro .content {
+    text-align: center;
+}
+
+section .intro .graphic {
+    position: absolute;
+    width: clamp(25rem, 75vw, 80rem);
+    height: clamp(25rem, 75vw, 80rem);
+    z-index: 1;
+    inset: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .title {
+    font-size: clamp(2rem, 3vw, 4rem);
+    font-weight: 500;
+}
+
+section .title b {
+    font-size: clamp(5rem, 22vw, 13rem);
+    font-weight: inherit;
+    color: var(--secondary);
+    position: relative;
+}
+
+section .title .psai {
+    position: absolute;
+    bottom: 85%;
+    font-size: clamp(1rem, 7vw, 3rem);
+    left: -2%;
+}
+
+section .flex.cta_ctnr {
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+section .flex.cta_ctnr .cta {
+    padding: clamp(0.7rem, 3.5vw, 1.4rem) clamp(1.6rem, 15vmin, 7rem);
+}
+
+section .flex.cta_ctnr button {
+    font-size: 1.6rem;
+}
+
+section .title .name {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+section .intro .title + p {
+    font-size: clamp(1rem, 4.1vw, 2rem);
+    font-weight: 100;
+    margin-block: 2rem 3rem;
+    line-height: 1.4;
+    max-width: 87rem;
+}
+
+section .intro .title + p b, section .intro .title + p strong {
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section.define {
+    background-color: var(--dark-1);
+    color: var(--light);
+    background-image: linear-gradient(-25deg, var(--secondary-1) -10%, var(--dark) 38%, #0f0917);
+    z-index: 4;
+}
+
+section.define > .ctnr {
+    overflow: hidden;
+}
+
+section.define .intro .title + p b, section.define .intro .title + p strong {
+    color: var(--secondary);
+}
+
+section.define .title .psai {
+    color: var(--light-1);
+}
+
+section.define .learn_more.cta {
+    border: 0.2rem solid var(--secondary);
+    color: var(--secondary);
+    background-color: var(--dark);
+    font-weight: 300;
+    background-image: linear-gradient(-25deg, var(--secondary-1), var(--dark) 50%);
+}
+
+section.define .title .name {
+    background-image: linear-gradient(150deg, var(--secondary) 30%, #a4ffe9);
+}
+
+section.define .intro .title {
+    color: var(--light-1);
+}
+
+section.define .intro .graphic {
+
+}
+
+section.define .intro .graphic path {
+    stroke: var(--dark);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section.align {
+    color: var(--dark);
+    background-image: url(/svg/noise-bg.svg), linear-gradient(150deg, #f6edff, #dcb9ff 38%);
+    z-index: 3;
+}
+
+section.align .title .name {
+    color: #0f0917;
+    background-image: linear-gradient(-25deg, var(--secondary) 0%, #583b80, #0f0917);
+    font-weight: 600;
+}
+
+section.align .intro .title {
+    color: var(--dark);
+    font-weight: 600;
+}
+
+section.align .title .psai {
+    color: var(--secondary-1);
+    font-weight: 600;
+}
+
+section.align .intro .graphic path {
+    stroke: var(--light-1);
+}
+
+section.align .learn_more.cta {
+    border: 0.2rem solid var(--light-1);
+    color: var(--secondary-1);
+    font-weight: 600;
+    background-image: linear-gradient(150deg, #dfc0ff 30%, #efe0ff);
+}
+
+section.align .intro .title + p b, section.align .intro .title + p strong {
+    color: var(--secondary-1);
+}
+
+section:not(.define) .flex.cta_ctnr button {
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+section.flow {
+    color: var(--dark);
+    background-image: url(/svg/noise-bg.svg), linear-gradient(195deg, #edfffb, #87dbcb 62%);
+    z-index: 2;
+}
+
+section.flow .title .name {
+    color: var(--dark-2);
+    background-image: linear-gradient(-25deg, #0dd7c8, var(--dark-2));
+    font-weight: 600;
+}
+
+section.flow .intro .title {
+    color: var(--dark);
+    font-weight: 600;
+}
+
+section.flow .title .psai {
+    color: var(--dark-2);
+    font-weight: 600;
+}
+
+section.flow .learn_more.cta {
+    border: 0.2rem solid var(--light-1);
+    color: var(--dark-2);
+    font-weight: 600;
+    background-image: linear-gradient(310deg, #c2fff0, #87dbcb 62%);
+}
+
+section.flow .intro .graphic path {
+    stroke: var(--light-1);
+}
+
+section.flow .intro .title + p b, section.flow .intro .title + p strong {
+    color: var(--dark-2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section.run {
+    color: var(--dark);
+    background-image: url(/svg/noise-bg.svg), linear-gradient(145deg, #ffa465, var(--secondary));
+    z-index: 1;
+}
+
+section.run .title .name {
+    font-weight: 500;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    white-space: unset;
+    color: var(--dark);
+}
+
+section.run .intro .title {
+    color: var(--dark);
+    font-weight: 600;
+}
+
+section.run .title .psai {
+    color: var(--dark-2);
+    font-weight: 600;
+}
+
+section.run .learn_more.cta {
+    border: 0.2rem solid var(--light-1);
+    color: var(--dark-2);
+    font-weight: 600;
+    background-image: linear-gradient(145deg, #ffc298, #e0c0ff);
+}
+
+section.run .intro .graphic path {
+    stroke: rgb(226 235 251 / 50%);
+}
+
+section.align .intro .title + p b, section.align .intro .title + p strong {
+    color: var(--dark-2);
+}

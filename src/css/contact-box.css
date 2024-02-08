@@ -12,7 +12,7 @@ section.contact {
     padding: clamp(3rem, 5vw, 4rem);
     box-sizing: border-box;
     max-width: var(--width-1);
-    max-height: 80vh;
+    max-height: 84vh;
     overflow: auto;
     /*display: none;
     */margin-bottom: unset;
