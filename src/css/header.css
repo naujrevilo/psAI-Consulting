@@ -251,7 +251,13 @@ header .hambt path {
     max-width: 22rem;
 }
 
+.subnav .pulse {
+    animation-play-state: paused;
+}
 
+.superset .subnav a:hover .pulse {
+    animation-play-state: running;
+}
 
 
 
@@ -394,12 +400,16 @@ header .hambt path {
     }
     nav > a span, nav .superset > a span {
         padding: 0.5rem 1rem;
-        border-radius: 0.4rem;
         transition: background-color 0.3s ease;
         -webkit-transition: background-color 0.3s ease;
         -moz-transition: background-color 0.3s ease;
         -ms-transition: background-color 0.3s ease;
         -o-transition: background-color 0.3s ease;
+        border-radius: 0.4rem;
+        -webkit-border-radius: 0.4rem;
+        -moz-border-radius: 0.4rem;
+        -ms-border-radius: 0.4rem;
+        -o-border-radius: 0.4rem;
 }
 
     nav > a:hover span, nav .superset > a:hover span, .superset:hover > a span {

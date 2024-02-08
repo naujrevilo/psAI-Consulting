@@ -320,7 +320,7 @@ section.default1 {
 }
 
 section.default1 h2 {
-    font-size: clamp(2rem, 11vw, 8rem);
+    font-size: clamp(2rem, 11vw, 7rem);
     color: var(--secondary-1);
     font-weight: 650;
     line-height: 1;

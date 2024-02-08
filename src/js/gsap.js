@@ -19,8 +19,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const graphics = document.querySelectorAll('.graphic, .logo')
 const serviceLogos = document.querySelectorAll('svg.service_logo')
-
-
 const serviceLogosOutHeader = document.querySelectorAll('main svg.service_logo')
 
 const relativeStrokeWidth = Math.floor((window.innerHeight + (window.innerWidth / 5)) / 580)

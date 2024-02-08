@@ -28,7 +28,7 @@ section > .ctnr {
     align-items: center;
     width: 100%;
     margin-inline: auto;
-    gap: clamp(2rem, 6vmin, 3rem);
+    gap: clamp(2rem, 6vmin, 2rem);
 }
 
 section + hr {
@@ -55,10 +55,20 @@ section + hr {
     font-size: clamp(2rem, 9.1vmin, 6.5rem);
     font-weight: 700;
     text-align: center;
-    line-height: 1.25;
+    line-height: 1.2;
     margin-inline: auto;
-    width: clamp(1rem, 90vw, 105rem);
+    width: clamp(1rem, 87vw, 105rem);
     user-select: none;
+}
+
+.intro h1 a {
+    color: var(--secondary-3);
+    font-weight: 500;
+}
+
+.intro h1 span.small {
+    display: block;
+    font-size: clamp(2rem, 5.8vmin, 4rem);
 }
 
 .intro h1 b, .intro h1 strong {
@@ -75,8 +85,9 @@ section + hr {
     font-size: clamp(1.6rem, 4.6vmin, 2.6rem);
     text-align: center;
     width: clamp(10rem, 75vw, 97rem);
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.5;
+    margin-bottom: 1.5rem;
 }
 
 .intro h2 b, .intro h2 strong {
@@ -194,8 +205,8 @@ section.default2 > .content {
 }
 
 section.default2 h2  {
-    font-size: clamp(2rem, 11vw, 7rem);
-    color: var(--dark);
+    font-size: clamp(2rem, 11vw, 9rem);
+    color: var(--secondary-1);
     text-align: center;
 }
 
@@ -409,7 +420,7 @@ section.default2 h2 + p  {
         -moz-transform: unset;
         -ms-transform: unset;
         -o-transform: unset;
-}
+    }
 
     .intro .logo {
         width: clamp(10rem, 45vw, var(--max-width));
@@ -423,7 +434,7 @@ section.default2 h2 + p  {
     .intro h1 {
         z-index: 3;
         width: clamp(1rem, var(--pace), var(--max-width));
-        font-size: clamp(3.3rem, 9.1vmin, 6.5rem);
+        font-size: clamp(5rem, 4.4vw, 7.5rem);
     }
 
     .intro .corner.graphic {
