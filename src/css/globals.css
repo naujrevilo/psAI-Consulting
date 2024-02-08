@@ -15,10 +15,11 @@ html.sr .reveal, html.sr .slow_reveal, html.sr .step_reveal1 {
     --secondary:#d2a5ff;
     --secondary-1:#513e6b;
     --secondary-2:#857695;
+    --secondary-3:#885cb5;
 
     --highlight-gradient:linear-gradient(-30deg, #00B094, #7B7BE5 62%, #A679FF);
 
-    --max-width: 120rem;
+    --max-width: 130rem;
     --pace:81vw;
 
     --width-1:clamp(15rem, var(--pace), var(--max-width));
@@ -147,13 +148,13 @@ body::-webkit-scrollbar-track-piece:start {
 }
 
 .cta {
-    padding: clamp(0.7rem, 3.5vw, 1.6rem) clamp(1.6rem, 9vmin, 4.3rem);
+    padding: clamp(0.7rem, 3.5vw, 1.4rem) clamp(1.6rem, 9vmin, 4rem);
     font-weight: 300;
     border-radius: 20rem;
     display: block;
     color: var(--secondary-1);
     font-weight: 600;
-    font-size: clamp(1.5rem, 4.8vw, 2.1rem);
+    font-size: clamp(1.5rem, 4.8vw, 1.8rem);
     line-height: 1;
     position: relative;
     transition: filter 0.4s ease;
@@ -200,7 +201,7 @@ body::-webkit-scrollbar-track-piece:start {
     z-index: -1;
 }
 
-.graphic svg {
+svg {
     width: 100%;
     overflow: visible;
 }

@@ -18,6 +18,7 @@ gsap.registerPlugin(ScrollTrigger);
 // anim01.from(".default1 .list li", {x: 1300, opacity:0, duration: 1, ease: "power1.out",})
 
 const graphics = document.querySelectorAll('.graphic, .logo')
+const serviceLogos = document.querySelectorAll('.subnav svg')
 
 const relativeStrokeWidth = Math.floor((window.innerHeight + (window.innerWidth / 5)) / 580)
 
@@ -27,6 +28,13 @@ for(let j = 0; j < graphics.length; j++) {
     for(let i = 0; i < pulsePaths.length; i++) {
         pulsePaths[i].style.animationDelay = `${i / 15}s`
         pulsePaths[i].style.strokeWidth = `${relativeStrokeWidth}px`
+    }
+}
+
+for(let j = 0; j < serviceLogos.length; j++) {
+    let pulsePaths = serviceLogos[j].querySelectorAll('.pulse')
+    for(let i = 0; i < pulsePaths.length; i++) {
+        pulsePaths[i].style.animationDelay = `${i / 15}s`
     }
 }
 

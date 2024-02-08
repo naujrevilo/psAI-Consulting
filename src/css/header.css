@@ -29,9 +29,10 @@ header .logo_anchor svg {
     margin-inline: auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: rgb(214 219 255 / 85%);
     backdrop-filter: blur(0.8rem);
-    padding: 4rem var(--corner-width1) 5rem;
+    padding: 4rem 2rem 3rem;
     box-sizing: border-box;
     font-size: clamp(1.5rem, 5.2vw, 2.1rem);
     font-weight: 600;
@@ -51,12 +52,21 @@ header .logo_anchor svg {
     padding: 0.8rem 3rem;
     border-radius: 3rem;
     margin-top: 0.8rem;
-    box-shadow: inset -1rem -1rem 1.5rem -1.2rem var(--secondary), inset 1rem 1rem 1.5rem -1.2rem var(--primary);
+    box-shadow: inset -1rem -1rem 1.5rem -1.2rem var(--secondary), inset 1rem 1rem 1.5rem -1.2rem var(--primary), 0 0rem 3.4rem -1.4rem var(--secondary-2);
     font-weight: 550;
+    border: 0.1rem solid var(--light-1);
+    position: sticky;
+    bottom: 0;
 }
 
 .header_nav a, .header_nav button {
     padding-block: 1.3rem;
+}
+
+.header_nav > hr {
+    min-height: 0.1rem;
+    width: 2rem;
+    background-color: var(--light);
 }
 
 nav.show {
@@ -101,6 +111,155 @@ header .hambt path {
     height: 3.5rem;
 }
 
+.superset {
+    display: flex;
+    flex-direction: column;
+    padding-block: 1.3rem;
+}
+
+.subnav {
+    width: clamp(10rem, 60vw, 30rem);
+}
+
+.subnav .ctnr {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 4vw, 2rem);
+}
+
+.header_nav .subnav a {
+    text-align: left;
+    padding: clamp(1.2rem, 3.5vw, 3rem) clamp(0.2rem, 4vw, 3rem) clamp(1.2rem, 3.5vw, 3rem) clamp(0.2rem, 4vw, 4rem);
+    /* justify-content: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    gap: clamp(0.2rem, 4vw, 2rem);
+    background-color: var(--light-1);
+    transition: background-color 0.4s ease;
+    -webkit-transition: background-color 0.4s ease;
+    -moz-transition: background-color 0.4s ease;
+    -ms-transition: background-color 0.4s ease;
+    -o-transition: background-color 0.4s ease;
+    border-radius: 1.5rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+    background-image: linear-gradient(140deg, var(--light), transparent);
+}
+
+.header_nav .subnav a:hover {
+    background-color: var(--light);
+    transition: background-color 0.1s ease;
+    -webkit-transition: background-color 0.1s ease;
+    -moz-transition: background-color 0.1s ease;
+    -ms-transition: background-color 0.1s ease;
+    -o-transition: background-color 0.1s ease;
+}
+
+.header_nav .subnav a > .flex {
+    gap: clamp(0.2rem, 4vw, 2rem);
+    flex-direction: column;
+}
+
+.header_nav .subnav a .flex .flex {
+    gap: clamp(0.2rem, 4vw, 2rem);
+    flex-flow: row wrap;
+}
+
+.header_nav .subnav a .text {
+    display: none;
+    font-size: clamp(1rem, 3.5vw, 1.6rem);
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+.header_nav .subnav a .text b, .header_nav .subnav a .text strong {
+    font-weight: 600;
+}
+
+.subnav a .learn_more {
+    display: none;
+    font-size: clamp(1rem, 2vw, 1.6rem);
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    border: 0.2rem solid var(--light);
+    border-radius: 0.4rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+    -moz-transition: background-color 0.3s ease, color 0.3s ease;
+    -ms-transition: background-color 0.3s ease, color 0.3s ease;
+    -o-transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.subnav a .learn_more:hover {
+    background-color: var(--light-1);
+    color: var(--secondary-3);
+    transition: background-color 0.1s ease, color 0.1s ease;
+    -webkit-transition: background-color 0.1s ease, color 0.1s ease;
+    -moz-transition: background-color 0.1s ease, color 0.1s ease;
+    -ms-transition: background-color 0.1s ease, color 0.1s ease;
+    -o-transition: background-color 0.1s ease, color 0.1s ease;
+}
+
+.subnav a:not(:last-of-type) {
+    border-bottom: 0.1rem solid var(--light);
+}
+
+.subnav a .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    flex: 1;
+    min-width: 12rem;
+}
+
+.subnav a svg {
+    width: clamp(4rem, 11vw, 7rem);
+    height: clamp(4rem, 15vw, 7rem);
+    box-sizing: border-box;
+    border-radius: 0.7rem;
+}
+
+.subnav a svg path {
+    /* stroke: var(--secondary); */
+    stroke-width: 4px;
+}
+
+.subnav a .title {
+    font-weight: 600;
+    font-size: clamp(1.8rem, 5.5vw, 2.5rem);
+}
+
+.subnav a .def {
+    font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+    color: var(--secondary-3);
+    font-weight: 400;
+    max-width: 22rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -123,6 +282,7 @@ header .hambt path {
     }
 
     nav.header_nav {
+        overflow: unset;
         border-top: unset;
         position: sticky;
         font-size: clamp(1.8rem, 1.15vw, 2.2rem);
@@ -132,14 +292,12 @@ header .hambt path {
         justify-content: center;
         padding-block: unset;
         flex-direction: row;
-        align-items: end;
         margin-inline: auto;
         left: 0;
         right: 0;
         padding: unset;
-        height: 6rem;
-        align-items: center;
-        width: clamp(15rem, 75vw, var(--max-width));
+        height: 7rem;
+        width: clamp(15rem, 80vw, var(--max-width));
         border-radius: 0 0 2rem 2rem;
         -webkit-border-radius: 0 0 2rem 2rem;
         -moz-border-radius: 0 0 2rem 2rem;
@@ -154,6 +312,11 @@ header .hambt path {
         -o-transition: none;
     }
 
+    nav.header_nav > hr {
+        height: 1.5rem;
+        width: 0.1rem;
+    }
+
     nav.header_nav.show {
         transform: translateY(0);
         -webkit-transform: translateY(0);
@@ -162,14 +325,21 @@ header .hambt path {
         -o-transform: translateY(0);
     }
 
-    .header_nav a, .header_nav button {
-        padding: 0.75rem clamp(0rem, 3vw, 2.5rem);
+    .header_nav > a, .header_nav button {
         margin-inline: unset;
         background-color: transparent;
         display: flex;
         align-items: center;
         box-sizing: border-box;
         height: 100%;
+    }
+
+    .header_nav a {
+        padding: clamp(0.75rem, 3vw, 1.4rem) clamp(0rem, 3vw, 3rem);
+    }
+
+    .header_nav button {
+        padding: 0.75rem clamp(0rem, 3vw, 2.5rem);
     }
 
     .header_nav .contact_bt {
@@ -181,7 +351,35 @@ header .hambt path {
         height: fit-content;
         margin-left: 1.5rem;
         padding: 0.7rem 2.5rem;
+        color: var(--secondary-3);
     }
+
+    .header_nav .subnav a {
+        transition: background-color 0.3s, transform 0.1s ease;
+        -webkit-transition: background-color 0.3s, transform 0.1s ease;
+        -moz-transition: background-color 0.3s, transform 0.1s ease;
+        -ms-transition: background-color 0.3s, transform 0.1s ease;
+        -o-transition: background-color 0.3s, transform 0.1s ease;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+        box-shadow: 0rem 3rem 5rem 0rem rgb(248 248 255 / 50%);
+    }
+
+    .header_nav .subnav a:hover {
+        transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        -o-transform: scale(1.02);
+        transition: background-color 0.1s, transform 0.1s ease;
+        -webkit-transition: background-color 0.1s, transform 0.1s ease;
+        -moz-transition: background-color 0.1s, transform 0.1s ease;
+        -ms-transition: background-color 0.1s, transform 0.1s ease;
+        -o-transition: background-color 0.1s, transform 0.1s ease;
+}
     
     nav a, nav button {
         transition: color 0.3s ease;
@@ -191,7 +389,7 @@ header .hambt path {
         -o-transition: color 0.3s ease;
     }
 
-    nav a:hover, nav button:hover {
+    nav > a:hover, nav .superset > a:hover, nav button:hover {
         color: var(--secondary-2);
         transition: color 0s ease;
         -webkit-transition: color 0s ease;
@@ -199,4 +397,62 @@ header .hambt path {
         -ms-transition: color 0s ease;
         -o-transition: color 0s ease;
     }
+
+    .superset {
+        /* align-items: center; */
+    }
+
+    .subnav {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        transform: translateY(calc(100% - 1rem));
+        -webkit-transform: translateY(calc(100% - 1rem));
+        -moz-transform: translateY(calc(100% - 1rem));
+        -ms-transform: translateY(calc(100% - 1rem));
+        -o-transform: translateY(calc(100% - 1rem));
+        padding-top: 1.5rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.4s ease, opacity 0.2s ease, visibility 0.2s;
+        -webkit-transition: transform 0.4s ease, opacity 0.2s ease, visibility 0.2s;
+        -moz-transition: transform 0.4s ease, opacity 0.2s ease, visibility 0.2s;
+        -ms-transition: transform 0.4s ease, opacity 0.2s ease, visibility 0.2s;
+        -o-transition: transform 0.4s ease, opacity 0.2s ease, visibility 0.2s;
+    }
+
+    .superset:hover .subnav {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(calc(100%));
+        -webkit-transform: translateY(calc(100%));
+        -moz-transform: translateY(calc(100%));
+        -ms-transform: translateY(calc(100%));
+        -o-transform: translateY(calc(100%));
+        transition: transform 0.1s ease, opacity 0.1s ease, visibility 0.1s;
+        -webkit-transition: transform 0.1s ease, opacity 0.1s ease, visibility 0.1s;
+        -moz-transition: transform 0.1s ease, opacity 0.1s ease, visibility 0.1s;
+        -ms-transition: transform 0.1s ease, opacity 0.1s ease, visibility 0.1s;
+        -o-transition: transform 0.1s ease, opacity 0.1s ease, visibility 0.1s;
+    }
+    
+    .subnav .ctnr {
+        flex-direction: row;
+    }
+    
+    .header_nav .subnav a {
+        flex: 1;
+    }
+
+    .header_nav .subnav a .text, .subnav a .learn_more {
+        display: block;
+    }
+    
+    .subnav a:not(:last-of-type) {
+        
+    }
+    
+        
 }
