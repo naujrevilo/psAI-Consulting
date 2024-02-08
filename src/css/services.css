@@ -30,7 +30,7 @@ section > .ctnr {
     overflow: hidden;
 }
 
-section .ctnr .content {
+.intro .ctnr .content {
     position: relative;
     z-index: 1;
     display: flex;
@@ -39,11 +39,11 @@ section .ctnr .content {
     justify-content: center;
 }
 
-section .intro .content {
+section.intro .content {
     text-align: center;
 }
 
-section .intro .graphic {
+section.intro .graphic {
     position: absolute;
     width: clamp(25rem, 75vw, 80rem);
     height: clamp(25rem, 75vw, 80rem);
@@ -94,7 +94,7 @@ section .title .name {
     white-space: nowrap;
 }
 
-section .intro .title + p {
+section.intro .title + p {
     font-size: clamp(1rem, 4.1vw, 2rem);
     font-weight: 100;
     margin-block: 2rem 3rem;
@@ -102,7 +102,7 @@ section .intro .title + p {
     max-width: 87rem;
 }
 
-section .intro .title + p b, section .intro .title + p strong {
+section.intro .title + p b, section.intro .title + p strong {
     font-weight: 600;
 }
 
@@ -130,7 +130,7 @@ section.define > .ctnr {
     overflow: hidden;
 }
 
-section.define .intro .title + p b, section.define .intro .title + p strong {
+.define.intro .title + p b, .define.intro .title + p strong {
     color: var(--secondary);
 }
 
@@ -148,17 +148,18 @@ section.define .learn_more.cta {
 
 section.define .title .name {
     background-image: linear-gradient(150deg, var(--secondary) 30%, #a4ffe9);
+    font-weight: 600;
 }
 
-section.define .intro .title {
+.define.intro .title {
     color: var(--light-1);
 }
 
-section.define .intro .graphic {
+.define.intro .graphic {
 
 }
 
-section.define .intro .graphic path {
+.define.intro .graphic path {
     stroke: var(--dark);
 }
 
@@ -187,7 +188,7 @@ section.align .title .name {
     font-weight: 600;
 }
 
-section.align .intro .title {
+.align.intro .title {
     color: var(--dark);
     font-weight: 600;
 }
@@ -197,7 +198,7 @@ section.align .title .psai {
     font-weight: 600;
 }
 
-section.align .intro .graphic path {
+.align.intro .graphic path {
     stroke: var(--light-1);
 }
 
@@ -208,7 +209,7 @@ section.align .learn_more.cta {
     background-image: linear-gradient(150deg, #dfc0ff 30%, #efe0ff);
 }
 
-section.align .intro .title + p b, section.align .intro .title + p strong {
+.align.intro .title + p b, .align.intro .title + p strong {
     color: var(--secondary-1);
 }
 
@@ -239,13 +240,13 @@ section.flow .title .name {
     font-weight: 600;
 }
 
-section.flow .intro .title {
+.flow.intro .title {
     color: var(--dark);
     font-weight: 600;
 }
 
 section.flow .title .psai {
-    color: var(--dark-2);
+    color: #164759;
     font-weight: 600;
 }
 
@@ -256,11 +257,11 @@ section.flow .learn_more.cta {
     background-image: linear-gradient(310deg, #c2fff0, #87dbcb 62%);
 }
 
-section.flow .intro .graphic path {
+.flow.intro .graphic path {
     stroke: var(--light-1);
 }
 
-section.flow .intro .title + p b, section.flow .intro .title + p strong {
+.flow.intro .title + p b, .flow.intro .title + p strong {
     color: var(--dark-2);
 }
 
@@ -296,7 +297,7 @@ section.run .title .name {
     color: var(--dark);
 }
 
-section.run .intro .title {
+.run.intro .title {
     color: var(--dark);
     font-weight: 600;
 }
@@ -313,10 +314,10 @@ section.run .learn_more.cta {
     background-image: linear-gradient(145deg, #ffc298, #e0c0ff);
 }
 
-section.run .intro .graphic path {
+.run.intro .graphic path {
     stroke: rgb(226 235 251 / 50%);
 }
 
-section.align .intro .title + p b, section.align .intro .title + p strong {
+.align.intro .title + p b, .align.intro .title + p strong {
     color: var(--dark-2);
 }
