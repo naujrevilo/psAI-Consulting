@@ -17,14 +17,18 @@ function toggleExitArea() {
 
 function toggleNav() {
     showingNav = !showingNav;
+
     hamBt.classList.toggle('active', showingNav);
     nav.classList.toggle("show", showingNav);
+    
     toggleExitArea();
     
     controlPathAnimation(showingNav ? 'paused' : 'running');
 
     if (showingContactBox) {
+        showingNav = false;
         toggleContactBox();
+        toggleNav()
     }
 }
 
@@ -34,9 +38,18 @@ function controlPathAnimation(state) {
 
 function toggleContactBox() {
     showingContactBox = !showingContactBox;
+
     contactBox.classList.toggle('show', showingContactBox);
+
     controlPathAnimation(showingContactBox ? 'paused' : 'running');
+
     toggleExitArea();
+
+    if (showingNav) {
+        showingContactBox = false;
+        toggleNav();
+        toggleContactBox()
+    }
 }
 
 hamBt.addEventListener("click", toggleNav);

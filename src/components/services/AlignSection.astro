@@ -5,13 +5,13 @@
     const { isMain } = Astro.props;
 ---
 
-<section class="align intro">
+<section class="align intro psai_align_style">
     <div class="ctnr">
         <div class="graphic">
             <Align/>
         </div>
 
-        <div class="content">
+        <div class="content slow_reveal">
             {isMain != "false" ? (
                 <h1 class="title">
                     <b>
@@ -35,11 +35,7 @@
             <p>psAI Align ensures your AI initiatives are in perfect harmony with your strategic objectives, <b>enhancing operational efficiencies and driving tangible outcomes.</b> This service is about leveraging AI as a strategic asset.</p>
 
             <div class="flex cta_ctnr">
-                {isMain != "false" ? (
-                    <a href="#learn-more" class="cta learn_more">Learn more</a>
-                ) : (
-                    <a href="/services/align#learn-more" class="cta learn_more">Learn more</a>
-                )}
+                <a href={isMain != "false" ? "#learn-more" : "/services/align#learn-more"} class="cta learn_more">Learn more</a>
 
                 <button type="button" class="contact_bt">Contact us</button>
             </div>

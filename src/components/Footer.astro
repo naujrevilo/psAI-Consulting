@@ -9,6 +9,10 @@
 	import Stripe from './Stripe.astro';
 
     import Worm from './svg/graphics/Worm.astro';
+	import Define from '../components/svg/services/Define.astro'
+	import Align from '../components/svg/services/Align.astro'
+	import Flow from '../components/svg/services/Flow.astro'
+	import Run from '../components/svg/services/Run.astro'
 ---
 
 <footer>
@@ -22,18 +26,63 @@
     
             <p class="legal">Copyright © 2024 psAI Consulting</p>
         </div>
+
+        <div class="services">
+            <p>Our services</p>
+
+            <div class="flex">
+                <a href="/services/define">
+                    <Define/>
+                
+                    <div class="content">
+                        <span class="title">psAI Define</span>
+
+                        <span class="def">Tailoring AI to Your Business Identity</span>
+                    </div>
+                </a>
     
+                <a href="/services/align">
+                    <Align/>
+
+                    <div class="content">
+                        <span class="title">psAI Align</span>
+
+                        <span class="def">Bridging AI Capabilities with Business Goals</span>
+                    </div>
+                </a>
+    
+                <a href="/services/flow">
+                    <Flow/>
+			
+                    <div class="content">
+                        <span class="title">psAI Flow</span>
+
+                        <span class="def">Optimising Data for AI Success</span>
+                    </div>
+                </a>
+    
+                <a href="/services/run">
+                    <Run/>
+			
+                    <div class="content">
+                        <span class="title">psAI Run</span>
+
+                        <span class="def">Enhancing Machine Learning Operations</span>
+                    </div>
+                </a>
+            </div>
+        </div>
     
         <nav>
             <a href="/#home">Home <Worm/></a>
         
-            <a href="/#the-ai-challenge">The Problem <Worm/></a>
+            <!-- <a href="/#the-ai-challenge">The Problem <Worm/></a> -->
         
             <a href="/#why-psai">Why psAI <Worm/></a>
         
-            <a href="/#the-team">The Team <Worm/></a>
+            <!-- <a href="/#the-team">The Team <Worm/></a> -->
         
-            <a href="/#deliverables">Deliverables <Worm/></a>
+            <a href="/#the-psai-edge">The psAI edge <Worm/></a>
         
             <button type="button" class="contact_bt">Contact us</button>
         </nav>

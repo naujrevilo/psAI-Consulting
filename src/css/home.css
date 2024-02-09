@@ -1,3 +1,7 @@
+body::before {
+    background-image: url(/svg/light-noise-bg.svg), linear-gradient(-30deg, var(--primary), var(--secondary));
+}
+
 section.intro {
     display: flex;
     flex-direction: column;
@@ -51,24 +55,28 @@ section + hr {
     display: none;
 }
 
-.intro h1 {
-    font-size: clamp(2rem, 9.1vmin, 6.5rem);
+.intro .statistics {
+    display: block;
+    font-size: clamp(2rem, 5vmin, 3rem);
     font-weight: 700;
     text-align: center;
-    line-height: 1.35;
-    margin-inline: auto;
-    width: clamp(1rem, 87vw, 105rem);
-    user-select: none;
+    max-width: 74%;
 }
 
-.intro h1 a {
+.intro .statistics a {
     color: var(--secondary-3);
     font-weight: 500;
 }
 
-.intro h1 span.small {
-    display: block;
-    font-size: clamp(2rem, 5.8vmin, 4rem);
+.intro h1 {
+    font-size: clamp(2rem, 9.1vmin, 6.5rem);
+    font-weight: 700;
+    text-align: center;
+    margin-inline: auto;
+    width: clamp(1rem, 87vw, 105rem);
+    user-select: none;
+    display: flex;
+    flex-direction: column;
 }
 
 .intro h1 b, .intro h1 strong {
@@ -85,9 +93,10 @@ section + hr {
     font-size: clamp(1.6rem, 4.6vmin, 2.6rem);
     text-align: center;
     width: clamp(10rem, 75vw, 97rem);
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.5;
     margin-bottom: 1.5rem;
+    color: var(--secondary-1);
 }
 
 .intro h2 b, .intro h2 strong {
@@ -148,14 +157,94 @@ section p b, section p strong {
     color: var(--secondary-1);
 }
 
-
-
 .g1 {
     width: clamp(10rem, 40vw, 25rem);
     position: absolute;
     left: 2rem;
     top: 0;
 }
+
+
+
+
+
+
+
+
+.default1#the-psai-edge .list .item {
+    padding: clamp(3rem, 5vw, 4rem);
+    border: 0.1rem solid var(--light);
+}
+
+#the-psai-edge .item {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    gap: clamp(0.5rem, 4vw, 1.5rem);
+}
+
+#the-psai-edge .content {
+    flex: 1;
+    min-width: clamp(12rem, 60vw, 30rem);
+}
+
+#the-psai-edge .def {
+    font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+    color: var(--secondary-3);
+    font-weight: 450;
+    max-width: 22rem;
+}
+
+#the-psai-edge a .content p {
+    margin-top: 0;
+}
+
+#the-psai-edge a .learn_more {
+    font-size: clamp(1rem, 4vw, 1.6rem);
+    width: fit-content;
+    padding: 0.5rem 1rem;
+    border: 0.1rem solid var(--light);
+    border-radius: 0.4rem;
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    color: var(--secondary-1);
+    font-weight: 600;
+    background-color: var(--light);
+    margin-top: 1rem;
+    display: block;
+}
+
+#the-psai-edge a .flex.heading {
+    gap: 2rem;
+    align-items: center;
+}
+
+#the-psai-edge a .learn_more:hover {
+    background-color: var(--light-1);
+    transition: background-color 0.1s ease;
+    -webkit-transition: background-color 0.1s ease;
+    -moz-transition: background-color 0.1s ease;
+    -ms-transition: background-color 0.1s ease;
+    -o-transition: background-color 0.1s ease;
+}
+
+#the-psai-edge .item h3 {
+    margin-block: 0 0.4rem;
+}
+
+#the-psai-edge .item svg {
+    width: 5rem;
+}
+
+.default1 .list .item.psai_define_style h3,
+.default1 .list .item.psai_define_style p {
+    font-weight: 400;
+    color:var(--light);
+}
+
 
 
 
@@ -208,6 +297,7 @@ section.default2 h2  {
     font-size: clamp(2rem, 11vw, 9rem);
     color: var(--secondary-1);
     text-align: center;
+    font-weight: 700;
 }
 
 section.default2 h2 + p  {
@@ -220,13 +310,12 @@ section.default2 h2 + p  {
     display: flex;
     flex-flow: row wrap;
     gap: clamp(1.6rem, 2vw, 2rem);
-    margin-block: 2rem;
+    margin-block: 2rem 3rem;
 }
 
 .default2 .box_ctnr .box {
     min-width: clamp(10rem, 85vw, 30rem);
-    background-color: rgb(214 219 255 / 25%);
-    backdrop-filter: blur(0.3rem);
+    background-color: var(--light-1);
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -241,11 +330,26 @@ section.default2 h2 + p  {
     text-align: center;
     align-items: center;
     border: 0.1rem solid var(--light-1);
+    transition: background-color 0.4s ease;
+    -webkit-transition: background-color 0.4s ease;
+    -moz-transition: background-color 0.4s ease;
+    -ms-transition: background-color 0.4s ease;
+    -o-transition: background-color 0.4s ease;
+}
+
+.default2 .box_ctnr .box:hover {
+    background-color: var(--light);
+    transition: background-color 0.05s ease;
+    -webkit-transition: background-color 0.05s ease;
+    -moz-transition: background-color 0.05s ease;
+    -ms-transition: background-color 0.05s ease;
+    -o-transition: background-color 0.05s ease;
 }
 
 .default2 .box_ctnr .box h3 {
-    font-size: clamp(1.6rem, 6vw, 2.4rem);
+    font-size: clamp(1.6rem, 6vw, 2.6rem);
     color: var(--secondary-1);
+    font-weight: 700;
 }
 
 .default2 .box_ctnr .box p {
@@ -255,6 +359,17 @@ section.default2 h2 + p  {
 .default2 .box_ctnr .box svg {
 
 }
+
+
+
+
+
+
+
+
+
+
+
 
 .team_ctnr {
     display: flex;
@@ -434,7 +549,8 @@ section.default2 h2 + p  {
     .intro h1 {
         z-index: 3;
         width: clamp(1rem, var(--pace), var(--max-width));
-        font-size: clamp(5rem, 4.4vw, 7.5rem);
+        font-size: clamp(5rem, 6vw, 10.5rem);
+        line-height: 1.1;
     }
 
     .intro .corner.graphic {
@@ -459,7 +575,7 @@ section.default2 h2 + p  {
         -moz-transition: border-color 0.4s ease, transform 0.8s 0.2s, margin-bottom 0.2s ease, background-color 0.4s ease;
         -ms-transition: border-color 0.4s ease, transform 0.8s 0.2s, margin-bottom 0.2s ease, background-color 0.4s ease;
         -o-transition: border-color 0.4s ease, transform 0.8s 0.2s, margin-bottom 0.2s ease, background-color 0.4s ease;
-}
+    }
 
     .team_ctnr .profile:hover {
         z-index: 8;
@@ -469,7 +585,7 @@ section.default2 h2 + p  {
         -moz-transition: margin-bottom 0.2s 0.15s ease, transform 0.4s, background-color 0.2s ease;
         -ms-transition: margin-bottom 0.2s 0.15s ease, transform 0.4s, background-color 0.2s ease;
         -o-transition: margin-bottom 0.2s 0.15s ease, transform 0.4s, background-color 0.2s ease;
-}
+    }
 
     .team_ctnr .profile .description {
         transition:max-height 0.2s ease;
@@ -477,7 +593,7 @@ section.default2 h2 + p  {
         -moz-transition:max-height 0.2s ease;
         -ms-transition:max-height 0.2s ease;
         -o-transition:max-height 0.2s ease;
-}
+    }
 
     .team_ctnr .profile:hover .description {
         max-height: 15rem;

@@ -36,6 +36,12 @@
 	import Idea from '../components/svg/icons/Idea.astro'
 	import List from '../components/svg/icons/List.astro'
 	import Strategy from '../components/svg/icons/Strategy.astro'
+
+	
+	import Define from '../components/svg/services/Define.astro'
+	import Align from '../components/svg/services/Align.astro'
+	import Flow from '../components/svg/services/Flow.astro'
+	import Run from '../components/svg/services/Run.astro'
 ---
 
 <Layout logoAnchorTheme="dark">
@@ -55,9 +61,12 @@
 					<LogoText/>
 				</div>
 
-				<!-- <h1><span class="step_reveal1">Unlock the potential of <strong>AI integration.</strong></span> <span class="step_reveal1">Embrace innovation.</span> <span class="step_reveal1"><b>Define the future.</b></span></h1> -->
+				<div class="statistics step_reveal1">
+					<span class="">91.5% of leading businesses invest in AI on an ongoing basis.<a href="https://connect.comptia.org/blog/artificial-intelligence-statistics-facts" target="_blank" title="30+ Artificial Intelligence Statistics and Facts for 2023">*</a>
+					</span>
+				</div>
 
-				<h1><span class="small step_reveal1">91.5% of leading businesses invest in AI on an ongoing basis.<a href="https://connect.comptia.org/blog/artificial-intelligence-statistics-facts" target="_blank" title="30+ Artificial Intelligence Statistics and Facts for 2023">*</a></span><span class="step_reveal1">Embrace innovation.</span> <span class="step_reveal1"><b>Define the future.</b></span></h1>
+				<h1><span class="step_reveal1">Embrace innovation.</span> <span class="step_reveal1"><b>Define the future.</b></span></h1>
 
 				<h2 class="step_reveal1">Transform tomorrow’s uncertainties into identifiable opportunities.</h2>
 
@@ -163,7 +172,7 @@
 			</div>
 		</section> -->
 
-		<section id="deliverables" class="default1 bullets">
+		<section id="the-psai-edge" class="default1 bullets">
 			<div class="content">
 				<h2>The psAI edge<Worm/></h2>
 
@@ -185,28 +194,76 @@
 			</div>
 
 			<div class="list">
-				<a class="item" href="/services/define">
-					<h3>psAI Define</h3>
+				<a class="item psai_define_style" href="/services/define">
+					<div class="flex heading">
+						<Define/>
+						
+						<div>
+							<h3>psAI Define</h3>
+								
+							<span class="def">Tailoring AI to Your Business Identity</span>
+						</div>
+					</div>
 
-					<p>Customises AI to mirror your business's ethos, ensuring technology reflects your brand's identity.</p>
+					<div class="content">	
+						<p>Customises AI to mirror your business's ethos, ensuring technology reflects your brand's identity.</p>
+	
+						<span class="learn_more">Learn more</span>
+					</div>
 				</a>
 
-				<a class="item" href="/services/align">
-					<h3>psAI Align</h3>
+				<a class="item psai_align_style" href="/services/align">
+					<div class="flex heading">
+						<Align/>
 
-					<p>Bridges the gap between AI capabilities and your strategic objectives, ensuring technology serves your business, not the other way around.</p>
+						<div>
+							<h3>psAI Align</h3>
+	
+							<span class="def">Bridging AI Capabilities with Business Goals</span>
+						</div>
+					</div>
+
+					<div class="content">
+						<p>Bridges the gap between AI capabilities and your strategic objectives, ensuring technology serves your business, not the other way around.</p>
+	
+						<span class="learn_more">Learn more</span>
+					</div>
 				</a>
 
-				<a class="item" href="/services/flow">
-					<h3>psAI Flow</h3>
+				<a class="item psai_flow_style" href="/services/flow">
+					<div class="flex heading">
+						<Flow/>
 
-					<p>Optimises your data ecosystem, preparing it for seamless integration with AI, building on the importance of data in understanding human behaviour.</p>
+						<div>
+							<h3>psAI Flow</h3>
+	
+							<span class="def">Optimising Data for AI Success</span>
+						</div>
+					</div>
+
+					<div class="content">
+						<p>Optimises your data ecosystem, preparing it for seamless integration with AI, building on the importance of data in understanding human behaviour.</p>
+	
+						<span class="learn_more">Learn more</span>
+					</div>
 				</a>
 
-				<a class="item" href="/services/run">
-					<h3>psAI Run</h3>
+				<a class="item psai_run_style" href="/services/run">
+					<div class="flex heading">
+						<Run/>
 
-					<p>Focuses on the operational excellence of Machine Learning implementation, ensuring they are efficient, cost-effective, and human-friendly.</p>
+						<div>
+							<h3>psAI Run</h3>
+							
+							<span class="def">Enhancing Machine Learning Operations</span>
+						</div>
+					</div>
+
+					<div class="content">
+						<p>Focuses on the operational excellence of Machine Learning implementation, ensuring they are efficient, cost-effective, and human-friendly.</p>
+	
+						<span class="learn_more">Learn more</span>
+					</div>
 				</a>
 			</div>
 		</section>

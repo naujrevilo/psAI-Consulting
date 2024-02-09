@@ -17,3 +17,9 @@ import RunSection from '../../components/services/RunSection.astro';
         <RunSection isMain="false"/>
     </main>
 </Layout>
+
+<style>
+    body::before {
+        background-image: url(/svg/light-noise-bg.svg), linear-gradient(-30deg, var(--primary), var(--secondary));
+    }
+</style>

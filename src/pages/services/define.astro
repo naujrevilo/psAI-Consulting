@@ -8,6 +8,8 @@ import Worm from '../../components/svg/graphics/Worm.astro';
 ---
 
 <Layout logoAnchorTheme="light">
+    <a href="/services/" class="back">Return to Services</a>
+
     <main>
         <DefineSection/>
         
@@ -62,3 +64,39 @@ import Worm from '../../components/svg/graphics/Worm.astro';
         </section>
     </main>
 </Layout>
+
+<style>
+    body::before {
+        background-image: url(/svg/dark-noise-bg.svg), linear-gradient(-25deg, var(--secondary-1) -10%, var(--dark) 38%, #0f0917);
+    }
+
+
+    .default1 .content h2 {
+        font-size: clamp(2rem, 9vw, 6rem);
+        color: var(--secondary);
+        font-weight: 500;
+    }
+
+    .default1 {
+        color: var(--light);
+    }
+
+    .default1 .content p {
+        font-size: clamp(1.6rem, 4.2vw, 1.9rem);
+    }
+
+    .default1 .list .item h3 {
+        color: var(--secondary);
+        font-weight: 550;
+    }
+
+    .default1 .list .item p {
+        color: var(--light);
+        font-weight: 400;
+    }
+
+    .default1 .list .item {
+        background-color: var(--dark);
+        border: 0.1rem solid var(--secondary-1);
+    }
+</style>

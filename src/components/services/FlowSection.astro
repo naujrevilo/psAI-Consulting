@@ -5,13 +5,13 @@
     const { isMain } = Astro.props;
 ---
 
-<section class="flow intro">
+<section class="flow intro psai_flow_style">
     <div class="ctnr">
         <div class="graphic">
             <Flow/>
         </div>
 
-        <div class="content">
+        <div class="content slow_reveal">
             {isMain != "false" ? (
                 <h1 class="title">
                     <b>
@@ -35,11 +35,8 @@
             <p>Data is the foundation of effective AI. psAI Flow focuses on <strong>refining your data management practices for seamless AI integration</strong>, turning data into a strategic asset for growth and innovation.</p>
 
             <div class="flex cta_ctnr">
-                {isMain != "false" ? (
-                    <a href="#learn-more" class="cta learn_more">Learn more</a>
-                ) : (
-                    <a href="/services/flow#learn-more" class="cta learn_more">Learn more</a>
-                )}
+                <a href={isMain != "false" ? "#learn-more" : "/services/flow#learn-more"} class="cta learn_more">Learn more</a>
+
                 <button type="button" class="contact_bt">Contact us</button>
             </div>
 

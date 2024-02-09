@@ -5,13 +5,13 @@
     const { isMain } = Astro.props;
 ---
 
-<section class="run intro">
+<section class="run intro psai_run_style">
     <div class="ctnr">
         <div class="graphic">
             <Run/>
         </div>
 
-        <div class="content">
+        <div class="content slow_reveal">
             {isMain != "false" ? (
                 <h1 class="title">
                     <b>
@@ -35,11 +35,8 @@
             <p>For businesses leveraging <strong>Machine Learning (ML)</strong>, psAI Run offers a strategic approach to optimising ML costs and operational models, <b>aligning them with your business needs for maximum efficiency and cost-effectiveness.</b></p>
 
             <div class="flex cta_ctnr">
-                {isMain != "false" ? (
-                    <a href="#learn-more" class="cta learn_more">Learn more</a>
-                ) : (
-                    <a href="/services/run#learn-more" class="cta learn_more">Learn more</a>
-                )}
+                <a href={isMain != "false" ? "#learn-more" : "/services/run#learn-more"} class="cta learn_more">Learn more</a>
+
                 <button type="button" class="contact_bt">Contact us</button>
             </div>
 
