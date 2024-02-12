@@ -36,16 +36,16 @@ section > .ctnr {
 }
 
 section + hr {
-    margin: clamp(4rem, 40vw, 22rem) auto clamp(4rem, 40vw, 20rem);
+    margin: clamp(4rem, 40vw, 16rem) auto clamp(4rem, 40vw, 16rem);
     width: var(--width-1);
     height: 0.1rem;
     background-color: var(--light-1);
 }
 
 .intro .waves {
-    width: clamp(10rem, 65vw, 80rem);
+    width: clamp(10rem, 50vw, 80rem);
     position: absolute;
-    transform: translateY(-50%);
+    transform: translateY(-33%);
 }
 
 .intro .waves svg {
@@ -330,7 +330,7 @@ section.default2 > .content {
 }
 
 section.default2 h2  {
-    font-size: clamp(2rem, 11vw, 9rem);
+    font-size: clamp(2rem, 11vw, 6rem);
     color: var(--secondary-1);
     text-align: center;
     font-weight: 700;

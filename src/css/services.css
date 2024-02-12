@@ -60,7 +60,7 @@ section:last-of-type {
 
 
 section:not(.intro) {
-    padding-block: 15rem;
+    padding-block: 22rem 5rem;
 }
 
 section > .ctnr {
