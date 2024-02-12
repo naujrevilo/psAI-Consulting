@@ -105,11 +105,11 @@ nav.show {
 }
 
 header .hambt path {
-    transition: stroke 0.2s ease;
+    /* transition: stroke 0.2s ease;
     -webkit-transition: stroke 0.2s ease;
     -moz-transition: stroke 0.2s ease;
     -ms-transition: stroke 0.2s ease;
-    -o-transition: stroke 0.2s ease;
+    -o-transition: stroke 0.2s ease; */
 }
 
 .hambt > .ctnr {
@@ -228,6 +228,11 @@ header .hambt path {
 .subnav a svg path {
     /* stroke: var(--secondary); */
     stroke-width: 0.1rem;
+    animation-play-state: paused;
+}
+
+.subnav a:hover svg path {
+    animation-play-state: running;
 }
 
 .subnav a .title {
