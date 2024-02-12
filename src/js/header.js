@@ -23,7 +23,7 @@ function toggleNav() {
     
     toggleExitArea();
     
-    controlPathAnimation(showingNav ? 'paused' : 'running');
+    // controlPathAnimation(showingNav ? 'paused' : 'running');
 
     if (showingContactBox) {
         showingNav = false;

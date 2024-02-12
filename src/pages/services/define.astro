@@ -28,6 +28,12 @@ import Worm from '../../components/svg/graphics/Worm.astro';
                 <div class="graphic_cta">
                     <button type="button" class="main cta highlight contact_bt">Contact us</button>
                 </div>
+
+                <article class="details">
+                    <p>Engagement Duration: <b>14 days</b></p>
+                    <p>Price: <b>$30,000</b></p>
+                    <p>Minimum Time to Kickoff: <b>7 days</b></p>
+                </article>
             </div>
     
             <ul class="list">
@@ -98,5 +104,18 @@ import Worm from '../../components/svg/graphics/Worm.astro';
     .default1 .list .item {
         background-color: var(--dark);
         border: 0.1rem solid var(--secondary-1);
+    }
+
+    section.intro .title + p {
+        color: #C7B8D0;
+    }
+
+    .details {
+        border-color:var(--secondary-1);
+        box-shadow: 0 2rem 2rem -1.5rem var(--dark-1);
+    }
+
+    .details p b {
+        color: var(--secondary);
     }
 </style>

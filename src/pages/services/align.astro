@@ -23,6 +23,12 @@ import Worm from '../../components/svg/graphics/Worm.astro';
                 <div class="graphic_cta">
                     <button type="button" class="main cta highlight contact_bt">Contact us</button>
                 </div>
+
+                <article class="details">
+                    <p>Engagement Duration: <b>14 days</b></p>
+                    <p>Price: <b>$30,000</b></p>
+                    <p>Minimum Time to Kickoff: <b>7 days</b></p>
+                </article>
             </div>
     
             <ul class="list">
@@ -64,5 +70,15 @@ import Worm from '../../components/svg/graphics/Worm.astro';
     body::before {
         background-image: url(/svg/light-noise-bg.svg), linear-gradient(150deg, #f6edff, #dcb9ff 38%);
         background-size: 26rem, cover;
+    }
+
+    .details {
+        border-color: var(--light);
+        box-shadow: 0 2rem 2rem -1.5rem var(--secondary-2);
+    }
+
+    .details p b {
+        color: inherit;
+        font-weight: 700;
     }
 </style>

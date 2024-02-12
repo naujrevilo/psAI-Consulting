@@ -55,17 +55,53 @@ section + hr {
     display: none;
 }
 
-.intro .statistics {
+.intro .ticker {
     display: block;
-    font-size: clamp(2rem, 5vmin, 3rem);
-    font-weight: 700;
+    font-size: clamp(2rem, 5vmin, 2.8rem);
+    font-weight: 650;
     text-align: center;
-    max-width: 74%;
+    position: relative;
+    overflow: hidden;
 }
 
-.intro .statistics a {
+.intro .ticker span:not(:first-child) {
+    position: absolute;
+}
+
+.intro .ticker a {
     color: var(--secondary-3);
     font-weight: 500;
+    width: fit-content;
+}
+
+.intro .ticker span {
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.8s ease, opacity 1.6s ease;
+    -webkit-transition: transform 0.8s ease, opacity 1.6s ease;
+    -moz-transition: transform 0.8s ease, opacity 1.6s ease;
+    -ms-transition: transform 0.8s ease, opacity 1.6s ease;
+    -o-transition: transform 0.8s ease, opacity 1.6s ease;
+    max-width: clamp(30rem, 78vw, 110rem);
+}
+
+.intro .ticker span.active {
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    opacity: 1;
+}
+
+.intro .ticker .flex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .intro h1 {
@@ -549,7 +585,7 @@ section.default2 h2 + p  {
     .intro h1 {
         z-index: 3;
         width: clamp(1rem, var(--pace), var(--max-width));
-        font-size: clamp(5rem, 6vw, 10.5rem);
+        font-size: clamp(5rem, 8vw, 11.5rem);
         line-height: 1.1;
     }
 

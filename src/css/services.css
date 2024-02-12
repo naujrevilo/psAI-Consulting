@@ -1,6 +1,10 @@
 section.intro {
-    border-radius: 0 0 clamp(4rem, 5vw, 6rem) clamp(4rem, 5vw, 6rem);
     box-shadow: 0 -2rem 8rem -3rem var(--dark-2);
+    border-radius: 0 0 clamp(4rem, 18vw, 10rem) clamp(4rem, 18vw, 11rem);
+    -webkit-border-radius: 0 0 clamp(4rem, 18vw, 10rem) clamp(4rem, 18vw, 11rem);
+    -moz-border-radius: 0 0 clamp(4rem, 18vw, 10rem) clamp(4rem, 18vw, 11rem);
+    -ms-border-radius: 0 0 clamp(4rem, 18vw, 10rem) clamp(4rem, 18vw, 11rem);
+    -o-border-radius: 0 0 clamp(4rem, 18vw, 10rem) clamp(4rem, 18vw, 11rem);
 }
 
 section.intro:first-of-type {
@@ -8,11 +12,11 @@ section.intro:first-of-type {
 }
 
 section.intro:not(:last-of-type) {
-    margin-bottom: -6rem;
+    margin-bottom: calc(clamp(4rem, 18vw, 10rem) * -1);
 }
 
 section.intro:not(:first-of-type) {
-    padding-top: 6rem;
+    padding-top: clamp(4rem, 18vw, 10rem);
 }
 
 section {
@@ -23,17 +27,9 @@ section:last-of-type {
     margin-bottom: 10rem;
 }
 
-section .pulse {
-    animation-play-state: paused;
-}
-
-section:hover .pulse {
-    animation-play-state: running;
-}
-
 .back {
     position: absolute;
-    top: calc(var(--header-height) + 7rem);
+    top: calc(var(--header-height) + 6rem);
     left: 0;
     right: 0;
     margin-inline: auto;
@@ -107,6 +103,7 @@ section.intro .graphic {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: visible;
 }
 
 section .title {
@@ -149,7 +146,7 @@ section .title .name {
 }
 
 section.intro .title + p {
-    font-size: clamp(1rem, 4.6vw, 2rem);
+    font-size: clamp(1.6rem, 3.8vw, 2rem);
     font-weight: 100;
     margin-block: 2rem 3rem;
     line-height: 1.4;
@@ -186,6 +183,7 @@ section.define > .ctnr {
 
 .define.intro .title + p b, .define.intro .title + p strong {
     color: var(--secondary);
+    font-weight: 600;
 }
 
 section.define .title .psai {
@@ -395,6 +393,43 @@ section.run .learn_more.cta {
 
 
 
+/* DETAILS */
+
+.details {
+    padding: 2rem 3rem;
+    border-radius: 2rem;
+    margin-block: 3rem;
+    border: 0.1rem solid;
+    font-weight: 100;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 35rem;
+}
+
+.details p {
+
+}
+
+.details p b {
+    font-weight: 500;
+}
+
+section.default1 .content .details p {
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -410,7 +445,7 @@ section.run .learn_more.cta {
 }
 
 #learn-more.default1 .content p {
-    font-size: clamp(1.6rem, 4.2vw, 1.9rem);
+    font-size: clamp(1.6rem, 4.2vw, 1.8rem);
 }
 
 

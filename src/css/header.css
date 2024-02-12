@@ -138,21 +138,21 @@ header .hambt path {
 .subnav .ctnr {
     display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 4vw, 2rem);
+    gap: clamp(1rem, 3vw, 2rem);
 }
 
 .header_nav .subnav a {
     text-align: left;
-    padding: clamp(1.2rem, 3.5vw, 3rem) clamp(0.2rem, 4vw, 3rem) clamp(1.2rem, 3.5vw, 3rem) clamp(0.2rem, 4vw, 3rem);
+    padding: clamp(1.2rem, 3.5vw, 3rem) clamp(0.2rem, 6vw, 3rem) clamp(1.2rem, 3.5vw, 3rem) clamp(0.2rem, 6vw, 3rem);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: clamp(0.2rem, 4vw, 2rem);
-    border-radius: 1.5rem;
-    -webkit-border-radius: 1.5rem;
-    -moz-border-radius: 1.5rem;
-    -ms-border-radius: 1.5rem;
-    -o-border-radius: 1.5rem;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
     border: 0.1rem solid var(--light);
 }
 
@@ -164,6 +164,7 @@ header .hambt path {
 .header_nav .subnav a .flex .flex {
     gap: clamp(0.2rem, 4vw, 2rem);
     flex-flow: row wrap;
+    justify-content: space-between;
 }
 
 .header_nav .subnav a .text {
@@ -203,7 +204,7 @@ header .hambt path {
     -o-transition: background-color 0.1s ease;
 }
 
-.subnav a:not(:last-of-type) {
+.superset .subnav a:not(:last-of-type) {
     border-bottom: 0.1rem solid var(--light);
 }
 
@@ -211,11 +212,13 @@ header .hambt path {
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
-    flex: 1;
     min-width: 12rem;
+    justify-content: space-between;
+    width: fit-content;
 }
 
 .subnav a svg {
+    /* position: absolute; */
     width: clamp(4rem, 11vw, 7rem);
     height: clamp(4rem, 15vw, 7rem);
     box-sizing: border-box;
@@ -229,27 +232,26 @@ header .hambt path {
 
 .subnav a .title {
     font-weight: 600;
-    font-size: clamp(1.8rem, 5.5vw, 2.5rem);
+    font-size: clamp(1.8rem, 8.5vw, 3.8rem);
+    width: fit-content;
+    position: relative;
+    bottom: 4%;
+}
+
+.subnav a .title sup {
+    display: block;
+    position: relative;
+    font-size: 0.5em;
+    left: -5%;
+    bottom: -8%;
+    opacity: 0.4;
 }
 
 .subnav a .def {
-    font-size: clamp(1.1rem, 3.5vw, 1.5rem);
-    color: var(--secondary-3);
-    font-weight: 450;
-    max-width: 22rem;
+    font-size: clamp(1.1rem, 3.5vw, 1.7rem);
+    margin-bottom: 0.6rem;
+    line-height: 1.25;
 }
-
-.subnav .pulse {
-    animation-play-state: paused;
-}
-
-.superset .subnav a:hover .pulse {
-    animation-play-state: running;
-}
-
-
-
-
 
 
 
@@ -297,8 +299,6 @@ header .hambt path {
 .subnav a.psai_run_style path {
     stroke: var(--secondary-1);
 }
-
-
 
 
 
@@ -425,11 +425,11 @@ header .hambt path {
 }
 
     .header_nav .subnav a:hover {
-        transform: scale(1.02);
-        -webkit-transform: scale(1.02);
-        -moz-transform: scale(1.02);
-        -ms-transform: scale(1.02);
-        -o-transform: scale(1.02);
+        transform: scale(1.01);
+        -webkit-transform: scale(1.01);
+        -moz-transform: scale(1.01);
+        -ms-transform: scale(1.01);
+        -o-transform: scale(1.01);
         transition: transform 0.05s ease;
         -webkit-transition: transform 0.05s ease;
         -moz-transition: transform 0.05s ease;
@@ -463,7 +463,7 @@ header .hambt path {
         
     }
 
-    .subnav {
+    .superset .subnav {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -477,29 +477,29 @@ header .hambt path {
         padding-top: 1.5rem;
         opacity: 0;
         visibility: hidden;
-        transition-delay: 0.4s;
+        transition-delay: 0.8s;
 }
 
     .superset:hover .subnav {
         opacity: 1;
         visibility: visible;
-        transition-delay: 0s;
+        transition-delay: 0.2s;
     }
 
     .transition_ctnr:nth-child(1) {
-        transition-delay: 0s;
+        transition-delay: 0.2s;
     }
 
     .transition_ctnr:nth-child(2) {
-        transition-delay: 0.04s;
+        transition-delay: 0.25s;
     }
 
     .transition_ctnr:nth-child(3) {
-        transition-delay: 0.08s;
+        transition-delay: 0.3s;
     }
 
     .transition_ctnr:nth-child(4) {
-        transition-delay: 0.12s;
+        transition-delay: 0.35s;
     }
     
     .subnav .ctnr {
@@ -518,11 +518,11 @@ header .hambt path {
         -moz-transform: translateY(-0.8rem);
         -ms-transform: translateY(-0.8rem);
         -o-transform: translateY(-0.8rem);
-        transition: transform 0.2s ease, opacity 0.3s ease, visibility 0.3s;
-        -webkit-transition: transform 0.2s ease, opacity 0.3s ease, visibility 0.3s;
-        -moz-transition: transform 0.2s ease, opacity 0.3s ease, visibility 0.3s;
-        -ms-transition: transform 0.2s ease, opacity 0.3s ease, visibility 0.3s;
-        -o-transition: transform 0.2s ease, opacity 0.3s ease, visibility 0.3s;
+        transition: transform 0.4s ease, opacity 0.5s ease, visibility 0.5s;
+        -webkit-transition: transform 0.4s ease, opacity 0.5s ease, visibility 0.5s;
+        -moz-transition: transform 0.4s ease, opacity 0.5s ease, visibility 0.5s;
+        -ms-transition: transform 0.4s ease, opacity 0.5s ease, visibility 0.5s;
+        -o-transition: transform 0.4s ease, opacity 0.5s ease, visibility 0.5s;
 }
 
     .superset:hover .transition_ctnr {
@@ -536,6 +536,10 @@ header .hambt path {
 }
     
     .header_nav .subnav a {
+    }
+
+    .header_nav .subnav a .flex .flex {
+        justify-content: unset;
     }
 
     .header_nav .subnav a .text, .subnav a .learn_more {

@@ -61,10 +61,42 @@
 					<LogoText/>
 				</div>
 
-				<div class="statistics step_reveal1">
-					<span class="">91.5% of leading businesses invest in AI on an ongoing basis.<a href="https://connect.comptia.org/blog/artificial-intelligence-statistics-facts" target="_blank" title="30+ Artificial Intelligence Statistics and Facts for 2023">*</a>
-					</span>
+				<div class="ticker step_reveal1">
+					<div class="flex">
+						<span>91.5% of leading businesses invest in AI on an ongoing basis.<a href="https://connect.comptia.org/blog/artificial-intelligence-statistics-facts" target="_blank" title="30+ Artificial Intelligence Statistics and Facts for 2023">*</a></span>
+	
+						<span>87% of AI projects never make it into production.<a href="https://d2iq.com/blog/why-87-of-ai-ml-projects-never-make-it-into-production-and-how-to-fix-it" target="_blank" title="87% of AI projects never make it into production.">*</a></span>
+					</div>
 				</div>
+
+				<script is:inline>
+					let tickers = document.querySelectorAll('.ticker span')
+
+					tickers[0].classList.add('active')
+
+					let i = 0;
+
+					function passTicker() {
+						
+						if(i == (tickers.length)) {
+							i = 0;
+							document.querySelector('.active').classList.remove('active')
+						}
+						
+						if(i > 0) {
+							tickers[i - 1].classList.remove('active')
+						}
+						
+						tickers[i].classList.add('active')
+						i++
+					}
+
+					setInterval(() => {
+						passTicker()
+					}, 5000);
+
+					passTicker()
+				</script>
 
 				<h1><span class="step_reveal1">Embrace innovation.</span> <span class="step_reveal1"><b>Define the future.</b></span></h1>
 
@@ -206,7 +238,7 @@
 					</div>
 
 					<div class="content">	
-						<p>Customises AI to mirror your business's ethos, ensuring technology reflects your brand's identity.</p>
+						<p>Individuals in your organisation already use AI with no organisational oversight or direction. Let's fix this by uniting the efforts towards your business goals.</p>
 	
 						<span class="learn_more">Learn more</span>
 					</div>
@@ -224,7 +256,7 @@
 					</div>
 
 					<div class="content">
-						<p>Bridges the gap between AI capabilities and your strategic objectives, ensuring technology serves your business, not the other way around.</p>
+						<p>It's hard to know if you're heading in the right direction when it comes to cutting edge tech. Let's direct your resources to something that will pay off.</p>
 	
 						<span class="learn_more">Learn more</span>
 					</div>
@@ -242,7 +274,7 @@
 					</div>
 
 					<div class="content">
-						<p>Optimises your data ecosystem, preparing it for seamless integration with AI, building on the importance of data in understanding human behaviour.</p>
+						<p>Every modern business has access to priceless data, most of which is underutilised. Let's optimise your dataflow to leverage AI.</p>
 	
 						<span class="learn_more">Learn more</span>
 					</div>
@@ -260,7 +292,7 @@
 					</div>
 
 					<div class="content">
-						<p>Focuses on the operational excellence of Machine Learning implementation, ensuring they are efficient, cost-effective, and human-friendly.</p>
+						<p>Machine Learning is set to become as fundamental as digitisation. Let's make sure you're optimised to be ahead of the curve.</p>
 	
 						<span class="learn_more">Learn more</span>
 					</div>
