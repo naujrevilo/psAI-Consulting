@@ -15,6 +15,14 @@ header .logo_anchor {
     width: clamp(9rem, 21vmin, 11rem);
 }
 
+header .logo_anchor.dark {
+    color:var(--dark);
+}
+
+header .logo_anchor.light {
+    color:var(--light);
+}
+
 header .logo_anchor svg {
 
 }
@@ -30,13 +38,12 @@ header .logo_anchor svg {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(214 219 255 / 85%);
-    backdrop-filter: blur(0.8rem);
+    background-color: var(--light-1);
     padding: 4rem 2rem 3rem;
     box-sizing: border-box;
     font-size: clamp(1.5rem, 5.2vw, 2.1rem);
     font-weight: 600;
-    max-height: 75vh;
+    max-height: 70vh;
     overflow-y: auto;
     z-index: 9;
     color: var(--secondary-1);
@@ -57,6 +64,10 @@ header .logo_anchor svg {
     border: 0.1rem solid var(--light-1);
     position: sticky;
     bottom: 0;
+}
+
+.header_nav .contact_bt:hover {
+    color: var(--secondary-3);
 }
 
 .header_nav a, .header_nav button {
@@ -84,6 +95,9 @@ nav.show {
     margin-left: auto;
     display: block;
     margin-top: 1rem;
+    color: var(--light);
+    mix-blend-mode: difference;
+    margin-bottom: calc((var(--header-height) + 1rem) * -1);
 }
 
 .hambt.active {
@@ -124,39 +138,22 @@ header .hambt path {
 .subnav .ctnr {
     display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 4vw, 2rem);
+    gap: clamp(1rem, 3vw, 2rem);
 }
 
 .header_nav .subnav a {
     text-align: left;
-    padding: clamp(1.2rem, 3.5vw, 3rem) clamp(0.2rem, 4vw, 3rem) clamp(1.2rem, 3.5vw, 3rem) clamp(0.2rem, 4vw, 4rem);
-    /* justify-content: center; */
+    padding: clamp(1.2rem, 3.5vw, 3rem) clamp(0.2rem, 6vw, 3rem) clamp(1.2rem, 3.5vw, 3rem) clamp(0.2rem, 6vw, 3rem);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* align-items: center; */
     gap: clamp(0.2rem, 4vw, 2rem);
-    background-color: var(--light-1);
-    transition: background-color 0.4s ease;
-    -webkit-transition: background-color 0.4s ease;
-    -moz-transition: background-color 0.4s ease;
-    -ms-transition: background-color 0.4s ease;
-    -o-transition: background-color 0.4s ease;
-    border-radius: 1.5rem;
-    -webkit-border-radius: 1.5rem;
-    -moz-border-radius: 1.5rem;
-    -ms-border-radius: 1.5rem;
-    -o-border-radius: 1.5rem;
-    background-image: linear-gradient(140deg, var(--light), transparent);
-}
-
-.header_nav .subnav a:hover {
-    background-color: var(--light);
-    transition: background-color 0.1s ease;
-    -webkit-transition: background-color 0.1s ease;
-    -moz-transition: background-color 0.1s ease;
-    -ms-transition: background-color 0.1s ease;
-    -o-transition: background-color 0.1s ease;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    border: 0.1rem solid var(--light);
 }
 
 .header_nav .subnav a > .flex {
@@ -167,6 +164,7 @@ header .hambt path {
 .header_nav .subnav a .flex .flex {
     gap: clamp(0.2rem, 4vw, 2rem);
     flex-flow: row wrap;
+    justify-content: space-between;
 }
 
 .header_nav .subnav a .text {
@@ -185,26 +183,28 @@ header .hambt path {
     font-size: clamp(1rem, 2vw, 1.6rem);
     width: fit-content;
     padding: 0.5rem 1rem;
-    border: 0.2rem solid var(--light);
+    border: 0.1rem solid var(--light);
     border-radius: 0.4rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    -webkit-transition: background-color 0.3s ease, color 0.3s ease;
-    -moz-transition: background-color 0.3s ease, color 0.3s ease;
-    -ms-transition: background-color 0.3s ease, color 0.3s ease;
-    -o-transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    color: var(--secondary-1);
+    font-weight: 600;
+    background-color: var(--light);
 }
 
 .subnav a .learn_more:hover {
     background-color: var(--light-1);
-    color: var(--secondary-3);
-    transition: background-color 0.1s ease, color 0.1s ease;
-    -webkit-transition: background-color 0.1s ease, color 0.1s ease;
-    -moz-transition: background-color 0.1s ease, color 0.1s ease;
-    -ms-transition: background-color 0.1s ease, color 0.1s ease;
-    -o-transition: background-color 0.1s ease, color 0.1s ease;
+    transition: background-color 0.1s ease;
+    -webkit-transition: background-color 0.1s ease;
+    -moz-transition: background-color 0.1s ease;
+    -ms-transition: background-color 0.1s ease;
+    -o-transition: background-color 0.1s ease;
 }
 
-.subnav a:not(:last-of-type) {
+.superset .subnav a:not(:last-of-type) {
     border-bottom: 0.1rem solid var(--light);
 }
 
@@ -212,11 +212,13 @@ header .hambt path {
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
-    flex: 1;
     min-width: 12rem;
+    justify-content: space-between;
+    width: fit-content;
 }
 
 .subnav a svg {
+    /* position: absolute; */
     width: clamp(4rem, 11vw, 7rem);
     height: clamp(4rem, 15vw, 7rem);
     box-sizing: border-box;
@@ -225,25 +227,78 @@ header .hambt path {
 
 .subnav a svg path {
     /* stroke: var(--secondary); */
-    stroke-width: 4px;
+    stroke-width: 0.1rem;
 }
 
 .subnav a .title {
     font-weight: 600;
-    font-size: clamp(1.8rem, 5.5vw, 2.5rem);
+    font-size: clamp(1.8rem, 8.5vw, 3.8rem);
+    width: fit-content;
+    position: relative;
+    bottom: 4%;
+}
+
+.subnav a .title sup {
+    display: block;
+    position: relative;
+    font-size: 0.5em;
+    left: -5%;
+    bottom: -8%;
+    opacity: 0.4;
 }
 
 .subnav a .def {
-    font-size: clamp(1.1rem, 3.5vw, 1.5rem);
-    color: var(--secondary-3);
-    font-weight: 400;
-    max-width: 22rem;
+    font-size: clamp(1.1rem, 3.5vw, 1.7rem);
+    margin-bottom: 0.6rem;
+    line-height: 1.25;
 }
 
 
 
 
 
+
+
+
+
+/* SERVICE STYLES */
+
+
+.subnav a.psai_define_style {
+    border-color: var(--secondary-1);
+}
+
+.subnav a.psai_define_style .title {
+    font-weight: 400;
+}
+
+.subnav a.psai_define_style .text {
+    
+}
+
+.subnav a.psai_define_style .def {
+    color: var(--secondary);
+}
+
+.header_nav .subnav a.psai_define_style .text b,
+.header_nav .subnav a.psai_define_style .text strong {
+    font-weight: inherit;
+    color: var(--secondary);
+}
+
+
+.subnav a.psai_define_style path {
+    stroke: var(--secondary);
+}
+.subnav a.psai_align_style path {
+    stroke: var(--secondary-3);
+}
+.subnav a.psai_flow_style path {
+    stroke: #09cf9f;
+}
+.subnav a.psai_run_style path {
+    stroke: var(--secondary-1);
+}
 
 
 
@@ -297,6 +352,7 @@ header .hambt path {
         right: 0;
         padding: unset;
         height: 7rem;
+        margin-bottom: -7rem;
         width: clamp(15rem, 80vw, var(--max-width));
         border-radius: 0 0 2rem 2rem;
         -webkit-border-radius: 0 0 2rem 2rem;
@@ -335,7 +391,7 @@ header .hambt path {
     }
 
     .header_nav a {
-        padding: clamp(0.75rem, 3vw, 1.4rem) clamp(0rem, 3vw, 3rem);
+        padding: clamp(0.75rem, 3vw, 1.4rem) clamp(0rem, 3vw, 2rem);
     }
 
     .header_nav button {
@@ -351,99 +407,139 @@ header .hambt path {
         height: fit-content;
         margin-left: 1.5rem;
         padding: 0.7rem 2.5rem;
-        color: var(--secondary-3);
     }
 
     .header_nav .subnav a {
-        transition: background-color 0.3s, transform 0.1s ease;
-        -webkit-transition: background-color 0.3s, transform 0.1s ease;
-        -moz-transition: background-color 0.3s, transform 0.1s ease;
-        -ms-transition: background-color 0.3s, transform 0.1s ease;
-        -o-transition: background-color 0.3s, transform 0.1s ease;
+        transition: transform 0.3s ease;
+        -webkit-transition: transform 0.3s ease;
+        -moz-transition: transform 0.3s ease;
+        -ms-transition: transform 0.3s ease;
+        -o-transition: transform 0.3s ease;
         transform: scale(1);
         -webkit-transform: scale(1);
         -moz-transform: scale(1);
         -ms-transform: scale(1);
         -o-transform: scale(1);
-        box-shadow: 0rem 3rem 5rem 0rem rgb(248 248 255 / 50%);
-    }
+        box-shadow: 0rem 1.3rem 2rem -1.5rem rgb(248 248 255 / 60%);
+               
+}
 
     .header_nav .subnav a:hover {
-        transform: scale(1.02);
-        -webkit-transform: scale(1.02);
-        -moz-transform: scale(1.02);
-        -ms-transform: scale(1.02);
-        -o-transform: scale(1.02);
-        transition: background-color 0.1s, transform 0.1s ease;
-        -webkit-transition: background-color 0.1s, transform 0.1s ease;
-        -moz-transition: background-color 0.1s, transform 0.1s ease;
-        -ms-transition: background-color 0.1s, transform 0.1s ease;
-        -o-transition: background-color 0.1s, transform 0.1s ease;
+        transform: scale(1.01);
+        -webkit-transform: scale(1.01);
+        -moz-transform: scale(1.01);
+        -ms-transform: scale(1.01);
+        -o-transform: scale(1.01);
+        transition: transform 0.05s ease;
+        -webkit-transition: transform 0.05s ease;
+        -moz-transition: transform 0.05s ease;
+        -ms-transition: transform 0.05s ease;
+        -o-transition: transform 0.05s ease;
 }
-    
-    nav a, nav button {
-        transition: color 0.3s ease;
-        -webkit-transition: color 0.3s ease;
-        -moz-transition: color 0.3s ease;
-        -ms-transition: color 0.3s ease;
-        -o-transition: color 0.3s ease;
-    }
+    nav > a span, nav .superset > a span {
+        padding: 0.5rem 1rem;
+        transition: background-color 0.6s ease;
+        -webkit-transition: background-color 0.6s ease;
+        -moz-transition: background-color 0.6s ease;
+        -ms-transition: background-color 0.6s ease;
+        -o-transition: background-color 0.6s ease;
+        border-radius: 0.4rem;
+        -webkit-border-radius: 0.4rem;
+        -moz-border-radius: 0.4rem;
+        -ms-border-radius: 0.4rem;
+        -o-border-radius: 0.4rem;
+}
 
-    nav > a:hover, nav .superset > a:hover, nav button:hover {
-        color: var(--secondary-2);
-        transition: color 0s ease;
-        -webkit-transition: color 0s ease;
-        -moz-transition: color 0s ease;
-        -ms-transition: color 0s ease;
-        -o-transition: color 0s ease;
+    nav > a:hover span, nav .superset > a:hover span, .superset:hover > a span {
+        background-color:var(--light);
+        transition: background-color 0.1s ease;
+        -webkit-transition: background-color 0.1s ease;
+        -moz-transition: background-color 0.1s ease;
+        -ms-transition: background-color 0.1s ease;
+        -o-transition: background-color 0.1s ease;
     }
 
     .superset {
-        /* align-items: center; */
+        
     }
 
-    .subnav {
+    .superset .subnav {
         position: absolute;
         bottom: 0;
         left: 0;
         right: 0;
         width: 100%;
-        transform: translateY(calc(100% - 1rem));
-        -webkit-transform: translateY(calc(100% - 1rem));
-        -moz-transform: translateY(calc(100% - 1rem));
-        -ms-transform: translateY(calc(100% - 1rem));
-        -o-transform: translateY(calc(100% - 1rem));
+        transform: translateY(100%);
+        -webkit-transform: translateY(100%);
+        -moz-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        -o-transform: translateY(100%);
         padding-top: 1.5rem;
         opacity: 0;
         visibility: hidden;
-        transition: transform 0.4s ease, opacity 0.2s ease, visibility 0.2s;
-        -webkit-transition: transform 0.4s ease, opacity 0.2s ease, visibility 0.2s;
-        -moz-transition: transform 0.4s ease, opacity 0.2s ease, visibility 0.2s;
-        -ms-transition: transform 0.4s ease, opacity 0.2s ease, visibility 0.2s;
-        -o-transition: transform 0.4s ease, opacity 0.2s ease, visibility 0.2s;
-    }
+        transition-delay: 0.8s;
+}
 
     .superset:hover .subnav {
         opacity: 1;
         visibility: visible;
-        transform: translateY(calc(100%));
-        -webkit-transform: translateY(calc(100%));
-        -moz-transform: translateY(calc(100%));
-        -ms-transform: translateY(calc(100%));
-        -o-transform: translateY(calc(100%));
-        transition: transform 0.1s ease, opacity 0.1s ease, visibility 0.1s;
-        -webkit-transition: transform 0.1s ease, opacity 0.1s ease, visibility 0.1s;
-        -moz-transition: transform 0.1s ease, opacity 0.1s ease, visibility 0.1s;
-        -ms-transition: transform 0.1s ease, opacity 0.1s ease, visibility 0.1s;
-        -o-transition: transform 0.1s ease, opacity 0.1s ease, visibility 0.1s;
+        transition-delay: 0.2s;
+    }
+
+    .transition_ctnr:nth-child(1) {
+        transition-delay: 0.2s;
+    }
+
+    .transition_ctnr:nth-child(2) {
+        transition-delay: 0.25s;
+    }
+
+    .transition_ctnr:nth-child(3) {
+        transition-delay: 0.3s;
+    }
+
+    .transition_ctnr:nth-child(4) {
+        transition-delay: 0.35s;
     }
     
     .subnav .ctnr {
         flex-direction: row;
+        width: 95%;
+        margin-inline: auto;
     }
+
+    .transition_ctnr {
+        display: flex;
+        flex: 1;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-0.8rem);
+        -webkit-transform: translateY(-0.8rem);
+        -moz-transform: translateY(-0.8rem);
+        -ms-transform: translateY(-0.8rem);
+        -o-transform: translateY(-0.8rem);
+        transition: transform 0.4s ease, opacity 0.5s ease, visibility 0.5s;
+        -webkit-transition: transform 0.4s ease, opacity 0.5s ease, visibility 0.5s;
+        -moz-transition: transform 0.4s ease, opacity 0.5s ease, visibility 0.5s;
+        -ms-transition: transform 0.4s ease, opacity 0.5s ease, visibility 0.5s;
+        -o-transition: transform 0.4s ease, opacity 0.5s ease, visibility 0.5s;
+}
+
+    .superset:hover .transition_ctnr {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0rem);
+        -webkit-transform: translateY(0rem);
+        -moz-transform: translateY(0rem);
+        -ms-transform: translateY(0rem);
+        -o-transform: translateY(0rem);
+}
     
     .header_nav .subnav a {
-        flex: 1;
+    }
+
+    .header_nav .subnav a .flex .flex {
+        justify-content: unset;
     }
 
     .header_nav .subnav a .text, .subnav a .learn_more {

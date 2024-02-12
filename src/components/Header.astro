@@ -1,6 +1,8 @@
 ---
 	import { Image } from 'astro:assets';
 
+	const { logoAnchorTheme } = Astro.props;
+
     import '../css/header.css'
 
 	import LogoText from './svg/LogoText.astro';
@@ -10,13 +12,13 @@
 	import Align from '../components/svg/services/Align.astro'
 	import Flow from '../components/svg/services/Flow.astro'
 	import Run from '../components/svg/services/Run.astro'
-import ContactBox from './ContactBox.astro';
+	import ContactBox from './ContactBox.astro';
 ---
 
 <Stripe type="header"/>
 
 <header>
-	<a href="#home" class="logo_anchor" aria-label="Return to home page">
+	<a href="/#home" class={`logo_anchor ${logoAnchorTheme ? logoAnchorTheme : ""}`} aria-label="Return to home page">
 		<LogoText/>
 	</a>
 </header>
@@ -26,105 +28,126 @@ import ContactBox from './ContactBox.astro';
 </button>
 
 <nav class="header_nav">
-	<a href="/#home">Home</a>
+	<a href="/#home"><span>Home</span></a>
 
 	<hr>
 	
-	<!-- <div class="superset">
-		<a href="/services/">Services</a>
+	<div class="superset">
+		<a href="/services/"><span>Services</span></a>
 	
 		<div class="subnav">
 			<div class="ctnr">
-				<a href="#">
-					<span class="flex">
+				<div class="transition_ctnr">
+					<a href="/services/define" class="psai_define_style">
 						<span class="flex">
-							<Define/>
+							<span class="flex">
+								<Define/>
+			
+								<div class="content">
+									<span class="title"><sup>psAI</sup> Define</span>
+								</div>
+							</span>
 		
-							<div class="content">
-								<span class="title">psAI Define</span>
-								<span class="def">Tailoring AI to Your Business Identity</span>
-							</div>
+							<span class="text">
+								<p class="def">Tailoring AI to Your Business Identity</p>
+	
+								<p>psAI Define is about crafting AI solutions that <b>authentically represent your business and brand.</b> This service ensures your AI initiatives deliver predictable and meaningful outcomes, embodying your company's values and objectives.</p>
+							</span>
 						</span>
 	
-						<span class="text">psAI Define is about crafting AI solutions that <b>authentically represent your business and brand.</b> This service ensures your AI initiatives deliver predictable and meaningful outcomes, embodying your company's values and objectives.</span>
-					</span>
+						<span class="learn_more">Learn more</span>
+					</a>
+				</div>
 
-					<span class="learn_more">Learn more</span>
-				</a>
-
-				<a href="#">
-					<span class="flex">
+				<div class="transition_ctnr">
+					<a href="/services/align" class="psai_align_style">
 						<span class="flex">
-							<Align/>
-		
-							<div class="content">
-								<span class="title">psAI Align</span>
-								<span class="def">Bridging AI Capabilities with Business Goals</span>
-							</div>
+							<span class="flex">
+								<Align/>
+			
+								<div class="content">
+									<span class="title"><sup>psAI</sup> Align</span>
+								</div>
+							</span>
+
+							<span class="text">
+								<p class="def">Bridging AI Capabilities with Business Goals</p>
+								
+								<p>psAI Align ensures your AI initiatives are in <b>perfect harmony with your strategic objectives, enhancing operational efficiencies and driving tangible outcomes.</b> This service is about leveraging AI as a strategic asset.</p>
+							</span>
 						</span>
 	
-						<span class="text">psAI Align ensures your AI initiatives are in <b>perfect harmony with your strategic objectives, enhancing operational efficiencies and driving tangible outcomes.</b> This service is about leveraging AI as a strategic asset.</span>
-					</span>
+						<span class="learn_more">Learn more</span>
+					</a>
+				</div>
 
-					<span class="learn_more">Learn more</span>
-				</a>
-
-				<a href="#">
-					<span class="flex">
+				<div class="transition_ctnr">
+					<a href="/services/flow" class="psai_flow_style">
 						<span class="flex">
-							<Flow/>
+							<span class="flex">
+								<Flow/>
+			
+								<div class="content">
+									<span class="title"><sup>psAI</sup> Flow</span>
+								</div>
+							</span>
 		
-							<div class="content">
-								<span class="title">psAI Flow</span>
-								<span class="def">Optimising Data for AI Success</span>
-							</div>
+							<span class="text">
+								<p class="def">Optimising Data for AI Success</p>
+								
+								<p><b>Data is the foundation of effective AI.</b> psAI Flow focuses on refining your data management practices for seamless AI integration, turning data into a strategic asset for growth and innovation.</p>
+							</span>
 						</span>
 	
-						<span class="text"><b>Data is the foundation of effective AI.</b> psAI Flow focuses on refining your data management practices for seamless AI integration, turning data into a strategic asset for growth and innovation.</span>
-					</span>
+						<span class="learn_more">Learn more</span>
+					</a>
+				</div>
 
-					<span class="learn_more">Learn more</span>
-				</a>
-
-				<a href="#">
-					<span class="flex">
+				<div class="transition_ctnr">
+					<a href="/services/run" class="psai_run_style">
 						<span class="flex">
-							<Run/>
+							<span class="flex">
+								<Run/>
+			
+								<div class="content">
+									<span class="title"><sup>psAI</sup> Run</span>
+								</div>
+							</span>
 		
-							<div class="content">
-								<span class="title">psAI Run</span>
-								<span class="def">Enhancing Machine Learning Operations</span>
-							</div>
+							<span class="text">
+								<p class="def">Enhancing Machine Learning Operations</p>
+								
+								<p>For businesses leveraging Machine Learning (ML), <b>psAI Run offers a strategic approach to optimising ML costs and operational models</b>, aligning them with your business needs for maximum efficiency and cost-effectiveness.</p>
+							</span>
 						</span>
 	
-						<span class="text">For businesses leveraging Machine Learning (ML), <b>psAI Run offers a strategic approach to optimising ML costs and operational models</b>, aligning them with your business needs for maximum efficiency and cost-effectiveness.</span>
-					</span>
-
-					<span class="learn_more">Learn more</span>
-				</a>
+						<span class="learn_more">Learn more</span>
+					</a>
+				</div>
 			</div>
 		</div>
-	</div> -->
+	</div>
 	
 	<hr>
 
-	<a href="/#the-ai-challenge">The Problem</a>
+	<!-- <a href="/#the-ai-challenge"><span>The Problem</span></a> -->
 	
 	<hr>
 
-	<a href="/#why-psai">Why psAI</a>
+	<a href="/#why-psai"><span>Why psAI</span></a>
 	
 	<hr>
 
-	<a href="/#the-team">The Team</a>
+	<!-- <a href="/#the-team"><span>The Team</span></a>
+	
+	<hr> -->
+
+	<a href="/#the-psai-edge"><span>The psAI Edge</span></a>
 	
 	<hr>
 
-	<a href="/#deliverables">Deliverables</a>
-
-	<button type="button" class="contact_bt">Connect with us</button>
+	<button type="button" class="contact_bt">Contact us</button>
 </nav>
-
 
 <ContactBox/>
     

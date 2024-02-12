@@ -1,0 +1,78 @@
+---
+import '../../css/services.css'
+import Layout from "../../layouts/Layout.astro";
+import RunSection from "../../components/services/RunSection.astro";
+
+import Worm from '../../components/svg/graphics/Worm.astro';
+---
+
+<Layout logoAnchorTheme="dark">
+    <a href="/services/" class="back">Return to Services</a>
+    
+    <main>
+        <RunSection/>
+        
+        <section id="learn-more" class="default1 bullets">
+            <div class="content">    
+                <h2>Enhancing Efficiency in Machine Learning Operations<Worm/></h2>
+    
+                <p>In an era where Machine Learning (ML) technologies become pivotal in driving business processes, psAI Run stands as the essential service for enterprises looking to maximise the efficiency and cost-effectiveness of their ML deployments. Tailored specifically for businesses leveraging ML, psAI Run offers a strategic approach to optimising ML costs and models, ensuring they align perfectly with your business needs.</p>
+    
+                <p>Choosing psAI Run means selecting a partner dedicated to refining your ML operations to achieve unparalleled efficiency and effectiveness. Here's how:</p>
+    
+                <div class="graphic_cta">
+                    <button type="button" class="main cta highlight contact_bt">Contact us</button>
+                </div>
+
+                <article class="details">
+                    <p>Engagement Duration: <b>14 days</b></p>
+                    <p>Price: <b>$30,000</b></p>
+                    <p>Minimum Time to Kickoff: <b>7 days</b></p>
+                </article>
+            </div>
+    
+            <ul class="list">
+                <li class="item">
+                    <h3>Specialised ML Cost Analysis</h3>
+    
+                    <p>With a focus on financial efficiency, psAI Run identifies opportunities to reduce expenses in ML deployments, ensuring you get the most value from your investments.</p>
+                </li>
+    
+                <li class="item">
+                    <h3>Comparative Model Analysis</h3>
+    
+                    <p>Our service benchmarks your ML models against those in the market, providing insights into their efficiency and suitability, ensuring your ML initiatives are competitive and cutting-edge.</p>
+                </li>
+    
+                <li class="item">
+                    <h3>Optimisation of ML Operations</h3>
+    
+                    <p>psAI Run enhances the performance and cost-effectiveness of your ML models, driving better results and greater operational efficiency.</p>
+                </li>
+    
+                <li class="item">
+                    <h3>Tailored ML Solutions</h3>
+    
+                    <p>Recognising the uniqueness of each business, psAI Run offers customised recommendations tailored to your specific ML use cases and requirements, ensuring solutions that perfectly fit your needs.</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    body::before {
+        background-image: url(/svg/light-noise-bg.svg), linear-gradient(145deg, #ffa465, var(--secondary));
+        background-size: 26rem, cover;
+    }
+
+    .details {
+        border-color: var(--secondary-2);
+        box-shadow: 0 1.8rem 3rem -1.5rem var(--secondary-1);
+    }
+
+    .details p b {
+        color: inherit;
+        font-weight: 600;
+    }
+</style>

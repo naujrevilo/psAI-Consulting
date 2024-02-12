@@ -1,0 +1,25 @@
+---
+
+import Layout from '../../layouts/Layout.astro';
+
+import DefineSection from '../../components/services/DefineSection.astro'
+import AlignSection from '../../components/services/AlignSection.astro';
+import FlowSection from '../../components/services/FlowSection.astro';
+import RunSection from '../../components/services/RunSection.astro';
+
+---
+
+<Layout logoAnchorTheme="light">
+    <main>
+        <DefineSection isMain="false"/>
+        <AlignSection isMain="false"/>
+        <FlowSection isMain="false"/>
+        <RunSection isMain="false"/>
+    </main>
+</Layout>
+
+<style>
+    body::before {
+        background-image: url(/svg/light-noise-bg.svg), linear-gradient(-30deg, var(--primary), var(--secondary));
+    }
+</style>

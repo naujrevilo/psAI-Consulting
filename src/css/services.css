@@ -1,0 +1,475 @@
+section.intro {
+    box-shadow: 0 -2rem 8rem -3rem var(--dark-2);
+    border-radius: 0 0 clamp(4rem, 18vw, 10rem) clamp(4rem, 18vw, 11rem);
+    -webkit-border-radius: 0 0 clamp(4rem, 18vw, 10rem) clamp(4rem, 18vw, 11rem);
+    -moz-border-radius: 0 0 clamp(4rem, 18vw, 10rem) clamp(4rem, 18vw, 11rem);
+    -ms-border-radius: 0 0 clamp(4rem, 18vw, 10rem) clamp(4rem, 18vw, 11rem);
+    -o-border-radius: 0 0 clamp(4rem, 18vw, 10rem) clamp(4rem, 18vw, 11rem);
+}
+
+section.intro:first-of-type {
+    padding-top: 7rem;
+}
+
+section.intro:not(:last-of-type) {
+    margin-bottom: calc(clamp(4rem, 18vw, 10rem) * -1);
+}
+
+section.intro:not(:first-of-type) {
+    padding-top: clamp(4rem, 18vw, 10rem);
+}
+
+section {
+    position: relative;
+}
+
+section:last-of-type {
+    margin-bottom: 10rem;
+}
+
+.back {
+    position: absolute;
+    top: calc(var(--header-height) + 6rem);
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    z-index: 5;
+    text-align: center;
+    color: var(--secondary-1);
+    font-size: clamp(1.6rem, 5vw, 1.7rem);
+    font-weight: 600;
+    width: fit-content;
+}
+
+.back:hover {
+    color: var(--secondary-2);
+}
+
+.back::before {
+    content: '';
+    width: 0.3rem;
+    height: 0.3rem;
+    transform: translateY(-50%) rotate(45deg);
+    border-left: 0.2rem solid;
+    border-bottom: 0.2rem solid;
+    border-color: var(--light-b);
+    position: relative;
+    right: 1rem;
+    display: inline-block;
+}
+
+
+section:not(.intro) {
+    padding-block: 15rem;
+}
+
+section > .ctnr {
+    position: relative;
+    z-index: 1;
+    width: var(--width-1);
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.intro > .ctnr {
+    padding-block: clamp(4rem, 25vmin, 12rem);
+    box-sizing: border-box;
+    /* min-height: 80vh; */
+}
+
+.intro .ctnr .content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section.intro .content {
+    text-align: center;
+}
+
+section.intro .graphic {
+    position: absolute;
+    width: clamp(25rem, 75vw, 80rem);
+    height: clamp(25rem, 75vw, 80rem);
+    z-index: 1;
+    inset: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+section .title {
+    font-size: clamp(2rem, 3vw, 4rem);
+    font-weight: 500;
+}
+
+section .title b {
+    font-size: clamp(5rem, 22vw, 15rem);
+    font-weight: inherit;
+    color: var(--secondary);
+    position: relative;
+}
+
+section .title .psai {
+    position: absolute;
+    bottom: 85%;
+    font-size: clamp(1rem, 7vw, 3rem);
+    left: -2%;
+}
+
+section .flex.cta_ctnr {
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+section .flex.cta_ctnr .cta {
+    padding: clamp(0.7rem, 3.5vw, 1.4rem) clamp(1.6rem, 15vmin, 7rem);
+}
+
+section .flex.cta_ctnr button {
+    font-size: 1.6rem;
+}
+
+section .title .name {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+}
+
+section.intro .title + p {
+    font-size: clamp(1.6rem, 3.8vw, 2rem);
+    font-weight: 100;
+    margin-block: 2rem 3rem;
+    line-height: 1.4;
+    max-width: 87rem;
+}
+
+section.intro .title + p b, section.intro .title + p strong {
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section.define {
+    /* background-color: var(--dark-1);
+    color: var(--light);
+    background-image: linear-gradient(-25deg, var(--secondary-1) -10%, var(--dark) 38%, #0f0917); */
+    z-index: 4;
+}
+
+section.define > .ctnr {
+    overflow: hidden;
+}
+
+.define.intro .title + p b, .define.intro .title + p strong {
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+section.define .title .psai {
+    color: var(--light-1);
+}
+
+section.define .learn_more.cta {
+    border: 0.2rem solid var(--secondary);
+    color: var(--secondary);
+    background-color: var(--dark);
+    font-weight: 300;
+    background-image: linear-gradient(-25deg, var(--secondary-1), var(--dark) 50%);
+}
+
+section.define .title .name {
+    background-image: linear-gradient(150deg, var(--secondary) 30%, #a4ffe9);
+    font-weight: 600;
+}
+
+.define.intro .title {
+    color: var(--light-1);
+}
+
+.define.intro .graphic {
+
+}
+
+.define.intro .graphic path {
+    stroke: var(--dark);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section.align {
+    /* color: var(--dark);
+    background-image: url(/svg/light-noise-bg.svg), linear-gradient(150deg, #f6edff, #dcb9ff 38%); */
+    z-index: 3;
+    background-size: 26rem, cover;
+}
+
+section.align .title .name {
+    color: #0f0917;
+    background-image: linear-gradient(-25deg, var(--secondary) 0%, #583b80, #0f0917);
+    font-weight: 600;
+}
+
+.align.intro .title {
+    color: var(--dark);
+    font-weight: 600;
+    max-width: 73vw;
+}
+
+section.align .title .psai {
+    color: var(--secondary-1);
+    font-weight: 600;
+}
+
+.align.intro .graphic path {
+    stroke: var(--light-1);
+}
+
+section.align .learn_more.cta {
+    border: 0.1rem solid var(--light-1);
+    color: var(--secondary-1);
+    font-weight: 600;
+    background-image: linear-gradient(150deg, #dfc0ff 30%, #efe0ff);
+}
+
+.align.intro .title + p b, .align.intro .title + p strong {
+    color: var(--secondary-1);
+}
+
+section:not(.define) .flex.cta_ctnr button {
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+section.flow {
+    /* color: var(--dark);
+    background-image: url(/svg/light-noise-bg.svg), linear-gradient(195deg, #edfffb, #87dbcb 62%); */
+    z-index: 2;
+    background-size: 26rem, cover;
+}
+
+section.flow .title .name {
+    color: var(--dark-2);
+    background-image: linear-gradient(115deg, #0dd7c8, #216077);
+    font-weight: 600;
+}
+
+.flow.intro .title {
+    color: var(--dark);
+    font-weight: 600;
+}
+
+section.flow .title .psai {
+    color: #164759;
+    font-weight: 600;
+}
+
+section.flow .learn_more.cta {
+    border: 0.1rem solid var(--light-1);
+    color: var(--dark-2);
+    font-weight: 600;
+    background-image: linear-gradient(310deg, #c2fff0, #87dbcb 62%);
+}
+
+.flow.intro .graphic path {
+    stroke: var(--light-1);
+}
+
+.flow.intro .title + p b, .flow.intro .title + p strong {
+    color: var(--dark-2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section.run {
+    /* color: var(--dark);
+    background-image: url(/svg/light-noise-bg.svg), linear-gradient(145deg, #ffa465, var(--secondary));
+    background-size: 26rem, cover; */
+    z-index: 1;
+}
+
+section.run .title .name {
+    font-weight: 600;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+    white-space: unset;
+    color: var(--dark);
+}
+
+.run.intro .title {
+    color: var(--dark);
+    font-weight: 600;
+}
+
+section.run .title .psai {
+    color: var(--dark-2);
+    font-weight: 600;
+}
+
+section.run .learn_more.cta {
+    border: 0.1rem solid var(--light-1);
+    color: var(--dark-2);
+    font-weight: 600;
+    background-image: linear-gradient(145deg, #ffc298, #e0c0ff);
+}
+
+.run.intro .graphic path {
+    stroke: rgb(226 235 251 / 50%);
+}
+
+.align.intro .title + p b, .align.intro .title + p strong {
+    color: var(--dark-2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DETAILS */
+
+.details {
+    padding: 2rem 3rem;
+    border-radius: 2rem;
+    margin-block: 3rem;
+    border: 0.1rem solid;
+    font-weight: 100;
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 35rem;
+}
+
+.details p {
+
+}
+
+.details p b {
+    font-weight: 500;
+}
+
+section.default1 .content .details p {
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#learn-more.default1 .content h2 {
+    font-size: clamp(2rem, 11vw, 6rem);
+}
+
+#learn-more.default1 .content p {
+    font-size: clamp(1.6rem, 4.2vw, 1.8rem);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:800px) {
+    .back {
+        top: calc(var(--header-height) + 3rem);
+    }
+}

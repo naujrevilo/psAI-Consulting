@@ -50,9 +50,10 @@ form select {
     font-weight: 500;
     color: var(--dark);
     background-size: 100% 100%;
-    background-color: var(--light-1);
+    background-color: var(--light);
     border: unset;
     border-radius: 2rem;
+    box-shadow: 0 1rem 1rem var(--light-2);
 }
 
 input:focus-visible, textarea:focus-visible, select:focus-visible {

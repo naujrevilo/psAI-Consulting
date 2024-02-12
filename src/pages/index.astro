@@ -36,15 +36,21 @@
 	import Idea from '../components/svg/icons/Idea.astro'
 	import List from '../components/svg/icons/List.astro'
 	import Strategy from '../components/svg/icons/Strategy.astro'
+
+	
+	import Define from '../components/svg/services/Define.astro'
+	import Align from '../components/svg/services/Align.astro'
+	import Flow from '../components/svg/services/Flow.astro'
+	import Run from '../components/svg/services/Run.astro'
 ---
 
-<Layout title="">
+<Layout logoAnchorTheme="dark">
 	<main>
 		<section class="intro">
 
-			<div class="corner graphic">
+			<!-- <div class="corner graphic">
 				<CornerGraphic01/>
-			</div>
+			</div> -->
 
 			<div class="waves big graphic">
 				<Graphic06/>
@@ -55,13 +61,51 @@
 					<LogoText/>
 				</div>
 
-				<h1><span class="step_reveal1">Unlock the potential of <strong>AI integration.</strong></span> <span class="step_reveal1">Embrace innovation.</span> <span class="step_reveal1"><b>Define the future.</b></span></h1>
+				<div class="ticker step_reveal1">
+					<div class="flex">
+						<span>91.5% of leading businesses invest in AI on an ongoing basis.<a href="https://connect.comptia.org/blog/artificial-intelligence-statistics-facts" target="_blank" title="30+ Artificial Intelligence Statistics and Facts for 2023">*</a></span>
+	
+						<span>87% of AI projects never make it into production.<a href="https://d2iq.com/blog/why-87-of-ai-ml-projects-never-make-it-into-production-and-how-to-fix-it" target="_blank" title="87% of AI projects never make it into production.">*</a></span>
+					</div>
+				</div>
 
-				<h2 class="step_reveal1">AI integration through a blend of agility, insight, and innovation. <b>Navigate tomorrow's complexities, transforming uncertainties into identifiable opportunities.</b></h2>
+				<script is:inline>
+					let tickers = document.querySelectorAll('.ticker span')
+
+					tickers[0].classList.add('active')
+
+					let i = 0;
+
+					function passTicker() {
+						
+						if(i == (tickers.length)) {
+							i = 0;
+							document.querySelector('.active').classList.remove('active')
+						}
+						
+						if(i > 0) {
+							tickers[i - 1].classList.remove('active')
+						}
+						
+						tickers[i].classList.add('active')
+						i++
+					}
+
+					setInterval(() => {
+						passTicker()
+					}, 5000);
+
+					passTicker()
+				</script>
+
+				<h1><span class="step_reveal1">Embrace innovation.</span> <span class="step_reveal1"><b>Define the future.</b></span></h1>
+
+				<h2 class="step_reveal1">Transform tomorrow’s uncertainties into identifiable opportunities.</h2>
 
 				<div class="cta_ctnr flex step_reveal1">
-					<a href="#the-ai-challenge" class="cta dark">The AI Challenge</a>
-					<button type="button" class="main cta contact_bt">Connect with psAi</button>
+					<a href="/services/define" class="cta dark">Take the first step</a>
+
+					<button type="button" class="main cta contact_bt">Contact us</button>
 				</div>
 
 				<!-- <div class="graphic g1">
@@ -71,7 +115,7 @@
 			</div>
 		</section>
 
-		<!-- <section id="why-psai" class="default2">
+		<section id="why-psai" class="default2">
 			<div class="content">
 				<div class="heading big graphic">
 					<Graphic04/>
@@ -79,46 +123,47 @@
 				
 				<h2>Why psAI?</h2>
 
-				<p>At psAI, we believe in the transformative power of AI to redefine business operations, enhance human experiences, and create new paradigms of success. <strong>Our goal is to actualise the potential of AI for our clients, turning innovative concepts into tangible results.</strong></p>
+				<p>At psAI, we believe in the transformative power of AI to redefine business operations, enhance human experiences, and create new paradigms of success. <strong>Our goal is to actualise the potential of AI with our clients, turning innovative concepts into tangible results.</strong></p>
 
 				<div class="box_ctnr">
 					<div class="box">
 						<h3>Innovative Approach</h3>
 
-						<p>Our strategies are not born from consensus but from firsthand experience and emergent industry insights. We are pioneers, constantly on the cusp of AI's evolution, ensuring our partners lead rather than follow.</p>
+						<p>Our strategies are not born from consensus but from firsthand experience and emergent industry insights. <strong>We are pioneers, constantly on the cusp of AI's evolution, ensuring our partners lead rather than follow.</strong></p>
 					</div>
 					
 					<div class="box">
-						<h3>Proven Expertise</h3>
+						<h3>Holistic Deliverables</h3>
 
-						<p>The psAI team boasts a proven track record of successful AI implementation across a wide range of industries. From operational efficiency to customer engagement, our holistic approach addresses every facet of your business.</p>
+						<p>The psAI team boasts a proven track record of successful AI implementation across a wide range of industries. <strong>From operational efficiency to customer engagement, our holistic approach addresses every facet of your business.</strong></p>
 					</div>
 					
 					<div class="box">
 						<h3>Agility and Insight</h3>
 
-						<p>Our lean structure and close proximity to AI innovation allow us to move with the speed of a startup but the precision of seasoned experts. We quickly translate complex AI challenges into actionable opportunities for our clients.</p>
-					</div>
-					
-					<div class="box">
-						<h3>Our Mission</h3>
-
-						<p>We help businesses navigate the complexities of tomorrow, transforming uncertainties into identifiable opportunities. Our commitment is to guide you through the AI landscape, ensuring your business not only adapts but thrives.</p>
+						<p>Our lean structure and close proximity to AI innovation allow us to move with the speed of a startup but the precision of seasoned experts. <strong>We quickly translate complex AI challenges into actionable opportunities for our clients.</strong></p>
 					</div>
 				</div>
 				
-				<button type="button" class="main cta contact_bt">Connect with us</button>
-		</section> -->
+				<div class="flex cta_ctnr">
+
+					<div class="flex cta_ctnr">
+						<a href="/services/align" class="cta dark">Build your Strategy</a>
+
+						<button type="button" class="main cta contact_bt">Contact us</button>
+					</div>
+				</div>
+		</section>
 
 		<hr>
 
-		<section id="the-ai-challenge" class="default1">
+		<!-- <section id="the-ai-challenge" class="default1">
 			<div class="big graphic">
 				<ProblemGraphic/>
 			</div>
 
 			<div class="content">
-				<h2>The AI Challenge<Worm/></h2>
+				<h2>Take the first step<Worm/></h2>
 
 				<p>AI development and implementation are <b>advancing faster than any other technological progress in human history.</b> How will you keep pace?</p>
 
@@ -133,15 +178,11 @@
 					</div>
 				</div>
 			</div>
-
-			<!-- <div class="graphic corner">
-				<CornerGraphic02/>
-			</div> -->
 		</section>
 
-		<hr>
+		<hr> -->
 
-		<section id="why-psai" class="default1 inverted">
+		<!-- <section class="default1 inverted">
 			<div class="big graphic g4">
 				<Graphic03/>
 			</div>
@@ -149,21 +190,117 @@
 			<div class="content">
 				<h2>The psAI edge<Worm/></h2>
 
-				<p>Experience emergent, <b>industry-leading insights and advice</b>, born from firsthand experience – not just recycled consensus.</p>
+				<p>Actualising the true potential of Artificial intelligence requires a blend of innovation, insight, and a deep understanding of both the technological and human aspects of AI. At psAI, our unique approach combines *mathematical potential with psychological insight*, setting us apart in transforming the landscape of global business operations through AI.</p>
 
 				<p class="minor"><b>Our partners lead AI development and implementation across various industries.</b> psAI's agility and speed mirror that of a startup, made possible by our lean structure and close proximity to AI innovation.</p>
 
 				<div class="graphic_cta">
-					<a href="#the-team" class="main cta">Meet our Team</a>
+					<a href="/services/" class="main cta">Know our Services</a>
 
 					<div class="graphic">
 						<Graphic06/>
 					</div>
 				</div>
 			</div>
+		</section> -->
+
+		<section id="the-psai-edge" class="default1 bullets">
+			<div class="content">
+				<h2>The psAI edge<Worm/></h2>
+
+				<p>Actualising the true potential of Artificial intelligence requires a blend of innovation, insight, and a deep understanding of both the technological and human aspects of AI. At psAI, our unique approach combines <b>mathematical potential with psychological insight</b>, setting us apart in transforming the landscape of global business operations through AI.</p>
+
+				<h3>Tailored AI Solutions</h3>
+
+				<p><b>Customised Integration Across All Levels</b></p>
+
+				<p>Our services are designed to cater to the unique needs of each business, integrating AI solutions that are not only technologically advanced but also aligned with human-centric goals. This approach ensures that our AI implementations enhance operational efficiency, foster human-machine collaboration, and drive meaningful outcomes.</p>
+
+				<div class="graphic_cta">
+					<button type="button" class="main cta highlight contact_bt">Contact us</button>
+
+					<div class="graphic">
+						<Graphic06/>
+					</div>
+				</div>
+			</div>
+
+			<div class="list">
+				<a class="item psai_define_style" href="/services/define">
+					<div class="flex heading">
+						<Define/>
+						
+						<div>
+							<h3>psAI Define</h3>
+								
+							<span class="def">Tailoring AI to Your Business Identity</span>
+						</div>
+					</div>
+
+					<div class="content">	
+						<p>Individuals in your organisation already use AI with no organisational oversight or direction. Let's fix this by uniting the efforts towards your business goals.</p>
+	
+						<span class="learn_more">Learn more</span>
+					</div>
+				</a>
+
+				<a class="item psai_align_style" href="/services/align">
+					<div class="flex heading">
+						<Align/>
+
+						<div>
+							<h3>psAI Align</h3>
+	
+							<span class="def">Bridging AI Capabilities with Business Goals</span>
+						</div>
+					</div>
+
+					<div class="content">
+						<p>It's hard to know if you're heading in the right direction when it comes to cutting edge tech. Let's direct your resources to something that will pay off.</p>
+	
+						<span class="learn_more">Learn more</span>
+					</div>
+				</a>
+
+				<a class="item psai_flow_style" href="/services/flow">
+					<div class="flex heading">
+						<Flow/>
+
+						<div>
+							<h3>psAI Flow</h3>
+	
+							<span class="def">Optimising Data for AI Success</span>
+						</div>
+					</div>
+
+					<div class="content">
+						<p>Every modern business has access to priceless data, most of which is underutilised. Let's optimise your dataflow to leverage AI.</p>
+	
+						<span class="learn_more">Learn more</span>
+					</div>
+				</a>
+
+				<a class="item psai_run_style" href="/services/run">
+					<div class="flex heading">
+						<Run/>
+
+						<div>
+							<h3>psAI Run</h3>
+							
+							<span class="def">Enhancing Machine Learning Operations</span>
+						</div>
+					</div>
+
+					<div class="content">
+						<p>Machine Learning is set to become as fundamental as digitisation. Let's make sure you're optimised to be ahead of the curve.</p>
+	
+						<span class="learn_more">Learn more</span>
+					</div>
+				</a>
+			</div>
 		</section>
 
-		<hr>
+		<!-- <hr>
 
 		<section id="the-team" class="default2">
 			<div class="content">
@@ -171,7 +308,7 @@
 					<Graphic07/>
 				</div>
 				
-				<h2>psAI Team</h2>
+				<h2>psAI</h2>
 
 				<p>Our team has a proven track record in <strong>AI implementation across a diverse range of industries and roles</strong>, providing a holistic approach from business operations to customer engagement.</p>
 
@@ -281,75 +418,15 @@
 				</div>
 
 				<div class="graphic_cta">
-					<a href="#deliverables" class="main cta">What psAI Delivers</a>
+					<a href="/services/" class="main cta">Know our Services</a>
 					<div class="graphic">
 						<Graphic06/>
 					</div>
 				</div>
 			</div>
-
-			<!-- <div class="graphic g4 slow_reveal">
-				<Graphic02/>
-			</div> -->
 		</section>
 
-		<hr>
-
-		<section id="deliverables" class="default1 bullets">
-			<div class="content">
-				<h2>Deliverables<Worm/></h2>
-
-				<p>Tailored to actualise your AI implementation – <b>clear, concise, and actionable.</b></p>
-
-				<p class="minor">psAI delivers insights, frameworks, and guidelines that enable you to keep up with the rapidly accelerating pace of innovation, implementing best-in-class practices and developments as they arise.</p>
-
-				<div class="graphic_cta">
-					<button type="button" class="main cta highlight contact_bt">Connect with us</button>
-
-					<div class="graphic">
-						<Graphic07/>
-					</div>
-				</div>
-			</div>
-
-			<ul class="list">
-				<li>
-					<h3><Analysis/>AI Readiness Analysis</h3>
-
-					<p>This involves assessing the current technological infrastructure, including hardware, software, and data systems. The aim is to gauge <b>how prepared your company is for AI integration</b> and to identify areas needing upgrades or modifications.</p>
-				</li>
-
-				<li>
-					<h3><Chart/>Market Analysis</h3>
-
-					<p>We provide an overview of the latest trends, particularly in technology and AI. This includes <b>benchmarking your company against 'best in class' competitors effectively using AI</b>, offering insights into their strategies and success stories.</p>
-				</li>
-
-				<li>
-					<h3><HeartBeat/>Risk Analysis</h3>
-
-					<p>We'll analyse potential risks associated with lagging in AI implementation. This includes <b>potential market share loss, brand damage, and the opportunity costs of delayed implementation.</b> This analysis underscores the critical need for rapid AI adoption in your company.</p>
-				</li>
-
-				<li>
-					<h3><Idea/>Long List of AI Opportunities</h3>
-
-					<p>A comprehensive compilation of <b>potential AI applications</b> relevant to your sector and industry.</p>
-				</li>
-
-				<li>
-					<h3><List/>Shortlist of Opportunities</h3>
-
-					<p>Based on your company's goals, market position, and readiness, we prioritise AI implementation ideas, explaining why <b>certain opportunities are more viable or beneficial for initial pursuit</b> and how they align with your company's strategic objectives.</p>
-				</li>
-
-				<li>
-					<h3><Strategy/>Implementation Plans</h3>
-
-					<p>We provide detailed plans for the technical implementation of chosen AI initiatives. These include a phased roadmap, resource allocation, timelines, and key milestones, <b>ensuring that your company has a clear and actionable plan for integrating AI into its operations.</b></p>
-				</li>
-			</ul>
-		</section>
+		<hr> -->
 	</main>
 
 	<Schema

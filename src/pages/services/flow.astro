@@ -1,0 +1,78 @@
+---
+import '../../css/services.css'
+import Layout from "../../layouts/Layout.astro";
+import FlowSection from "../../components/services/FlowSection.astro";
+
+import Worm from '../../components/svg/graphics/Worm.astro';
+---
+
+<Layout logoAnchorTheme="dark">
+    <a href="/services/" class="back">Return to Services</a>
+    
+    <main>
+        <FlowSection/>
+        
+        <section id="learn-more" class="default1 bullets">
+            <div class="content">    
+                <h2>Optimising Data for AI-Driven Success<Worm/></h2>
+    
+                <p>In the era where data is the lifeblood of business operations and decision-making, psAI Flow emerges as the pivotal force in redefining data management practices. Tailored for organisations eager to refine their data ecosystems, psAI Flow paves the way for seamless AI integrations and enhanced operational efficiency.</p>
+    
+                <p>psAI Flow ensures your data isn’t just a repository of information, but a dynamic, strategic asset. Here's how:</p>
+    
+                <div class="graphic_cta">
+                    <button type="button" class="main cta highlight contact_bt">Contact us</button>
+                </div>
+
+                <article class="details">
+                    <p>Engagement Duration: <b>14 days</b></p>
+                    <p>Price: <b>$30,000</b></p>
+                    <p>Minimum Time to Kickoff: <b>7 days</b></p>
+                </article>
+            </div>
+    
+            <ul class="list">
+                <li class="item">
+                    <h3>Tailored Data Architecture</h3>
+    
+                    <p>We understand that each business has unique goals. psAI Flow customises your data architecture to directly support and achieve these objectives, turning data into a strategic tool for growth and innovation.</p>
+                </li>
+    
+                <li class="item">
+                    <h3>Seamless LLM Integration</h3>
+    
+                    <p>As AI technologies, especially Large Language Models, become integral to business strategies, psAI Flow ensures your data infrastructure is primed and ready, enabling you to leverage the full power of AI with ease and precision.</p>
+                </li>
+    
+                <li class="item">
+                    <h3>Enhanced Operational Efficiency</h3>
+    
+                    <p>Through strategic data structuring and optimisation, psAI Flow not only improves your operational workflows but also ensures data is managed and utilised in the most efficient way possible, driving significant improvements in decision-making and customer satisfaction.</p>
+                </li>
+    
+                <li class="item">
+                    <h3>Actionable Business Intelligence</h3>
+    
+                    <p>With psAI Flow, data becomes a source of actionable insights, guiding your business towards informed strategies and better outcomes. Our framework ensures that your data is not just collected, but effectively analysed and applied.</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    body::before {
+        background-image: url(/svg/light-noise-bg.svg), linear-gradient(195deg, #edfffb, #87dbcb 62%);
+        background-size: 26rem, cover;
+    }
+
+    .details {
+        border-color: var(--light);
+        box-shadow: 0 3rem 4rem -2.5rem var(--light-2);
+    }
+
+    .details p b {
+        color: var(--dark-2);
+        font-weight: 700;
+    }
+</style>

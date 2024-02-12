@@ -5,9 +5,11 @@ html.sr .reveal, html.sr .slow_reveal, html.sr .step_reveal1 {
 :root {
     --light:#f8f8ff;
     --light-1:#e2ebfb;
+    --light-2:#d8e3f7;
 
     --dark:#30253f;
     --dark-1:#201c25;
+    --dark-2:#082631;
 
     --primary:#58f9d2;
     --primary-1:#58f9a4;
@@ -53,19 +55,21 @@ html {
 
 body {
     font-family: 'Gabarito', sans-serif;
-    background-color: var(--primary);
+    background-color: var(--light);
     color: var(--dark);
     position: relative;
 }
 
 body::before {
     content:'';
-    background-image: url(/svg/noise-bg.svg), linear-gradient(-30deg, var(--primary), var(--secondary));
+    /* background-image: url(/svg/light-noise-bg.svg), linear-gradient(-30deg, var(--primary), var(--secondary)); */
     background-size: 26rem, cover;
     position: fixed;
     inset: 0;
     z-index: -2;
 }
+
+
 
 
 ::selection {
@@ -100,7 +104,7 @@ body::-webkit-scrollbar-track-piece:start {
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: var(--primary);
-    background-image: url(/svg/noise-bg.svg), linear-gradient(-30deg, var(--primary), var(--secondary));
+    background-image: url(/svg/light-noise-bg.svg), linear-gradient(-30deg, var(--primary), var(--secondary));
     border:0.7rem solid var(--light);
     border-radius: 3rem;
     -webkit-border-radius: 3rem;
@@ -147,6 +151,16 @@ body::-webkit-scrollbar-track-piece:start {
     font-weight: 300;
 }
 
+.flex.cta_ctnr {
+    flex-flow: row wrap;
+    gap: clamp(1rem, 3vw, 2rem);
+    justify-content: center;
+}
+
+.flex.cta_ctnr a, .flex.cta_ctnr button {
+    
+}
+
 .cta {
     padding: clamp(0.7rem, 3.5vw, 1.4rem) clamp(1.6rem, 9vmin, 4rem);
     font-weight: 300;
@@ -154,7 +168,7 @@ body::-webkit-scrollbar-track-piece:start {
     display: block;
     color: var(--secondary-1);
     font-weight: 600;
-    font-size: clamp(1.5rem, 4.8vw, 1.8rem);
+    font-size: clamp(1.5rem, 4.8vw, 1.9rem);
     line-height: 1;
     position: relative;
     transition: filter 0.4s ease;
@@ -162,6 +176,7 @@ body::-webkit-scrollbar-track-piece:start {
     -moz-transition: filter 0.4s ease;
     -ms-transition: filter 0.4s ease;
     -o-transition: filter 0.4s ease;
+    white-space: nowrap;
 }
 
 .cta.dark {
@@ -231,7 +246,7 @@ svg {
     z-index: 8;
     position: fixed;
     right: clamp(2rem, 6vmin, 90rem);
-    bottom: clamp(2rem, calc(4vmin + 2.5rem), 90rem);
+    bottom: clamp(2rem, calc(4vmin + 3.5rem), 90rem);
     width: clamp(1rem, 15vw, 6rem);
     height: clamp(1rem, 15vw, 6rem);
     border: 0.1rem solid var(--light);
@@ -270,10 +285,6 @@ svg {
 
 .exit_area.show {
     display: block;
-    backdrop-filter: blur(0.6rem);
-    -webkit-backdrop-filter: blur(0.6rem);
-    filter: brightness(0.95);
-    -webkit-filter: brightness(0.95);
 }
 
 .exit_area {
@@ -282,9 +293,317 @@ svg {
     z-index: 7;
     display: none;
     cursor: alias;
+    filter: brightness(0.95);
+    -webkit-filter: brightness(0.95);
+    background-color: rgb(216 227 247 / 20%);
 }
 
 
+
+
+
+
+
+
+
+
+/* DEFAULT 1 */
+
+
+section.default1 {
+    display: flex;
+    flex-direction: column;
+    width: var(--width-1);
+    margin-inline: auto;
+    gap: clamp(1rem, 5vw, 8rem);
+    justify-content: center;
+    /* align-items: center; */
+}
+
+section.default1 h2 {
+    font-size: clamp(2rem, 11vw, 7rem);
+    color: var(--secondary-1);
+    font-weight: 650;
+    line-height: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.8rem;
+}
+
+section.default1 h2 .worm {
+    color: var(--light);
+    width: 5rem;
+    top: 120%;
+}
+
+section.default1 > .content {
+    flex: 1;
+    min-width: clamp(10rem, var(--pace), 40rem);
+    max-width: clamp(10rem, var(--pace), 64rem);
+}
+
+section.default1 .content p {
+    font-size: clamp(1.6rem, 4.3vw, 2rem);
+    margin-top: 1.2rem;
+    font-weight: 450;
+    line-height: 1.4;
+}
+
+section.default1 h3 {
+    font-size: clamp(2rem, 6.5vw, 3.4rem);
+    color: var(--secondary-1);
+    font-weight: 650;
+    margin-bottom: -0.5rem;
+}
+
+section.default1 .content h3 {
+    margin-top: 2rem;
+}
+
+section.default1 p.minor {
+    font-size: clamp(1.7rem, 3vw, 2rem);
+    font-weight: 450;
+    color: var(--secondary-1);
+    line-height: 1.4;
+    max-width: 50rem;
+}
+
+section.default1 > .graphic {
+    width: clamp(9rem, 55vmin, 38rem);
+}
+
+section.default1 .cta {
+    margin-top: 2.5rem;
+    width: fit-content;
+}
+
+.default1 .list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.default1 .list .item {
+    position: relative;
+    background-color: rgb(214 219 255 / 25%);
+    box-sizing: border-box;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    border: 0.1rem solid transparent;
+    transition: border-color 0.4s ease, background-color 0.4s ease;
+    -webkit-transition: border-color 0.4s ease, background-color 0.4s ease;
+    -moz-transition: border-color 0.4s ease, background-color 0.4s ease;
+    -ms-transition: border-color 0.4s ease, background-color 0.4s ease;
+    -o-transition: border-color 0.4s ease, background-color 0.4s ease;
+}
+
+.default1 .list .item {
+    padding: 3rem;
+    display: block;
+}
+
+.default1 .list .item:hover {
+    border-color: var(--light-1);
+    background-color: rgb(214 219 255 / 50%);
+    transition: border-color 0.1s ease, background-color 0.1s ease;
+    -webkit-transition: border-color 0.1s ease, background-color 0.1s ease;
+    -moz-transition: border-color 0.1s ease, background-color 0.1s ease;
+    -ms-transition: border-color 0.1s ease, background-color 0.1s ease;
+    -o-transition: border-color 0.1s ease, background-color 0.1s ease;
+}
+
+.default1 .list .item h3 {
+    font-weight: 650;
+    font-size: clamp(1rem, 8vw, 2.6rem);
+    line-height: 1;
+    margin-bottom: 1rem;
+    color: var(--secondary-1);
+}
+
+.default1 .list .item h3 svg {
+    color: var(--secondary-1);
+    position: absolute;
+    left: 0;
+    transform: translate(-50%, 0%);
+    width: 2.8rem;
+    height: 2.8rem;
+}
+
+.default1 .list .item p {
+    font-size: clamp(1.6rem, 3vw, 1.8rem);
+    line-height: 1.4;
+    color: var(--secondary-1);
+    font-weight: 550;
+}
+
+.default1 .list .item b, .default1 .list .item strong{
+    font-weight: 650;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SERVICES */
+
+.psai_define_style {
+    background-color: var(--dark-1);
+    color: var(--light);
+    background-image: url(/svg/dark-noise-bg.svg), linear-gradient(-25deg, var(--secondary-1) -10%, var(--dark) 38%, #0f0917);
+    background-size: 26rem, cover;
+} .psai_define_style .def {
+    color: var(--secondary-3);
+    font-weight: 550;
+}
+
+
+
+.psai_align_style {
+    color: var(--dark);
+    background-image: url(/svg/light-noise-bg.svg), linear-gradient(150deg, #f6edff, #dcb9ff 38%);
+    background-size: 26rem, cover;
+} .psai_align_style .def {
+    color: var(--secondary-1);
+    font-weight: 650;
+}
+
+
+
+.psai_flow_style {
+    color: var(--dark);
+    background-image: url(/svg/light-noise-bg.svg), linear-gradient(195deg, #edfffb, #87dbcb 62%);
+    background-size: 26rem, cover;
+} .psai_flow_style .def {
+    font-weight: 650;
+    color: var(--dark-2);    
+}
+
+
+
+.psai_run_style {
+    color: var(--dark);
+    background-image: url(/svg/light-noise-bg.svg), linear-gradient(145deg, #ffa465, var(--secondary));
+    background-size: 26rem, cover;
+} .psai_run_style .def {
+    font-weight: 600;
+    color: #63412a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes pulse_wave {
+    0% {
+        opacity:1;
+        transform: scale3D(1, 1, 1);
+        -webkit-transform: scale3D(1, 1, 1);
+        -moz-transform: scale3D(1, 1, 1);
+        -ms-transform: scale3D(1, 1, 1);
+        -o-transform: scale3D(1, 1, 1);
+}   3% {
+        opacity:1;
+        transform: scale3D(1, 1, 1);
+        -webkit-transform: scale3D(1, 1, 1);
+        -moz-transform: scale3D(1, 1, 1);
+        -ms-transform: scale3D(1, 1, 1);
+        -o-transform: scale3D(1, 1, 1);
+}   7% {
+        opacity:0;
+        transform: scale3D(0.6, 0.6, 1);
+        -webkit-transform: scale3D(0.6, 0.6, 1);
+        -moz-transform: scale3D(0.6, 0.6, 1);
+        -ms-transform: scale3D(0.6, 0.6, 1);
+        -o-transform: scale3D(0.6, 0.6, 1);
+}   8% {
+        opacity:0.3;
+        transform: scale3D(1.1, 1.1, 1);
+        -webkit-transform: scale3D(1.1, 1.1, 1);
+        -moz-transform: scale3D(1.1, 1.1, 1);
+        -ms-transform: scale3D(1.1, 1.1, 1);
+        -o-transform: scale3D(1.1, 1.1, 1);
+}   11% {
+        opacity:1;
+        transform: scale3D(0.9, 0.9, 1);
+        -webkit-transform: scale3D(0.9, 0.9, 1);
+        -moz-transform: scale3D(0.9, 0.9, 1);
+        -ms-transform: scale3D(0.9, 0.9, 1);
+        -o-transform: scale3D(0.9, 0.9, 1);
+}   20% {
+        opacity:1;
+        transform: scale3D(1, 1, 1);
+        -webkit-transform: scale3D(1, 1, 1);
+        -moz-transform: scale3D(1, 1, 1);
+        -ms-transform: scale3D(1, 1, 1);
+        -o-transform: scale3D(1, 1, 1);
+}  28% {
+        opacity: 1;
+        transform: scale3D(0.8, 0.8, 1);
+        -webkit-transform: scale3D(0.8, 0.8, 1);
+        -moz-transform: scale3D(0.8, 0.8, 1);
+        -ms-transform: scale3D(0.8, 0.8, 1);
+        -o-transform: scale3D(0.8, 0.8, 1);
+}   35% {
+        opacity: 1;
+        transform: scale3D(0.9, 0.9, 1);
+        -webkit-transform: scale3D(0.9, 0.9, 1);
+        -moz-transform: scale3D(0.9, 0.9, 1);
+        -ms-transform: scale3D(0.9, 0.9, 1);
+        -o-transform: scale3D(0.9, 0.9, 1);
+}   58% {
+        opacity: 1;
+        transform: scale3D(0.5, 0.5, 1);
+        -webkit-transform: scale3D(0.5, 0.5, 1);
+        -moz-transform: scale3D(0.5, 0.5, 1);
+        -ms-transform: scale3D(0.5, 0.5, 1);
+        -o-transform: scale3D(0.5, 0.5, 1);
+}  67% {
+        opacity: 1;
+        transform: scale3D(1.2, 1.2, 1);
+        -webkit-transform: scale3D(1.2, 1.2, 1);
+        -moz-transform: scale3D(1.2, 1.2, 1);
+        -ms-transform: scale3D(1.2, 1.2, 1);
+        -o-transform: scale3D(1.2, 1.2, 1);
+}   100% {
+        opacity: 1;
+        transform: scale3D(1, 1, 1);
+        -webkit-transform: scale3D(1, 1, 1);
+        -moz-transform: scale3D(1, 1, 1);
+        -ms-transform: scale3D(1, 1, 1);
+        -o-transform: scale3D(1, 1, 1);
+    }
+}
+
+.pulse {
+    animation: pulse_wave 18s ease infinite;
+    -webkit-animation: pulse_wave 18s ease infinite;
+    will-change: transform, opacity;
+    transform-origin: center;
+}
 
 
 
@@ -308,6 +627,25 @@ svg {
     .fixed_bubble {
         width: clamp(2rem, 30vmin, 25rem);
         height: clamp(2rem, 30vmin, 25rem);
+    }
+
+    section.default1 {
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: row wrap;
+    }
+    
+    section.default1.bullets {
+        align-items: flex-start;
+    }
+    
+    section.default1 > .content {
+        position: sticky;
+        top: calc(var(--header-height) + 2rem);
+    }
+    
+    section.default1.inverted {
+        flex-flow: row-reverse wrap;
     }
 }
 

@@ -1,11 +1,5 @@
 ---
-interface Props {
-	title?: string;
-	description?: string;
-	keywords?: string;
-}
-
-const { title, description, keywords } = Astro.props;
+const { title, description, keywords, logoAnchorTheme } = Astro.props;
 
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_KEYWORDS } from "../../consts";
 
@@ -15,6 +9,7 @@ import Footer from '../components/Footer.astro';
 import MailBubble from '../components/MailBubble.astro';
 
 import CookieConsentBanner from "../components/CookieConsentBanner.astro";
+import OQVABadge from "../components/OQVABadge.astro";
 ---
 
 <!doctype html>
@@ -28,7 +23,8 @@ import CookieConsentBanner from "../components/CookieConsentBanner.astro";
 		<!-- Google Tag Manager (noscript) -->
 			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-587VFLN8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
-		<Header/>
+		
+		<Header logoAnchorTheme={logoAnchorTheme}/>
 
 		<MailBubble/>
 
@@ -38,6 +34,6 @@ import CookieConsentBanner from "../components/CookieConsentBanner.astro";
 
         <CookieConsentBanner/>
 
-		<!-- <OQVABadge/> -->
+		<OQVABadge/>
 	</body>
 </html>
