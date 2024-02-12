@@ -60,10 +60,6 @@ body {
     position: relative;
 }
 
-main {
-    overflow-x: hidden;
-}
-
 body::before {
     content:'';
     /* background-image: url(/svg/light-noise-bg.svg), linear-gradient(-30deg, var(--primary), var(--secondary)); */
