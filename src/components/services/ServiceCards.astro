@@ -1,0 +1,102 @@
+---
+import Align from "../svg/services/Align.astro";
+import Define from "../svg/services/Define.astro";
+import Flow from "../svg/services/Flow.astro";
+import Run from "../svg/services/Run.astro";
+
+const { current } = Astro.props;
+---
+
+<div class="other_services">
+    <p class={`heading ${current == "define" ? "light" : ""}`}>Discover other services</p>
+
+    <div class="ctnr">
+        {current != "define" ? (
+        <a href="/services/define" class="psai_define_style">
+            <span class="flex">
+                <span class="flex">
+                    <Define/>
+    
+                    <div class="content">
+                        <span class="title"><sup>psAI</sup> Define</span>
+                    </div>
+                </span>
+    
+                <span class="text">
+                    <p class="def">Tailoring AI to Your Business Identity</p>
+    
+                    <p>psAI Define is about crafting AI solutions that <b>authentically represent your business and brand.</b> This service ensures your AI initiatives deliver predictable and meaningful outcomes, embodying your company's values and objectives.</p>
+                </span>
+            </span>
+    
+            <span class="learn_more">Learn more</span>
+        </a>
+        ) : null}
+        
+        {current != "align" ? (
+        <a href="/services/align" class="psai_align_style">
+            <span class="flex">
+                <span class="flex">
+                    <Align/>
+    
+                    <div class="content">
+                        <span class="title"><sup>psAI</sup> Align</span>
+                    </div>
+                </span>
+    
+                <span class="text">
+                    <p class="def">Bridging AI Capabilities with Business Goals</p>
+                    
+                    <p>psAI Align ensures your AI initiatives are in <b>perfect harmony with your strategic objectives, enhancing operational efficiencies and driving tangible outcomes.</b> This service is about leveraging AI as a strategic asset.</p>
+                </span>
+            </span>
+    
+            <span class="learn_more">Learn more</span>
+        </a>
+        ) : null}
+        
+        {current != "flow" ? (
+            <a href="/services/flow" class="psai_flow_style">
+                <span class="flex">
+                    <span class="flex">
+                        <Flow/>
+        
+                        <div class="content">
+                            <span class="title"><sup>psAI</sup> Flow</span>
+                        </div>
+                    </span>
+        
+                    <span class="text">
+                        <p class="def">Optimising Data for AI Success</p>
+                        
+                        <p><b>Data is the foundation of effective AI.</b> psAI Flow focuses on refining your data management practices for seamless AI integration, turning data into a strategic asset for growth and innovation.</p>
+                    </span>
+                </span>
+        
+                <span class="learn_more">Learn more</span>
+            </a>
+        ) : null}
+    
+        {current != "run" ? (
+        <a href="/services/run" class="psai_run_style">
+            <span class="flex">
+                <span class="flex">
+                    <Run/>
+    
+                    <div class="content">
+                        <span class="title"><sup>psAI</sup> Run</span>
+                    </div>
+                </span>
+    
+                <span class="text">
+                    <p class="def">Enhancing Machine Learning Operations</p>
+                    
+                    <p>For businesses leveraging Machine Learning (ML), <b>psAI Run offers a strategic approach to optimising ML costs and operational models</b>, aligning them with your business needs for maximum efficiency and cost-effectiveness.</p>
+                </span>
+            </span>
+    
+            <span class="learn_more">Learn more</span>
+        </a>
+        ) : null}
+    </div>
+</div>
