@@ -19,6 +19,8 @@ html.sr .reveal, html.sr .slow_reveal, html.sr .step_reveal1 {
     --secondary-2:#857695;
     --secondary-3:#885cb5;
 
+    --c3:#4c80a6;
+
     --highlight-gradient:linear-gradient(-30deg, #00B094, #7B7BE5 62%, #A679FF);
 
     --max-width: 130rem;
@@ -82,7 +84,7 @@ body::before {
 }
 
 ::-webkit-scrollbar {
-    width: 2.6rem;
+    width: 2rem;
     height: 2rem;
 }
 
@@ -106,11 +108,12 @@ body::-webkit-scrollbar-track-piece:start {
     background: var(--primary);
     background-image: url(/svg/light-noise-bg.svg), linear-gradient(-30deg, var(--primary), var(--secondary));
     border:0.7rem solid var(--light);
-    border-radius: 3rem;
-    -webkit-border-radius: 3rem;
-    -moz-border-radius: 3rem;
-    -ms-border-radius: 3rem;
-    -o-border-radius: 3rem;
+    border-left:unset;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
 }
 
 .flex {
@@ -245,8 +248,8 @@ svg {
 .mail_bubble {
     z-index: 8;
     position: fixed;
-    right: clamp(2rem, 6vmin, 90rem);
-    bottom: clamp(2rem, calc(4vmin + 3.5rem), 90rem);
+    right: clamp(2rem, 8vmin, 90rem);
+    bottom: clamp(2rem, calc(4vmin + 8.5rem), 90rem);
     width: clamp(1rem, 15vw, 6rem);
     height: clamp(1rem, 15vw, 6rem);
     border: 0.1rem solid var(--light);
@@ -622,7 +625,7 @@ section.default1 .cta {
     }
 
     body {
-        border-left: 0.7rem solid var(--light);
+        border-inline: 0.7rem solid var(--light);
     }
 
     .fixed_bubble {

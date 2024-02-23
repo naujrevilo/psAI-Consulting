@@ -1,0 +1,101 @@
+body::before {
+    background-image: url(/svg/dark-noise-bg.svg), linear-gradient(-25deg, #0a2b3d -10%, #081b33, #0a2b3d);
+}
+
+body {
+    color: var(--light);
+}
+
+section.intro {
+    margin-block: clamp(1rem, 25vw, 16rem) clamp(4rem, 40vw, 8rem);
+}
+
+section.intro .ctnr {
+    width: var(--width-1);
+    margin-inline: auto;
+}
+
+section.intro h1 {
+    font-size: clamp(3rem, 9vw, 5rem);
+    font-weight: 500;
+}
+
+section.intro .flex {
+    flex-flow: row wrap;
+    gap: clamp(1rem, 5vw, 10rem);
+}
+
+section.intro .text {
+    flex: 1;
+}
+
+section.intro .text p {
+    font-size: clamp(1rem, 4.2vw, 2rem);
+    font-weight: 100;
+    margin-block: 1rem 2rem;
+    line-height: 1.4;
+    color: var(--c3);
+}
+
+section.intro .text .cta {
+
+}
+
+section.intro iframe {
+    max-width: 100%;
+    width: clamp(10rem, 90vmin, 75rem);
+    height: calc(clamp(10rem, 90vmin, 75rem) / 1.9);
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    background-color: #081b33;
+}
+
+section.intro + hr {
+    width: 100%;
+    height: 0.1rem;
+    background-color: rgba(255,255,255,0.1);
+    margin-block: clamp(5rem, 15vw, 10rem);
+}
+
+
+
+
+
+
+
+
+section.episodes {
+    width: var(--width-1);
+    margin-inline: auto;
+    margin-bottom: 10rem;
+}
+
+section.episodes h2 {
+    text-align: center;
+    margin-inline: auto;
+    font-size: clamp(1rem, 8vw, 3rem);
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+section.episodes ul {
+    display: flex;
+    flex-flow: row wrap;
+    gap: clamp(1rem, 4vw, 4rem);
+}
+
+section.episodes li {
+    flex: 0;
+    max-width: 100%;
+    min-width: clamp(1rem, 75vw, 30rem);
+    background-color: rgba(0,0,0,0.2);
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+section.episodes li .cover {
+
+}

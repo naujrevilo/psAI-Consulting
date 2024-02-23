@@ -30,19 +30,19 @@
 }
 
 .stripe .inverted_corner:first-of-type {
-    left:0;
+    left:-1px;
 }
 
 .stripe .inverted_corner:last-of-type {
-    right:0;
+    right:-1px;
 }
 
 .stripe.header .inverted_corner {
-    top: 99%;
+    top: 98%;
 }
 
 .stripe.footer .inverted_corner {
-    bottom: 99%;
+    bottom: 98%;
 }
 
 .stripe.header .inverted_corner:first-of-type {

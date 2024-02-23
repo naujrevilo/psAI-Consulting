@@ -1,0 +1,82 @@
+---
+import Layout from '../../layouts/Layout.astro'
+
+import '../../css/podcast.css'
+
+import { getCollection } from 'astro:content';
+
+import BackBt from '../../components/BackBt.astro';
+
+const episodes = (await getCollection('podcast')).sort((a, b) => {
+    if (a.data.episodeNumber !== undefined && b.data.episodeNumber !== undefined) {
+        return b.data.episodeNumber - a.data.episodeNumber;
+    } else if (a.data.episodeNumber !== undefined) {
+        return 1;
+    } else if (b.data.episodeNumber !== undefined) {
+        return -1;
+    } else {
+        return b.data.title.localeCompare(a.data.title);
+    }
+});
+
+---
+
+<Layout>
+    <BackBt/>
+
+    <main>
+        <section class="intro">
+            <div class="ctnr">
+                <div class="flex">
+                    <div class="text">
+                        <h1>The psAI Podcast</h1>
+    
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut vel itaque dolore laudantium delectus magnam. Unde fuga error laudantium est molestias possimus temporibus vero provident! Minus non nemo facere illo!</p>
+    
+                        <div class="cta_ctnr">
+                            <a href="#" class="cta main">Subscribe to our channel</a>
+                        </div>
+                    </div>
+
+                    <div set:html={episodes[(episodes.length - 1)].data.embedURL}></div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="episodes">
+            <h2>Our Episodes</h2>
+
+            <ul>
+                {
+                    episodes.map((episode) => (
+                        <>
+                        <li id={(episode.data.title).toLowerCase().replace(/\s+/g, '-')} class="scroll_margin_top">
+                            <div class="ctnr reveal">
+                                <div class="content">
+                                    <div class="ctnr">
+                                        <a href={`/blog/${episode.slug}/`} class="cover">
+                                            <img src={episode.data.cover} alt="Episode cover"/>
+                                        </a>
+    
+                                        <a href={`/blog/${episode.slug}/`}>
+                                            <h3 class="title">Episode {episode.data.episodeNumber}</h3>
+                                        </a>
+
+                                        {episode.data.description ? (
+                                            <p class="description">{episode.data.description}</p>
+                                        ) : null}
+
+                                        <a href={`/blog/${episode.slug}/`} class="read_more">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        </>
+                    ))
+                }
+            </ul>
+        </section>
+    </main>
+</Layout>
