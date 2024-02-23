@@ -143,7 +143,7 @@ header .hambt path {
 
 .header_nav .subnav a {
     text-align: left;
-    padding: clamp(1.2rem, 3.5vw, 3rem) clamp(0.2rem, 6vw, 3rem) clamp(1.2rem, 3.5vw, 3rem) clamp(0.2rem, 6vw, 3rem);
+    padding: clamp(0.3rem, 1.5vw, 3rem) clamp(0.2rem, 6vw, 3rem) clamp(0.3rem, 1.5vw, 3rem) clamp(0.2rem, 6vw, 3rem);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -222,7 +222,7 @@ header .hambt path {
     width: clamp(4rem, 11vw, 7rem);
     height: clamp(4rem, 15vw, 7rem);
     box-sizing: border-box;
-    border-radius: 0.7rem;
+    /* border-radius: 0.7rem; */
 }
 
 .subnav a svg path {
@@ -236,11 +236,9 @@ header .hambt path {
 }
 
 .subnav a .title {
-    font-weight: 600;
-    font-size: clamp(1.8rem, 8.5vw, 3.8rem);
+    font-size: clamp(1.8rem, 7.5vw, 3.8rem);
     width: fit-content;
     position: relative;
-    bottom: 4%;
 }
 
 .subnav a .title sup {
@@ -281,9 +279,9 @@ header .hambt path {
     
 }
 
-.subnav a.psai_define_style .def {
+/* .subnav a.psai_define_style .def {
     color: var(--secondary);
-}
+} */
 
 .header_nav .subnav a.psai_define_style .text b,
 .header_nav .subnav a.psai_define_style .text strong {

@@ -3,6 +3,7 @@ import '../../css/services.css'
 import Layout from "../../layouts/Layout.astro";
 import DefineSection from "../../components/services/DefineSection.astro";
 import Define from '../../components/svg/services/Define.astro';
+import ServiceCards from '../../components/services/ServiceCards.astro'
 
 import Worm from '../../components/svg/graphics/Worm.astro';
 ---
@@ -15,9 +16,6 @@ import Worm from '../../components/svg/graphics/Worm.astro';
         
         <section id="learn-more" class="default1 bullets">
             <div class="content">
-                <!-- <div class="graphic">
-                    <Define/>
-                </div> -->
     
                 <h2>Transforming Your Communication<Worm/></h2>
     
@@ -68,6 +66,8 @@ import Worm from '../../components/svg/graphics/Worm.astro';
             </ul>
         </section>
     </main>
+
+    <ServiceCards current="define"/>
 </Layout>
 
 <style>

@@ -467,7 +467,7 @@ section.default1 .cta {
     background-image: url(/svg/dark-noise-bg.svg), linear-gradient(-25deg, var(--secondary-1) -10%, var(--dark) 38%, #0f0917);
     background-size: 26rem, cover;
 } .psai_define_style .def {
-    color: var(--secondary-3);
+    color: var(--secondary);
     font-weight: 550;
 }
 
@@ -480,6 +480,8 @@ section.default1 .cta {
 } .psai_align_style .def {
     color: var(--secondary-1);
     font-weight: 650;
+} .psai_align_style .title {
+    font-weight: 600;
 }
 
 
@@ -491,6 +493,8 @@ section.default1 .cta {
 } .psai_flow_style .def {
     font-weight: 650;
     color: var(--dark-2);    
+} .psai_flow_style .title {
+    font-weight: 600;
 }
 
 
@@ -502,6 +506,8 @@ section.default1 .cta {
 } .psai_run_style .def {
     font-weight: 600;
     color: #63412a;
+} .psai_run_style .title {
+    font-weight: 600;
 }
 
 
@@ -524,42 +530,36 @@ section.default1 .cta {
         -moz-transform: scale3D(1, 1, 1);
         -ms-transform: scale3D(1, 1, 1);
         -o-transform: scale3D(1, 1, 1);
-}   5% {
-        transform: scale3D(1.1, 1.1, 1);
-        -webkit-transform: scale3D(1.1, 1.1, 1);
-        -moz-transform: scale3D(1.1, 1.1, 1);
-        -ms-transform: scale3D(1.1, 1.1, 1);
-        -o-transform: scale3D(1.1, 1.1, 1);
 }   10% {
-        transform: scale3D(1, 1, 1);
-        -webkit-transform: scale3D(1, 1, 1);
-        -moz-transform: scale3D(1, 1, 1);
-        -ms-transform: scale3D(1, 1, 1);
-        -o-transform: scale3D(1, 1, 1);
-}   14% {
         transform: scale3D(1.1, 1.1, 1);
         -webkit-transform: scale3D(1.1, 1.1, 1);
         -moz-transform: scale3D(1.1, 1.1, 1);
         -ms-transform: scale3D(1.1, 1.1, 1);
         -o-transform: scale3D(1.1, 1.1, 1);
-}   18% {
+}   15% {
         transform: scale3D(1, 1, 1);
         -webkit-transform: scale3D(1, 1, 1);
         -moz-transform: scale3D(1, 1, 1);
         -ms-transform: scale3D(1, 1, 1);
         -o-transform: scale3D(1, 1, 1);
-}   23% {
+}   20% {
+        transform: scale3D(1.1, 1.1, 1);
+        -webkit-transform: scale3D(1.1, 1.1, 1);
+        -moz-transform: scale3D(1.1, 1.1, 1);
+        -ms-transform: scale3D(1.1, 1.1, 1);
+        -o-transform: scale3D(1.1, 1.1, 1);
+}   25% {
+        transform: scale3D(1, 1, 1);
+        -webkit-transform: scale3D(1, 1, 1);
+        -moz-transform: scale3D(1, 1, 1);
+        -ms-transform: scale3D(1, 1, 1);
+        -o-transform: scale3D(1, 1, 1);
+}   29% {
         transform: scale3D(0.9, 0.9, 1);
         -webkit-transform: scale3D(0.9, 0.9, 1);
         -moz-transform: scale3D(0.9, 0.9, 1);
         -ms-transform: scale3D(0.9, 0.9, 1);
         -o-transform: scale3D(0.9, 0.9, 1);
-}  30% {
-        transform: scale3D(0.8, 0.8, 1);
-        -webkit-transform: scale3D(0.8, 0.8, 1);
-        -moz-transform: scale3D(0.8, 0.8, 1);
-        -ms-transform: scale3D(0.8, 0.8, 1);
-        -o-transform: scale3D(0.8, 0.8, 1);
 }   35% {
         transform: scale3D(0.9, 0.9, 1);
         -webkit-transform: scale3D(0.9, 0.9, 1);
