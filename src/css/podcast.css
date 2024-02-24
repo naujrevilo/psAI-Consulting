@@ -146,6 +146,7 @@ section.intro + hr {
 .subscribe form p {
     margin-bottom: unset;
     flex: 1;
+    min-width: clamp(10rem, 60vw, 25rem);
 }
 
 .subscribe form label {
