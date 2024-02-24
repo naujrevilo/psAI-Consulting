@@ -9,7 +9,7 @@ html.sr .reveal, html.sr .slow_reveal, html.sr .step_reveal1 {
 
     --dark:#30253f;
     --dark-1:#201c25;
-    --dark-2:#082631;
+    --dark-2:#081931;
 
     --primary:#58f9d2;
     --primary-1:#58f9a4;
@@ -19,7 +19,8 @@ html.sr .reveal, html.sr .slow_reveal, html.sr .step_reveal1 {
     --secondary-2:#857695;
     --secondary-3:#885cb5;
 
-    --c3:#4c80a6;
+    --c3:#a9dbff;
+    --c3-1:#6cc1ff;
 
     --highlight-gradient:linear-gradient(-30deg, #00B094, #7B7BE5 62%, #A679FF);
 
@@ -250,8 +251,8 @@ svg {
     position: fixed;
     right: clamp(2rem, 8vmin, 90rem);
     bottom: clamp(2rem, calc(4vmin + 8.5rem), 90rem);
-    width: clamp(1rem, 15vw, 6rem);
-    height: clamp(1rem, 15vw, 6rem);
+    width: clamp(1rem, 13vw, 6rem);
+    height: clamp(1rem, 13vw, 6rem);
     border: 0.1rem solid var(--light);
     border-radius: 50%;
     background-color: var(--light);
@@ -300,6 +301,11 @@ svg {
     -webkit-filter: brightness(0.95);
     background-color: rgb(216 227 247 / 20%);
 }
+
+input, textarea, select {
+    font-family: inherit;
+}
+
 
 
 
@@ -421,15 +427,15 @@ section.default1 .cta {
     -o-transition: border-color 0.1s ease, background-color 0.1s ease;
 }
 
-.default1 .list .item h3 {
+.default1 .list h3 {
     font-weight: 650;
-    font-size: clamp(1rem, 8vw, 2.6rem);
+    font-size: clamp(1rem, 8vw, 3.6rem);
     line-height: 1;
     margin-bottom: 1rem;
     color: var(--secondary-1);
 }
 
-.default1 .list .item h3 svg {
+.default1 .list h3 svg {
     color: var(--secondary-1);
     position: absolute;
     left: 0;
@@ -463,6 +469,21 @@ section.default1 .cta {
 
 
 /* SERVICES */
+
+
+a.psai_define_style path {
+    stroke: var(--secondary);
+}
+a.psai_align_style path {
+    stroke: var(--secondary-3);
+}
+a.psai_flow_style path {
+    stroke: #09cf9f;
+}
+a.psai_run_style path {
+    stroke: var(--secondary-1);
+}
+
 
 .psai_define_style {
     background-color: var(--dark-1);

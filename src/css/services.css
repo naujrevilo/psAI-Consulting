@@ -158,6 +158,10 @@ section.intro .title + p b, section.intro .title + p strong {
     font-weight: 600;
 }
 
+.default1 .list .item h3 {
+    font-size: clamp(1rem, 8vw, 2.6rem);
+}
+
 
 
 
