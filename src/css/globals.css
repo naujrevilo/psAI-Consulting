@@ -32,7 +32,7 @@ html.sr .reveal, html.sr .slow_reveal, html.sr .step_reveal1 {
     --corner-width1: calc((100vw - var(--width-1)) / 2);
     --limited-corner: clamp(-30rem, calc(var(--corner-width1) * -1), 80rem);
 
-    --header-height: clamp(1rem,19vmin,10rem);
+    --header-height: clamp(1rem,24vmin,10rem);
 
     --testimonial-width:clamp(15rem, 75vw, 100rem);
 }

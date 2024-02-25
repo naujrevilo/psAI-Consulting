@@ -18,30 +18,23 @@ const { url, label } = Astro.props;
         align-items: center;
         gap: 0.8rem;
         width: fit-content;
-        z-index: 2;
+        z-index: 7;
         background-color: var(--light-d);
-        padding: clamp(1rem, 3vw, 1.3rem) 2rem clamp(1rem, 3vw, 1.3rem) var(--base-width-overflow);
-        font-size: clamp(1.3rem, 4vw, 1.6rem);
-        font-weight: 500;
-        color: var(--primary-d);
+        padding: clamp(1rem,3vw,1.3rem) 2rem clamp(1rem,3vw,1.3rem) var(--base-width-overflow);
+        font-size: clamp(1.3rem,4vw,1.6rem);
+        font-weight: 400;
         border-radius: 0 0 0.4rem 0;
-        transition: background-color 0.3s ease;
-        -webkit-transition: background-color 0.3s ease;
-        -moz-transition: background-color 0.3s ease;
-        -ms-transition: background-color 0.3s ease;
-        -o-transition: background-color 0.3s ease;
         border-right: 0.2rem solid var(--light-a);
         border-bottom: 0.2rem solid var(--light-a);
         box-shadow: 2rem 1rem 2.5rem -1.2rem var(--light-b);
+        position: absolute;
+        top: 13rem;
+        color: var(--light);
+        left: var(--corner-width1);
     }
     
     .back:hover {
-        background-color: var(--light);
-        transition: background-color 0s ease;
-        -webkit-transition: background-color 0s ease;
-        -moz-transition: background-color 0s ease;
-        -ms-transition: background-color 0s ease;
-        -o-transition: background-color 0s ease;
+        
     }
 
     .back span {

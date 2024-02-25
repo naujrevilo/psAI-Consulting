@@ -36,16 +36,15 @@ const episodes = (await getCollection('podcast')).sort((a, b) => {
 
 ---
 
-<Layout title={episode.data.title}>
-    <BackBt url="/podcast/" label="Return to podcast"/>
+<Layout title={`${episode.data.title} | psAI Podcast`}>
+	<BackBt url={`/podcast/1`} label="Return"/>
 
     <main class="ep_page">
     
-        <div class="content_ctnr">
-            <h1>{episode.data.title}</h1>
-            
-
+        <div class="content_ctnr">     
             <div class="video_ctnr" set:html={episode.data.embedURL}></div>
+
+            <h1>{episode.data.title}</h1>
 
             <NewsletterForm/>
             

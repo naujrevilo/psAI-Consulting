@@ -1,5 +1,5 @@
 body::before {
-    background-image: url(/svg/dark-noise-bg.svg), linear-gradient(-25deg, #0a2b3d -10%, #081b33, #0a2b3d);
+    background-image: url(/svg/dark-noise-bg.svg), linear-gradient(-25deg, #040538 -10%, #020c1a, #042131);
 }
 
 body section {
@@ -11,7 +11,7 @@ main {
 }
 
 section.intro {
-    margin-block: clamp(1rem, 25vw, 16rem) clamp(4rem, 40vw, 8rem);
+    margin-block: clamp(1rem, 30vw, 16rem) clamp(4rem, 40vw, 8rem);
 }
 
 section.intro .ctnr {
@@ -122,12 +122,14 @@ section.intro + hr {
 
 
 
-
+.subscribe {
+    flex: 1;
+}
 
 .subscribe form {
     display: flex;
-    flex-flow: row wrap;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
     gap: clamp(1rem, 3vw, 2rem);
     background-color: var(--c3-1);
     padding: 1.5rem clamp(1.5rem, 4vw, 2.5rem) 2rem;
@@ -146,7 +148,6 @@ section.intro + hr {
 .subscribe form p {
     margin-bottom: unset;
     flex: 1;
-    min-width: clamp(10rem, 60vw, 25rem);
 }
 
 .subscribe form label {
@@ -195,7 +196,7 @@ section.intro + hr {
 
 .subscribe .field label {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: clamp(1.2rem, 3vw, 2rem);
@@ -212,7 +213,7 @@ section.intro + hr {
 section.intro .video_ctnr {
     display: flex;
     flex-direction: column-reverse;
-    gap: clamp(2rem, 3vw, 3rem);
+    gap: clamp(2rem, 7vw, 3rem);
 }
 
 
@@ -231,12 +232,15 @@ section.intro .video_ctnr {
 
 
 
-
+main.ep_catalogue {
+    margin-top: 20vh;
+}
 
 .ep_catalogue {
     width: var(--width-1);
     margin-inline: auto;
     margin-bottom: 10rem;
+    margin-top: 10vh;
 }
 
 .ep_catalogue .cta {
@@ -267,15 +271,19 @@ section.intro .video_ctnr {
     min-width: clamp(1rem, 75vw, 26rem);
     padding: 2rem;
     border-radius: 2rem;
-    background-color: #041e30;
+    background-color: #011624;
     color: var(--light);
-    border: 0.2rem solid #02253e;
-    box-shadow: 0 2.2rem 2rem -1.6rem var(--dark-2), inset 0 -3rem 4rem -2rem #00233b;
+    border: 0.2rem solid #031d30;
+    box-shadow: 0 2.2rem 2rem -1.6rem var(--dark-2), inset 0 -3rem 4rem -2rem #011b2e;
     transition: border-color 0.4s ease;
     -webkit-transition: border-color 0.4s ease;
     -moz-transition: border-color 0.4s ease;
     -ms-transition: border-color 0.4s ease;
     -o-transition: border-color 0.4s ease;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
 }
 
 .ep_catalogue li:hover {
@@ -314,14 +322,14 @@ section.intro .video_ctnr {
 }
 
 .ep_catalogue li .watch {
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-right: 0.5rem;
     display: block;
     font-size: 1.5rem;
     width: fit-content;
     margin-left: auto;
     font-weight: 400;
-    color: var(--c3);
+    color: var(--c3-1);
 }
 
 .ep_catalogue h1 {
@@ -331,10 +339,22 @@ section.intro .video_ctnr {
 
 .ep_catalogue h1 sub {
     display: block;
-    font-size: 0.3em;
+    font-size: 0.25em;
     text-align: right;
     font-weight: 450;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -430,14 +450,14 @@ section.intro .video_ctnr {
 }
 
 .ep_page iframe {
-    width: clamp(10rem, 80vw, 75rem);
-    height: calc(clamp(10rem, 80vw, 75rem) / 1.75);
+    width: clamp(10rem, 80vw, 95rem);
+    height: calc(clamp(10rem, 80vw, 95rem) / 1.75);
 }
 
 .ep_page h1 {
     text-align: center;
     display: block;
-    font-size: clamp(2rem, 6vw, 4rem);
+    font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 450;
 }
 
@@ -470,5 +490,9 @@ section.intro .video_ctnr {
 
     .subscribe form p:not(.field) {
         flex: unset;
+    }
+
+    .subscribe form, .subscribe .field label {
+        flex-direction: row;
     }
 }
