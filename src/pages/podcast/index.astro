@@ -30,9 +30,11 @@ const episodes = (await getCollection('podcast')).sort((a, b) => {
                 <div class="flex">
                     <div class="content">
                         <h1><sup>The psAI</sup> <span>Podcast</span></h1>
+
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
     
                         <div class="text">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut vel itaque <strong>dolore laudantium delectus magnam.</strong> Unde fuga error laudantium est molestias possimus temporibus vero provident! Minus non nemo facere illo!</p>
+                            <p>Ut vel itaque <strong>dolore laudantium delectus magnam.</strong> Unde fuga error laudantium est molestias possimus temporibus vero provident! Minus non nemo facere illo!</p>
     
                             <p>Odit quis porro laborum asperiores deserunt eum <b>consectetur repellat ratione deleniti sint eveniet autem</b>, aspernatur eaque vitae laudantium molestiae voluptas velit aliquam.</p>
                         </div>
@@ -58,28 +60,26 @@ const episodes = (await getCollection('podcast')).sort((a, b) => {
 
             <ul>
                 {
-                    episodes.slice(0, 3).map((episode) => (
+                    episodes.slice(0, 6).map((episode) => (
                         <>
                         <li id={(episode.data.title).toLowerCase().replace(/\s+/g, '-')} class="scroll_margin_top">
-                            <div class="ctnr">
+                            <a href={`/podcast/${episode.slug}/`} class="ctnr">
                                 <div class="content">
                                     <div class="ctnr">
-                                        <a href={`/podcast/${episode.slug}/`} class="cover">
+                                        <div class="cover">
                                             <img src={episode.data.cover} alt="Episode cover" loading="lazy"/>
-                                        </a>
+                                        </div>
     
-                                        <a href={`/podcast/${episode.slug}/`}>
-                                            <h3 class="title">Episode {episode.data.episodeNumber}</h3>
-                                        </a>
+                                        <h3 class="title">Episode {episode.data.episodeNumber}</h3>
 
                                         {episode.data.description ? (
                                             <p class="description">{episode.data.description}</p>
                                         ) : null}
 
-                                        <a href={`/podcast/${episode.slug}/`} class="watch">Watch Now</a>
+                                        <div class="watch">Watch Now</div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </li>
                         </>
                     ))
