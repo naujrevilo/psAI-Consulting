@@ -247,7 +247,7 @@ svg {
 }
 
 .mail_bubble {
-    z-index: 8;
+    z-index: 9;
     position: fixed;
     right: clamp(2rem, 8vmin, 90rem);
     bottom: clamp(2rem, calc(4vmin + 8.5rem), 90rem);
@@ -671,6 +671,10 @@ a.psai_run_style path {
     
     section.default1.inverted {
         flex-flow: row-reverse wrap;
+    }
+
+    .mail_bubble {
+        bottom: 4rem;
     }
 }
 
