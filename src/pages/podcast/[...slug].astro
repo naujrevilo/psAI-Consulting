@@ -1,42 +1,42 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
+// import { type CollectionEntry, getCollection } from "astro:content";
+// import Layout from "../../layouts/Layout.astro";
 
-import BackBt from "../../components/BackBt.astro";
+// import BackBt from "../../components/BackBt.astro";
 
-export async function getStaticPaths() {
-    const podcast = await getCollection("podcast");
-    return podcast.map((podcast) => ({
-        params: { slug: podcast.slug },
-        props: podcast,
-    }));
-}
+// export async function getStaticPaths() {
+//     const podcast = await getCollection("podcast");
+//     return podcast.map((podcast) => ({
+//         params: { slug: podcast.slug },
+//         props: podcast,
+//     }));
+// }
 
-import '../../css/podcast.css'
+// import '../../css/podcast.css'
 
-type Props = CollectionEntry<"podcast">;
+// type Props = CollectionEntry<"podcast">;
 
-const episode = Astro.props;
-const { Content } = await episode.render();
+// const episode = Astro.props;
+// const { Content } = await episode.render();
 
-import { Schema } from "astro-seo-schema"
-import NewsletterForm from "../../components/NewsletterForm.astro";
+// import { Schema } from "astro-seo-schema"
+// import NewsletterForm from "../../components/NewsletterForm.astro";
 
-const episodes = (await getCollection('podcast')).sort((a, b) => {
-    if (a.data.episodeNumber !== undefined && b.data.episodeNumber !== undefined) {
-        return b.data.episodeNumber - a.data.episodeNumber;
-    } else if (a.data.episodeNumber !== undefined) {
-        return 1;
-    } else if (b.data.episodeNumber !== undefined) {
-        return -1;
-    } else {
-        return b.data.title.localeCompare(a.data.title);
-    }
-});
+// const episodes = (await getCollection('podcast')).sort((a, b) => {
+//     if (a.data.episodeNumber !== undefined && b.data.episodeNumber !== undefined) {
+//         return b.data.episodeNumber - a.data.episodeNumber;
+//     } else if (a.data.episodeNumber !== undefined) {
+//         return 1;
+//     } else if (b.data.episodeNumber !== undefined) {
+//         return -1;
+//     } else {
+//         return b.data.title.localeCompare(a.data.title);
+//     }
+// });
 
 ---
 
-<Layout title={`${episode.data.title} | psAI Podcast`}>
+<!-- <Layout title={`${episode.data.title} | psAI Podcast`}>
 	<BackBt url={`/podcast/1`} label="Return"/>
 
     <main class="ep_page">
@@ -51,4 +51,4 @@ const episodes = (await getCollection('podcast')).sort((a, b) => {
             <a href="/podcast/1" class="cta main">Check all episodes</a>
         </div>
     </main>
-</Layout>
+</Layout> -->

@@ -31,23 +31,45 @@ const episodes = (await getCollection('podcast')).sort((a, b) => {
                     <div class="content">
                         <h1><sup>The psAI</sup> <span>Podcast</span></h1>
 
-                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                        <h2><b>Web Summit Doha</b>:<br>26th-29th of February 2024.<span>Leap Riyadh: 4-7th of March 2024.</span></h2>
     
                         <div class="text">
-                            <p>Ut vel itaque <strong>dolore laudantium delectus magnam.</strong> Unde fuga error laudantium est molestias possimus temporibus vero provident! Minus non nemo facere illo!</p>
-    
-                            <p>Odit quis porro laborum asperiores deserunt eum <b>consectetur repellat ratione deleniti sint eveniet autem</b>, aspernatur eaque vitae laudantium molestiae voluptas velit aliquam.</p>
+                            <p>As artificial intelligence reshapes the landscape of business across industries, leaders stand at the precipice of a new era. The psAI Podcast, launching at the heart of two of the most anticipated tech gatherings of the year—<strong>Web Summit Doha and Leap Riyadh</strong>—aims to dive deep into the evolving world of AI implementation.</p>
+
+                            <p>Join us as we explore the transformational power of AI in business, understanding not just the technology but the human stories behind it. <b>Let's define the future together.</b></p>
+
+                            <p><b>Subscribe now to secure your spot in the conversation that will shape the future of business in the AI-driven world.</b></p>
                         </div>
     
                         <div class="cta_ctnr">
-                            <a href="#" class="cta main">Subscribe now</a>
+                            <a href="#subscribe" class="cta main subscribe_newsletter_bt">Subscribe now</a>
 
-                            <a href="/podcast/1">Check all episodes</a>
+                            <script>
+                                let subscribeBt = document.querySelector('.subscribe_newsletter_bt')
+
+                                let emailInput = document.querySelector('.subscribe input')
+
+                                let subscribe = document.querySelector('.subscribe')
+
+                                subscribeBt.addEventListener('click', function() {
+                                    emailInput.focus()
+
+                                    subscribe.classList.add('focus')
+                                })
+                            </script>
+
+                            <!-- <a href="/podcast/1">Check all episodes</a> -->
                         </div>
                     </div>
 
-                    <div class="video_ctnr" set:html={episodes[(episodes.length - 1)].data.embedURL}>
+                    <!-- <div class="video_ctnr" set:html={episodes[(episodes.length - 1)].data.embedURL}>
                         <NewsletterForm/>
+                    </div> -->
+
+                    <div class="video_ctnr">
+                        <NewsletterForm/>
+
+                        <video src="/video/psai_podcast_intro.mov" controls></video>
                     </div>
                 </div>
             </div>
@@ -55,7 +77,7 @@ const episodes = (await getCollection('podcast')).sort((a, b) => {
 
         <hr>
 
-        <section class="ep_catalogue">
+        <!-- <section class="ep_catalogue">
             <h2>Latest Episodes</h2>
 
             <ul>
@@ -87,6 +109,6 @@ const episodes = (await getCollection('podcast')).sort((a, b) => {
             </ul>
 
             <a href="/podcast/1" class="cta">Check All Episodes</a>
-        </section>
+        </section> -->
     </main>
 </Layout>
