@@ -72,12 +72,23 @@ header .logo_anchor svg {
 
 .header_nav a, .header_nav button {
     padding-block: 1.3rem;
+    position: relative;
+}
+
+.header_nav a .worm {
+    color: var(--secondary);
+    width: clamp(2.2rem, 5vw, 2.8rem);
+    position: absolute;
+    bottom: 0.6rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
 }
 
 .header_nav > hr {
     min-height: 0.1rem;
     width: 2rem;
-    background-color: var(--light);
+    background-color: var(--c3);
 }
 
 nav.show {
@@ -288,21 +299,6 @@ header .hambt path {
     font-weight: inherit;
     color: var(--secondary);
 }
-
-
-.subnav a.psai_define_style path {
-    stroke: var(--secondary);
-}
-.subnav a.psai_align_style path {
-    stroke: var(--secondary-3);
-}
-.subnav a.psai_flow_style path {
-    stroke: #09cf9f;
-}
-.subnav a.psai_run_style path {
-    stroke: var(--secondary-1);
-}
-
 
 
 

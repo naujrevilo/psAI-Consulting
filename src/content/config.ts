@@ -13,6 +13,17 @@ import { z, defineCollection } from 'astro:content';
 // 	}),
 // });
 
-// export const collections = {
-//     'blog': blogCollection,
-// };
+const podcastCollection = defineCollection({
+	schema: z.object({
+		embedURL: z.string(),
+		episodeNumber:z.number().optional(),
+		title: z.string(),
+		description: z.string(),
+		cover:z.string(),
+	}),
+});
+
+export const collections = {
+    // 'blog': blogCollection,
+    'podcast': podcastCollection
+};
