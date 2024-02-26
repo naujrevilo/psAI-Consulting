@@ -55,6 +55,10 @@ const episodes = (await getCollection('podcast')).sort((a, b) => {
                                     emailInput.focus()
 
                                     subscribe.classList.add('focus')
+
+                                    setTimeout(() => {
+                                        subscribe.classList.remove('focus')
+                                    }, 1000);
                                 })
                             </script>
 
