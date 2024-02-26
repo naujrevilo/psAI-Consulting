@@ -100,7 +100,7 @@ section.intro .content .text {
     margin-block: 2rem;
 }
 
-iframe {
+iframe, video {
     background-color: #081b33;
     border-radius: 2rem;
     -webkit-border-radius: 2rem;
