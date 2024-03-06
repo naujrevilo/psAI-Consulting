@@ -51,6 +51,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
+    min-height: 100svh;
     max-height: 100vh;
     width: clamp(10rem, 85vw, 150rem);
     margin-inline: auto;
