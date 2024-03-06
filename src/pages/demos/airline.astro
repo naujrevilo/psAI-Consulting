@@ -5,6 +5,9 @@ import BaseHead from '../../components/BaseHead.astro'
 import PaperPlane from '../../components/ai-demo/PaperPlane.astro'
 import Attachment from '../../components/ai-demo/Attachment.astro'
 import Photo from '../../components/ai-demo/Photo.astro'
+
+import { Image } from 'astro:assets';
+import Map from '../../assets/demos/map.jpg';
 ---
 
 <!doctype html>
@@ -20,7 +23,7 @@ import Photo from '../../components/ai-demo/Photo.astro'
 
 	<body class="demo">
         <!-- welcome, checkin_start, checkin_output -->
-        <main class="checkin_start">
+        <main class="welcome">
             <div class="context_menu">
                 <div class="menu">
                     <div class="item">
@@ -67,9 +70,9 @@ import Photo from '../../components/ai-demo/Photo.astro'
             <div class="chat flex">
                 <div class="outputs_ctnr">
                     <article class="welcome">
-                        <p class="heading">Welcome!</p>
+                        <!-- <p class="heading big">Welcome!</p> -->
 
-                        <p class="subheading">How can I help you?</p>
+                        <p class="heading medium">How can I help you?</p>
                     </article>
 
                     <article class="checkin_start">
@@ -80,7 +83,7 @@ import Photo from '../../components/ai-demo/Photo.astro'
                         <p class="instruction">Make your check in right away by <b>uploading your passport</b>:</p>
 
                         <div class="options">
-                            <button type="button">
+                            <button type="button" class="upload">
                                 <Attachment/>
                                 Upload passport
                             </button>
@@ -99,17 +102,65 @@ import Photo from '../../components/ai-demo/Photo.astro'
                             </button>
                         </div>
                     </article>
+
+                    <article class="checkin_output">
+                        <span class="status_confirmation"><Attachment/> passport uploaded</span>
+                        
+                        <p class="heading medium">Checkin done!</p>
+
+                        <p class="subheading medium">Here’s everything you need for your flight:</p>
+
+                        <div class="boxes">
+                            <div class="flex">
+                                <div class="box">
+                                    <div class="ctnr">
+                                        <p class="heading"><b>04/03/2024</b></p>
+        
+                                        <p>São Paulo (GRU)  >  Doha (DIA)</p>
+        
+                                        <p>One <b>stop</b> at Riyadh (RUH)</p>
+                                    </div>
+                                </div>
+
+                                <div class="box">
+                                    <div class="ctnr">
+                                        <p class="heading">You’re on Executive Class</p>
+    
+                                        <p>Enjoy lounge access, priority boarding, premium seats, fine meals, and more</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box">
+                                <div class="ctnr">
+                                    <p>Find your way to</p>
+    
+                                    <p class="heading">Terminal 4, Gate 9</p>
+                                </div>
+
+                                <Image src={Map} alt="Terminal map" draggable="false"/>
+                            </div>
+                        </div>
+                    </article>
                 </div>
     
                 <div class="prompt_area">
-                    <div class="context_prompts">
-                        <p class="reveal_step_bottom selected">check me in</p>
+                    <div class="context_prompts welcome">
+                        <div class="reveal_step_bottom">
+                            <button type="button" class="selected">check me in</button>
+                        </div>
 
-                        <p class="reveal_step_bottom">travel tips</p>
+                        <div class="reveal_step_bottom">
+                            <button type="button">travel tips</button>
+                        </div>
 
-                        <p class="reveal_step_bottom">flight status</p>
+                        <div class="reveal_step_bottom">
+                            <button type="button">flight status</button>
+                        </div>
 
-                        <p class="reveal_step_bottom">more options</p>
+                        <div class="reveal_step_bottom">
+                            <button type="button">more options</button>
+                        </div>
                     </div>
 
                     <div class="prompt_input">
