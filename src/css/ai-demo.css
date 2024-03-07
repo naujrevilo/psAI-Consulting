@@ -365,12 +365,13 @@ main {
 }
 
 .outputs_ctnr .checkin_start .video_ctnr button.switch {
+    display: none;
     position: absolute;
     width: 3rem;
     height: 3rem;
     left: 0;
     bottom: 0%;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     background-color: var(--demo-c1-2);

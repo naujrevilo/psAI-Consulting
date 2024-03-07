@@ -15,6 +15,12 @@ for(let i = 0; i < welcomeSubitems.length; i++) {
     }, 90 * i);
 }
 
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+if (isMobile) {
+    switchButton.style.display = 'flex';
+}
+
 contextPrompts.forEach(element => {
     element.addEventListener('click', async function() {
         document.querySelector('.outputs_ctnr .prompt_bt').classList.add('hide')
