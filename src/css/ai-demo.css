@@ -13,6 +13,7 @@ body.demo {
     background-color: white;
     font-family: "Lato", sans-serif;
     font-style: normal;
+    line-height: 1.4;
 }
 
 /* Handle */
@@ -57,6 +58,7 @@ main {
     margin-inline: auto;
     z-index: 1;
     position: relative;
+    gap: 2rem;
 }
 
 
@@ -96,8 +98,8 @@ main {
 .context_menu .menu .item .circle {
     background-color: var(--demo-light-1);
     border: 0.2rem solid var(--demo-light-2);
-    width: clamp(5rem, 14vw, 6rem);
-    height: clamp(5rem, 14vw, 6rem);
+    width: clamp(5rem, 13vw, 6rem);
+    height: clamp(5rem, 13vw, 6rem);
     border-radius: 10rem;
     -webkit-border-radius: 10rem;
     -moz-border-radius: 10rem;
@@ -109,8 +111,8 @@ main {
 }
 
 .context_menu .menu .item .circle svg {
-    width: 55%;
-    height: 55%;
+    width: 50%;
+    height: 50%;
 }
 
 .context_menu .menu .item p {
@@ -228,6 +230,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
+    gap: 2rem;
 }
 
 .outputs_ctnr {
@@ -236,31 +239,58 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
+    max-height: clamp(40vh, 68vmax, 70vh);
+    position: relative;
+    /* margin: auto; */
+    width: 100%;
+    height: 100%;
 }
 
 .outputs_ctnr article {
-    opacity: 0;
+    display: none;
+    /* max-height: 0; */
     transition: opacity 0.6s ease;
     -webkit-transition: opacity 0.6s ease;
     -moz-transition: opacity 0.6s ease;
     -ms-transition: opacity 0.6s ease;
     -o-transition: opacity 0.6s ease;
     pointer-events: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    min-height: 23rem;
+    width: 100%;
+    box-sizing: border-box;
+    max-height: 100%;
+    padding-top: 5rem;
+}
+
+.outputs_ctnr article > .ctnr {
+    overflow-y: auto;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
-    /* min-height: 23rem; */
-    max-height: clamp(40vh, 50vmax, 70vh);
-    overflow: auto;
     padding-inline: 3rem;
     width: 100%;
-    box-sizing: border-box;
+}
+
+.outputs_ctnr article > .ctnr > * {
+    opacity: 0;
+    transition:opacity 0.8s ease;
+    -webkit-transition:opacity 0.8s ease;
+    -moz-transition:opacity 0.8s ease;
+    -ms-transition:opacity 0.8s ease;
+    -o-transition:opacity 0.8s ease;
+}
+
+.outputs_ctnr article > .ctnr > .show {
+    opacity: 1;
 }
 
 .outputs_ctnr article .icon {
-    width: clamp(1rem, 14vw, 6rem);
-    height: clamp(1rem, 14vw, 6rem);
+    width: clamp(1rem, 11vw, 6rem);
+    height: clamp(1rem, 11vw, 6rem);
 }
 
 .outputs_ctnr article:not(:first-of-type) {
@@ -302,9 +332,10 @@ main {
 }
 
 .outputs_ctnr article .instruction {
-    font-size: clamp(1rem, 4.5vw, 1.9rem);
+    font-size: clamp(1rem, 4.5vw, 1.8rem);
     font-weight: 600;
     color: var(--demo-c1-2);
+    margin-block: 1rem 2rem;
 }
 
 .outputs_ctnr article b {
@@ -317,7 +348,71 @@ main {
     align-items: center;
     gap: 1rem;
     color: var(--demo-c1-2);
-    margin-top: clamp(0rem, 2vw, 1rem);
+    margin-top: clamp(0rem, 2vw, 2rem);
+}
+
+.outputs_ctnr .checkin_start .video_ctnr {
+    width: clamp(10rem, 65vw, 35rem);
+    height: 0;
+    padding-bottom: clamp(10rem, 65vw, 35rem);
+    position: relative;
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+    margin-bottom: 7rem;
+}
+
+.outputs_ctnr .checkin_start .video_ctnr .content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: fit-content;
+}
+
+.outputs_ctnr .checkin_start .video_ctnr button {
+    background-color: var(--demo-light-3);
+    color: var(--demo-c1-1);
+    font-weight: 800;
+    padding: 1rem 2rem;
+    border-radius: 0.7rem;
+    -webkit-border-radius: 0.7rem;
+    -moz-border-radius: 0.7rem;
+    -ms-border-radius: 0.7rem;
+    -o-border-radius: 0.7rem;
+    font-size: 1.6rem;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    border: 0.1rem solid var(--demo-c1-3);
+}
+
+.outputs_ctnr .checkin_start .video_ctnr span {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.outputs_ctnr .checkin_start .passport_video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+    border: 0.7rem solid var(--demo-light-3);
+    box-sizing: border-box;
 }
 
 .outputs_ctnr article .options button {
@@ -366,7 +461,7 @@ main {
 
 .outputs_ctnr article .status_confirmation {
     font-weight: 500;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     background-color: var(--demo-c1-2);
     color: var(--demo-light-1);
     padding: 0.7rem 1.9rem;
@@ -379,6 +474,18 @@ main {
     align-items: center;
 }
 
+.outputs_ctnr .prompt_bt {
+    transition: transform 0.5s ease, opacity 0.3s ease;
+    -webkit-transition: transform 0.5s ease, opacity 0.3s ease;
+    -moz-transition: transform 0.5s ease, opacity 0.3s ease;
+    -ms-transition: transform 0.5s ease, opacity 0.3s ease;
+    -o-transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.outputs_ctnr .prompt_bt.hide {
+    opacity: 0;
+}
+
 .outputs_ctnr article .status_confirmation svg {
     width: fit-content;
 }
@@ -389,6 +496,7 @@ main {
     gap: 2rem;
     width: 100%;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 .checkin_output .boxes > div {
@@ -486,21 +594,16 @@ main {
 }
 
 .prompt_area .context_prompts {
-    display: flex;
+    display: none;
     flex-flow: row wrap;
     justify-content: center;
     gap: 1rem;
+}
+
+.prompt_bt {
     font-size: 1.7rem;
     color: var(--demo-c1-2);
     font-weight: 700;
-    transition: transform 0.5s ease;
-    -webkit-transition: transform 0.5s ease;
-    -moz-transition: transform 0.5s ease;
-    -ms-transition: transform 0.5s ease;
-    -o-transition: transform 0.5s ease;
-}
-
-.context_prompts button {
     background-color: var(--demo-light-1);
     border-radius: 4rem;
     -webkit-border-radius: 4rem;
@@ -509,11 +612,53 @@ main {
     -o-border-radius: 4rem;
     padding: 0.8rem 2.4rem;
     border: 0.1rem solid var(--demo-light-4);
-    transition:background-color 0.4s ease;
-    -webkit-transition:background-color 0.4s ease;
-    -moz-transition:background-color 0.4s ease;
-    -ms-transition:background-color 0.4s ease;
-    -o-transition:background-color 0.4s ease;
+    transition:background-color 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+    -webkit-transition:background-color 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+    -moz-transition:background-color 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+    -ms-transition:background-color 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+    -o-transition:background-color 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+    box-shadow: 0 1.3rem 1.2rem -1.2rem var(--demo-c1-3);
+}
+
+.prompt_area .prompt_bt {
+    opacity: 0;
+    transform: translateY(1rem);
+    -webkit-transform: translateY(1rem);
+    -moz-transform: translateY(1rem);
+    -ms-transform: translateY(1rem);
+    -o-transform: translateY(1rem);
+}
+
+.prompt_area .prompt_bt:nth-child(1) {
+    transition:background-color 0.4s ease, opacity 0.4s ease, transform 0.3s ease;
+    -webkit-transition:background-color 0.4s ease, opacity 0.4s ease, transform 0.3s ease;
+    -moz-transition:background-color 0.4s ease, opacity 0.4s ease, transform 0.3s ease;
+    -ms-transition:background-color 0.4s ease, opacity 0.4s ease, transform 0.3s ease;
+    -o-transition:background-color 0.4s ease, opacity 0.4s ease, transform 0.3s ease;
+}
+
+.prompt_area .prompt_bt:nth-child(2) {
+    transition:background-color 0.4s ease, opacity 0.4s 0.1s ease, transform 0.3s 0.1s ease;
+    -webkit-transition:background-color 0.4s ease, opacity 0.4s 0.1s ease, transform 0.3s 0.1s ease;
+    -moz-transition:background-color 0.4s ease, opacity 0.4s 0.1s ease, transform 0.3s 0.1s ease;
+    -ms-transition:background-color 0.4s ease, opacity 0.4s 0.1s ease, transform 0.3s 0.1s ease;
+    -o-transition:background-color 0.4s ease, opacity 0.4s 0.1s ease, transform 0.3s 0.1s ease;
+}
+
+.prompt_area .prompt_bt:nth-child(3) {
+    transition:background-color 0.4s ease, opacity 0.4s 0.2s ease, transform 0.3s 0.2s ease;
+    -webkit-transition:background-color 0.4s ease, opacity 0.4s 0.2s ease, transform 0.3s 0.2s ease;
+    -moz-transition:background-color 0.4s ease, opacity 0.4s 0.2s ease, transform 0.3s 0.2s ease;
+    -ms-transition:background-color 0.4s ease, opacity 0.4s 0.2s ease, transform 0.3s 0.2s ease;
+    -o-transition:background-color 0.4s ease, opacity 0.4s 0.2s ease, transform 0.3s 0.2s ease;
+}
+
+.prompt_area .prompt_bt:nth-child(4) {
+    transition:background-color 0.4s ease, opacity 0.4s 0.3s ease, transform 0.3s 0.3s ease;
+    -webkit-transition:background-color 0.4s ease, opacity 0.4s 0.3s ease, transform 0.3s 0.3s ease;
+    -moz-transition:background-color 0.4s ease, opacity 0.4s 0.3s ease, transform 0.3s 0.3s ease;
+    -ms-transition:background-color 0.4s ease, opacity 0.4s 0.3s ease, transform 0.3s 0.3s ease;
+    -o-transition:background-color 0.4s ease, opacity 0.4s 0.3s ease, transform 0.3s 0.3s ease;
 }
 
 .context_prompts:hover button.selected {
@@ -527,22 +672,6 @@ main {
 
 .context_prompts:active button.selected {
     background-color: var(--light-2);
-}
-
-main.checkin_start .context_prompts button.selected, main.checkin_output .context_prompts button.selected {
-    background-color: var(--demo-light-3);
-    position: relative;
-}
-
-main.checkin_start .context_prompts button.selected::before, main.checkin_output .context_prompts button.selected::before {
-    content: '...';
-    position: absolute;
-    top: -0.5rem;
-    left: 0;
-    right: 0;
-    margin-inline: auto;
-    width: fit-content;
-    line-height: 0;
 }
 
 .prompt_area .prompt_input {
@@ -595,26 +724,56 @@ main.checkin_start .context_prompts button.selected::before, main.checkin_output
 
 
 
-
-
-main.welcome .prompt_area .context_prompts {
-    
-}
+/* RELATIVE MAIN CLASSES */
 
 main.welcome .outputs_ctnr .welcome, main.checkin_start .outputs_ctnr .checkin_start, main.checkin_output .outputs_ctnr .checkin_output {
-    opacity: 1;
     pointer-events: initial;
-}
-
-main.checkin_start .prompt_area .context_prompts {
-    
+    display: flex;
 }
 
 
 
+/* WELCOME */
+
+main.welcome .prompt_area .prompt_bt, main.checkin_start .prompt_area .prompt_bt {
+}
 
 
 
+/* CHECK IN START */
+
+
+main.checkin_start .context_prompts button.selected, main.checkin_output .context_prompts button.selected {
+    background-color: var(--demo-light-3);
+    position: relative;
+}
+
+main.checkin_start .context_prompts button.selected::before, main.checkin_output .context_prompts button.selected::before {
+    content: '...';
+    position: absolute;
+    top: -0.5rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: fit-content;
+    line-height: 0;
+}
+
+
+/* CHECK IN OUTPUT */
+
+main.checkin_output .context_prompts {
+    display: flex;
+}
+
+main.checkin_output .prompt_area .prompt_bt {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    opacity: 1;
+}
 
 
 
@@ -674,5 +833,13 @@ main.checkin_start .prompt_area .context_prompts {
 
     .checkin_output .boxes {
         width: clamp(10rem, 50vw, 80rem);
+    }
+
+    .outputs_ctnr {
+        padding-top: 2rem;
+    }
+
+    .outputs_ctnr article {
+        max-width: 62vw;
     }
 }

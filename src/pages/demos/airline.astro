@@ -70,75 +70,94 @@ import Map from '../../assets/demos/map.jpg';
             <div class="chat flex">
                 <div class="outputs_ctnr">
                     <article class="welcome">
-                        <!-- <p class="heading big">Welcome!</p> -->
-
-                        <p class="heading medium">How can I help you?</p>
+                        <div class="ctnr">
+                            <p class="heading big">Hi!</p>
+    
+                            <p class="instruction">It looks like your next flight is close. <b>Want to check in?</b></p>
+                            
+                            <button type="button" class="prompt_bt">check me in</button>
+                        </div>
                     </article>
 
                     <article class="checkin_start">
-                        <PaperPlane/>
+                        <div class="ctnr">
+                            <PaperPlane/>
+    
+                            <p class="prompt">"Check me in"</p>
+    
+                            <p class="instruction">Make your check in right away by <b>taking a photo of your passport</b>:</p>
+    
+                            <div class="video_ctnr">
+                                <video class="passport_video" autoplay></video>
 
-                        <p class="prompt">"Check me in"</p>
+                                <div class="content">
+                                    <button type="button">Scan passport</button>
 
-                        <p class="instruction">Make your check in right away by <b>uploading your passport</b>:</p>
+                                    <span>or...</span>
+                                </div>
+                            </div>
+    
+                            <div class="options">
+                                
+                                <button type="button" class="take_photo">
+                                    <Photo/>
+                                    Take a photo of passport
+                                </button>
+    
+                                <hr/>
 
-                        <div class="options">
-                            <button type="button" class="upload">
-                                <Attachment/>
-                                Upload passport
-                            </button>
-
-                            <hr/>
-                            
-                            <button type="button">
-                                <Photo/>
-                                Take a photo of passport
-                            </button>
-
-                            <hr/>
-                            
-                            <button type="button">
-                                Insert Manually
-                            </button>
+                                <button type="button" class="upload">
+                                    <Attachment/>
+                                    Upload passport
+                                </button>
+    
+                                <hr/>
+                                
+                                <button type="button">
+                                    Insert Manually
+                                </button>
+                            </div>
                         </div>
                     </article>
 
                     <article class="checkin_output">
-                        <span class="status_confirmation"><Attachment/> passport uploaded</span>
-                        
-                        <p class="heading medium">Checkin done!</p>
-
-                        <p class="subheading medium">Here’s everything you need for your flight:</p>
-
-                        <div class="boxes">
-                            <div class="flex">
-                                <div class="box">
-                                    <div class="ctnr">
-                                        <p class="heading"><b>04/03/2024</b></p>
+                        <div class="ctnr">
+                            <span class="status_confirmation"><Attachment/> passport uploaded</span>
+                            
+                            <p class="heading medium">Checkin done!</p>
+    
+                            <p class="subheading medium">Here’s everything you need for your flight:</p>
+    
+                            <div class="boxes">
+                                <div class="flex">
+                                    <div class="box">
+                                        <div class="ctnr">
+                                            <p class="heading"><b>04/03/2024</b></p>
+            
+                                            <p>São Paulo (GRU)  >  Doha (DIA)</p>
+            
+                                            <p>One <b>stop</b> at Riyadh (RUH)</p>
+                                        </div>
+                                    </div>
+    
+                                    <div class="box">
+                                        <div class="ctnr">
+                                            <p class="heading">You’re on Executive Class</p>
         
-                                        <p>São Paulo (GRU)  >  Doha (DIA)</p>
-        
-                                        <p>One <b>stop</b> at Riyadh (RUH)</p>
+                                            <p>Enjoy lounge access, priority boarding, premium seats, fine meals, and more</p>
+                                        </div>
                                     </div>
                                 </div>
-
+    
                                 <div class="box">
                                     <div class="ctnr">
-                                        <p class="heading">You’re on Executive Class</p>
-    
-                                        <p>Enjoy lounge access, priority boarding, premium seats, fine meals, and more</p>
+                                        <p>Find your way to</p>
+        
+                                        <p class="heading">Terminal 4, Gate 9</p>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="box">
-                                <div class="ctnr">
-                                    <p>Find your way to</p>
     
-                                    <p class="heading">Terminal 4, Gate 9</p>
+                                    <Image src={Map} alt="Terminal map" draggable="false"/>
                                 </div>
-
-                                <Image src={Map} alt="Terminal map" draggable="false"/>
                             </div>
                         </div>
                     </article>
@@ -146,21 +165,13 @@ import Map from '../../assets/demos/map.jpg';
     
                 <div class="prompt_area">
                     <div class="context_prompts welcome">
-                        <div class="reveal_step_bottom">
-                            <button type="button" class="selected">check me in</button>
-                        </div>
+                        <button type="button" class="selected prompt_bt">check me in</button>
 
-                        <div class="reveal_step_bottom">
-                            <button type="button">travel tips</button>
-                        </div>
+                        <button type="button" class="prompt_bt">travel tips</button>
 
-                        <div class="reveal_step_bottom">
-                            <button type="button">flight status</button>
-                        </div>
-
-                        <div class="reveal_step_bottom">
-                            <button type="button">more options</button>
-                        </div>
+                        <button type="button" class="prompt_bt">flight status</button>
+                        
+                        <button type="button" class="prompt_bt">more options</button>
                     </div>
 
                     <div class="prompt_input">
@@ -182,13 +193,13 @@ import Map from '../../assets/demos/map.jpg';
                 </div>
 
                 <nav>
-                    <a href="#">My trips</a>
-                    <a href="#">Preferences</a>
-                    <a href="#">Security</a>
-                    <a href="#">Privacy</a>
-                    <a href="#">FAQ</a>
-                    <a href="#">Contact us</a>
-                    <a href="#">Press</a>
+                    <a>My trips</a>
+                    <a>Preferences</a>
+                    <a>Security</a>
+                    <a>Privacy</a>
+                    <a>FAQ</a>
+                    <a>Contact us</a>
+                    <a>Press</a>
                 </nav>
             </div>
         </main>

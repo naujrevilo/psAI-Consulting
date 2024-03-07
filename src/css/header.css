@@ -505,7 +505,7 @@ header .hambt path {
     
     .subnav .ctnr {
         flex-direction: row;
-        width: 95%;
+        width: 80%;
         margin-inline: auto;
     }
 
