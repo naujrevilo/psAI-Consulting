@@ -3,6 +3,7 @@ const main = document.querySelector('main')
 const contextPrompts = document.querySelectorAll('article.welcome .prompt_bt')
 
 const videoCtnr = document.querySelector('.video_ctnr');
+const video = videoCtnr.querySelector('.passport_video');
 const switchButton = document.querySelector('.checkin_start .switch');
 let stream;
 
@@ -27,7 +28,7 @@ contextPrompts.forEach(element => {
         
         try {
             const stream = await navigator.mediaDevices.getUserMedia({ video: true });
-            videoCtnr.querySelector('.passport_video').srcObject = stream;
+            video.srcObject = stream;
             document.querySelector('.take_photo').style.display = 'none'
         } catch (err) {
             videoCtnr.style.display = 'none'
@@ -60,24 +61,37 @@ contextPrompts.forEach(element => {
 switchButton.addEventListener('click', async () => {
     if (!stream) return;
 
-    console.log(stream)
-
-    const tracks = stream.getVideoTracks();
-    if (tracks.length === 0) {
-        console.error('No video tracks found');
-        return;
+    function handleVideo(cameraFacing) {
+        const constraints = {
+          video: {
+            facingMode: {
+              exact: cameraFacing
+            }
+          }
+        }
+        return constraints
+    };
+      
+      function turnVideo(constraints) {
+        navigator.mediaDevices.getUserMedia(constraints)
+          .then((stream) => {
+            video = document.createElement("video")
+            video.srcObject = stream
+            video.play()
+            video.onloadeddata = () => {
+              ctx.height = video.videoHeight
+            }
+          })
+      
     }
+      
+    document.querySelector(".frontCamera").addEventListener("click", () => {
+        turnVideo(handleVideo("user"));
+    })
 
-    const currentTrack = tracks[0];
-    const facingMode = currentTrack.getSettings().facingMode;
-
-    const constraints = { video: { facingMode: facingMode === 'user' ? 'environment' : 'user' } };
-    try {
-        stream = await navigator.mediaDevices.getUserMedia(constraints);
-        videoElement.srcObject = stream;
-    } catch (err) {
-        console.error('Error switching camera:', err);
-    }
+    document.querySelector(".backCamera").addEventListener("click", () => {
+        turnVideo(handleVideo("environment"));
+    })
 });
 
 
