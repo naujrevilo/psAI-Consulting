@@ -1,6 +1,8 @@
 const main = document.querySelector('main')
 
-const contextPrompts = document.querySelectorAll('article.welcome .prompt_bt')
+const step2Triggers = document.querySelectorAll('article.welcome .prompt_bt')
+
+console.log(step2Triggers)
 
 const videoCtnr = document.querySelector('.video_ctnr');
 const video = videoCtnr.querySelector('.passport_video');
@@ -8,7 +10,10 @@ const switchButton = document.querySelector('.checkin_start .switch');
 let stream;
 
 const welcomeSubitems = document.querySelectorAll('article.welcome > .ctnr > *')
+
 const checkinStartSubitems = document.querySelectorAll('article.checkin_start > .ctnr > *')
+
+const checkinOutputSubitems = document.querySelectorAll('article.checkin_output > .ctnr > *')
 
 for(let i = 0; i < welcomeSubitems.length; i++) {
     setTimeout(() => {
@@ -22,7 +27,7 @@ if (isMobile) {
     switchButton.style.display = 'flex';
 }
 
-contextPrompts.forEach(element => {
+step2Triggers.forEach(element => {
     element.addEventListener('click', async function() {
         document.querySelector('.outputs_ctnr .prompt_bt').classList.add('hide')
         
@@ -41,7 +46,7 @@ contextPrompts.forEach(element => {
         for(let i = 0; i < welcomeSubitems.length; i++) {
             setTimeout(() => {
                 welcomeSubitems[i].classList.remove('show')
-            }, 90 * i);
+            }, 30 * i);
         }
 
         setTimeout(() => {
@@ -88,20 +93,29 @@ switchButton.addEventListener('click', async () => {
     document.querySelector(".frontCamera").addEventListener("click", () => {
         turnVideo(handleVideo("user"));
     })
-
-    document.querySelector(".backCamera").addEventListener("click", () => {
-        turnVideo(handleVideo("environment"));
-    })
 });
 
 
-const uploadBt = document.querySelectorAll('.checkin_start .options button')
+const step3Triggers = document.querySelectorAll('.checkin_start button')
 
-uploadBt.forEach(element => {
+step3Triggers.forEach(element => {
     element.addEventListener('click', function() {
         main.classList.remove('checkin_start')
+
+        for(let i = 0; i < checkinStartSubitems.length; i++) {
+            setTimeout(() => {
+                checkinStartSubitems[i].classList.remove('show')
+            }, 90 * i);
+        }
+
         setTimeout(() => {
-            main.classList.add('checkin_output')
-        }, 900);
+            for(let i = 0; i < checkinOutputSubitems.length; i++) {
+                setTimeout(() => {
+                    checkinOutputSubitems[i].classList.add('show')
+                }, 90 * i);
+            }
+        }, 100);
+
+        main.classList.add('checkin_output')
     })
 })
