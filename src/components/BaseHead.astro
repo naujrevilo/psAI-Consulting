@@ -76,6 +76,16 @@ declare global {
             interval:100,
             afterReveal: resetTransition,
         });
+        ScrollReveal().reveal('.reveal_step_bottom', {
+            opacity: 0,
+            duration:500,
+            easing: 'ease',
+            delay: 150,
+            interval:80,
+            distance: '0.5rem',
+            origin: 'bottom',
+            afterReveal: resetTransition,
+        });
         ScrollReveal().reveal('.team_ctnr .profile .flex', {
             opacity: 0,
             duration:1600,

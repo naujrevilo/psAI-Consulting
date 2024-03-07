@@ -645,6 +645,10 @@ a.psai_run_style path {
         display: inherit;
     }
 
+    .desktop_hidden {
+        display: none;
+    }
+
     body {
         border-inline: 0.7rem solid var(--light);
     }

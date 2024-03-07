@@ -1,0 +1,678 @@
+:root {
+    --demo-light-1: #F1F6FF;
+    --demo-light-2: #E8EFFF;
+    --demo-light-3:#D4E5FF;
+    --demo-light-4:#E3ECF9;
+    --demo-c1-1: #415675;
+    --demo-c1-2: #445F87;
+    --demo-c1-3:#9AB8E3;
+}
+
+body.demo {
+    color:var(--demo-c1-1);
+    background-color: white;
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+}
+
+/* Handle */
+body ::-webkit-scrollbar-thumb {
+    background: var(--demo-c1-3);
+    background-image: unset;
+    border:unset;
+    border-left:unset;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+body ::-webkit-scrollbar {
+    width: 0.6rem;
+    height: 0.6rem;
+}
+
+body.demo::before {
+    content:"";
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    /* height: clamp(25rem, 30vw, 45rem); */
+    height: 100vh;
+    z-index: 0;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25.5 25.5'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:none;stroke:%23D4DDF4;stroke-miterlimit:10;%7D%3C/style%3E%3C/defs%3E%3Cpolyline class='cls-1' points='25 0 25 25 0 25'/%3E%3C/svg%3E"),linear-gradient(175deg,transparent 60%,var(--demo-light-3));
+    background-size: clamp(1.2rem, 3vw, 1.6rem), cover;
+    -webkit-mask-image: linear-gradient(0deg, black, transparent 80%);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    min-height: 100svh;
+    max-height: 100vh;
+    width: clamp(10rem, 85vw, 150rem);
+    margin-inline: auto;
+    z-index: 1;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.context_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: clamp(8rem, 26vw, 11rem);
+    padding-top: clamp(3rem, 5vw, 8rem);
+}
+
+.context_menu .menu {
+    display: flex;
+    flex-flow: row wrap;
+    gap: clamp(1rem, calc(10vw - 2.4rem), 3.5rem);
+}
+
+.context_menu .menu .item {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.context_menu .menu .item .circle {
+    background-color: var(--demo-light-1);
+    border: 0.2rem solid var(--demo-light-2);
+    width: clamp(5rem, 14vw, 6rem);
+    height: clamp(5rem, 14vw, 6rem);
+    border-radius: 10rem;
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.context_menu .menu .item .circle svg {
+    width: 55%;
+    height: 55%;
+}
+
+.context_menu .menu .item p {
+    text-align: center;
+    font-size: clamp(1.4rem, 4vw, 1.6rem);
+    color: var(--demo-c1-2);
+    font-weight: 600;
+}
+
+.context_menu .brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.context_menu .brand .hambt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.6rem;
+    height: 2.6rem;
+}
+
+.context_menu .brand .hambt div {
+    width: 100%;
+    height: 18%;
+    background-color: var(--demo-c1-3);
+    border-radius: 0.1rem;
+}
+
+.context_menu .brand .logo {
+    background-color: var(--demo-c1-3);
+    width: clamp(5rem, 14vw, 6rem);
+    height: clamp(5rem, 14vw, 6rem);
+    border-radius: 10rem;
+    -webkit-border-radius: 10rem;
+    -moz-border-radius: 10rem;
+    -ms-border-radius: 10rem;
+    -o-border-radius: 10rem;
+    transform: scale(0.9);
+}
+
+
+
+
+
+
+
+
+
+
+.lateral_nav {
+    display: none;
+    font-weight: 600;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.lateral_nav .brand {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+}
+
+.lateral_nav .brand .image {
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--demo-c1-3);
+    border-radius: 10rem;
+}
+
+.lateral_nav .brand p {
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-align: right;
+}
+
+.lateral_nav nav {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    font-size: 1.5rem;
+    color: var(--demo-c1-2);
+}
+
+.lateral_nav nav a {
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.chat.flex {
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.outputs_ctnr {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.outputs_ctnr article {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    -webkit-transition: opacity 0.6s ease;
+    -moz-transition: opacity 0.6s ease;
+    -ms-transition: opacity 0.6s ease;
+    -o-transition: opacity 0.6s ease;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    /* min-height: 23rem; */
+    max-height: clamp(40vh, 50vmax, 70vh);
+    overflow: auto;
+    padding-inline: 3rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.outputs_ctnr article .icon {
+    width: clamp(1rem, 14vw, 6rem);
+    height: clamp(1rem, 14vw, 6rem);
+}
+
+.outputs_ctnr article:not(:first-of-type) {
+    position: absolute;
+}
+
+.outputs_ctnr article .heading {
+    font-weight: 800;
+    color: var(--demo-c1-2);
+    /* margin-bottom: 1.5rem; */
+}
+
+.outputs_ctnr article .heading.big {
+    font-size: clamp(2rem, 11vw, 5rem);
+}
+
+.outputs_ctnr article .heading.medium {
+    font-size: clamp(2rem, 8vw, 4rem);
+}
+
+.outputs_ctnr article .subheading {
+    font-weight: 600;
+    color: var(--demo-c1-2);
+}
+
+.outputs_ctnr article .subheading.big {
+    font-size: clamp(1rem, 6vw, 2.1rem);
+}
+
+.outputs_ctnr article .subheading.medium {
+    font-size: clamp(1rem, 4vw, 1.8rem);
+}
+
+.outputs_ctnr article .prompt {
+    font-size: clamp(2rem, 9vw, 4rem);
+    font-weight: 700;
+    color: var(--demo-c1-2);
+    font-style: italic;
+}
+
+.outputs_ctnr article .instruction {
+    font-size: clamp(1rem, 4.5vw, 1.9rem);
+    font-weight: 600;
+    color: var(--demo-c1-2);
+}
+
+.outputs_ctnr article b {
+    font-weight: 800;
+}
+
+.outputs_ctnr article .options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: var(--demo-c1-2);
+    margin-top: clamp(0rem, 2vw, 1rem);
+}
+
+.outputs_ctnr article .options button {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    font-size: 1.7rem;
+    padding: 1rem 2.5rem;
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+    background-color: var(--demo-light-1);
+    font-weight: 600;
+    border:0.2rem solid transparent;
+    transition: border-color 0.3s ease;
+    -webkit-transition: border-color 0.3s ease;
+    -moz-transition: border-color 0.3s ease;
+    -ms-transition: border-color 0.3s ease;
+    -o-transition: border-color 0.3s ease;
+}
+
+.outputs_ctnr article .options:hover button.upload {
+    border-color: var(--demo-light-3);
+    transition: border-color 0s ease;
+    -webkit-transition: border-color 0s ease;
+    -moz-transition: border-color 0s ease;
+    -ms-transition: border-color 0s ease;
+    -o-transition: border-color 0s ease;
+}
+
+.outputs_ctnr article .options:active button.upload {
+    background-color: var(--demo-light-3);
+}
+
+.outputs_ctnr article .options hr {
+    width: 2rem;
+    height: 0.2rem;
+    background-color: var(--demo-light-2);
+}
+
+.outputs_ctnr article .options button svg {
+    width: fit-content;
+}
+
+.outputs_ctnr article .status_confirmation {
+    font-weight: 500;
+    font-size: 1.6rem;
+    background-color: var(--demo-c1-2);
+    color: var(--demo-light-1);
+    padding: 0.7rem 1.9rem;
+    border-radius: 3rem;
+    font-style: italic;
+    line-height: 1;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.outputs_ctnr article .status_confirmation svg {
+    width: fit-content;
+}
+
+.checkin_output .boxes {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.checkin_output .boxes > div {
+    flex: 1;
+    min-width: 22rem;
+}
+
+.checkin_output .boxes .flex {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.checkin_output .boxes .box {
+    background-color: var(--demo-light-1);
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.3;
+    box-sizing: border-box;
+    font-weight: 600;
+}
+
+.checkin_output .boxes .box .ctnr {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.checkin_output .boxes .box p  {
+
+}
+
+.checkin_output .boxes .box p.heading  {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.checkin_output .boxes .box sup  {
+
+}
+
+.checkin_output .boxes .box img {
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.prompt_area {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 0 0 clamp(5rem, 15vw, 8rem);
+}
+
+.prompt_area .context_prompts {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.7rem;
+    color: var(--demo-c1-2);
+    font-weight: 700;
+    transition: transform 0.5s ease;
+    -webkit-transition: transform 0.5s ease;
+    -moz-transition: transform 0.5s ease;
+    -ms-transition: transform 0.5s ease;
+    -o-transition: transform 0.5s ease;
+}
+
+.context_prompts button {
+    background-color: var(--demo-light-1);
+    border-radius: 4rem;
+    -webkit-border-radius: 4rem;
+    -moz-border-radius: 4rem;
+    -ms-border-radius: 4rem;
+    -o-border-radius: 4rem;
+    padding: 0.8rem 2.4rem;
+    border: 0.1rem solid var(--demo-light-4);
+    transition:background-color 0.4s ease;
+    -webkit-transition:background-color 0.4s ease;
+    -moz-transition:background-color 0.4s ease;
+    -ms-transition:background-color 0.4s ease;
+    -o-transition:background-color 0.4s ease;
+}
+
+.context_prompts:hover button.selected {
+    background-color: white;
+    transition:background-color 0s ease;
+    -webkit-transition:background-color 0s ease;
+    -moz-transition:background-color 0s ease;
+    -ms-transition:background-color 0s ease;
+    -o-transition:background-color 0s ease;
+}
+
+.context_prompts:active button.selected {
+    background-color: var(--light-2);
+}
+
+main.checkin_start .context_prompts button.selected, main.checkin_output .context_prompts button.selected {
+    background-color: var(--demo-light-3);
+    position: relative;
+}
+
+main.checkin_start .context_prompts button.selected::before, main.checkin_output .context_prompts button.selected::before {
+    content: '...';
+    position: absolute;
+    top: -0.5rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    width: fit-content;
+    line-height: 0;
+}
+
+.prompt_area .prompt_input {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: clamp(10rem, 80vw, 58rem);
+}
+
+.prompt_input input {
+    flex: 1;
+    border: unset;
+    background-color: white;
+    border-radius: 4rem;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    height: 4.5rem;
+}
+
+.prompt_input button {
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4.5rem;
+    -webkit-border-radius: 4.5rem;
+    -moz-border-radius: 4.5rem;
+    -ms-border-radius: 4.5rem;
+    -o-border-radius: 4.5rem;
+}
+
+.prompt_input button svg {
+    width: 70%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main.welcome .prompt_area .context_prompts {
+    
+}
+
+main.welcome .outputs_ctnr .welcome, main.checkin_start .outputs_ctnr .checkin_start, main.checkin_output .outputs_ctnr .checkin_output {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+main.checkin_start .prompt_area .context_prompts {
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:900px) and (min-aspect-ratio: 4/3) {
+    main {
+        flex-direction: row;
+    }
+
+    .context_menu .brand {
+        display: none;
+    }
+
+    .lateral_nav {
+        display: flex;
+    }
+
+    .context_menu {
+        height: unset;
+    }
+
+    .context_menu .menu {
+        flex-direction: column;
+    }
+
+    .context_menu, .lateral_nav {
+        width: clamp(10rem, calc(35vw - 23rem), 30rem);
+        padding-top: clamp(3rem, 5vw, 8rem);
+    }
+
+    .checkin_output .boxes {
+        width: clamp(10rem, 50vw, 80rem);
+    }
+}
