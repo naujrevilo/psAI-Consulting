@@ -58,7 +58,6 @@ main {
     margin-inline: auto;
     z-index: 1;
     position: relative;
-    gap: 2rem;
 }
 
 
@@ -270,7 +269,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-inline: 3rem;
+    padding: 5rem 3rem;
     width: 100%;
 }
 
@@ -864,6 +863,6 @@ main.checkin_output .prompt_area .prompt_bt {
 
     .outputs_ctnr article {
         max-width: 62vw;
-        padding-top: 5rem;
+        /* padding-top: 5rem; */
     }
 }
