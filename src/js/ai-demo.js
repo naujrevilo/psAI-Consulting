@@ -3,6 +3,8 @@ const main = document.querySelector('main')
 const contextPrompts = document.querySelectorAll('article.welcome .prompt_bt')
 
 const videoCtnr = document.querySelector('.video_ctnr');
+const switchButton = document.querySelector('.checkin_start .switch');
+let stream;
 
 const welcomeSubitems = document.querySelectorAll('article.welcome > .ctnr > *')
 const checkinStartSubitems = document.querySelectorAll('article.checkin_start > .ctnr > *')
@@ -47,6 +49,29 @@ contextPrompts.forEach(element => {
             main.classList.remove('welcome')
         }, 400);
     })
+});
+
+switchButton.addEventListener('click', async () => {
+    if (!stream) return;
+
+    console.log(stream)
+
+    const tracks = stream.getVideoTracks();
+    if (tracks.length === 0) {
+        console.error('No video tracks found');
+        return;
+    }
+
+    const currentTrack = tracks[0];
+    const facingMode = currentTrack.getSettings().facingMode;
+
+    const constraints = { video: { facingMode: facingMode === 'user' ? 'environment' : 'user' } };
+    try {
+        stream = await navigator.mediaDevices.getUserMedia(constraints);
+        videoElement.srcObject = stream;
+    } catch (err) {
+        console.error('Error switching camera:', err);
+    }
 });
 
 

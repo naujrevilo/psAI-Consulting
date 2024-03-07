@@ -364,6 +364,28 @@ main {
     margin-bottom: 7rem;
 }
 
+.outputs_ctnr .checkin_start .video_ctnr button.switch {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    left: 0;
+    bottom: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--demo-c1-2);
+    color: var(--demo-light-1);
+    padding: 2rem;
+    border-radius: 0.8rem;
+    transform: translate(0%, 50%);
+    border: 0.2rem solid var(--demo-light-1);
+}
+
+.outputs_ctnr .checkin_start .video_ctnr button.switch .icon {
+    width: 3rem;
+    height: 3rem;
+}
+
 .outputs_ctnr .checkin_start .video_ctnr .content {
     display: flex;
     flex-direction: column;
@@ -375,7 +397,7 @@ main {
     width: fit-content;
 }
 
-.outputs_ctnr .checkin_start .video_ctnr button {
+.outputs_ctnr .checkin_start .video_ctnr .content button {
     background-color: var(--demo-light-3);
     color: var(--demo-c1-1);
     font-weight: 800;
