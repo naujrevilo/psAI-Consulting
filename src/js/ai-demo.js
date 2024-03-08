@@ -2,8 +2,6 @@ const main = document.querySelector('main')
 
 const step2Triggers = document.querySelectorAll('article.welcome .prompt_bt')
 
-console.log(step2Triggers)
-
 const videoCtnr = document.querySelector('.video_ctnr');
 const video = videoCtnr.querySelector('.passport_video');
 const switchButton = document.querySelector('.checkin_start .switch');
@@ -15,11 +13,36 @@ const checkinStartSubitems = document.querySelectorAll('article.checkin_start > 
 
 const checkinOutputSubitems = document.querySelectorAll('article.checkin_output > .ctnr > *')
 
-for(let i = 0; i < welcomeSubitems.length; i++) {
-    setTimeout(() => {
-        welcomeSubitems[i].classList.add('show')
-    }, 90 * i);
+const welcomeArticle = document.querySelector('article.welcome')
+const checkinStartArticle = document.querySelector('article.checkin_start')
+const checkinOutputArticle = document.querySelector('article.checkin_output')
+
+let articleItems;
+let allArticleItems = document.querySelectorAll('.outputs_ctnr article > .ctnr > *');
+
+function updateStep(article) {
+    articleItems = article.querySelectorAll('.ctnr > *')
+
+    allArticleItems.forEach(item => {
+        item.classList.remove('show')
+    });
+
+    console.log(articleItems)
+
+    for(let i = 0; i < articleItems.length; i++) {
+        setTimeout(() => {
+            articleItems[i].classList.add('show')
+        }, 90 * i);
+    }
 }
+
+updateStep(welcomeArticle)
+
+// for(let i = 0; i < welcomeSubitems.length; i++) {
+//     setTimeout(() => {
+//         welcomeSubitems[i].classList.add('show')
+//     }, 90 * i);
+// }
 
 const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
@@ -29,7 +52,7 @@ if (isMobile) {
 
 step2Triggers.forEach(element => {
     element.addEventListener('click', async function() {
-        document.querySelector('.outputs_ctnr .prompt_bt').classList.add('hide')
+        // document.querySelector('.outputs_ctnr .prompt_bt').classList.add('hide')
         
         try {
             const stream = await navigator.mediaDevices.getUserMedia({ video: true });
@@ -41,6 +64,8 @@ step2Triggers.forEach(element => {
         }
 
         
+
+        // updateStep(checkinStartArticle)
         main.classList.add('checkin_start')
 
         for(let i = 0; i < welcomeSubitems.length; i++) {

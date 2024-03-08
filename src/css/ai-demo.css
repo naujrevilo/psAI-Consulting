@@ -246,7 +246,6 @@ main {
 
 .outputs_ctnr article {
     display: none;
-    /* max-height: 0; */
     transition: opacity 0.6s ease;
     -webkit-transition: opacity 0.6s ease;
     -moz-transition: opacity 0.6s ease;
