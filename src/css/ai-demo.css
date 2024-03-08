@@ -13,7 +13,7 @@ body.demo {
     background-color: white;
     font-family: "Lato", sans-serif;
     font-style: normal;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 /* Handle */
@@ -58,7 +58,6 @@ main {
     margin-inline: auto;
     z-index: 1;
     position: relative;
-    gap: 2rem;
 }
 
 
@@ -239,7 +238,6 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-    max-height: clamp(40vh, 68vmax, 70vh);
     position: relative;
     /* margin: auto; */
     width: 100%;
@@ -248,7 +246,6 @@ main {
 
 .outputs_ctnr article {
     display: none;
-    /* max-height: 0; */
     transition: opacity 0.6s ease;
     -webkit-transition: opacity 0.6s ease;
     -moz-transition: opacity 0.6s ease;
@@ -262,7 +259,6 @@ main {
     width: 100%;
     box-sizing: border-box;
     max-height: 100%;
-    padding-top: 5rem;
 }
 
 .outputs_ctnr article > .ctnr {
@@ -271,7 +267,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-inline: 3rem;
+    padding: 5vw 3rem 5rem;
     width: 100%;
 }
 
@@ -364,6 +360,28 @@ main {
     margin-bottom: 7rem;
 }
 
+.outputs_ctnr .checkin_start .video_ctnr button.switch {
+    display: none;
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    right: 0;
+    top: 0;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    background-color: var(--c3);
+    color: var(--demo-c1-2);
+    border-radius: 0.8rem;
+    transform: translate(15%, -15%);
+    border: 0.2rem solid var(--demo-light-1);
+}
+
+.outputs_ctnr .checkin_start .video_ctnr button.switch .icon {
+    width: 75%;
+    height: 75%;
+}
+
 .outputs_ctnr .checkin_start .video_ctnr .content {
     display: flex;
     flex-direction: column;
@@ -375,13 +393,13 @@ main {
     width: fit-content;
 }
 
-.outputs_ctnr .checkin_start .video_ctnr button {
-    background-color: var(--demo-light-3);
-    color: var(--demo-c1-1);
-    font-weight: 800;
-    padding: 1rem 2rem;
+.outputs_ctnr .checkin_start .video_ctnr .content button {
+    background-color: var(--demo-c1-1);
+    color: var(--demo-light-1);
+    font-weight: 600;
+    padding: 1rem 2.6rem;
     border-radius: 0.7rem;
-    -webkit-border-radius: 0.7rem;
+    -webkit-border-radius: 3rem;
     -moz-border-radius: 0.7rem;
     -ms-border-radius: 0.7rem;
     -o-border-radius: 0.7rem;
@@ -683,12 +701,20 @@ main {
 
 .prompt_input input {
     flex: 1;
-    border: unset;
+    border: 0.2rem solid var(--demo-light-3);
     background-color: white;
     border-radius: 4rem;
-    padding: 1.5rem;
+    padding: 1.5rem 2.5rem;
     box-sizing: border-box;
     height: 4.5rem;
+    font-family: "Lato", sans-serif;
+    font-size: 1.6rem;
+    color: var(--demo-c1-2);
+    font-weight: 600;
+}
+
+.prompt_input input:focus-visible {
+    outline-color: var(--c3);
 }
 
 .prompt_input button {
@@ -808,6 +834,7 @@ main.checkin_output .prompt_area .prompt_bt {
 @media screen and (min-width:900px) and (min-aspect-ratio: 4/3) {
     main {
         flex-direction: row;
+        gap: 2rem;
     }
 
     .context_menu .brand {
@@ -832,14 +859,16 @@ main.checkin_output .prompt_area .prompt_bt {
     }
 
     .checkin_output .boxes {
-        width: clamp(10rem, 50vw, 80rem);
+        /* width: clamp(10rem, 50vw, 80rem); */
+        width: 100%;
     }
 
     .outputs_ctnr {
-        padding-top: 2rem;
+        
     }
 
     .outputs_ctnr article {
         max-width: 62vw;
+        /* padding-top: 5rem; */
     }
 }

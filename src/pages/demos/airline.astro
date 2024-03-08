@@ -5,6 +5,7 @@ import BaseHead from '../../components/BaseHead.astro'
 import PaperPlane from '../../components/ai-demo/PaperPlane.astro'
 import Attachment from '../../components/ai-demo/Attachment.astro'
 import Photo from '../../components/ai-demo/Photo.astro'
+import SwitchCamera from '../../components/ai-demo/SwitchCamera.astro'
 
 import { Image } from 'astro:assets';
 import Map from '../../assets/demos/map.jpg';
@@ -71,9 +72,9 @@ import Map from '../../assets/demos/map.jpg';
                 <div class="outputs_ctnr">
                     <article class="welcome">
                         <div class="ctnr">
-                            <p class="heading big">Hi!</p>
+                            <p class="heading big">Hello,</p>
     
-                            <p class="instruction">It looks like your next flight is close. <b>Want to check in?</b></p>
+                            <p class="instruction">It looks like your next flight is close.<br/><b>Want to check in?</b></p>
                             
                             <button type="button" class="prompt_bt">check me in</button>
                         </div>
@@ -91,10 +92,14 @@ import Map from '../../assets/demos/map.jpg';
                                 <video class="passport_video" autoplay></video>
 
                                 <div class="content">
-                                    <button type="button">Scan passport</button>
+                                    <button type="button">scan passport</button>
 
                                     <span>or...</span>
                                 </div>
+
+                                <button type="button" class="switch">
+                                    <SwitchCamera/>
+                                </button>
                             </div>
     
                             <div class="options">
