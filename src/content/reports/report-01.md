@@ -4,7 +4,7 @@
     heading: "Test Report 01"
     description: "Test Report Description"
     heroImage: ""
-    pubdate: Mar 11 2024
+    pubDate: "Mar 11 2024"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec suscipit, neque vitae eleifend vulputate, libero libero lacinia ante, quis dignissim nunc leo a sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque dictum rutrum turpis sed sodales. Etiam id orci a eros malesuada ornare fringilla sed mauris. Duis nec porta nisi. Aenean convallis leo diam, quis ornare ex elementum quis. Mauris dictum aliquet quam, nec sollicitudin nulla rhoncus sed. Nunc sem neque, pretium nec feugiat sed, porta ut velit.
