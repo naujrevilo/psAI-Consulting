@@ -1,5 +1,5 @@
 section.intro {
-    box-shadow: 0 -2rem 8rem -3rem var(--dark-2);
+    box-shadow: 0 4rem 8rem -8rem var(--dark-2);
     border-radius: 0 0 clamp(4rem, 18vw, 10rem) clamp(4rem, 18vw, 11rem);
     -webkit-border-radius: 0 0 clamp(4rem, 18vw, 10rem) clamp(4rem, 18vw, 11rem);
     -moz-border-radius: 0 0 clamp(4rem, 18vw, 10rem) clamp(4rem, 18vw, 11rem);
@@ -485,6 +485,7 @@ section.default1 .content .details p {
     width: var(--width-1);
     margin-inline: auto;
     gap: clamp(1rem, 3vw, 4rem);
+    justify-content: center;
 }
 
 .other_services a {
@@ -492,6 +493,7 @@ section.default1 .content .details p {
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
+    max-width: 28rem;
     padding: clamp(0.3rem, 4.5vw, 3rem) clamp(0.2rem, 6vw, 3rem) clamp(0.3rem, 5.5vw, 3rem) clamp(0.2rem, 6vw, 3rem);
     min-width: clamp(10rem,50vw, 23rem);
     border: 0.1rem solid var(--light);
