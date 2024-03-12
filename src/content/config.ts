@@ -22,6 +22,7 @@ const reportsCollection = defineCollection({
 			.string()
 			.or(z.date())
 			.transform((val) => new Date(val)),
+		type:z.string().optional()
 	}),
 });
 

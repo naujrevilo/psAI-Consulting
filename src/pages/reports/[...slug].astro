@@ -40,7 +40,7 @@ const reports = (await getCollection('reports')).sort((a, b) => {
 
     <main class="report_page">
         {report.data.heroImage ? (
-            <img class="cover reveal" src={report.data.heroImage} alt={`${report.data.heading} cover image`} loading="lazy"/>
+            <img class="cover slow_reveal" src={report.data.heroImage} alt={`${report.data.heading} cover image`} loading="lazy"/>
         ) : ""}
         <section class="centered padding reveal">
             <div class="ctnr">

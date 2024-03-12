@@ -47,19 +47,20 @@ header {
     border: 0.1rem solid var(--light-1);
     text-align: center;
 }
-
 header .contact_bt {
     width: fit-content;
     margin-inline: auto;
     background-color: var(--light);
     padding: 0.8rem 3rem;
     border-radius: 3rem;
-    margin-top: 0.8rem;
+    margin-top: 4.8rem;
     box-shadow: inset -1rem -1rem 1.5rem -1.2rem var(--secondary), inset 1rem 1rem 1.5rem -1.2rem var(--primary), 0 0rem 3.4rem -1.4rem var(--secondary-2);
     font-weight: 550;
     border: 0.1rem solid var(--light-1);
     position: sticky;
     bottom: 0;
+    z-index: 3;
+    box-shadow: 0 0 2rem 2.5rem var(--light-1);
 }
 
 header .contact_bt:hover {
@@ -388,7 +389,7 @@ header .subnav a.psai_define_style .text strong {
     }
 
     header a {
-        padding: clamp(0.75rem, 3vw, 1.4rem) clamp(0rem, 3vw, 2rem);
+        padding: clamp(0.75rem, 3vw, 1.4rem) clamp(0rem, 3vw, 3rem);
     }
 
     header button {

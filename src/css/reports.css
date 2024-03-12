@@ -3,7 +3,7 @@ body main {
 }
 
 body::before {
-    background-image: url(/svg/dark-noise-bg.svg), linear-gradient(-25deg, #3e131e -10%, #0d0c24, #000000);
+    background-image: url(/svg/dark-noise-bg.svg), linear-gradient(-40deg, #380d29, #0d0c24 33%, #000000);
 }
 
 section.centered.padding {
@@ -44,6 +44,22 @@ h1 {
 .reports_ctnr .report a {
     display: flex;
     flex-flow: row wrap;
+    padding: clamp(2rem, 4vw, 3rem);
+    transition: background-color 0.4s ease;
+    -webkit-transition: background-color 0.4s ease;
+    -moz-transition: background-color 0.4s ease;
+    -ms-transition: background-color 0.4s ease;
+    -o-transition: background-color 0.4s ease;
+}
+
+.reports_ctnr .report a:hover {
+    background-color: #191534;
+    border-radius: 1.2rem;
+    transition:background-color 0.2s ease;
+    -webkit-transition:background-color 0.2s ease;
+    -moz-transition:background-color 0.2s ease;
+    -ms-transition:background-color 0.2s ease;
+    -o-transition:background-color 0.2s ease;
 }
 
 .reports_ctnr .content {
@@ -65,17 +81,18 @@ h1 {
     flex: 1;
     min-width: clamp(25rem, 50vw, 35rem);
     max-width: 50rem;
-    min-height: clamp(3rem, 30vw, 22rem);
+    display: flex;
 }
 
 .reports_ctnr .cover img {
     background-color: #060606;
     flex: 1;
-    min-height: 12rem;
+    /* min-height: 12rem; */
     width: 100%;
-    max-height: 30rem;
+    max-height: clamp(18rem, 45vw, 30rem);
     object-fit: cover;
     border-radius: 1.2rem;
+    border: 0.1rem solid var(--secondary-3);
 }
 
 .reports_ctnr hr {

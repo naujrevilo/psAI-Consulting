@@ -1,0 +1,15 @@
+---
+import LogoText from "./svg/LogoText.astro";
+
+
+const { logoAnchorTheme } = Astro.props;
+
+---
+
+<div class="psai_groups">
+	<a href="/"></a>
+</div>
+
+<button class={`logo_anchor ${logoAnchorTheme ? logoAnchorTheme : ""}`} aria-label="Return to home page">
+	<LogoText/>
+</button>
