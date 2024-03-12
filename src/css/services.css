@@ -131,7 +131,7 @@ section .flex.cta_ctnr {
 }
 
 section .flex.cta_ctnr .cta {
-    padding: clamp(0.7rem, 3.5vw, 1.4rem) clamp(1.6rem, 15vmin, 7rem);
+    padding: clamp(0.7rem, 3.5vw, 1.4rem) clamp(1.6rem, 15vmin, 4rem);
 }
 
 section .flex.cta_ctnr button {

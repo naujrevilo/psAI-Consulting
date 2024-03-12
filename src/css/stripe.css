@@ -31,13 +31,18 @@
 
 .stripe .inverted_corner:first-of-type {
     left:-1px;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
 }
 
 .stripe .inverted_corner:last-of-type {
     right:-1px;
 }
 
-.stripe.header .inverted_corner {
+.stripeheader .inverted_corner {
     top: 98%;
 }
 
@@ -45,7 +50,7 @@
     bottom: 98%;
 }
 
-.stripe.header .inverted_corner:first-of-type {
+.stripeheader .inverted_corner:first-of-type {
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);

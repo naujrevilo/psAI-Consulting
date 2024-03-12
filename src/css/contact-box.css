@@ -23,7 +23,7 @@
     -o-border-radius: clamp(2rem, 5vw, 3rem);
 }
 
-.header_nav, .contact_box {
+header, .contact_box {
     transform: translateY(calc(-50% + 1rem)) scale(0.9);
     -webkit-transform: translateY(calc(-50% + 1rem)) scale(0.9);
     -moz-transform: translateY(calc(-50% + 1rem)) scale(0.9);
@@ -38,7 +38,7 @@
     visibility: hidden;
 }
 
-.header_nav.show, .contact_box.show {
+header.show, .contact_box.show {
     opacity: 1;
     visibility: visible;
     transform: translateY(-50%) scale(1);

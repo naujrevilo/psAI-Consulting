@@ -5,50 +5,51 @@ import Layout from "../../layouts/Layout.astro";
 import BackBt from "../../components/BackBt.astro";
 
 export async function getStaticPaths() {
-    const podcast = await getCollection("podcast");
-    return podcast.map((podcast) => ({
-        params: { slug: podcast.slug },
-        props: podcast,
+    const report = await getCollection("reports");
+    return report.map((report) => ({
+        params: { slug: report.slug },
+        props: report,
     }));
 }
 
-import '../../css/podcast.css'
+import '../../css/reports.css'
 
-type Props = CollectionEntry<"podcast">;
+type Props = CollectionEntry<"reports">;
 
-const episode = Astro.props;
-const { Content } = await episode.render();
+const report = Astro.props;
+const { Content } = await report.render();
 
 import { Schema } from "astro-seo-schema"
-import NewsletterForm from "../../components/NewsletterForm.astro";
 
-const episodes = (await getCollection('podcast')).sort((a, b) => {
-    if (a.data.episodeNumber !== undefined && b.data.episodeNumber !== undefined) {
-        return b.data.episodeNumber - a.data.episodeNumber;
-    } else if (a.data.episodeNumber !== undefined) {
+const reports = (await getCollection('reports')).sort((a, b) => {
+    if (a.data.reportNumber !== undefined && b.data.reportNumber !== undefined) {
+        return b.data.reportNumber - a.data.reportNumber;
+    } else if (a.data.reportNumber !== undefined) {
         return 1;
-    } else if (b.data.episodeNumber !== undefined) {
+    } else if (b.data.reportNumber !== undefined) {
         return -1;
     } else {
-        return b.data.title.localeCompare(a.data.title);
+        return b.data.heading.localeCompare(a.data.heading);
     }
 });
 
 ---
 
-<Layout title={`${episode.data.title} | psAI Podcast`}>
-	<BackBt url={`/podcast/1`} label="Return"/>
+<Layout title={`${report.data.heading} | psAI report`}>
+	<BackBt url={`/reports/`} label="Back to reports"/>
 
-    <main class="ep_page">
-    
-        <div class="content_ctnr">     
-            <div class="video_ctnr" set:html={episode.data.embedURL}></div>
-
-            <h1>{episode.data.title}</h1>
-
-            <NewsletterForm/>
-            
-            <a href="/podcast/1" class="cta main">Check all episodes</a>
-        </div>
+    <main class="report_page">
+        {report.data.heroImage ? (
+            <img class="cover reveal" src={report.data.heroImage} alt={`${report.data.heading} cover image`} loading="lazy"/>
+        ) : ""}
+        <section class="centered padding reveal">
+            <div class="ctnr">
+                <h1>{report.data.heading}</h1>
+                
+                <article>
+                    <Content />
+                </article>
+            </div>
+        </section>
     </main>
 </Layout>

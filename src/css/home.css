@@ -2,16 +2,6 @@ body::before {
     background-image: url(/svg/light-noise-bg.svg), linear-gradient(-30deg, var(--primary), var(--secondary));
 }
 
-section.intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 69vh;
-    min-height: 69svh;
-    position: relative;
-    margin-block: calc(4vh + 8rem) clamp(4rem, 40vw, 22rem);
-}
 
 section {
     scroll-margin-top: calc(var(--header-height) + 3vmin);
@@ -23,16 +13,6 @@ p {
 
 section:last-of-type {
     margin-bottom: 20rem;
-}
-
-section > .ctnr {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-inline: auto;
-    gap: clamp(2rem, 6vmin, 2rem);
 }
 
 section + hr {
