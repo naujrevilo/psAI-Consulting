@@ -60,7 +60,7 @@ section:last-of-type {
 
 
 section:not(.intro) {
-    padding-block: 22rem 5rem;
+    padding-block: clamp(12rem, 30vw, 22rem) 5rem;
 }
 
 section > .ctnr {
@@ -75,7 +75,7 @@ section > .ctnr {
 }
 
 .intro > .ctnr {
-    padding-block: clamp(4rem, 25vmin, 12rem);
+    padding-block: clamp(4rem, 25vmin, 11rem) clamp(4rem, 25vmin, 8rem);
     box-sizing: border-box;
     /* min-height: 80vh; */
 }
@@ -561,7 +561,7 @@ section.default1 .content .details p {
 
 
 #learn-more.default1 .content h2 {
-    font-size: clamp(2rem, 11vw, 6rem);
+    font-size: clamp(2rem, 10vw, 6rem);
 }
 
 #learn-more.default1 .content p {

@@ -1,7 +1,7 @@
 const step2Triggers = document.querySelectorAll('article.welcome .prompt_bt')
 
 const videoCtnr = document.querySelector('.video_ctnr');
-const video = videoCtnr.querySelector('.passport_video');
+var video = videoCtnr.querySelector('.passport_video');
 const switchButton = document.querySelector('.checkin_start .switch');
 
 const welcomeArticle = document.querySelector('article.welcome')
