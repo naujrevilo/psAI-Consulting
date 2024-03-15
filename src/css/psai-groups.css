@@ -1,0 +1,213 @@
+:root {
+    --group-logo-width: clamp(9rem, 21vmin, 11rem);
+}
+
+.logo_anchor .current_logo {
+    position: absolute;
+    /* width: 100%; */
+    color: var(--light);
+    z-index: 6;
+    left: var(--corner-width1);
+    top: 4rem;
+    display: flex;
+    align-items: center;
+    height: var(--header-height);
+}
+
+.logo_anchor .current_logo, .psai_groups_nav a {
+    width: var(--group-logo-width);
+}
+
+.logo_anchor.dark div.current_logo {
+    color:var(--dark);
+}
+
+.logo_anchor.light div.current_logo {
+    color:var(--light);
+}
+
+.logo_anchor .current_logo svg {
+
+}
+
+.psai_groups_nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 11vw, 5rem);
+    z-index: 8;
+    /* height: 90rem; */
+    left: var(--corner-width1);
+    margin-top: clamp(1rem, 11vw, 5rem);
+    max-height: 0;
+}
+
+.psai_groups_bg {
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    bottom:0;
+    width: clamp(10rem, 62vw, 33rem);
+    background-image: url(/svg/dark-noise-bg.svg), linear-gradient(110deg, #d2a5ff 10%, #58f9d2 40%, transparent 85%);
+    height: 100%;
+    -webkit-mask-image: linear-gradient(90deg, black 12rem, transparent);
+    z-index: 7;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.9s ease-in, visibility 0.9s ease-in;
+    -webkit-transition: opacity 0.9s ease-in, visibility 0.9s ease-in;
+    -moz-transition: opacity 0.9s ease-in, visibility 0.9s ease-in;
+    -ms-transition: opacity 0.9s ease-in, visibility 0.9s ease-in;
+    -o-transition: opacity 0.9s ease-in, visibility 0.9s ease-in;
+}
+
+.logo_anchor:hover .psai_groups_bg {
+    transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+    -webkit-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+    -moz-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+    -ms-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+    -o-transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+}
+
+.psai_groups_nav a {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    transform: translateX(-4rem);
+    -webkit-transform: translateX(-4rem);
+    -moz-transform: translateX(-4rem);
+    -ms-transform: translateX(-4rem);
+    -o-transform: translateX(-4rem);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.6s ease, opacity 0.4s ease, visibility 0.4s ease;
+    -webkit-transition: transform 0.6s ease, opacity 0.4s ease, visibility 0.4s ease;
+    -moz-transition: transform 0.6s ease, opacity 0.4s ease, visibility 0.4s ease;
+    -ms-transition: transform 0.6s ease, opacity 0.4s ease, visibility 0.4s ease;
+    -o-transition: transform 0.6s ease, opacity 0.4s ease, visibility 0.4s ease;
+    transition-delay: 0.3s;
+}
+
+.psai_groups_nav a svg {
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
+
+.psai_groups_nav a:hover svg {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transition: transform 0.05s ease;
+    -webkit-transition: transform 0.05s ease;
+    -moz-transition: transform 0.05s ease;
+    -ms-transition: transform 0.05s ease;
+    -o-transition: transform 0.05s ease;
+}
+
+.logo_anchor:hover .psai_groups_nav a:nth-child(1) {
+    transition-delay: 0.25s;
+}
+.logo_anchor:hover .psai_groups_nav a:nth-child(2) {
+    transition-delay: 0.3s;
+}
+.logo_anchor:hover .psai_groups_nav a:nth-child(3) {
+    transition-delay: 0.35s;
+}
+.logo_anchor:hover .psai_groups_nav a:nth-child(4) {
+    transition-delay: 0.4s;
+}
+.logo_anchor:hover .psai_groups_nav a:nth-child(5) {
+    transition-delay: 0.45s;
+}
+.logo_anchor:hover .psai_groups_nav a:nth-child(6) {
+    transition-delay: 0.5s;
+}
+.logo_anchor:hover .psai_groups_nav a:nth-child(7) {
+    transition-delay: 0.55s;
+}
+
+.psai_groups_nav a svg {
+
+}
+
+.psai_groups_nav a.current_logo {
+    
+}
+
+.logo_anchor:hover .psai_groups_nav a,
+.logo_anchor:hover .psai_groups_bg {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+
+.logo_anchor:hover .psai_groups_nav {
+    max-height: unset;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1150px) {
+
+    .logo_anchor .current_logo {
+        position: absolute;
+        top: 12rem;
+        top: 5rem;
+        align-items: end;
+        height: 6rem;
+
+    }
+
+    .logo_anchor .current_logo {
+        left: 2vw;
+    }
+
+    .psai_groups_nav {
+        left: calc((2vw + 0.7rem) - 2rem);
+        padding: 2rem;
+        margin-top: calc(clamp(1rem, 11vw, 5rem) - 3.5rem);
+    }
+
+    .logo_anchor .current_logo, .psai_groups_nav a {
+        width: 5vw;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+

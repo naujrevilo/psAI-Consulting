@@ -1,28 +1,3 @@
-.logo_anchor {
-    position: absolute;
-    /* width: 100%; */
-    height: var(--header-height);
-    color: var(--light);
-    z-index: 7;
-    left: var(--corner-width1);
-    top: 4rem;
-    display: flex;
-    align-items: center;
-    width: clamp(9rem, 21vmin, 11rem);
-}
-
-.logo_anchor.dark {
-    color:var(--dark);
-}
-
-.logo_anchor.light {
-    color:var(--light);
-}
-
-.logo_anchor svg {
-
-}
-
 header {
     position: fixed;
     width: var(--width-1);
@@ -318,16 +293,6 @@ header .subnav a.psai_define_style .text strong {
 
 
 @media screen and (min-width: 1150px) {
-
-    .logo_anchor {
-        height: 6rem;
-        position: absolute;
-        width: 5vw;
-        left: 2vw;
-        top: 5rem;
-        align-items: end;
-    }
-
     .hambt {
         display: none;
     }

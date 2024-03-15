@@ -159,9 +159,9 @@ main.report_page {
 .report_page article p, .report_page article ul, .report_page article li {
     font-size: clamp(1.6rem, 4vw, 1.8rem);
     line-height: 1.5;
-    color: #BAC0D7;
     margin-bottom: 1rem;
     font-weight: 300;
+    color: #BAC0D7;
 }
 
 .report_page article p b, .report_page article p strong {
@@ -194,7 +194,7 @@ main.report_page {
     -moz-border-radius: 1.2rem;
     -ms-border-radius: 1.2rem;
     -o-border-radius: 1.2rem;
-    padding: clamp(0rem, 2vw, 2rem) clamp(2rem, 6vw, 4rem) 3rem;
+    padding: clamp(0rem, 2vw, 2rem) clamp(2rem, 6vw, 6rem) 3rem;
     margin-block: 10rem 5rem;
 }
 
@@ -224,4 +224,70 @@ main.report_page {
     background-color: #ffa56517;
 } .report_page article .group.run h2 {
     color: #ffa465;
+}
+
+.report_page article ol, .report_page article ul, .report_page article li {
+    list-style: disc;
+    margin-block: initial;
+}
+
+.report_page article li {
+    margin-bottom: 1rem;
+}
+
+.report_page article ol, .report_page article ul {
+    margin-bottom: 2rem;
+    padding-inline-start:2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media print {
+    .report_page .cover {
+        display: none;
+    }
+
+    .report_page h1 {
+        margin-top: unset;
+        font-weight: 700;
+    }
+
+    .report_page article h2 {
+        font-weight: 600;
+    }
+
+    body .report_page article .group {
+        padding: 0;
+    }
+
+    body .report_page article .group.define, body .report_page article .group.flow, body .report_page article .group.run {
+        background-color: transparent;
+    }
+
+    body::before {
+        background-image: none !important;
+    }
+
+    body main, .report_page article p, .report_page article ul, .report_page article li, .report_page article p b, .report_page article p strong {
+        color: var(--dark-1);
+    }
+
+    .report_page article .group h2:first-of-type {
+        border-top: 0.2rem solid;
+        padding-top: 2rem;
+        max-width: unset;
+    }
 }

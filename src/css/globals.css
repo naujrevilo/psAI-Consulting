@@ -737,3 +737,26 @@ a.psai_run_style path {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media print {
+    header, footer, .stripe, .logo_anchor, button.hambt, body .mail_bubble {
+        display: none;
+    }
+
+    body section.centered.padding {
+        margin-block: 0;
+    }
+}

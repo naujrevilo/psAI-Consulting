@@ -28,13 +28,14 @@ const { url, label } = Astro.props;
         border-bottom: 0.2rem solid var(--light-a);
         box-shadow: 2rem 1rem 2.5rem -1.2rem var(--light-b);
         position: absolute;
-        top: 13rem;
+        top: clamp(13rem, 21vw, 15rem);
         color: var(--light);
         left: var(--corner-width1);
         padding: 1rem 2rem;
-        background-color: var(--dark-1);
+        background-color: #d8e3f717;
         border-radius: 0.5rem;
-        margin-top: 2rem;
+        margin-top: 0rem;
+        font-weight: 400;
     }
     
     .back:hover {
@@ -53,4 +54,17 @@ const { url, label } = Astro.props;
         border-bottom: 0.3rem solid;
         border-color: var(--light-b);
     }
+
+
+
+
+    
+
+    @media print {
+        .back {
+            display: none;
+        }   
+    }
+
+
 </style>
