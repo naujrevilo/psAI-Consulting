@@ -9,7 +9,7 @@ public_folder: "/images/media"
 
 collections:
   - name: "reports"
-    label: "Report"
+    label: "Reports"
     folder: "src/content/reports"
     create: true
     slug: "{{slug}}"

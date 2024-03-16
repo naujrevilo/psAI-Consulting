@@ -26,10 +26,6 @@ const { logoAnchorTheme } = Astro.props;
 		</a>
 		
 		<a href="#">
-			<LogoGroups group="labs"/>
-		</a>
-		
-		<a href="#">
 			<LogoGroups group="events"/>
 		</a>
 		
@@ -44,3 +40,24 @@ const { logoAnchorTheme } = Astro.props;
 	
 	<div class="psai_groups_bg"></div>
 </div>
+
+<script is:inline>
+	const logoAnchor = document.querySelector('.logo_anchor')
+	const groupsNav = document.querySelector('.psai_groups_nav')
+	const groupsBg = document.querySelector('.psai_groups_bg')
+
+	logoAnchor.addEventListener('mouseover', function() {
+		groupsNav.classList.add('show')
+		groupsBg.classList.add('show')
+	})
+
+	logoAnchor.addEventListener('mouseout', function() {
+		groupsNav.classList.remove('show')
+		groupsBg.classList.remove('show')
+	})
+
+	window.onscroll = function() {
+		groupsNav.classList.remove('show')
+		groupsBg.classList.remove('show')
+	}
+</script>
