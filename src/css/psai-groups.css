@@ -34,7 +34,7 @@
     position: fixed;
     display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 7vw, 5rem);
+    gap: clamp(1rem, 11vw, 5rem);
     z-index: 8;
     /* height: 90rem; */
     left: var(--corner-width1);
@@ -204,7 +204,7 @@
     }
 
     .logo_anchor .current_logo, .psai_groups_nav a {
-        width: 5vw;
+        width: clamp(2rem, 5.5vw, 10rem);
     }
 
 }

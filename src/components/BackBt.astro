@@ -18,7 +18,7 @@ const { url, label } = Astro.props;
         align-items: center;
         gap: 0.8rem;
         width: fit-content;
-        z-index: 7;
+        z-index: 6;
         background-color: var(--light-d);
         padding: clamp(1rem,3vw,1.3rem) 2rem clamp(1rem,3vw,1.3rem) var(--base-width-overflow);
         font-size: clamp(1.4rem,4vw,1.6rem);
@@ -34,7 +34,7 @@ const { url, label } = Astro.props;
         padding: 1rem 2rem;
         background-color: #d8e3f717;
         border-radius: 0.5rem;
-        margin-top: 0rem;
+        margin-top: 2rem;
         font-weight: 400;
     }
     
@@ -56,6 +56,12 @@ const { url, label } = Astro.props;
     }
 
 
+
+    @media screen and (min-width: 800px) {
+        .back {
+            margin-top: 0rem;
+        }   
+    }
 
 
     

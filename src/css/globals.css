@@ -704,6 +704,10 @@ a.psai_run_style path {
     .mail_bubble {
         bottom: 4rem;
     }
+    
+    section.default1 h2 {
+        line-height: 1.1;
+    }
 }
 
 @media (min-width:1920px) {
