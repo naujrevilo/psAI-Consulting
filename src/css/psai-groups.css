@@ -34,7 +34,7 @@
     position: fixed;
     display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 11vw, 5rem);
+    /* gap: clamp(1rem, 11vw, 5rem); */
     z-index: 8;
     /* height: 90rem; */
     left: var(--corner-width1);
@@ -86,6 +86,7 @@
     -ms-transition: transform 1.2s ease, opacity 0.4s ease, visibility 0.4s ease;
     -o-transition: transform 1.2s ease, opacity 0.4s ease, visibility 0.4s ease;
     transition-delay: 0.1s;
+    padding-block: clamp(1rem, 5vw, 2.5rem);
 }
 
 .psai_groups_nav a svg {
