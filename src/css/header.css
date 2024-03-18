@@ -121,12 +121,12 @@ header .hambt path {
 .subnav .ctnr {
     display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 3vw, 2rem);
+    gap: clamp(1rem, 3vw, 2.5rem);
 }
 
 header .subnav a {
     text-align: left;
-    padding: clamp(0.3rem, 1.5vw, 3rem) clamp(0.2rem, 6vw, 3rem) clamp(0.3rem, 1.5vw, 3rem) clamp(0.2rem, 6vw, 3rem);
+    padding: clamp(0.3rem, 2.5vw, 4rem) clamp(0.2rem, 6vw, 3.5rem) clamp(0.3rem, 2.5vw, 4rem) clamp(0.2rem, 6vw, 3.5rem);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -470,7 +470,7 @@ header .subnav a.psai_define_style .text strong {
     
     .subnav .ctnr {
         flex-direction: row;
-        width: 80%;
+        width: 86%;
         margin-inline: auto;
     }
 
