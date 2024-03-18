@@ -1,0 +1,67 @@
+---
+import Layout from '../../layouts/Layout.astro'
+
+import '../../css/reports.css'
+
+import { getCollection } from 'astro:content';
+
+import BackBt from '../../components/BackBt.astro';
+import NewsletterForm from '../../components/NewsletterForm.astro'
+
+import FormattedDate from '../../components/FormattedDate.astro'
+
+const reports = (await getCollection('reports')).sort((a, b) => {
+    if (a.data.reportNumber !== undefined && b.data.reportNumber !== undefined) {
+        return b.data.reportNumber - a.data.reportNumber;
+    } else if (a.data.reportNumber !== undefined) {
+        return 1;
+    } else if (b.data.reportNumber !== undefined) {
+        return -1;
+    } else {
+        return b.data.heading.localeCompare(a.data.heading);
+    }
+});
+
+---
+
+<Layout title="psAI Reports">
+    <main>
+        <section class="centered padding">
+            <div class="ctnr">
+                <h1>Reports</h1>
+
+                <div class="reports_ctnr">
+                {
+                reports.slice(0, 6).map((report) => (
+                <>
+                    <div class="report reveal" id={(report.data.heading).toLowerCase().replace(/\s+/g, '-')} class="scroll_margin_top">
+                        <a href={`/reports/${report.slug}/`} class="ctnr flex">
+                            {report.data.heroImage ? (
+                                <div class="cover">
+                                    <img src={report.data.heroImage} alt={`${report.data.heading} cover image`} loading="lazy"/>
+                                </div>
+                            ) : ""}
+
+                            <div class="content">
+                                <h3 class="title">{report.data.heading}</h3>
+
+                                <FormattedDate date={report.data.pubDate} />
+
+                                {report.data.description ? (
+                                    <p class="description">{report.data.description}</p>
+                                ) : null}
+
+                                <div class="open">Open Report</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <hr/>
+                </>
+                ))
+                }
+                </div>
+            </div>
+        </section>
+    </main>
+</Layout>

@@ -1,0 +1,293 @@
+body main {
+    color: var(--light);
+}
+
+body::before {
+    background-image: url(/svg/dark-noise-bg.svg), linear-gradient(-40deg, #380d29, #0d0c24 33%, #000000);
+}
+
+section.centered.padding {
+    display: flex;
+    flex-direction: column;
+    min-height: 69vh;
+    min-height: 69svh;
+    position: relative;
+    margin-block: calc(4vh + 8rem) clamp(4rem, 40vw, 22rem);
+}
+
+section.centered.padding > .ctnr {
+    position: relative;
+    z-index: 1;
+    width: var(--width-1);
+    margin-inline: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2rem, 6vmin, 3rem);
+}
+
+h1 {
+    font-size: clamp(4rem, 14vw, 5rem);
+}
+
+.reports_ctnr {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(3rem, 15vw, 7rem);
+}
+
+.reports_ctnr .report {
+    flex:1;
+    font-size: 2rem;
+}
+
+.reports_ctnr .report a {
+    display: flex;
+    flex-flow: row wrap;
+    padding: clamp(2rem, 4vw, 3rem);
+    transition: background-color 0.4s ease;
+    -webkit-transition: background-color 0.4s ease;
+    -moz-transition: background-color 0.4s ease;
+    -ms-transition: background-color 0.4s ease;
+    -o-transition: background-color 0.4s ease;
+}
+
+.reports_ctnr .report a:hover {
+    background-color: #191534;
+    border-radius: 1.2rem;
+    transition:background-color 0.2s ease;
+    -webkit-transition:background-color 0.2s ease;
+    -moz-transition:background-color 0.2s ease;
+    -ms-transition:background-color 0.2s ease;
+    -o-transition:background-color 0.2s ease;
+}
+
+.reports_ctnr .content {
+    padding: 2rem 2rem 0 clamp(0rem, calc(25vw - 24rem), 5rem);
+    flex: 1;
+    min-width: clamp(15rem, 60vw, 20rem);
+    /* min-height: clamp(3rem, 20vw, 22rem); */
+    display: flex;
+    flex-direction: column;
+    gap:0.6rem;
+}
+
+.reports_ctnr .content time {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.reports_ctnr .cover {
+    flex: 1;
+    min-width: clamp(25rem, 50vw, 35rem);
+    max-width: 50rem;
+    display: flex;
+}
+
+.reports_ctnr .cover img {
+    background-color: #060606;
+    flex: 1;
+    /* min-height: 12rem; */
+    width: 100%;
+    max-height: clamp(18rem, 45vw, 30rem);
+    object-fit: cover;
+    border-radius: 1.2rem;
+    border: 0.1rem solid var(--secondary-3);
+}
+
+.reports_ctnr hr {
+    width: 100%;
+    height: 0.1rem;
+    background-color: var(--dark-1);
+}
+
+.report .title {
+    font-weight: 550;
+    font-size: clamp(1.6rem, 8vw, 4rem);
+}
+
+.report .description {
+    font-size: clamp(1.6rem, 3.8vw, 2rem);
+    font-weight: 100;
+    color: #978ea1;
+    margin-block: 0.8rem;
+    line-height: 1.4;
+}
+
+.report .open {
+
+}
+
+main.report_page {
+
+}
+
+.report_page section {
+
+}
+
+.report_page h1 {
+    margin-top: clamp(9rem, 20vw, 12rem);
+    font-size: clamp(3rem, 8.2vw, 5rem);
+    font-weight: 600;
+}
+
+.report_page article {
+    font-size: clamp(1.6rem, 4vw, 2rem);
+}
+
+.report_page article h2 {
+    margin-block: 3rem 1rem;
+    font-weight: 500;
+}
+
+.report_page article h3 {
+    font-size: clamp(2rem, 6vw, 2.5rem);
+    margin-block: 3rem 1.2rem;
+    font-weight: 600;
+}
+
+.report_page article p {
+}
+
+.report_page article a {
+    color: var(--light);
+    text-decoration: underline;
+    text-decoration-color: var(--light-2);
+}
+
+.report_page article p, .report_page article ul, .report_page article li {
+    font-size: clamp(1.6rem, 4vw, 1.8rem);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    color: #BAC0D7;
+}
+
+.report_page article p b, .report_page article p strong {
+    font-weight: inherit;
+    color: var(--light);
+}
+
+.report_page section.centered.padding > .ctnr {
+    width: clamp(10rem, var(--pace), 82rem);
+    gap: 0;
+}
+
+.report_page .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-height: 70vh;
+    object-fit: cover;
+    object-position: initial;
+    -webkit-mask-image: linear-gradient(180deg, black, transparent);
+    opacity: 0.3;
+}
+
+.report_page article .group {
+    /* border: 0.1rem solid; */
+    border-radius: 1.2rem;
+    -webkit-border-radius: 1.2rem;
+    -moz-border-radius: 1.2rem;
+    -ms-border-radius: 1.2rem;
+    -o-border-radius: 1.2rem;
+    padding: clamp(0rem, 2vw, 2rem) clamp(2rem, 6vw, 6rem) 3rem;
+    margin-block: 10rem 5rem;
+}
+
+.report_page article .group h2:first-of-type {
+    margin-block: -5rem 2rem;
+    font-size: clamp(2.2rem, 7vw, 3.8rem);
+    max-width: 60rem;
+    font-weight: 600;
+}
+
+.report_page article .group.define {
+    /* border-color: var(--secondary-2); */
+    background-color: #513e6b30;
+} .report_page article .group.define h2 {
+    color: var(--secondary);
+}
+
+.report_page article .group.flow {
+    /* border-color: #87dbcb; */
+    background-color: #87dbcb17;
+} .report_page article .group.flow h2 {
+    color: #87dbcb;
+}
+
+.report_page article .group.run {
+    /* border-color: #ffa465; */
+    background-color: #ffa56517;
+} .report_page article .group.run h2 {
+    color: #ffa465;
+}
+
+.report_page article ol, .report_page article ul, .report_page article li {
+    list-style: disc;
+    margin-block: initial;
+}
+
+.report_page article li {
+    margin-bottom: 1rem;
+}
+
+.report_page article ol, .report_page article ul {
+    margin-bottom: 2rem;
+    padding-inline-start:2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media print {
+    .report_page .cover {
+        display: none;
+    }
+
+    .report_page h1 {
+        margin-top: unset;
+        font-weight: 700;
+    }
+
+    .report_page article h2 {
+        font-weight: 600;
+    }
+
+    body .report_page article .group {
+        padding: 0;
+    }
+
+    body .report_page article .group.define, body .report_page article .group.flow, body .report_page article .group.run {
+        background-color: transparent;
+    }
+
+    body::before {
+        background-image: none !important;
+    }
+
+    body main, .report_page article p, .report_page article ul, .report_page article li, .report_page article p b, .report_page article p strong {
+        color: var(--dark-1);
+    }
+
+    .report_page article .group h2:first-of-type {
+        border-top: 0.2rem solid;
+        padding-top: 2rem;
+        max-width: unset;
+    }
+}

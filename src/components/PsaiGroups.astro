@@ -1,0 +1,63 @@
+---
+import LogoGroups from "./svg/LogoGroups.astro";
+
+import '../css/psai-groups.css'
+
+const { logoAnchorTheme } = Astro.props;
+
+---
+
+<div class={`logo_anchor ${logoAnchorTheme ? logoAnchorTheme : ""}`} aria-label="Return to home page">
+	<div class="current_logo">
+		<LogoGroups group="consulting"/>
+	</div>
+
+	<div class="psai_groups_nav">
+		<a href="#" class="">
+			<LogoGroups group="consulting"/>
+		</a>
+
+		<a href="#">
+			<LogoGroups group="labs"/>
+		</a>
+		
+		<a href="#">
+			<LogoGroups group="dev"/>
+		</a>
+		
+		<a href="#">
+			<LogoGroups group="events"/>
+		</a>
+		
+		<a href="#">
+			<LogoGroups group="foundation"/>
+		</a>
+		
+		<a href="#">
+			<LogoGroups group="education"/>
+		</a>
+	</div>
+	
+	<div class="psai_groups_bg"></div>
+</div>
+
+<script is:inline>
+	const logoAnchor = document.querySelector('.logo_anchor')
+	const groupsNav = document.querySelector('.psai_groups_nav')
+	const groupsBg = document.querySelector('.psai_groups_bg')
+
+	logoAnchor.addEventListener('mouseover', function() {
+		groupsNav.classList.add('show')
+		groupsBg.classList.add('show')
+	})
+
+	logoAnchor.addEventListener('mouseout', function() {
+		groupsNav.classList.remove('show')
+		groupsBg.classList.remove('show')
+	})
+
+	window.onscroll = function() {
+		groupsNav.classList.remove('show')
+		groupsBg.classList.remove('show')
+	}
+</script>

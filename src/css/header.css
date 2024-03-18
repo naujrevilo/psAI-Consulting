@@ -1,33 +1,4 @@
 header {
-    position: absolute;
-    /* width: 100%; */
-    height: var(--header-height);
-    color: var(--light);
-    z-index: 7;
-    left: var(--corner-width1);
-    top: 4rem;
-    display: flex;
-    align-items: center;
-}
-
-header .logo_anchor {
-    display: block;
-    width: clamp(9rem, 21vmin, 11rem);
-}
-
-header .logo_anchor.dark {
-    color:var(--dark);
-}
-
-header .logo_anchor.light {
-    color:var(--light);
-}
-
-header .logo_anchor svg {
-
-}
-
-.header_nav {
     position: fixed;
     width: var(--width-1);
     top: 50%;
@@ -51,31 +22,32 @@ header .logo_anchor svg {
     border: 0.1rem solid var(--light-1);
     text-align: center;
 }
-
-.header_nav .contact_bt {
+header .contact_bt {
     width: fit-content;
     margin-inline: auto;
     background-color: var(--light);
     padding: 0.8rem 3rem;
     border-radius: 3rem;
-    margin-top: 0.8rem;
+    margin-top: 4.8rem;
     box-shadow: inset -1rem -1rem 1.5rem -1.2rem var(--secondary), inset 1rem 1rem 1.5rem -1.2rem var(--primary), 0 0rem 3.4rem -1.4rem var(--secondary-2);
     font-weight: 550;
     border: 0.1rem solid var(--light-1);
     position: sticky;
     bottom: 0;
+    z-index: 3;
+    box-shadow: 0 0 2rem 2.5rem var(--light-1);
 }
 
-.header_nav .contact_bt:hover {
+header .contact_bt:hover {
     color: var(--secondary-3);
 }
 
-.header_nav a, .header_nav button {
+header a, header button {
     padding-block: 1.3rem;
     position: relative;
 }
 
-.header_nav a .worm {
+header a .worm {
     color: var(--secondary);
     width: clamp(2.2rem, 5vw, 2.8rem);
     position: absolute;
@@ -85,7 +57,7 @@ header .logo_anchor svg {
     margin-inline: auto;
 }
 
-.header_nav > hr {
+header > hr {
     min-height: 0.1rem;
     width: 2rem;
     background-color: var(--c3);
@@ -152,7 +124,7 @@ header .hambt path {
     gap: clamp(1rem, 3vw, 2rem);
 }
 
-.header_nav .subnav a {
+header .subnav a {
     text-align: left;
     padding: clamp(0.3rem, 1.5vw, 3rem) clamp(0.2rem, 6vw, 3rem) clamp(0.3rem, 1.5vw, 3rem) clamp(0.2rem, 6vw, 3rem);
     display: flex;
@@ -167,25 +139,25 @@ header .hambt path {
     border: 0.1rem solid var(--light);
 }
 
-.header_nav .subnav a > .flex {
+header .subnav a > .flex {
     gap: clamp(0.2rem, 4vw, 2rem);
     flex-direction: column;
 }
 
-.header_nav .subnav a .flex .flex {
+header .subnav a .flex .flex {
     gap: clamp(0.2rem, 4vw, 2rem);
     flex-flow: row wrap;
     justify-content: space-between;
 }
 
-.header_nav .subnav a .text {
+header .subnav a .text {
     display: none;
     font-size: clamp(1rem, 3.5vw, 1.6rem);
     line-height: 1.4;
     font-weight: 400;
 }
 
-.header_nav .subnav a .text b, .header_nav .subnav a .text strong {
+header .subnav a .text b, header .subnav a .text strong {
     font-weight: 600;
 }
 
@@ -294,8 +266,8 @@ header .hambt path {
     color: var(--secondary);
 } */
 
-.header_nav .subnav a.psai_define_style .text b,
-.header_nav .subnav a.psai_define_style .text strong {
+header .subnav a.psai_define_style .text b,
+header .subnav a.psai_define_style .text strong {
     font-weight: inherit;
     color: var(--secondary);
 }
@@ -321,21 +293,11 @@ header .hambt path {
 
 
 @media screen and (min-width: 1150px) {
-
-    header {
-        height: 6rem;
-        position: absolute;
-        width: 5vw;
-        left: 2vw;
-        top: 5rem;
-        align-items: end;
-    }
-
     .hambt {
         display: none;
     }
 
-    nav.header_nav {
+    body header {
         overflow: unset;
         border-top: unset;
         position: sticky;
@@ -369,12 +331,12 @@ header .hambt path {
         border-top: 0;
     }
 
-    nav.header_nav > hr {
+    header > hr {
         height: 1.5rem;
         width: 0.1rem;
     }
 
-    nav.header_nav.show {
+    header.show {
         transform: translateY(0);
         -webkit-transform: translateY(0);
         -moz-transform: translateY(0);
@@ -382,7 +344,7 @@ header .hambt path {
         -o-transform: translateY(0);
     }
 
-    .header_nav > a, .header_nav button {
+    header > a, header button {
         margin-inline: unset;
         background-color: transparent;
         display: flex;
@@ -391,15 +353,15 @@ header .hambt path {
         height: 100%;
     }
 
-    .header_nav a {
-        padding: clamp(0.75rem, 3vw, 1.4rem) clamp(0rem, 3vw, 2rem);
+    header a {
+        padding: clamp(0.75rem, 3vw, 1.4rem) clamp(0rem, 3vw, 3rem);
     }
 
-    .header_nav button {
+    header button {
         padding: 0.75rem clamp(0rem, 3vw, 2.5rem);
     }
 
-    .header_nav .contact_bt {
+    header .contact_bt {
         margin-inline: unset;
         margin-top: unset;
         border-radius: 0;
@@ -410,7 +372,7 @@ header .hambt path {
         padding: 0.7rem 2.5rem;
     }
 
-    .header_nav .subnav a {
+    header .subnav a {
         transition: transform 0.3s ease;
         -webkit-transition: transform 0.3s ease;
         -moz-transition: transform 0.3s ease;
@@ -425,7 +387,7 @@ header .hambt path {
                
 }
 
-    .header_nav .subnav a:hover {
+    header .subnav a:hover {
         transform: scale(1.01);
         -webkit-transform: scale(1.01);
         -moz-transform: scale(1.01);
@@ -451,13 +413,16 @@ header .hambt path {
         -o-border-radius: 0.4rem;
 }
 
-    nav > a:hover span, nav .superset > a:hover span, .superset:hover > a span {
+    nav > a:hover span, nav .superset > a:hover span, .superset:hover > a {
         background-color:var(--light);
-        transition: background-color 0.1s ease;
-        -webkit-transition: background-color 0.1s ease;
-        -moz-transition: background-color 0.1s ease;
-        -ms-transition: background-color 0.1s ease;
-        -o-transition: background-color 0.1s ease;
+        -webkit-transition: background-color 0.3s ease;
+        -moz-transition: background-color 0.3s ease;
+        -ms-transition: background-color 0.3s ease;
+        -o-transition: background-color 0.3s ease;
+}
+
+    .superset > a {
+        transition: background-color 0.3s ease;
     }
 
     .superset {
@@ -536,14 +501,14 @@ header .hambt path {
         -o-transform: translateY(0rem);
 }
     
-    .header_nav .subnav a {
+    header .subnav a {
     }
 
-    .header_nav .subnav a .flex .flex {
+    header .subnav a .flex .flex {
         justify-content: unset;
     }
 
-    .header_nav .subnav a .text, .subnav a .learn_more {
+    header .subnav a .text, .subnav a .learn_more {
         display: block;
     }
     
