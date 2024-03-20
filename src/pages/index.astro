@@ -1,93 +1,404 @@
 ---
 	import '../css/home.css'
 
-	import Layout from '../layouts/Layout.astro';
-	
-	import Logo from '../components/svg/Logo.astro';
-	import LogoWaves from '../components/svg/LogoWaves.astro';
-	import LogoGroups from '../components/svg/LogoGroups.astro';
+import Layout from '../layouts/Layout.astro';
 
-	import { Schema } from "astro-seo-schema"
+import Logo from '../components/svg/Logo.astro';
+import LogoWaves from '../components/svg/LogoWaves.astro';
+import LogoGroups from '../components/svg/LogoGroups.astro';
 
-	import Graphic01 from '../components/svg/graphics/Graphic01.astro';
-	import ProblemGraphic from '../components/svg/graphics/ProblemGraphic.astro';
-	import Graphic02 from '../components/svg/graphics/Graphic02.astro';
-	import Graphic03 from '../components/svg/graphics/Graphic03.astro';
-	import Graphic04 from '../components/svg/graphics/Graphic04.astro';
-	import Graphic05 from '../components/svg/graphics/Graphic05.astro';
-	import Graphic06 from '../components/svg/graphics/Graphic06.astro';
-	import Graphic07 from '../components/svg/graphics/Graphic07.astro';
+import { Schema } from "astro-seo-schema"
 
-	import Worm from '../components/svg/graphics/Worm.astro'
-	import CornerGraphic01 from '../components/svg/graphics/CornerGraphic01.astro';
-	import CornerGraphic02 from '../components/svg/graphics/CornerGraphic02.astro';
+import Graphic01 from '../components/svg/graphics/Graphic01.astro';
+import ProblemGraphic from '../components/svg/graphics/ProblemGraphic.astro';
+import Graphic02 from '../components/svg/graphics/Graphic02.astro';
+import Graphic03 from '../components/svg/graphics/Graphic03.astro';
+import Graphic04 from '../components/svg/graphics/Graphic04.astro';
+import Graphic05 from '../components/svg/graphics/Graphic05.astro';
+import Graphic06 from '../components/svg/graphics/Graphic06.astro';
+import Graphic07 from '../components/svg/graphics/Graphic07.astro';
 
-	import { Image, getImage } from 'astro:assets';
+import Worm from '../components/svg/graphics/Worm.astro'
+import CornerGraphic01 from '../components/svg/graphics/CornerGraphic01.astro';
+import CornerGraphic02 from '../components/svg/graphics/CornerGraphic02.astro';
 
-	import AndreiCroitor from "../assets/team/andrei-croitor.jpg";
-	import JasonGeorge from "../assets/team/jason-george.jpg";
-	import NdaliLiitaCairney from "../assets/team/ndali-liita-cairney.jpg";
-	import RayhanBeebeejaun from "../assets/team/rayhan.beebeejaun.jpg";
-	import TsvetelinAnastasov from "../assets/team/tsvetelin-anastasov.jpg";
+import { Image, getImage } from 'astro:assets';
 
-	import Analysis from '../components/svg/icons/Analysis.astro'
-	import Chart from '../components/svg/icons/Chart.astro'
-	import HeartBeat from '../components/svg/icons/HeartBeat.astro'
-	import Idea from '../components/svg/icons/Idea.astro'
-	import List from '../components/svg/icons/List.astro'
-	import Strategy from '../components/svg/icons/Strategy.astro'
+import AndreiCroitor from "../assets/team/andrei-croitor.jpg";
+import JasonGeorge from "../assets/team/jason-george.jpg";
+import NdaliLiitaCairney from "../assets/team/ndali-liita-cairney.jpg";
+import RayhanBeebeejaun from "../assets/team/rayhan.beebeejaun.jpg";
+import TsvetelinAnastasov from "../assets/team/tsvetelin-anastasov.jpg";
 
-	
-	import Define from '../components/svg/services/DefineSVG.astro'
-	// import Align from '../components/svg/services/AlignSVG.astro'
-	import Flow from '../components/svg/services/FlowSVG.astro'
-	import Run from '../components/svg/services/RunSVG.astro'
+import Analysis from '../components/svg/icons/Analysis.astro'
+import Chart from '../components/svg/icons/Chart.astro'
+import HeartBeat from '../components/svg/icons/HeartBeat.astro'
+import Idea from '../components/svg/icons/Idea.astro'
+import List from '../components/svg/icons/List.astro'
+import Strategy from '../components/svg/icons/Strategy.astro'
+
+
+import Define from '../components/svg/services/DefineSVG.astro'
+// import Align from '../components/svg/services/AlignSVG.astro'
+import Flow from '../components/svg/services/FlowSVG.astro'
+import Run from '../components/svg/services/RunSVG.astro'
 ---
 
 <Layout logoAnchorTheme="dark">
-	<main>
-		<h1>psAI Group</h1>
+<main>
+	<section class="centered intro">
 
-		<div class="groups">
-			
+		<!-- <div class="corner graphic">
+			<CornerGraphic01/>
+		</div> -->
+
+		<div class="waves big graphic">
+			<Graphic06/>
 		</div>
-	</main>
 
-	<Schema
-		item={
-		{
-			"@context": "https://schema.org",
-			"@type": "WebPage",
-			"name":"psAI Consulting - Unlock the Potential of AI Integration",
-			"url":`${Astro.url}`,
-			"description":"AI integration and analysis through a blend of agility, insight, and innovation. Transform uncertainties into identifiable opportunities with AI implementation.",
-		}
-		}
-	/>
+		<div class="ctnr width1">
+			<div class="logo">
+				<LogoGroups/>
+			</div>
 
-	<Schema
-		item={
-		{
-			"@context": "https://schema.org",
-			"@type":"WebSite",
-			"name":"psAI Consulting",
-			"url":`${Astro.url}`,
-		}
-		}
-	/>
+			<div class="ticker step_reveal1">
+				<div class="flex">
+					<span>91.5% of leading businesses invest in AI on an ongoing basis.<a href="https://connect.comptia.org/blog/artificial-intelligence-statistics-facts" target="_blank" title="30+ Artificial Intelligence Statistics and Facts for 2023">*</a></span>
 
-	<Schema
-		item={
-		{
-			"@context": "https://schema.org",
-			"@type":"Organization",
-			"name":"psAI Consulting",
-			"legalName":"psAI Consulting",
-			"url":`${Astro.url}`,
-			"@id":`${Astro.url}`,
-		}
-		}
-	/>
+					<span>87% of AI projects never make it into production.<a href="https://d2iq.com/blog/why-87-of-ai-ml-projects-never-make-it-into-production-and-how-to-fix-it" target="_blank" title="87% of AI projects never make it into production.">*</a></span>
+				</div>
+			</div>
+
+			<script is:inline>
+				let tickers = document.querySelectorAll('.ticker span')
+
+				tickers[0].classList.add('active')
+
+				let i = 0;
+
+				function passTicker() {
+					
+					if(i == (tickers.length)) {
+						i = 0;
+						document.querySelector('.active').classList.remove('active')
+					}
+					
+					if(i > 0) {
+						tickers[i - 1].classList.remove('active')
+					}
+					
+					tickers[i].classList.add('active')
+					i++
+				}
+
+				setInterval(() => {
+					passTicker()
+				}, 5000);
+
+				passTicker()
+			</script>
+
+			<h1><span class="step_reveal1">Embrace innovation.</span> <span class="step_reveal1"><b>Define the future.</b></span></h1>
+
+			<h2 class="step_reveal1">Transform tomorrow’s uncertainties into identifiable opportunities.</h2>
+
+			<div class="cta_ctnr flex step_reveal1">
+				<a href="/services/define" class="cta dark">Take the first step</a>
+
+				<button type="button" class="main cta contact_bt">Contact us</button>
+			</div>
+
+			<!-- <div class="graphic g1">
+				<Graphic02/>
+			</div> -->
+			<!-- <Graphic03/> -->
+		</div>
+	</section>
+
+	<section id="why-psai" class="default2">
+		<div class="content">
+			<div class="heading big graphic">
+				<Graphic04/>
+			</div>
+			
+			<h2>Why psAI?</h2>
+
+			<p>At psAI, we believe in the transformative power of AI to redefine business operations, enhance human experiences, and create new paradigms of success. <strong>Our goal is to actualise the potential of AI with our clients, turning innovative concepts into tangible results.</strong></p>
+
+			<div class="box_ctnr">
+				<div class="box">
+					<h3>Innovative Approach</h3>
+
+					<p>Our strategies are not born from consensus but from firsthand experience and emergent industry insights. <strong>We are pioneers, constantly on the cusp of AI's evolution, ensuring our partners lead rather than follow.</strong></p>
+				</div>
+				
+				<div class="box">
+					<h3>Holistic Deliverables</h3>
+
+					<p>The psAI team boasts a proven track record of successful AI implementation across a wide range of industries. <strong>From operational efficiency to customer engagement, our holistic approach addresses every facet of your business.</strong></p>
+				</div>
+				
+				<div class="box">
+					<h3>Agility and Insight</h3>
+
+					<p>Our lean structure and close proximity to AI innovation allow us to move with the speed of a startup but the precision of seasoned experts. <strong>We quickly translate complex AI challenges into actionable opportunities for our clients.</strong></p>
+				</div>
+			</div>
+			
+			<div class="flex cta_ctnr">
+
+				<div class="flex cta_ctnr">
+					<a href="/services/" class="cta dark">Build your Strategy</a>
+
+					<button type="button" class="main cta contact_bt">Contact us</button>
+				</div>
+			</div>
+	</section>
+
+	<hr>
+
+	<section id="the-psai-edge" class="default1 bullets">
+		<div class="content">
+			<h2>The psAI edge<Worm/></h2>
+
+			<p>Actualising the true potential of Artificial intelligence requires a blend of innovation, insight, and a deep understanding of both the technological and human aspects of AI. At psAI, our unique approach combines <b>mathematical potential with psychological insight</b>, setting us apart in transforming the landscape of global business operations through AI.</p>
+
+			<h3>Tailored AI Solutions</h3>
+
+			<p><b>Customised Integration Across All Levels</b></p>
+
+			<p>Our services are designed to cater to the unique needs of each business, integrating AI solutions that are not only technologically advanced but also aligned with human-centric goals. This approach ensures that our AI implementations enhance operational efficiency, foster human-machine collaboration, and drive meaningful outcomes.</p>
+
+			<div class="graphic_cta">
+				<button type="button" class="main cta highlight contact_bt">Contact us</button>
+
+				<div class="graphic">
+					<Graphic06/>
+				</div>
+			</div>
+		</div>
+
+		<div class="list">
+			<a class="item psai_define_style" href="/services/define">
+				<div class="flex heading">
+					<Define/>
+					
+					<div>
+						<h3>psAI Define</h3>
+							
+						<span class="def">Communication and Understanding</span>
+					</div>
+				</div>
+
+				<div class="content">	
+					<p>Individuals in your organisation already use AI with no organisational oversight or direction. Let's fix this by uniting the efforts towards your business goals.</p>
+
+					<span class="learn_more">Learn more</span>
+				</div>
+			</a>
+
+			<a class="item psai_flow_style" href="/services/flow">
+				<div class="flex heading">
+					<Flow/>
+
+					<div>
+						<h3>psAI Flow</h3>
+
+						<span class="def">Data Management and Optimisation</span>
+					</div>
+				</div>
+
+				<div class="content">
+					<p>Every modern business has access to priceless data, most of which is underutilised. Let's optimise your dataflow to leverage AI.</p>
+
+					<span class="learn_more">Learn more</span>
+				</div>
+			</a>
+
+			<a class="item psai_run_style" href="/services/run">
+				<div class="flex heading">
+					<Run/>
+
+					<div>
+						<h3>psAI Run</h3>
+						
+						<span class="def">Technology Harmonisation</span>
+					</div>
+				</div>
+
+				<div class="content">
+					<p>Machine Learning is set to become as fundamental as digitisation. Let's make sure you're optimised to be ahead of the curve.</p>
+
+					<span class="learn_more">Learn more</span>
+				</div>
+			</a>
+		</div>
+	</section>
+
+	<!-- <hr>
+
+	<section id="the-team" class="default2">
+		<div class="content">
+			<div class="heading big graphic">
+				<Graphic07/>
+			</div>
+			
+			<h2>psAI</h2>
+
+			<p>Our team has a proven track record in <strong>AI implementation across a diverse range of industries and roles</strong>, providing a holistic approach from business operations to customer engagement.</p>
+
+			<div class="team_ctnr">
+				<div class="profile">
+					<div class="flex">
+						<Image src={RayhanBeebeejaun} alt="Rayhan Beebeejaun Picture" draggable="false"/>
+
+						<Worm/>
+
+						<div>
+							<p class="name">Rayhan Beebeejaun</p>
+							<p class="role">Machine Learning & 
+								Artificial Intelligence</p>
+						</div>
+					</div>
+
+					<div class="description">
+						<div class="ctnr">
+							<p>Award-winning programmer & AI expert</p>
+							<p><b>Built ML solutions for notable organisations</b></p>
+							<p>AI thought leader, educator and speaker</p>
+						</div>
+					</div>
+				</div>
+				<div class="profile">
+					<div class="flex">
+						<Image src={NdaliLiitaCairney} alt="Dr. Ndali Liita Cairney Picture" draggable="false"/>
+
+						<Worm/>
+
+						<div>
+							<p class="name">Dr. Ndali Liita Cairney, Ph.D.</p>
+							<p class="role">Competitor & Customer Value Analysis</p>
+						</div>
+					</div>
+
+					<div class="description">
+						<div class="ctnr">
+							<p>Entrepreneur</p>
+							<p><b>Lecturer in Entrepreneurship & Innovation in Informatics at the University of Edinburgh</b></p>
+							<p>Intellectual property & customer value analyst</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="profile">
+					<div class="flex">
+						<Image src={TsvetelinAnastasov} alt="Tsvetelin Anastasov Picture" draggable="false"/>
+						
+						<Worm/>
+
+						<div>
+							<p class="name">Tsvetelin Anastasov</p>
+							<p class="role">Data Strategy & Data Management</p>
+						</div>
+					</div>
+
+					<div class="description">
+						<div class="ctnr">
+							<p>PM and Data Management expert</p>
+							<p><b>Developed successful data strategies for Top Tier institutions</b></p>
+							<p>Accredited by Enterprise Data Management Council</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="profile">
+					<div class="flex">
+						<Image src={JasonGeorge} alt="Jason George Picture" draggable="false"/>
+						
+						<Worm/>
+
+						<div>
+							<p class="name">Jason George</p>
+							<p class="role">Market analysis</p>
+						</div>
+					</div>
+
+					<div class="description">
+						<div class="ctnr">
+							<p>Deloitte consulting scholar</p>
+							<p><b>Digital ventures associate</b></p>
+							<p>Ex-BCG consultant</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="profile">
+					<div class="flex">
+						<Image src={AndreiCroitor} alt="Andrei Croitor Picture" draggable="false"/>
+						
+						<Worm/>
+
+						<div>
+							<p class="name">Andrei Croitor</p>
+							<p class="role">Cultural Transformation & Consumer Psychology</p>
+						</div>
+					</div>
+
+					<div class="description">
+						<div class="ctnr">
+							<p>D&AD Alumni</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="graphic_cta">
+				<a href="/services/" class="main cta">Know our Services</a>
+				<div class="graphic">
+					<Graphic06/>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<hr> -->
+</main>
+
+<Schema
+	item={
+	{
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"name":"psAI Consulting - Unlock the Potential of AI Integration",
+		"url":`${Astro.url}`,
+		"description":"AI integration and analysis through a blend of agility, insight, and innovation. Transform uncertainties into identifiable opportunities with AI implementation.",
+	}
+	}
+/>
+
+<Schema
+	item={
+	{
+		"@context": "https://schema.org",
+		"@type":"WebSite",
+		"name":"psAI Consulting",
+		"url":`${Astro.url}`,
+	}
+	}
+/>
+
+<Schema
+	item={
+	{
+		"@context": "https://schema.org",
+		"@type":"Organization",
+		"name":"psAI Consulting",
+		"legalName":"psAI Consulting",
+		"url":`${Astro.url}`,
+		"@id":`${Astro.url}`,
+	}
+	}
+/>
 </Layout>
 
 <!-- <script is:inline>
@@ -104,62 +415,62 @@ let showingNav = false;
 let showingContactBox = false;
 
 function toggleExitArea() {
-    exitArea.classList.toggle('show', showingContactBox || showingNav);
+exitArea.classList.toggle('show', showingContactBox || showingNav);
 }
 
 function toggleNav() {
-    showingNav = !showingNav;
-    hamBt.classList.toggle('active', showingNav);
-    nav.classList.toggle("show", showingNav);
-    toggleExitArea();
-	
-    controlPathAnimation(showingNav ? 'paused' : 'running');
+showingNav = !showingNav;
+hamBt.classList.toggle('active', showingNav);
+nav.classList.toggle("show", showingNav);
+toggleExitArea();
 
-    if (showingContactBox) {
-        toggleContactBox();
-    }
+controlPathAnimation(showingNav ? 'paused' : 'running');
+
+if (showingContactBox) {
+	toggleContactBox();
+}
 }
 
 function controlPathAnimation(state) {
-    pulsePaths.forEach(path => path.style.animationPlayState = state);
+pulsePaths.forEach(path => path.style.animationPlayState = state);
 }
 
 function toggleContactBox() {
-    showingContactBox = !showingContactBox;
-    contactBox.classList.toggle('show', showingContactBox);
-    controlPathAnimation(showingContactBox ? 'paused' : 'running');
-    toggleExitArea();
+showingContactBox = !showingContactBox;
+contactBox.classList.toggle('show', showingContactBox);
+controlPathAnimation(showingContactBox ? 'paused' : 'running');
+toggleExitArea();
 }
 
 hamBt.addEventListener("click", toggleNav);
 
 if (window.matchMedia('(max-width:850px)').matches) {
-    navBts.forEach(btn => {
-        btn.addEventListener("click", () => {
-            toggleNav();
-            if (showingContactBox) {
-                toggleContactBox();
-            }
-        });
-    });
+navBts.forEach(btn => {
+	btn.addEventListener("click", () => {
+		toggleNav();
+		if (showingContactBox) {
+			toggleContactBox();
+		}
+	});
+});
 }
 
 window.addEventListener("scroll", () => {
-    if (showingNav) {
-        toggleNav();
-    }
+if (showingNav) {
+	toggleNav();
+}
 });
 
 contactBts.forEach(btn => {
-    btn.addEventListener('click', toggleContactBox);
+btn.addEventListener('click', toggleContactBox);
 });
 
 exitArea.addEventListener('click', () => {
-    if (showingContactBox) {
-        toggleContactBox();
-    } else if (showingNav) {
-        toggleNav();
-    }
+if (showingContactBox) {
+	toggleContactBox();
+} else if (showingNav) {
+	toggleNav();
+}
 });
 
 </script> -->
