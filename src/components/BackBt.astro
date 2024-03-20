@@ -1,0 +1,76 @@
+---
+
+const { url, label } = Astro.props;
+
+---
+
+
+<a class="back" href={url}>
+    <span class="icon"></span>
+    <span>{label}</span>
+</a>
+
+<style>
+
+    .back {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+        width: fit-content;
+        z-index: 6;
+        background-color: var(--light-d);
+        padding: clamp(1rem,3vw,1.3rem) 2rem clamp(1rem,3vw,1.3rem) var(--base-width-overflow);
+        font-size: clamp(1.4rem,4vw,1.6rem);
+        font-weight: 400;
+        border-radius: 0 0 0.4rem 0;
+        border-right: 0.2rem solid var(--light-a);
+        border-bottom: 0.2rem solid var(--light-a);
+        box-shadow: 2rem 1rem 2.5rem -1.2rem var(--light-b);
+        position: absolute;
+        top: clamp(13rem, 21vw, 15rem);
+        color: var(--light);
+        left: var(--corner-width1);
+        padding: 1rem 2rem;
+        background-color: #d8e3f717;
+        border-radius: 0.5rem;
+        margin-top: 2rem;
+        font-weight: 400;
+    }
+    
+    .back:hover {
+        
+    }
+
+    .back span {
+
+    }
+
+    .back .icon {
+        width: 0.4rem;
+        height: 0.4rem;
+        transform: rotate(45deg);
+        border-left: 0.3rem solid;
+        border-bottom: 0.3rem solid;
+        border-color: var(--light-b);
+    }
+
+
+
+    @media screen and (min-width: 800px) {
+        .back {
+            margin-top: 0rem;
+        }   
+    }
+
+
+    
+
+    @media print {
+        .back {
+            display: none;
+        }   
+    }
+
+
+</style>

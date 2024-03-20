@@ -8,8 +8,8 @@
 
 .stripe > .ctnr {
     height: 2.7rem;
-    color: var(--secondary-1);
-    font-size: clamp(1rem, 3vw, 1.4rem);
+    color: #968da4;
+    font-size: clamp(1rem, 3vw, 1.35rem);
     font-weight: 500;
     display: flex;
     justify-content: space-between;
@@ -30,22 +30,27 @@
 }
 
 .stripe .inverted_corner:first-of-type {
-    left:0;
+    left:-1px;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
 }
 
 .stripe .inverted_corner:last-of-type {
-    right:0;
+    right:-1px;
 }
 
-.stripe.header .inverted_corner {
-    top: 99%;
+.stripeheader .inverted_corner {
+    top: 98%;
 }
 
 .stripe.footer .inverted_corner {
-    bottom: 99%;
+    bottom: 98%;
 }
 
-.stripe.header .inverted_corner:first-of-type {
+.stripeheader .inverted_corner:first-of-type {
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -67,4 +72,39 @@
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     -o-transform: rotate(90deg);
+}
+
+.psai_group_nav .flex {
+    flex-flow: row wrap;
+    gap: 1rem;
+}
+
+.psai_group_nav .flex a {
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.3rem;
+    background-color: var(--light-1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:800px) {
+    
+    .psai_group_nav.mobile_hidden {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
 }

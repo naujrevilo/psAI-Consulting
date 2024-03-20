@@ -2,12 +2,12 @@
 import '../../css/services.css'
 import Layout from "../../layouts/Layout.astro";
 import DefineSection from "../../components/services/DefineSection.astro";
-import Define from '../../components/svg/services/Define.astro';
+import ServiceCards from '../../components/services/ServiceCards.astro'
 
 import Worm from '../../components/svg/graphics/Worm.astro';
 ---
 
-<Layout logoAnchorTheme="light">
+<Layout logoAnchorTheme="light" title="psAI Define | Tailoring AI to Your Business Identity">
     <a href="/services/" class="back">Return to Services</a>
 
     <main>
@@ -15,13 +15,11 @@ import Worm from '../../components/svg/graphics/Worm.astro';
         
         <section id="learn-more" class="default1 bullets">
             <div class="content">
-                <!-- <div class="graphic">
-                    <Define/>
-                </div> -->
-    
                 <h2>Transforming Your Communication<Worm/></h2>
     
-                <p>The key to unlocking the full potential of artificial intelligence within your organisation lies not just in the technology itself, but in how you and your team communicate with it. psAI Define is designed to bridge this gap, ensuring your team and AI are speaking the same language—literally.</p>
+                <p><strong>The primary aim of psAI Define is to ensure efficient and effective communication between human workers and the Artificial Intelligence (AI) infrastructure.</strong> This is crucial because the potential of AI can only be fully realised when there is a clear understanding and seamless interaction between humans and AI systems.</p>
+
+                <p>To achieve this, <strong>Define focuses on the establishment and continuous maintenance of a Unified Organisational Language.</strong> This language serves as a common ground for interaction, ensuring that both humans and AI can understand and respond to each other without ambiguity or loss of meaning. This approach not only <b>improves the efficiency of AI integration</b> but also enhances the overall decision-making processes within the organisation by ensuring that all parties are aligned and informed.</p>
     
                 <p>psAI Define isn't merely an additional tool; it's the foundation for AI implementation. Here's why:</p>
     
@@ -30,45 +28,34 @@ import Worm from '../../components/svg/graphics/Worm.astro';
                 </div>
 
                 <article class="details">
-                    <p>Engagement Duration: <b>14 days</b></p>
-                    <p>Price: <b>$30,000</b></p>
-                    <p>Minimum Time to Kickoff: <b>7 days</b></p>
+                    <p>Initial Engagement: <b>14 days</b></p>
+                    <p>Price: <b>$75,000</b></p>
                 </article>
             </div>
     
             <ul class="list">
                 <li class="item">
-                    <h3>A more Human AI</h3>
+                    <h3>AI Communication Audit:</h3>
     
-                    <p>Imagine AI as a new team member who's eager but untrained. Without a proper introduction to your company's culture, goals, and strategic objectives, their talents remain underutilised at best, pulling in the wrong direction at worst. psAI Define ensures your AI "team member" is not just another tool, but a fully integrated part of your company, capable of understanding and contributing to your unique organisational Narrative.</p>
+                    <p>A comprehensive review of the current communication channels and processes between human teams and AI systems. This audit will identify gaps and inefficiencies in the existing communication framework.</p>
                 </li>
-    
+                
                 <li class="item">
-                    <h3>Unified Organisational Language</h3>
+                    <h3>Unified Organisational Language Blueprint:</h3>
     
-                    <p>Misunderstandings can derail even the most well-intentioned initiatives. By establishing a Unified Organisational Language, psAI Define minimises these errors, ensuring your operations run smoothly and efficiently. This isn't just about avoiding mistakes; it's about enabling and enhancing collaboration between humans and AI, fostering a happier, more productive workplace.</p>
+                    <p>Development of a tailored blueprint for establishing a Unified Organisational Language that facilitates clear and efficient communication between human workers and AI. This blueprint will include guidelines, best practices, and actionable steps for implementation.</p>
                 </li>
-    
+                
                 <li class="item">
-                    <h3>Enhanced AI Performance</h3>
+                    <h3>Recommendation Report:</h3>
     
-                    <p>Customisation is key. With psAI Define's business-specific dictionary and prompt engineering guide, your AI tools become sharper, more accurate, and incredibly relevant. This means better insights, more engaging customer interactions, and a significant leap in operational efficiency.</p>
-                </li>
-    
-                <li class="item">
-                    <h3>Seamless Integration</h3>
-    
-                    <p>Change doesn't have to be disruptive. psAI Define is crafted to enhance your existing workflows, not overhaul them. It's about making AI work for you in the most efficient way possible.</p>
-                </li>
-    
-                <li class="item">
-                    <h3>Human-Centric AI Training</h3>
-    
-                    <p>At the heart of psAI Define is a commitment to congruence and clarity. By ensuring your communication strategies are aligned, we create a solid foundation for your AI solutions, leading to unparalleled output.</p>
+                    <p>A detailed report providing specific recommendations for enhancing the communication infrastructure to support seamless interaction between human workers and AI, based on the audit findings.</p>
                 </li>
             </ul>
         </section>
     </main>
+
+    <ServiceCards current="define"/>
 </Layout>
 
 <style>
@@ -93,7 +80,7 @@ import Worm from '../../components/svg/graphics/Worm.astro';
 
     .default1 .list .item h3 {
         color: var(--secondary);
-        font-weight: 550;
+        font-weight: 450;
     }
 
     .default1 .list .item p {

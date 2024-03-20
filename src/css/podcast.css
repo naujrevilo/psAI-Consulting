@@ -1,0 +1,572 @@
+body::before {
+    background-image: url(/svg/dark-noise-bg.svg), linear-gradient(-25deg, #040538 -10%, #020c1a, #042131);
+}
+
+body section {
+    color: var(--light);
+}
+
+main {
+    margin-block: clamp(4rem, 25vmin, 12rem);
+}
+
+section.intro {
+    margin-block: clamp(1rem, 30vw, 16rem) clamp(4rem, 40vw, 8rem);
+}
+
+section.intro .ctnr {
+    width: var(--width-1);
+    margin-inline: auto;
+}
+
+section.intro h1, .ep_catalogue h1 {
+    font-size: clamp(3rem, 19vw, 10rem);
+    font-weight: 700;
+    position: relative;
+    line-height: 1;
+}
+
+section.intro h2 {
+    font-size: clamp(2.5rem, 9vw, 3.8rem);
+    font-weight: 450;
+    margin-top: 1rem;
+}
+
+section.intro h2 span {
+    font-size: clamp(1.5rem, 5vw, 2.6rem);
+    display: block;
+    margin-top: 1rem;
+}
+
+section.intro h2 b {
+    color: var(--c3);
+    font-weight: 500;
+}
+
+section.intro h1 span, .ep_catalogue h1 span {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+    text-shadow: 0px 0px #00000000;
+    background-image: linear-gradient(115deg, #84fff6, #daf5ff);
+}
+
+section.intro h1 sup, .ep_catalogue h1 sup {
+    display: block;
+    font-size: 0.3em;
+    font-weight: 500;
+}
+
+section.intro .flex {
+    flex-flow: row wrap;
+    gap: clamp(1rem, 5vw, 10rem);
+}
+
+section.intro .content {
+    flex: 1;
+}
+
+section.intro .content p {
+    font-size: clamp(1rem, 4.2vw, 1.9rem);
+    font-weight: 100;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+    color: #b7b7d4;
+}
+
+section.intro .content p strong, section.intro .content p b {
+    font-weight: inherit;
+    color: var(--c3-1);
+}
+
+section.intro .content .cta {
+
+}
+
+section.intro .content .cta_ctnr {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+section.intro .content .cta_ctnr a:not(.main) {
+    font-size: clamp(1.6rem, 4.5vw, 1.9rem);
+    padding: 0.6rem;
+}
+
+section.intro .content .text {
+    margin-block: 2rem;
+}
+
+iframe, video {
+    background-color: #081b33;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    max-width: 100%;
+}
+
+section.intro iframe, section.intro .video_ctnr video {
+    width: clamp(10rem, var(--pace), 69rem);
+    height: calc(clamp(10rem, 90vmin, 69rem) / 1.9);
+}
+
+section.intro + hr {
+    width: 100%;
+    height: 0.1rem;
+    background-color: rgba(255,255,255,0.1);
+    margin-block: clamp(5rem, 15vw, 10rem);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.subscribe {
+    flex: 1;
+    width: 100%;
+    max-width: 75rem;
+    margin-inline: auto;
+    scroll-margin-top: 25rem;
+}
+
+.subscribe.focus {
+    animation:focus 0.9s ease;
+    -webkit-animation:focus 0.9s ease;
+}
+
+@keyframes focus {
+    0% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    } 50% {
+        transform: scale(1.06);
+        -webkit-transform: scale(1.06);
+        -moz-transform: scale(1.06);
+        -ms-transform: scale(1.06);
+        -o-transform: scale(1.06);
+} 100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+}
+
+.subscribe form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: clamp(1rem, 3vw, 2rem);
+    background-color: var(--c3-1);
+    padding: 1.5rem clamp(1.5rem, 4vw, 2.5rem) 2rem;
+    border: 0.2rem solid var(--c3);
+    background-image: url(/svg/light-noise-bg.svg);
+    background-size: 26rem;
+    border-radius: 1.5rem;
+    -webkit-border-radius: 1.5rem;
+    -moz-border-radius: 1.5rem;
+    -ms-border-radius: 1.5rem;
+    -o-border-radius: 1.5rem;
+    max-width: 90rem;
+    margin-inline:auto;
+}
+
+.subscribe form p {
+    margin-bottom: unset;
+    flex: 1;
+}
+
+.subscribe form label {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.subscribe label .float {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2rem;
+}
+
+.subscribe .cta {
+    background-color: var(--secondary-1);
+    color: var(--light);
+    font-weight: 450;
+}
+
+.subscribe form input {
+    box-shadow: unset;
+    background-color: var(--light);
+    color: var(--dark);
+    border: unset;
+    padding: clamp(0.7rem, 3.5vw, 1.4rem) clamp(1.6rem, 9vmin, 3rem);
+    border-radius: 5rem;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    width: 100%;
+    min-width: clamp(1rem, 60vw, 20rem);
+    flex: 1;
+}
+
+.subscribe form input::placeholder {
+    color: var(--dark);
+    font-weight: 400;
+}
+
+.subscribe form button[type='submit'] {
+    margin-top: unset;
+    width: 100%;
+    background-color: var(--dark-2);
+}
+
+.subscribe .field label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1.2rem, 3vw, 2rem);
+}
+
+.subscribe .field span {
+    color: var(--dark-2);
+    font-weight: 700;
+    font-size: 2.6rem;
+    display: block;
+    text-align: center;
+}
+
+section.intro .video_ctnr {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: clamp(2rem, 7vw, 3rem);
+}
+
+section.intro .video_ctnr video {
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main.ep_catalogue {
+    margin-top: 20vh;
+}
+
+.ep_catalogue {
+    width: var(--width-1);
+    margin-inline: auto;
+    margin-bottom: 10rem;
+    margin-top: 10vh;
+}
+
+.ep_catalogue .cta {
+    width: fit-content;
+    margin-inline: auto;
+    margin-top: 3.5rem;
+    background-color: var(--light-1);
+}
+
+.ep_catalogue h2 {
+    text-align: center;
+    margin-inline: auto;
+    font-size: clamp(1rem, 8vw, 4rem);
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+
+.ep_catalogue ul {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: clamp(1rem, 6vw, 4rem);
+}
+
+.ep_catalogue li {
+    flex: 0;
+    max-width: 100%;
+    border-radius: 2rem;
+    background-color: #011624;
+    color: var(--light);
+    border: 0.2rem solid #031d30;
+    box-shadow: 0 2.2rem 2rem -1.6rem var(--dark-2), inset 0 -3rem 4rem -2rem #011b2e;
+    transition: border-color 0.4s ease;
+    -webkit-transition: border-color 0.4s ease;
+    -moz-transition: border-color 0.4s ease;
+    -ms-transition: border-color 0.4s ease;
+    -o-transition: border-color 0.4s ease;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
+.ep_catalogue li a {
+    padding: 2rem;
+    display: block;
+    min-width: clamp(1rem, 75vw, 26rem);
+}
+
+.ep_catalogue li:hover {
+    border-color: #18374e;
+    transition: border-color 0.1s ease;
+    -webkit-transition: border-color 0.1s ease;
+    -moz-transition: border-color 0.1s ease;
+    -ms-transition: border-color 0.1s ease;
+    -o-transition: border-color 0.1s ease;
+}
+
+.ep_catalogue li .cover {
+    display: block;
+}
+
+.ep_catalogue li .cover img {
+    width: 100%;
+    height: 17rem;
+    object-fit: cover;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+.ep_catalogue li h3 {
+    font-size: clamp(1rem, 8vw, 2.6rem);
+    font-weight: 600;
+    margin-block: 1.5rem 0.6rem;
+}
+
+.ep_catalogue li .description {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #738999;
+    line-height: 1.3;
+}
+
+.ep_catalogue li .watch {
+    margin-top: 2rem;
+    margin-right: 0.5rem;
+    display: block;
+    font-size: 1.5rem;
+    width: fit-content;
+    margin-left: auto;
+    font-weight: 400;
+    color: var(--c3-1);
+}
+
+.ep_catalogue h1 {
+    margin-inline: auto;
+    margin-bottom: 3rem;
+}
+
+.ep_catalogue h1 sub {
+    display: block;
+    font-size: 0.25em;
+    text-align: right;
+    font-weight: 450;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.blog_nav {
+    margin-block: 7rem;
+    text-align: center;
+    position: sticky;
+    bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 1.6rem;
+    background-color: var(--dark-2);
+    box-sizing: border-box;
+    width: fit-content;
+    margin-inline: auto;
+} .blog_nav .flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4rem;
+} .blog_nav a.disabled {
+    background-color: var(--light-d);
+    border-color: transparent;
+    pointer-events: none;
+    color: var(--light-b);
+} .blog_nav a {
+    font-size: clamp(1.6rem,4vw,1.7rem);
+    padding: 1rem 1.7rem;
+    background-color: #02253e;
+    border-radius: 0.3rem;
+    border: 0.1rem solid var(--primary-d);
+    min-width: clamp(4rem,20vw,13rem);
+    color: var(--light);
+    font-weight: 400;
+    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+} .blog_nav a:hover {
+    background-color: #033554;
+    transition: background-color 0s ease;
+    -webkit-transition: background-color 0s ease;
+    -moz-transition: background-color 0s ease;
+    -ms-transition: background-color 0s ease;
+    -o-transition: background-color 0s ease;
+} .blog_nav .counter {
+    font-weight: 500;
+    font-size: clamp(1.5rem, 4.5vw, 1.6rem);
+    color: var(--primary-e);
+} .counter_title {
+    margin-block: clamp(6rem, 10vw, 10rem) clamp(1rem, 2vw, 2rem);
+    font-size: clamp(1.2rem, 5vw, 2.6rem);
+    color: var(--primary-e);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.ep_page {
+    color: var(--light);
+    min-height: 71vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ep_page .content_ctnr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: var(--width-1);
+    gap: 3rem;
+}
+
+.ep_page .video_ctnr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ep_page iframe {
+    width: clamp(10rem, 80vw, 95rem);
+    height: calc(clamp(10rem, 80vw, 95rem) / 1.75);
+}
+
+.ep_page h1 {
+    text-align: center;
+    display: block;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 450;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:800px) {
+
+    section.intro iframe, section.intro .video_ctnr video {
+        width: clamp(10rem, 45vw, 63rem);
+        height: calc(clamp(10rem, 45vw, 63rem) / 1.7);
+    }
+
+    section.intro .subscribe {
+        width: clamp(10rem, 45vw, 63rem);
+    }
+
+    .subscribe form p:not(.field) {
+        flex: unset;
+    }
+
+    .subscribe form, .subscribe .field label {
+        flex-direction: row;
+    }
+
+    section.intro .video_ctnr {
+        height: fit-content;
+        position: sticky;
+        top: calc(var(--header-height) + 3rem);
+    }
+}

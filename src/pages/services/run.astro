@@ -4,9 +4,10 @@ import Layout from "../../layouts/Layout.astro";
 import RunSection from "../../components/services/RunSection.astro";
 
 import Worm from '../../components/svg/graphics/Worm.astro';
+import ServiceCards from '../../components/services/ServiceCards.astro';
 ---
 
-<Layout logoAnchorTheme="dark">
+<Layout logoAnchorTheme="dark" title="psAI Run | Enhancing Machine Learning Operations">
     <a href="/services/" class="back">Return to Services</a>
     
     <main>
@@ -16,48 +17,43 @@ import Worm from '../../components/svg/graphics/Worm.astro';
             <div class="content">    
                 <h2>Enhancing Efficiency in Machine Learning Operations<Worm/></h2>
     
-                <p>In an era where Machine Learning (ML) technologies become pivotal in driving business processes, psAI Run stands as the essential service for enterprises looking to maximise the efficiency and cost-effectiveness of their ML deployments. Tailored specifically for businesses leveraging ML, psAI Run offers a strategic approach to optimising ML costs and models, ensuring they align perfectly with your business needs.</p>
+                <p><strong>psAI Run focuses on the modernisation and harmonisation of the organisation's technology stack to support AI integration.</strong> It recognises the pivotal role that current technology plays in enabling or hindering the adoption of advanced AI capabilities.</p>
     
-                <p>Choosing psAI Run means selecting a partner dedicated to refining your ML operations to achieve unparalleled efficiency and effectiveness. Here's how:</p>
+                <p>To enable this psAI Run advocates for the establishment and continuous maintenance of a <b>Unified Technology Framework</b>. This framework is intended to facilitate seamless, efficient, and effective integration of AI into both existing and future technology stacks. By ensuring that the tech stack is not only up-to-date but also cohesive and compatible with AI advancements, <strong>psAI Run enables organisations to stay at the forefront of innovation</strong>, adapting to new technologies and methodologies that drive growth and competitiveness.</p>
     
                 <div class="graphic_cta">
                     <button type="button" class="main cta highlight contact_bt">Contact us</button>
                 </div>
 
                 <article class="details">
-                    <p>Engagement Duration: <b>14 days</b></p>
-                    <p>Price: <b>$30,000</b></p>
-                    <p>Minimum Time to Kickoff: <b>7 days</b></p>
+                    <p>Initial Engagement: <b>14 days</b></p>
+                    <p>Price: <b>$75,000</b></p>
                 </article>
             </div>
     
             <ul class="list">
                 <li class="item">
-                    <h3>Specialised ML Cost Analysis</h3>
+                    <h3>Technology Stack Review:</h3>
     
-                    <p>With a focus on financial efficiency, psAI Run identifies opportunities to reduce expenses in ML deployments, ensuring you get the most value from your investments.</p>
+                    <p>A thorough analysis of the existing technology infrastructure, identifying areas that require modernisation or harmonisation to support AI integration.</p>
                 </li>
-    
+                
                 <li class="item">
-                    <h3>Comparative Model Analysis</h3>
+                    <h3>Unified Technology Framework Proposal:</h3>
     
-                    <p>Our service benchmarks your ML models against those in the market, providing insights into their efficiency and suitability, ensuring your ML initiatives are competitive and cutting-edge.</p>
+                    <p>A proposal for a Unified Technology Framework that ensures the technology stack is not only current but also cohesive and capable of seamlessly integrating AI capabilities.</p>
                 </li>
-    
+                
                 <li class="item">
-                    <h3>Optimisation of ML Operations</h3>
+                    <h3>Integration Strategy Document:</h3>
     
-                    <p>psAI Run enhances the performance and cost-effectiveness of your ML models, driving better results and greater operational efficiency.</p>
-                </li>
-    
-                <li class="item">
-                    <h3>Tailored ML Solutions</h3>
-    
-                    <p>Recognising the uniqueness of each business, psAI Run offers customised recommendations tailored to your specific ML use cases and requirements, ensuring solutions that perfectly fit your needs.</p>
+                    <p>A comprehensive strategy document detailing the approach for incorporating AI into the existing and future technology stack, including recommendations for technology adoption, upgrades, and integration best practices.</p>
                 </li>
             </ul>
         </section>
     </main>
+
+    <ServiceCards current="run"/>
 </Layout>
 
 <style>
@@ -68,7 +64,7 @@ import Worm from '../../components/svg/graphics/Worm.astro';
 
     .details {
         border-color: var(--light);
-        box-shadow: -2rem 2rem 6rem -1.5rem var(--light-2);
+        box-shadow: -6rem 2rem 8rem -2rem var(--light-2);
     }
 
     .details p b {

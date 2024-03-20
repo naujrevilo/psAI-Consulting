@@ -1,8 +1,8 @@
 
 const header = document.querySelector('header');
 const hamBt = document.querySelector(".hambt");
-const nav = document.querySelector(".header_nav");
-const navBts = document.querySelectorAll(".header_nav a, .header_nav button");
+const nav = document.querySelector("header");
+const navBts = document.querySelectorAll("header a, header button");
 const exitArea = document.querySelector('.exit_area');
 const contactBox = document.querySelector('.contact_box');
 const contactBts = document.querySelectorAll('.contact_bt');

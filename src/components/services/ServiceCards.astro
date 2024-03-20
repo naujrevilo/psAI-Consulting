@@ -1,0 +1,80 @@
+---
+// import Align from "../svg/services/AlignSVG.astro";
+import Define from "../svg/services/DefineSVG.astro";
+import Flow from "../svg/services/FlowSVG.astro";
+import Run from "../svg/services/RunSVG.astro";
+
+const { current } = Astro.props;
+---
+
+<div class="other_services">
+    <p class={`heading ${current == "define" ? "light" : ""}`}>Discover other services</p>
+
+    <div class="ctnr">
+        {current != "define" ? (
+        <a href="/services/define" class="psai_define_style">
+            <span class="flex">
+                <span class="flex">
+                    <Define/>
+    
+                    <div class="content">
+                        <span class="title"><sup>psAI</sup> Define</span>
+                    </div>
+                </span>
+    
+                <span class="text">
+                    <p class="def">Communication and Understanding</p>
+    
+                    <p>Establishes efficient communication between human teams and AI systems through a Unified Organisational Language, enhancing mutual understanding and collaboration.</p>
+                </span>
+            </span>
+    
+            <span class="learn_more">Learn more</span>
+        </a>
+        ) : null}
+        
+        {current != "flow" ? (
+            <a href="/services/flow" class="psai_flow_style">
+                <span class="flex">
+                    <span class="flex">
+                        <Flow/>
+        
+                        <div class="content">
+                            <span class="title"><sup>psAI</sup> Flow</span>
+                        </div>
+                    </span>
+        
+                    <span class="text">
+                        <p class="def">Data Management and Optimisation</p>
+                        
+                        <p>Optimises the data ecosystem to ensure seamless, efficient transfer of data between sources and AI infrastructure, enabling effective AI integration.</p>
+                    </span>
+                </span>
+        
+                <span class="learn_more">Learn more</span>
+            </a>
+        ) : null}
+    
+        {current != "run" ? (
+        <a href="/services/run" class="psai_run_style">
+            <span class="flex">
+                <span class="flex">
+                    <Run/>
+    
+                    <div class="content">
+                        <span class="title"><sup>psAI</sup> Run</span>
+                    </div>
+                </span>
+    
+                <span class="text">
+                    <p class="def">Technology Harmonisation</p>
+                    
+                    <p>Modernises and harmonises the technology stack to be cohesive and AI-ready, facilitating the seamless integration of advanced AI capabilities.</p>
+                </span>
+            </span>
+    
+            <span class="learn_more">Learn more</span>
+        </a>
+        ) : null}
+    </div>
+</div>

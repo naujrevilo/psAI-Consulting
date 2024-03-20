@@ -31,5 +31,3 @@ function success() {
 }
   
 document.querySelector("form").addEventListener("submit", handleSubmit);
-
-

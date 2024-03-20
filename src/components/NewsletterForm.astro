@@ -1,0 +1,54 @@
+---
+
+---
+
+
+
+<div class="subscribe" id="subscribe">
+    <form name="contact" method="POST" data-netlify="true">
+        <p class="field">
+            <label><span>Stay updated</span><input type="email" name="email" required placeholder="Your email"/></label>
+        </p>
+    
+        <p>
+            <button class="cta newsletter" type="submit" aria-label="Submit contact form">Submit
+            </button>
+                    
+            <noscript>You need to enable JavaScript on your browser to submit emails.</noscript>
+        </p>
+    </form>
+    
+    <script>
+        const handleSubmit = (event) => {
+            event.preventDefault();
+        
+            const myForm = event.target;
+            const formData = new FormData(myForm);
+            
+            fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(),
+            })
+            .then(() => success())
+            .catch((error) => alert(error));
+        };
+
+        const submitBt = document.querySelector('button.newsletter')
+
+        function success() {
+            
+            submitBt.innerHTML = "Thank you!"
+
+            submitBt.classList.add('submitted')
+
+            setTimeout(() => {
+                submitBt.innerHTML = "Submit"
+        
+            submitBt.classList.remove('submitted')
+            }, 6000);
+        }
+        
+        document.querySelector(".subscribe form").addEventListener("submit", handleSubmit);
+    </script>
+</div>

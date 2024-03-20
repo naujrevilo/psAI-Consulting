@@ -1,4 +1,4 @@
-form {
+.contact_form {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -9,18 +9,18 @@ form {
     color: var(--light);
 }
 
-form p {
+.contact_form p {
     flex: 1;
     min-width: clamp(10rem, 33vw, 18rem);
 }
 
-form > .flex {
+.contact_form > .flex {
     justify-content: space-between;
     gap: clamp(1.5rem, 2vw, 2rem);
     flex-flow: row wrap;
 }
 
-form label {
+.contact_form label {
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
@@ -30,14 +30,14 @@ form label {
     color: var(--secondary-1);
 }
 
-form input,
-form select {
+.contact_form input,
+.contact_form select {
     height: 4rem;
 }
 
-form input,
-form textarea,
-form select {
+.contact_form input,
+.contact_form textarea,
+.contact_form select {
     padding: clamp(0.8rem, 2vw, 1.2rem) clamp(1.2rem, 3vw, 1.5rem);
     border: unset;
     font-size: 0.85em;
@@ -46,7 +46,6 @@ form select {
     width: 100%;
     min-width: 100%;
     max-width: 100%;
-    font-family: inherit;
     font-weight: 500;
     color: var(--dark);
     background-size: 100% 100%;
@@ -70,7 +69,7 @@ textarea {
     max-height: 35rem;
 }
 
-form button[type='submit'].main.cta {
+.contact_form button[type='submit'].main.cta {
     display: block;
     margin: 0 auto;
     font-size: 2.2rem;
@@ -88,12 +87,12 @@ form button[type='submit'].main.cta {
     background-image: var(--highlight-gradient);
 }
 
-form button[type='submit'].disabled {
+.contact_form button[type='submit'].disabled {
     font-weight: 500;
     pointer-events: none;
 }
 
-body form button[type='submit'].submitted {
+body .contact_form button[type='submit'].submitted {
     background-color: var(--light-1);
     color: var(--secondary-1);
     pointer-events: none;

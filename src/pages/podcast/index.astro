@@ -1,0 +1,118 @@
+---
+import Layout from '../../layouts/Layout.astro'
+
+import '../../css/podcast.css'
+
+import { getCollection } from 'astro:content';
+
+import BackBt from '../../components/BackBt.astro';
+import NewsletterForm from '../../components/NewsletterForm.astro'
+
+const episodes = (await getCollection('podcast')).sort((a, b) => {
+    if (a.data.episodeNumber !== undefined && b.data.episodeNumber !== undefined) {
+        return b.data.episodeNumber - a.data.episodeNumber;
+    } else if (a.data.episodeNumber !== undefined) {
+        return 1;
+    } else if (b.data.episodeNumber !== undefined) {
+        return -1;
+    } else {
+        return b.data.title.localeCompare(a.data.title);
+    }
+});
+
+---
+
+<Layout title="The psAI Podcast">
+
+    <main class="podcast_home">
+        <section class="centered intro">
+            <div class="ctnr">
+                <div class="flex">
+                    <div class="content">
+                        <h1><sup>The psAI</sup> <span>Podcast</span></h1>
+
+                        <h2><b>Leap Riyadh</b>: 4-7th of March 2024.<span><b>Web Summit Doha</b>: 26th-29th of February 2024.</span></h2>
+    
+                        <div class="text">
+                            <p>As artificial intelligence reshapes the landscape of business across industries, leaders stand at the precipice of a new era. The psAI Podcast, launching at the heart of two of the most anticipated tech gatherings of the year—<strong>Web Summit Doha and Leap Riyadh</strong>—aims to dive deep into the evolving world of AI implementation.</p>
+
+                            <p>Join us as we explore the transformational power of AI in business, understanding not just the technology but the human stories behind it. <b>Let's define the future together.</b></p>
+
+                            <p><b>Subscribe now to secure your spot in the conversation that will shape the future of business in the AI-driven world.</b></p>
+                        </div>
+    
+                        <div class="cta_ctnr">
+                            <a href="#subscribe" class="cta main subscribe_newsletter_bt">Subscribe now</a>
+
+                            <script>
+                                let subscribeBt = document.querySelector('.subscribe_newsletter_bt')
+
+                                let emailInput = document.querySelector('.subscribe input')
+
+                                let subscribe = document.querySelector('.subscribe')
+
+                                subscribeBt.addEventListener('click', function() {
+                                    emailInput.focus()
+
+                                    subscribe.classList.add('focus')
+
+                                    setTimeout(() => {
+                                        subscribe.classList.remove('focus')
+                                    }, 1000);
+                                })
+                            </script>
+
+                            <!-- <a href="/podcast/1">Check all episodes</a> -->
+                        </div>
+                    </div>
+
+                    <!-- <div class="video_ctnr" set:html={episodes[(episodes.length - 1)].data.embedURL}>
+                        <NewsletterForm/>
+                    </div> -->
+
+                    <div class="video_ctnr">
+                        <NewsletterForm/>
+
+                        <video src="/video/psai_podcast_intro.mov" controls></video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- <section class="ep_catalogue">
+            <h2>Latest Episodes</h2>
+
+            <ul>
+                {
+                    episodes.slice(0, 6).map((episode) => (
+                        <>
+                        <li id={(episode.data.title).toLowerCase().replace(/\s+/g, '-')} class="scroll_margin_top">
+                            <a href={`/podcast/${episode.slug}/`} class="ctnr">
+                                <div class="content">
+                                    <div class="ctnr">
+                                        <div class="cover">
+                                            <img src={episode.data.cover} alt="Episode cover" loading="lazy"/>
+                                        </div>
+    
+                                        <h3 class="title">Episode {episode.data.episodeNumber}</h3>
+
+                                        {episode.data.description ? (
+                                            <p class="description">{episode.data.description}</p>
+                                        ) : null}
+
+                                        <div class="watch">Watch Now</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        </>
+                    ))
+                }
+            </ul>
+
+            <a href="/podcast/1" class="cta">Check All Episodes</a>
+        </section> -->
+    </main>
+</Layout>

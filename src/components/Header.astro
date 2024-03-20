@@ -5,35 +5,33 @@
 
     import '../css/header.css'
 
-	import LogoText from './svg/LogoText.astro';
+	import LogoGroups from './svg/LogoGroups.astro';
 	import Stripe from './Stripe.astro';
 
-	import Define from '../components/svg/services/Define.astro'
-	import Align from '../components/svg/services/Align.astro'
-	import Flow from '../components/svg/services/Flow.astro'
-	import Run from '../components/svg/services/Run.astro'
-	import ContactBox from './ContactBox.astro';
+	import DefineSVG from '../components/svg/services/DefineSVG.astro'
+	// import AlignSVG from '../components/svg/services/AlignSVG.astro'
+	import FlowSVG from '../components/svg/services/FlowSVG.astro'
+	import RunSVG from '../components/svg/services/RunSVG.astro'
+	import Worm from './svg/graphics/Worm.astro';
+
+	import PsaiGroups from '../components/PsaiGroups.astro'
 ---
 
 <Stripe type="header"/>
 
-<header>
-	<a href="/#home" class={`logo_anchor ${logoAnchorTheme ? logoAnchorTheme : ""}`} aria-label="Return to home page">
-		<LogoText/>
-	</a>
-</header>
+<PsaiGroups logoAnchorTheme={logoAnchorTheme}/>
 
 <button class="hambt" type="button" aria-label="Open navigation menu">
 	<svg id="Camada_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 107.68 73.05"><defs><style>.hambt-svg-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:5px;}</style></defs><path class="hambt-svg-1" d="m70.01,8.58h0c0,3.08-2.5,5.58-5.58,5.58h0c-3.08,0-5.58-2.5-5.58-5.58h0c0-3.08-2.5-5.58-5.58-5.58h0c-3.08,0-5.58,2.5-5.58,5.58h0c0,3.08-2.5,5.58-5.58,5.58h0c-3.08,0-5.58-2.5-5.58-5.58h0c0-3.08-2.5-5.58-5.58-5.58h0c-3.08,0-5.58,2.5-5.58,5.58h0c0,3.08-2.5,5.58-5.58,5.58h0c-3.08,0-5.58-2.5-5.58-5.58h0c0-3.08-2.5-5.58-5.58-5.58h0c-3.08,0-5.58,2.5-5.58,5.58"/><path class="hambt-svg-1" d="m87.34,37.18h0c0,3.08-2.5,5.58-5.58,5.58h0c-3.08,0-5.58-2.5-5.58-5.58h0c0-3.08-2.5-5.58-5.58-5.58h0c-3.08,0-5.58,2.5-5.58,5.58h0c0,3.08-2.5,5.58-5.58,5.58h0c-3.08,0-5.58-2.5-5.58-5.58h0c0-3.08-2.5-5.58-5.58-5.58h0c-3.08,0-5.58,2.5-5.58,5.58h0c0,3.08-2.5,5.58-5.58,5.58h0c-3.08,0-5.58-2.5-5.58-5.58h0c0-3.08-2.5-5.58-5.58-5.58h0c-3.08,0-5.58,2.5-5.58,5.58"/><path class="hambt-svg-1" d="m104.68,64.47h0c0,3.08-2.5,5.58-5.58,5.58h0c-3.08,0-5.58-2.5-5.58-5.58h0c0-3.08-2.5-5.58-5.58-5.58h0c-3.08,0-5.58,2.5-5.58,5.58h0c0,3.08-2.5,5.58-5.58,5.58h0c-3.08,0-5.58-2.5-5.58-5.58h0c0-3.08-2.5-5.58-5.58-5.58h0c-3.08,0-5.58,2.5-5.58,5.58h0c0,3.08-2.5,5.58-5.58,5.58h0c-3.08,0-5.58-2.5-5.58-5.58h0c0-3.08-2.5-5.58-5.58-5.58h0c-3.08,0-5.58,2.5-5.58,5.58"/></svg>
 </button>
 
-<nav class="header_nav">
+<header>
 	<a href="/#home"><span>Home</span></a>
 
 	<hr>
 	
 	<div class="superset">
-		<a href="/services/"><span>Services</span></a>
+		<a href="/services/"><span>Services</span> <Worm/></a>
 	
 		<div class="subnav">
 			<div class="ctnr">
@@ -41,7 +39,7 @@
 					<a href="/services/define" class="psai_define_style">
 						<span class="flex">
 							<span class="flex">
-								<Define/>
+								<DefineSVG/>
 			
 								<div class="content">
 									<span class="title"><sup>psAI</sup> Define</span>
@@ -49,31 +47,9 @@
 							</span>
 		
 							<span class="text">
-								<p class="def">Tailoring AI to Your Business Identity</p>
+								<p class="def">Communication and Understanding</p>
 	
-								<p>psAI Define is about crafting AI solutions that <b>authentically represent your business and brand.</b> This service ensures your AI initiatives deliver predictable and meaningful outcomes, embodying your company's values and objectives.</p>
-							</span>
-						</span>
-	
-						<span class="learn_more">Learn more</span>
-					</a>
-				</div>
-
-				<div class="transition_ctnr">
-					<a href="/services/align" class="psai_align_style">
-						<span class="flex">
-							<span class="flex">
-								<Align/>
-			
-								<div class="content">
-									<span class="title"><sup>psAI</sup> Align</span>
-								</div>
-							</span>
-
-							<span class="text">
-								<p class="def">Bridging AI Capabilities with Business Goals</p>
-								
-								<p>psAI Align ensures your AI initiatives are in <b>perfect harmony with your strategic objectives, enhancing operational efficiencies and driving tangible outcomes.</b> This service is about leveraging AI as a strategic asset.</p>
+								<p>Establishes efficient communication between human teams and AI systems through a Unified Organisational Language, enhancing mutual understanding and collaboration.</p>
 							</span>
 						</span>
 	
@@ -85,7 +61,7 @@
 					<a href="/services/flow" class="psai_flow_style">
 						<span class="flex">
 							<span class="flex">
-								<Flow/>
+								<FlowSVG/>
 			
 								<div class="content">
 									<span class="title"><sup>psAI</sup> Flow</span>
@@ -93,9 +69,9 @@
 							</span>
 		
 							<span class="text">
-								<p class="def">Optimising Data for AI Success</p>
+								<p class="def">Data Management and Optimisation</p>
 								
-								<p><b>Data is the foundation of effective AI.</b> psAI Flow focuses on refining your data management practices for seamless AI integration, turning data into a strategic asset for growth and innovation.</p>
+								<p><b>Optimises the data ecosystem</b> to ensure seamless, efficient transfer of data between sources and AI infrastructure, <b>enabling effective AI integration.</b></p>
 							</span>
 						</span>
 	
@@ -107,7 +83,7 @@
 					<a href="/services/run" class="psai_run_style">
 						<span class="flex">
 							<span class="flex">
-								<Run/>
+								<RunSVG/>
 			
 								<div class="content">
 									<span class="title"><sup>psAI</sup> Run</span>
@@ -115,9 +91,9 @@
 							</span>
 		
 							<span class="text">
-								<p class="def">Enhancing Machine Learning Operations</p>
+								<p class="def">Technology Harmonisation</p>
 								
-								<p>For businesses leveraging Machine Learning (ML), <b>psAI Run offers a strategic approach to optimising ML costs and operational models</b>, aligning them with your business needs for maximum efficiency and cost-effectiveness.</p>
+								<p>Modernises and harmonises the technology stack to be cohesive and AI-ready, facilitating the <b>seamless integration of advanced AI capabilities.</b></p>
 							</span>
 						</span>
 	
@@ -130,26 +106,24 @@
 	
 	<hr>
 
-	<!-- <a href="/#the-ai-challenge"><span>The Problem</span></a> -->
-	
-	<hr>
-
 	<a href="/#why-psai"><span>Why psAI</span></a>
 	
 	<hr>
-
-	<!-- <a href="/#the-team"><span>The Team</span></a>
-	
-	<hr> -->
 
 	<a href="/#the-psai-edge"><span>The psAI Edge</span></a>
 	
 	<hr>
 
-	<button type="button" class="contact_bt">Contact us</button>
-</nav>
+	<a href="/reports/" type="button">Reports</a>
+	
+	<hr>
 
-<ContactBox/>
+	<a href="/podcast"><span>Podcast</span></a>
+	
+	<hr>
+
+	<button type="button" class="contact_bt">Contact us</button>
+</header>
     
 <script>
 	import '../js/header.js'

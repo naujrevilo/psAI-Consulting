@@ -1,0 +1,227 @@
+---
+import '../../css/ai-demo.css'
+import BaseHead from '../../components/BaseHead.astro'
+
+import PaperPlane from '../../components/ai-demo/PaperPlane.astro'
+import Attachment from '../../components/ai-demo/Attachment.astro'
+import Photo from '../../components/ai-demo/Photo.astro'
+import SwitchCamera from '../../components/ai-demo/SwitchCamera.astro'
+
+import { Image } from 'astro:assets';
+import Map from '../../assets/demos/map.jpg';
+---
+
+<!doctype html>
+<html lang="en">
+	<BaseHead 
+	title="Airline AI Demo - psAI Consulting"/>
+
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+
+	<body class="demo">
+        <main>
+            <div class="context_menu">
+                <div class="menu">
+                    <div class="item">
+                        <div class="circle">
+                            <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.66667 18.8333L4 14.1667L5.645 12.5217L8.66667 15.5317L16.355 7.84332L18 9.49999M11 2.49999C11.3094 2.49999 11.6062 2.62291 11.825 2.8417C12.0437 3.06049 12.1667 3.35724 12.1667 3.66666C12.1667 3.97608 12.0437 4.27282 11.825 4.49161C11.6062 4.71041 11.3094 4.83332 11 4.83332C10.6906 4.83332 10.3938 4.71041 10.175 4.49161C9.95625 4.27282 9.83333 3.97608 9.83333 3.66666C9.83333 3.35724 9.95625 3.06049 10.175 2.8417C10.3938 2.62291 10.6906 2.49999 11 2.49999ZM19.1667 2.49999H14.29C13.8 1.14666 12.5167 0.166656 11 0.166656C9.48333 0.166656 8.2 1.14666 7.71 2.49999H2.83333C2.21449 2.49999 1.621 2.74582 1.18342 3.18341C0.745833 3.62099 0.5 4.21448 0.5 4.83332V21.1667C0.5 21.7855 0.745833 22.379 1.18342 22.8166C1.621 23.2542 2.21449 23.5 2.83333 23.5H19.1667C19.7855 23.5 20.379 23.2542 20.8166 22.8166C21.2542 22.379 21.5 21.7855 21.5 21.1667V4.83332C21.5 4.21448 21.2542 3.62099 20.8166 3.18341C20.379 2.74582 19.7855 2.49999 19.1667 2.49999Z" fill="#9AB8E3"/>
+                            </svg>
+                        </div>
+
+                        <p>checkins</p>
+                    </div>
+                    
+                    <div class="item">
+                        <div class="circle">
+                            <svg width="28" height="19" viewBox="0 0 28 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.6154 11.9205H24.7611C25.6098 11.9205 26.4238 11.5834 27.0239 10.9832C27.6241 10.3831 27.9612 9.56914 27.9612 8.72042C27.9612 7.87171 27.6241 7.05775 27.0239 6.45762C26.4238 5.85748 25.6098 5.52033 24.7611 5.52033H6.99164C6.75399 5.5202 6.52106 5.45392 6.31895 5.3289C6.11684 5.20388 5.95352 5.02506 5.84729 4.81247L5.27383 3.66811C5.1676 3.45552 5.00428 3.27671 4.80217 3.15169C4.60006 3.02667 4.36713 2.96038 4.12948 2.96025H1.74221C1.53028 2.96006 1.32162 3.0125 1.13495 3.11285C0.948286 3.2132 0.789458 3.35833 0.672722 3.53521C0.555985 3.71209 0.484993 3.91519 0.466117 4.12628C0.447241 4.33737 0.481071 4.54984 0.564571 4.74463L3.30769 11.1448C3.40646 11.3752 3.57071 11.5716 3.78006 11.7095C3.98941 11.8474 4.23464 11.9207 4.48533 11.9205H9.43011C9.63918 11.9207 9.84504 11.972 10.0297 12.0701C10.2143 12.1681 10.3721 12.3099 10.4893 12.483C10.6065 12.6562 10.6795 12.8554 10.702 13.0632C10.7244 13.2711 10.6956 13.4813 10.618 13.6755L9.46468 16.5671C9.38742 16.761 9.35879 16.971 9.38128 17.1786C9.40377 17.3861 9.47671 17.5851 9.59372 17.758C9.71073 17.9309 9.86828 18.0726 10.0526 18.1707C10.2369 18.2688 10.4425 18.3203 10.6513 18.3207H13.2651C13.4571 18.3208 13.6466 18.2777 13.8196 18.1946C13.9927 18.1115 14.1448 17.9905 14.2648 17.8407L18.6169 12.4005C18.7368 12.2508 18.8887 12.13 19.0615 12.0469C19.2344 11.9638 19.4236 11.9206 19.6154 11.9205ZM10.6807 4.24029H16.7609L14.2648 0.912192C14.1456 0.753217 13.991 0.624184 13.8132 0.535314C13.6355 0.446444 13.4395 0.400177 13.2408 0.400177H10.8318C10.6136 0.400293 10.3992 0.456139 10.2087 0.562414C10.0183 0.66869 9.85811 0.82187 9.74347 1.00742C9.62884 1.19297 9.56351 1.40473 9.5537 1.62262C9.54388 1.84051 9.58991 2.05729 9.6874 2.25239L10.6807 4.24029Z" fill="#9AB8E3"/>
+                            </svg>
+                        </div>
+                        
+                        <p>trips</p>
+                    </div>
+                    
+                    <div class="item">
+                        <div class="circle">
+                            <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.00856 19.8886C6.0966 19.0566 7.31263 18.4008 8.65667 17.9212C10.0007 17.4416 11.4088 17.2014 12.8808 17.2006C14.3528 17.2006 15.7609 17.4408 17.1049 17.9212C18.449 18.4017 19.665 19.0575 20.753 19.8886C21.4997 19.0139 22.0813 18.0219 22.4977 16.9125C22.9142 15.8032 23.122 14.6191 23.1211 13.3604C23.1211 10.523 22.124 8.10674 20.1297 6.11158C18.1354 4.11643 15.7191 3.11928 12.8808 3.12013C10.0434 3.12013 7.62709 4.11771 5.63194 6.11286C3.63679 8.10802 2.63964 10.5239 2.64049 13.3604C2.64049 14.6191 2.84871 15.8032 3.26515 16.9125C3.68159 18.0219 4.26273 19.0139 5.00856 19.8886ZM12.8808 14.6405C11.6221 14.6405 10.5605 14.2087 9.69606 13.3451C8.83161 12.4815 8.39981 11.4199 8.40066 10.1603C8.40066 8.90164 8.83289 7.84006 9.69734 6.97561C10.5618 6.11116 11.6229 5.67936 12.8808 5.68021C14.1395 5.68021 15.2011 6.11244 16.0655 6.97689C16.93 7.84134 17.3618 8.90249 17.3609 10.1603C17.3609 11.419 16.9291 12.4806 16.0655 13.3451C15.2019 14.2095 14.1404 14.6413 12.8808 14.6405ZM12.8808 26.1608C11.1101 26.1608 9.44603 25.8246 7.88865 25.1521C6.33127 24.4797 4.97656 23.5679 3.82453 22.4167C2.67249 21.2647 1.76068 19.91 1.08909 18.3526C0.417494 16.7952 0.081271 15.1312 0.0804176 13.3604C0.0804176 11.5897 0.416641 9.92567 1.08909 8.36829C1.76153 6.81091 2.67335 5.4562 3.82453 4.30417C4.97656 3.15214 6.33127 2.24032 7.88865 1.56873C9.44603 0.897135 11.1101 0.560912 12.8808 0.560059C14.6515 0.560059 16.3156 0.896282 17.8729 1.56873C19.4303 2.24118 20.785 3.15299 21.9371 4.30417C23.0891 5.4562 24.0013 6.81091 24.6738 8.36829C25.3462 9.92567 25.682 11.5897 25.6812 13.3604C25.6812 15.1312 25.345 16.7952 24.6725 18.3526C24.0001 19.91 23.0882 21.2647 21.9371 22.4167C20.785 23.5687 19.4303 24.481 17.8729 25.1534C16.3156 25.8259 14.6515 26.1617 12.8808 26.1608Z" fill="#9AB8E3"/>
+                            </svg>
+                        </div>
+                        
+                        <p>account</p>
+                    </div>
+                </div>
+
+                <div class="brand desktop_hidden">
+                    <div class="hambt">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="logo"></div>
+                </div>
+            </div>
+
+            <div class="chat flex">
+                <div class="outputs_ctnr">
+                    <article class="welcome">
+                        <div class="ctnr">
+                            <p class="heading big">Hey!</p>
+    
+                            <p class="instruction">It looks like your next flight is close.<br/><b>Want to check in?</b></p>
+                            
+                            <button type="button" class="prompt_bt">check me in</button>
+                        </div>
+                    </article>
+
+                    <article class="checkin_start">
+                        <div class="ctnr">
+                            <PaperPlane/>
+    
+                            <p class="prompt">"Check me in"</p>
+    
+                            <p class="instruction">Make your check in right away by <b>taking a photo of your passport</b>:</p>
+    
+                            <div class="video_ctnr">
+                                <video class="passport_video" autoplay></video>
+
+                                <div class="content">
+                                    <button type="button">scan passport</button>
+
+                                    <span>or...</span>
+                                </div>
+
+                                <button type="button" class="switch">
+                                    <SwitchCamera/>
+                                </button>
+                            </div>
+    
+                            <div class="options">
+                                
+                                <!-- <button type="button" class="take_photo">
+                                    <Photo/>
+                                    Take a photo of passport
+                                </button>
+    
+                                <hr/> -->
+
+                                <button type="button" class="upload">
+                                    <Attachment/>
+                                    Upload passport
+                                </button>
+    
+                                <hr/>
+                                
+                                <button type="button">
+                                    Insert Manually
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="checkin_output">
+                        <div class="ctnr">
+                            <span class="status_confirmation"><Attachment/> passport uploaded</span>
+                            
+                            <p class="heading medium">Checkin done!</p>
+    
+                            <p class="subheading medium">Here’s everything you need for your flight:</p>
+    
+                            <div class="boxes">
+                                <div class="flex">
+                                    <div class="box">
+                                        <div class="ctnr">
+                                            <p class="heading"><b>04/03/2024</b></p>
+            
+                                            <p>São Paulo (GRU)  >  Doha (DIA)</p>
+            
+                                            <p>One <b>stop</b> at Riyadh (RUH)</p>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="box ticket">
+                                        <div class="ctnr flex">
+                                            <svg class="icon" width="100%" height="100%" viewBox="-1 -1 27 27" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" shape-rendering="crispEdges" id="qr code"><rect id="qr background" fill-opacity="1" fill="rgb(255, 255, 255)" x="-1" y="-1" width="27" height="27"></rect><path fill-opacity="1" fill="rgb(0, 0, 0)" id="qr dark pixels" fill-rule="evenodd" d="M 8 0 L 9 0 L 9 2 L 10 2 L 10 3 L 11 3 L 11 7 L 12 7 L 12 8 L 11 8 L 11 9 L 10 9 L 10 6 L 9 6 L 9 7 L 8 7 L 8 5 L 9 5 L 9 4 L 8 4 z M 13 0 L 14 0 L 14 2 L 13 2 L 13 3 L 14 3 L 14 2 L 15 2 L 15 3 L 16 3 L 16 4 L 17 4 L 17 5 L 14 5 L 14 4 L 13 4 L 13 5 L 12 5 L 12 2 L 11 2 L 11 1 L 13 1 z M 15 0 L 17 0 L 17 3 L 16 3 L 16 1 L 15 1 z M 13 5 L 14 5 L 14 6 L 13 6 z M 12 6 L 13 6 L 13 7 L 12 7 z M 14 6 L 15 6 L 15 7 L 14 7 z M 16 6 L 17 6 L 17 7 L 16 7 z M 0 8 L 2 8 L 2 9 L 0 9 z M 4 8 L 7 8 L 7 9 L 4 9 z M 12 8 L 13 8 L 13 9 L 12 9 z M 15 8 L 16 8 L 16 9 L 18 9 L 18 11 L 17 11 L 17 10 L 16 10 L 16 11 L 14 11 L 14 10 L 15 10 z M 19 8 L 20 8 L 20 9 L 19 9 z M 21 8 L 25 8 L 25 9 L 24 9 L 24 10 L 23 10 L 23 9 L 22 9 L 22 10 L 23 10 L 23 11 L 24 11 L 24 12 L 25 12 L 25 13 L 24 13 L 24 14 L 23 14 L 23 13 L 21 13 L 21 12 L 22 12 L 22 11 L 21 11 L 21 10 L 20 10 L 20 9 L 21 9 z M 3 9 L 4 9 L 4 11 L 3 11 L 3 12 L 4 12 L 4 14 L 3 14 L 3 13 L 2 13 L 2 12 L 1 12 L 1 10 L 3 10 z M 13 9 L 14 9 L 14 10 L 13 10 z M 6 10 L 7 10 L 7 11 L 6 11 z M 9 10 L 11 10 L 11 11 L 10 11 L 10 12 L 9 12 z M 4 11 L 5 11 L 5 12 L 4 12 z M 12 11 L 13 11 L 13 12 L 12 12 z M 18 11 L 19 11 L 19 13 L 17 13 L 17 12 L 18 12 z M 0 12 L 1 12 L 1 13 L 2 13 L 2 14 L 0 14 z M 6 12 L 7 12 L 7 13 L 6 13 z M 8 12 L 9 12 L 9 14 L 10 14 L 10 16 L 9 16 L 9 15 L 8 15 L 8 14 L 7 14 L 7 13 L 8 13 z M 11 12 L 12 12 L 12 13 L 11 13 z M 15 12 L 16 12 L 16 13 L 17 13 L 17 14 L 16 14 L 16 15 L 15 15 L 15 14 L 14 14 L 14 13 L 15 13 z M 5 13 L 6 13 L 6 14 L 5 14 z M 10 13 L 11 13 L 11 14 L 10 14 z M 12 13 L 13 13 L 13 15 L 12 15 L 12 16 L 11 16 L 11 14 L 12 14 z M 20 13 L 21 13 L 21 14 L 23 14 L 23 15 L 24 15 L 24 16 L 23 16 L 23 17 L 21 17 L 21 19 L 24 19 L 24 20 L 23 20 L 23 21 L 25 21 L 25 22 L 24 22 L 24 24 L 25 24 L 25 25 L 22 25 L 22 24 L 19 24 L 19 25 L 17 25 L 17 22 L 16 22 L 16 15 L 17 15 L 17 16 L 19 16 L 19 14 L 20 14 zM 21 15 L 22 15 L 22 16 L 21 16 z M 17 17 L 20 17 L 20 20 L 17 20 z M 20 21 L 22 21 L 22 22 L 21 22 L 21 23 L 19 23 L 19 22 L 20 22 z M 22 22 L 23 22 L 23 23 L 22 23 z M 2 14 L 3 14 L 3 15 L 5 15 L 5 16 L 4 16 L 4 17 L 3 17 L 3 16 L 2 16 z M 6 14 L 7 14 L 7 15 L 6 15 z M 17 14 L 18 14 L 18 15 L 17 15 z M 14 15 L 15 15 L 15 16 L 14 16 z M 0 16 L 2 16 L 2 17 L 0 17 z M 5 16 L 8 16 L 8 17 L 5 17 z M 10 16 L 11 16 L 11 17 L 10 17 z M 12 16 L 13 16 L 13 17 L 12 17 z M 8 17 L 9 17 L 9 18 L 8 18 z M 14 17 L 15 17 L 15 19 L 13 19 L 13 18 L 14 18 z M 9 18 L 10 18 L 10 19 L 9 19 z M 18 18 L 19 18 L 19 19 L 18 19 z M 8 19 L 9 19 L 9 20 L 12 20 L 12 19 L 13 19 L 13 21 L 15 21 L 15 23 L 16 23 L 16 24 L 15 24 L 15 25 L 14 25 L 14 23 L 13 23 L 13 25 L 11 25 L 11 24 L 12 24 L 12 23 L 11 23 L 11 24 L 10 24 L 10 22 L 12 22 L 12 21 L 8 21 z M 8 23 L 9 23 L 9 25 L 8 25 z"></path><path id="qr squares" d="M0,0h7h0v0v7v0h0h-7h0v0v-7v0h0zM1,1h5h0v0v5v0h0h-5h0v0v-5v0h0zM2,2h3h0v0v3v0h0h-3h0v0v-3v0h0z M18,0h7h0v0v7v0h0h-7h0v0v-7v0h0zM19,1h5h0v0v5v0h0h-5h0v0v-5v0h0zM20,2h3h0v0v3v0h0h-3h0v0v-3v0h0z M0,18h7h0v0v7v0h0h-7h0v0v-7v0h0zM1,19h5h0v0v5v0h0h-5h0v0v-5v0h0zM2,20h3h0v0v3v0h0h-3h0v0v-3v0h0z" fill-rule="evenodd" fill-opacity="1" fill="rgb(0, 0, 0)"></path></svg>
+                                            
+                                            <div class="content">
+                                                <p class="heading">This is your ticket</p>
+                
+                                                <p>Scan this QR Code to access boarding area</p>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="box">
+                                        <div class="ctnr">
+                                            <p class="heading">You’re on Executive Class</p>
+        
+                                            <p>Enjoy lounge access, priority boarding, premium seats, fine meals, and more</p>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="box">
+                                    <div class="ctnr">
+                                        <p>Find your way to</p>
+        
+                                        <p class="heading">Terminal 4, Gate 9</p>
+                                    </div>
+    
+                                    <Image src={Map} alt="Terminal map" draggable="false"/>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+    
+                <div class="prompt_area">
+                    <div class="context_prompts welcome">
+                        <button type="button" class="selected prompt_bt">check me in</button>
+
+                        <button type="button" class="prompt_bt">travel tips</button>
+
+                        <button type="button" class="prompt_bt">flight status</button>
+                        
+                        <button type="button" class="prompt_bt">more options</button>
+                    </div>
+
+                    <div class="prompt_input">
+                        <input type="text"/>
+
+                        <button type="button">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.34899 0.217264C0.680743 -0.116861 -0.0600692 0.518764 0.168306 1.23033L1.77593 6.22701C1.80754 6.32524 1.86555 6.41288 1.94363 6.48035C2.02171 6.54781 2.11684 6.5925 2.21862 6.60951L8.89493 7.7227C9.20824 7.77501 9.20824 8.22501 8.89493 8.27733L2.21918 9.38995C2.11731 9.40688 2.02205 9.45152 1.94387 9.51899C1.86568 9.58646 1.80758 9.67415 1.77593 9.77245L0.168306 14.7708C-0.0606317 15.4824 0.680181 16.118 1.34899 15.7839L15.4081 8.75545C16.0302 8.44439 16.0302 7.55733 15.4081 7.2457L1.34899 0.217264Z" fill="#445F87"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lateral_nav">
+                <div class="brand">
+                    <div class="image"></div>
+                    <p>Brand Name</p>        
+                </div>
+
+                <nav>
+                    <a>My trips</a>
+                    <a>Preferences</a>
+                    <a>Security</a>
+                    <a>Privacy</a>
+                    <a>FAQ</a>
+                    <a>Contact us</a>
+                    <a>Press</a>
+                </nav>
+            </div>
+        </main>
+
+        <div class="square_bg"></div>
+
+        <script src="../../js/ai-demo.js"></script>
+	</body>
+</html>
