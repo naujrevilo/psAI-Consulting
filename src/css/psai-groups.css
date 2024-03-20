@@ -31,7 +31,7 @@
 }
 
 .psai_groups_nav {
-    display: none !important;
+    /* display: none !important; */
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -44,7 +44,7 @@
 }
 
 .psai_groups_bg {
-    display: none !important;
+    /* display: none !important; */
     pointer-events: none;
     position: fixed;
     top: 0;
