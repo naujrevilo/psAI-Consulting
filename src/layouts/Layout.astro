@@ -10,6 +10,8 @@ import MailBubble from '../components/MailBubble.astro';
 
 import CookieConsentBanner from "../components/CookieConsentBanner.astro";
 import OQVABadge from "../components/OQVABadge.astro";
+	
+	import ContactBox from '../components/ContactBox.astro';
 ---
 
 <!doctype html>
@@ -23,8 +25,6 @@ import OQVABadge from "../components/OQVABadge.astro";
 		<!-- Google Tag Manager (noscript) -->
 		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-587VFLN8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		<!-- End Google Tag Manager (noscript) -->
-		
-		<Header logoAnchorTheme={logoAnchorTheme}/>
 
 		<MailBubble/>
 
@@ -34,6 +34,6 @@ import OQVABadge from "../components/OQVABadge.astro";
 
         <CookieConsentBanner/>
 
-		<OQVABadge/>
+		<ContactBox/>
 	</body>
 </html>

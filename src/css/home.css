@@ -1,5 +1,5 @@
 body::before {
-    background-image: url(/svg/light-noise-bg.svg), linear-gradient(-30deg, var(--primary), var(--secondary));
+    background-image: url(/svg/dark-noise-bg.svg), linear-gradient(-30deg, #0e0925, #060823);
 }
 
 
